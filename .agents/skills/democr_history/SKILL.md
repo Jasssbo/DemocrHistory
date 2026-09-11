@@ -190,6 +190,7 @@ Usare **esclusivamente** i valori definiti di seguito. Non inventarne di nuovi.
 | **Atti Giudiziari** | Sentenze d'assise, decreti d'archiviazioni | Usare `tipo: "atti giudiziari"` |
 | **National Archives NARA / CIA CREST** | Declassificazioni diplomatiche ed intelligence USA | Usare `tipo: "monografia"` o `atti` con URL |
 | **Istituto Parri / Fondazione Gramsci** | Archivi di partito e movimenti sociali | Indicarli nelle fonti di ricerca |
+| **Strano Network (Cronologia delle Stragi)** | Cronologia digitale di eventi, stragi e politica (1969-1993) | Riferimento essenziale per la verifica cronologica sequenziale di fatti e date ([strano.net](https://www.strano.net/stragi/stragi/crono/indcro.htm)) |
 
 ---
 
