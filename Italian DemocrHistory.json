@@ -370,20 +370,41 @@
 		},
 		{
 			"anno": 1960,
-			"titolo": "Governo Tambroni e Piano Marzano",
+			"titolo": "Governo Tambroni e crisi politica del luglio 1960",
 			"data": {"inizio": "1960-03-25", "fine": "1960-07-19", "precisione": "giorno"},
 			"luogo": {"nome": "Roma, Genova e Reggio Emilia", "paese": "Italia"},
-			"descrizione": "Il governo Tambroni, formato nel marzo 1960, ottenne la fiducia anche grazie ai voti del MSI. La decisione di autorizzare il congresso missino a Genova provoco proteste e scontri; dopo le vittime delle manifestazioni di luglio, Tambroni si dimise. Il cosiddetto Piano Marzano e una ricostruzione separata, da documentare con fonti specifiche.",
-			"dati_concreti": ["Governo Tambroni: in carica dal 25 marzo al 19 luglio 1960.", "A Genova le proteste iniziarono il 30 giugno 1960.", "Il 7 luglio 1960 a Reggio Emilia morirono cinque manifestanti durante gli scontri.", "Il Piano Marzano non deve essere presentato come un golpe accertato senza una fonte primaria o giudiziaria."],
-			"responsabili_o_attori": [{"nome": "Governo Tambroni", "ruolo": "governo coinvolto"}, {"nome": "MSI", "ruolo": "sostegno politico indicato"}, {"nome": "Marzano", "ruolo": "autore indicato del piano"}],
-			"entita_coinvolte": ["MSI", "Stato", "Carabinieri", "societa civile"],
+			"descrizione": "Il governo Tambroni, formato nel marzo 1960, ottenne la fiducia anche grazie ai voti del MSI. L'autorizzazione del congresso missino a Genova provocò proteste e scontri; dopo le vittime delle manifestazioni di luglio, Tambroni si dimise.",
+			"dati_concreti": ["Governo Tambroni: in carica dal 25 marzo al 19 luglio 1960.", "A Genova le proteste iniziarono il 30 giugno 1960.", "Il 7 luglio 1960 a Reggio Emilia morirono cinque manifestanti durante gli scontri.", "La crisi del governo fu politica e sociale; non va confusa con il distinto Piano Marzano, un piano di emergenza della pubblica sicurezza."],
+			"responsabili_o_attori": [{"nome": "Fernando Tambroni", "ruolo": "presidente del Consiglio"}, {"nome": "Governo Tambroni", "ruolo": "esecutivo coinvolto"}, {"nome": "MSI", "ruolo": "forza politica i cui voti contribuirono alla fiducia iniziale"}, {"nome": "societa civile", "ruolo": "protagonista delle proteste e degli scontri"}],
+			"entita_coinvolte": ["Governo", "MSI", "Carabinieri", "societa civile"],
 			"tipo_di_fatto": ["politico-istituzionale", "violenza politica o strage"],
 			"scala": "nazionale",
-			"stato_della_ricostruzione": "evento e ricostruzione da verificare",
+			"stato_della_ricostruzione": "evento documentato",
+			"relazioni": [{"tipo": "distinto da", "verso": "EVT-1960-002"}],
 			"wikilinks": {
 				"Governo_Tambroni": "https://it.wikipedia.org/wiki/Governo_Tambroni",
-				"Giovanni_Tambroni": "https://it.wikipedia.org/wiki/Giovanni_Tambroni"
+				"Giovanni_Tambroni": "https://it.wikipedia.org/wiki/Giovanni_Tambroni",
+				"Fatti_di_Genova_del_30_giugno_1960": "https://it.wikipedia.org/wiki/Fatti_di_Genova_del_30_giugno_1960"
 			}
+		},
+		{
+			"anno": 1960,
+			"titolo": "Piano Marzano: piano di emergenza della pubblica sicurezza",
+			"data": {"inizio": "1960-07-01", "fine": "1960-07-31", "precisione": "mese"},
+			"luogo": {"nome": "Roma", "paese": "Italia"},
+			"descrizione": "Nel luglio 1960 il questore di Roma Carmelo Marzano predispose un piano di emergenza per fronteggiare possibili disordini. Il piano rientrava nella logica dei piani di contingenza interforze e prevedeva anche l'individuazione di persone da enucleare, ma non è di per sé la prova di un progetto di colpo di Stato.",
+			"dati_concreti": ["Il piano fu predisposto nel luglio 1960 dal questore di Roma Carmelo Marzano.", "Prevedeva misure di emergenza e l'individuazione di possibili enucleandi in caso di gravi disordini.", "La sua struttura va distinta dal Piano Solo del 1964, che attribuiva l'attuazione ai soli Carabinieri.", "Il collegamento con il governo Tambroni è cronologico e istituzionale, ma il piano non va presentato come un ordine personale di Tambroni senza documenti specifici."],
+			"responsabili_o_attori": [{"nome": "Carmelo Marzano", "ruolo": "questore di Roma e autore del piano"}, {"nome": "Pubblica sicurezza", "ruolo": "apparato responsabile dell'attuazione ordinaria"}, {"nome": "Prefettura e forze dell'ordine", "ruolo": "strutture di coordinamento del piano di contingenza"}],
+			"entita_coinvolte": ["Questura di Roma", "Pubblica sicurezza", "Prefettura", "Carabinieri"],
+			"tipo_di_fatto": ["servizi segreti e apparati dello Stato", "politico-istituzionale"],
+			"scala": "nazionale",
+			"stato_della_ricostruzione": "piano documentato; interpretazione politica e portata operativa da contestualizzare",
+			"relazioni": [{"tipo": "contesto di", "verso": "EVT-1960-001"}, {"tipo": "precede e si distingue da", "verso": "EVT-1964-002"}],
+			"wikilinks": {
+				"Piano_Solo": "https://it.wikipedia.org/wiki/Piano_Solo",
+				"Carmelo_Marzano": "https://it.wikipedia.org/wiki/Piano_Solo"
+			},
+			"fonti": [{"tipo": "voce di sintesi", "titolo": "Piano Solo", "url": "https://it.wikipedia.org/wiki/Piano_Solo"}, {"tipo": "monografia", "titolo": "Il piano Solo. I servizi segreti, il centro-sinistra e il «golpe» del 1964", "autore": "Mimmo Franzinelli", "editore": "Mondadori", "anno": 2010}]
 		},
 		{
 			"anno": 1962,
@@ -403,6 +424,25 @@
 			}
 		},
 		{
+			"anno": 1962,
+			"titolo": "Piano di emergenza speciale della pubblica sicurezza",
+			"data": {"inizio": "1962-01-01", "fine": "1962-12-31", "precisione": "anno"},
+			"luogo": {"nome": "Italia", "paese": "Repubblica Italiana"},
+			"descrizione": "Nel 1962 il capo della Polizia Angelo Vicari riordinò i piani di emergenza speciale della pubblica sicurezza. Si trattava di piani di contingenza ordinari e interforze, predisposti per fronteggiare gravi disordini, da distinguere dal successivo Piano Solo perché non riservavano l'attuazione ai soli Carabinieri.",
+			"dati_concreti": ["Il piano E.S. apparteneva alla famiglia dei piani di contingenza della pubblica sicurezza.", "La predisposizione e il coordinamento erano ricondotti al capo della Polizia Angelo Vicari.", "La logica era interforze e coordinata attraverso le autorità territoriali, non affidata esclusivamente all'Arma dei Carabinieri.", "Il Piano Solo del 1964 riprese alcuni elementi della pianificazione emergenziale, ma se ne distinse per la riserva operativa a favore dei soli Carabinieri e per l'ampiezza degli obiettivi indicati."],
+			"responsabili_o_attori": [{"nome": "Angelo Vicari", "ruolo": "capo della Polizia e coordinatore della pianificazione di emergenza"}, {"nome": "Pubblica sicurezza", "ruolo": "apparato titolare dei piani E.S."}, {"nome": "Prefetture e forze dell'ordine", "ruolo": "strutture territoriali di attuazione e coordinamento"}],
+			"entita_coinvolte": ["Polizia di Stato", "Prefetture", "Carabinieri", "forze dell'ordine", "Ministero dell'Interno"],
+			"tipo_di_fatto": ["servizi segreti e apparati dello Stato", "politico-istituzionale"],
+			"scala": "nazionale",
+			"stato_della_ricostruzione": "pianificazione documentata; contenuti operativi specifici da verificare negli atti",
+			"relazioni": [{"tipo": "precede e si distingue da", "verso": "EVT-1964-002"}],
+			"wikilinks": {
+				"Piano_Solo": "https://it.wikipedia.org/wiki/Piano_Solo",
+				"Angelo_Vicari": "https://it.wikipedia.org/wiki/Angelo_Vicari"
+			},
+			"fonti": [{"tipo": "voce di sintesi", "titolo": "Piano Solo", "url": "https://it.wikipedia.org/wiki/Piano_Solo"}, {"tipo": "relazione parlamentare", "titolo": "Relazione della Commissione parlamentare d'inchiesta sugli eventi del giugno-luglio 1964", "anno": 1971}]
+		},
+		{
 			"anno": 1963,
 			"titolo": "Sorveglianza del Quirinale e del Vaticano",
 			"data": {"inizio": "1963-01-01", "fine": "1963-12-31", "precisione": "anno"},
@@ -420,6 +460,7 @@
 			}
 		},
 		{
+			"id_evento": "EVT-1964-001",
 			"anno": 1964,
 			"titolo": "Crisi della lira e riequilibrio economico",
 			"data": {"inizio": "1963-01-01", "fine": "1964-12-31", "precisione": "intervallo"},
@@ -431,6 +472,7 @@
 			"tipo_di_fatto": ["sociale-economico", "politico-istituzionale"],
 			"scala": "nazionale",
 			"stato_della_ricostruzione": "evento documentato; cause e peso delle singole misure sono oggetto di interpretazione economica",
+			"relazioni": [{"tipo": "contesto temporale di", "verso": "EVT-1964-002"}],
 			"wikilinks": {
 				"Crisi_della_lira_del_1963-1964": "https://it.wikipedia.org/wiki/Crisi_della_lira_del_1963-1964",
 				"Banca_d_Italia": "https://it.wikipedia.org/wiki/Banca_d%27Italia",
@@ -441,24 +483,31 @@
 			}
 		},
 		{
+			"id_evento": "EVT-1964-002",
 			"anno": 1964,
 			"titolo": "Piano Solo",
 			"data": {"inizio": "1964-06-01", "fine": "1964-07-31", "precisione": "mese"},
 			"luogo": {"nome": "Roma e Italia", "paese": "Repubblica Italiana"},
-			"descrizione": "Giovanni De Lorenzo e indicato come promotore del Piano Solo, con appoggio politico del presidente Antonio Segni e opposizione all'evoluzione del centrosinistra.",
-			"dati_concreti": ["Il Piano Solo fu elaborato nel 1964 dal comandante generale dell'Arma dei Carabinieri Giovanni De Lorenzo.", "Il piano prevedeva l'impiego dell'Arma in caso di emergenza politica e la predisposizione di elenchi di persone da controllare o arrestare.", "La vicenda divenne pubblica nel 1967 attraverso le inchieste giornalistiche e parlamentari sul SIFAR."],
-			"responsabili_o_attori": [{"nome": "Giovanni De Lorenzo", "ruolo": "promotore indicato"}, {"nome": "Antonio Segni", "ruolo": "appoggio politico indicato"}, {"nome": "SIFAR", "ruolo": "apparato coinvolto"}],
-			"entita_coinvolte": ["SIFAR", "Carabinieri", "Presidenza della Repubblica", "USA"],
+			"descrizione": "Il Piano Solo fu un piano di emergenza speciale predisposto nel 1964 dal comandante generale dei Carabinieri Giovanni De Lorenzo, nel contesto della crisi del primo governo Moro e delle tensioni sulla stabilità economica e politica. La crisi della lira del 1963-inizio 1964 costituì lo sfondo di allarme istituzionale, ma non è una prova che il piano avesse finalità economiche. Il nome indicava la previsione di un'attuazione affidata ai soli Carabinieri, diversamente dal Piano Marzano del 1960 e dai piani E.S. della Polizia del 1962, che erano piani di contingenza interforze.",
+			"dati_concreti": ["Il Piano Solo fu elaborato nel 1964 dal comandante generale dell'Arma dei Carabinieri Giovanni De Lorenzo; la riunione con i comandanti delle divisioni di Milano, Roma e Napoli si tenne il 25 marzo 1964 con autorizzazione del capo di Stato maggiore della Difesa Aldo Rossi.", "Il piano prevedeva l'occupazione di centri nevralgici, tra cui questure, sedi di partiti e sindacati, RAI, ferrovie e telefoni.", "Prevedeva l'enucleazione e il trasferimento in Sardegna di persone considerate pericolose: la cifra di 731 nominativi appartiene alla ricostruzione del contenuto del piano, mentre la lista originale non è oggi disponibile integralmente.", "Il Piano Marzano del luglio 1960 e il piano di emergenza speciale E.S. riordinato da Angelo Vicari nel 1962 erano precedenti piani di contingenza, normalmente interforze e coordinati dalla pubblica sicurezza.", "La differenza centrale del Piano Solo era la riserva operativa esclusiva a favore dell'Arma dei Carabinieri e il coinvolgimento del SIFAR nella predisposizione delle liste e delle strutture.", "Nel 1963 e nei primi mesi del 1964 la crisi della lira, la pressione sui cambi e il rischio di svalutazione aumentarono l'allarme delle istituzioni; il rapporto con il Piano Solo è però di contesto temporale e politico, non di causalità economica dimostrata.", "La caduta del primo governo Moro il 25-26 giugno 1964 e le consultazioni di Antonio Segni con De Lorenzo e Aldo Rossi resero il piano politicamente rilevante.", "La vicenda divenne pubblica nel 1967 attraverso le inchieste giornalistiche e parlamentari sul SIFAR; la Commissione Alessi escluse nel 1970 la prova di un progetto di colpo di Stato, pur censurando il carattere illegittimo e anomalo della predisposizione."],
+			"responsabili_o_attori": [{"nome": "Giovanni De Lorenzo", "ruolo": "comandante generale dei Carabinieri e promotore della pianificazione"}, {"nome": "Antonio Segni", "ruolo": "presidente della Repubblica e interlocutore politico istituzionale"}, {"nome": "Aldo Rossi", "ruolo": "capo di Stato maggiore della Difesa che autorizzò la riunione del 25 marzo"}, {"nome": "SIFAR", "ruolo": "apparato coinvolto nella predisposizione informativa e delle liste"}, {"nome": "Aldo Moro", "ruolo": "presidente del Consiglio del governo la cui crisi fece da sfondo alla vicenda"}, {"nome": "Angelo Vicari", "ruolo": "autore del precedente riordino dei piani E.S. della Polizia"}, {"nome": "Carmelo Marzano", "ruolo": "autore del precedente Piano Marzano del 1960"}],
+			"entita_coinvolte": ["SIFAR", "Carabinieri", "Presidenza della Repubblica", "Presidenza del Consiglio", "Pubblica sicurezza", "PSI", "DC", "RAI", "centri di comunicazione e trasporto"],
 			"tipo_di_fatto": ["servizi segreti e apparati dello Stato", "politico-istituzionale"],
 			"scala": "nazionale",
-			"stato_della_ricostruzione": "responsabilita e dinamica da verificare",
+			"stato_della_ricostruzione": "predisposizione documentata; intenzione golpista esclusa dalla Commissione Alessi ma interpretazione politica e responsabilita restano controverse",
+			"relazioni": [{"tipo": "si distingue da", "verso": "EVT-1960-002"}, {"tipo": "si distingue da", "verso": "EVT-1962-002"}, {"tipo": "contesto temporale di", "verso": "EVT-1964-001"}, {"tipo": "precede e contribuisce a", "verso": "EVT-1966-001"}],
 			"wikilinks": {
 				"Piano_Solo": "https://it.wikipedia.org/wiki/Piano_Solo",
 				"Giovanni_De_Lorenzo": "https://it.wikipedia.org/wiki/Giovanni_De_Lorenzo",
-				"Antonio_Segni": "https://it.wikipedia.org/wiki/Antonio_Segni"
-			}
+				"Antonio_Segni": "https://it.wikipedia.org/wiki/Antonio_Segni",
+				"Crisi_della_lira_del_1963-1964": "https://it.wikipedia.org/wiki/Crisi_della_lira_del_1963-1964",
+				"Piano_Marzo_1960": "https://it.wikipedia.org/wiki/Piano_Solo",
+				"Angelo_Vicari": "https://it.wikipedia.org/wiki/Angelo_Vicari"
+			},
+			"fonti": [{"tipo": "voce di sintesi", "titolo": "Piano Solo", "url": "https://it.wikipedia.org/wiki/Piano_Solo"}, {"tipo": "relazione parlamentare", "titolo": "Relazione della Commissione parlamentare d'inchiesta sugli eventi del giugno-luglio 1964", "autore": "Giuseppe Alessi", "anno": 1971}, {"tipo": "monografia", "titolo": "Il piano Solo. I servizi segreti, il centro-sinistra e il «golpe» del 1964", "autore": "Mimmo Franzinelli", "editore": "Mondadori", "anno": 2010}]
 		},
 		{
+			"id_evento": "EVT-1966-001",
 			"anno": 1966,
 			"titolo": "Scandalo SIFAR e trasformazione in SID",
 			"data": {"inizio": "1966-01-01", "fine": "1966-12-31", "precisione": "anno"},
