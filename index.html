@@ -610,9 +610,25 @@
       return [...new Set(allEvents().flatMap((event) => Array.isArray(event[key]) ? event[key] : [event[key]]).filter(Boolean))].sort();
     }
 
+    function matchCertainty(eventStatus, filterValue) {
+      if (!filterValue) return true;
+      const s = (eventStatus || '').toLowerCase();
+      if (filterValue === 'documentato') return s.includes('documentat') || s.includes('cronologia') || s.includes('storic');
+      if (filterValue === 'giudiziario') return s.includes('giudiziar') || s.includes('sentenza') || s.includes('processo') || s.includes('parlamentar') || s.includes('accertat');
+      if (filterValue === 'controverso') return s.includes('controvers') || s.includes('ipotesi') || s.includes('discuss') || s.includes('presunt');
+      return true;
+    }
+
     function setupFilters() {
+      $('type').innerHTML = '<option value="">Tutti i tipi</option>';
       uniqueValues('tipo_di_fatto').forEach((value) => $('type').append(new Option(value, value)));
-      uniqueValues('stato_della_ricostruzione').forEach((value) => $('certainty').append(new Option(value, value)));
+      
+      $('certainty').innerHTML = `
+        <option value="">Tutti gli stati</option>
+        <option value="documentato">Fatto documentato</option>
+        <option value="giudiziario">Accertato (Sentenza / Atti)</option>
+        <option value="controverso">Controverso / Ipotesi</option>
+      `;
     }
 
     function eventTypeClass(event) {
@@ -653,7 +669,7 @@
       const type = $('type').value;
       const certainty = $('certainty').value;
       const visibleEvents = state.showPrelude ? allEvents() : state.events;
-      state.filtered = visibleEvents.filter((event) => (state.showPrelude || event.anno >= mainYear) && (!query || flatten(event).includes(query)) && (!type || event.tipo_di_fatto?.includes(type)) && (!certainty || event.stato_della_ricostruzione === certainty));
+      state.filtered = visibleEvents.filter((event) => (state.showPrelude || event.anno >= mainYear) && (!query || flatten(event).includes(query)) && (!type || event.tipo_di_fatto?.includes(type)) && matchCertainty(event.stato_della_ricostruzione, certainty));
       $('count').textContent = state.filtered.length;
       const years = state.filtered.map((event) => event.anno).sort((a, b) => a - b);
       $('range').textContent = years.length ? `${years[0]}–${years[years.length - 1]}` : '-';

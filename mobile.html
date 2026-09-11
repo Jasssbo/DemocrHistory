@@ -15,7 +15,7 @@
       --accent: #b4492d;
       --accent-soft: #f8ece6;
       --shadow: 0 4px 20px rgba(0, 0, 0, .08);
-      --shadow-sheet: 0 -8px 30px rgba(0, 0, 0, .18);
+      --shadow-sheet: 0 -10px 40px rgba(0, 0, 0, .3);
       
       --political: #356a8a;
       --social: #b27b2f;
@@ -40,18 +40,17 @@
       background: var(--paper);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
       overflow-x: hidden;
-      padding-bottom: 80px;
     }
 
-    /* Sticky Mobile Header */
-    .mobile-header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(247, 244, 237, 0.95);
-      backdrop-filter: blur(10px);
+    /* Top Header & Filters Wrapper (Scorre via normalmente con la pagina) */
+    .top-wrapper {
+      position: relative;
+      background: var(--paper);
       border-bottom: 1px solid var(--line);
-      padding: 12px 16px;
+    }
+
+    .mobile-header {
+      padding: 12px 16px 8px;
     }
 
     .brand-bar {
@@ -70,7 +69,7 @@
     }
 
     .desktop-link {
-      font-size: 12px;
+      font-size: 11px;
       color: var(--accent);
       text-decoration: none;
       font-weight: 600;
@@ -98,12 +97,12 @@
       border-color: var(--accent);
     }
 
-    /* Filter Controls Row */
+    /* Filter Controls Scroll Row */
     .filters-scroll {
       display: flex;
       gap: 8px;
       overflow-x: auto;
-      padding-bottom: 4px;
+      padding-bottom: 6px;
       scrollbar-width: none;
     }
 
@@ -112,7 +111,8 @@
     }
 
     .filters-scroll select,
-    .filters-scroll button {
+    .filters-scroll button,
+    .filters-scroll label.upload-btn {
       padding: 6px 12px;
       font-size: 12px;
       border-radius: 20px;
@@ -121,6 +121,9 @@
       color: var(--ink);
       white-space: nowrap;
       outline: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
     }
 
     .filters-scroll select:focus {
@@ -139,10 +142,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 16px;
-      font-size: 12px;
+      padding: 8px 16px;
+      font-size: 11px;
       color: var(--muted);
-      border-bottom: 1px solid var(--line);
+      border-top: 1px solid var(--line);
       background: var(--panel);
     }
 
@@ -152,7 +155,7 @@
 
     /* Event Feed */
     .timeline-feed {
-      padding: 12px 16px;
+      padding: 12px 16px 40px;
       display: flex;
       flex-direction: column;
       gap: 12px;
@@ -232,15 +235,16 @@
       font-weight: 500;
     }
 
-    /* Detail Bottom Sheet Modal */
+    /* Modal Overlay Panel (Tendina sovrapposta in alto che copre lo schermo) */
     .sheet-overlay {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 1000;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(6px);
+      z-index: 2000;
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.25s ease, visibility 0.25s ease;
@@ -256,83 +260,74 @@
       left: 0;
       right: 0;
       bottom: 0;
-      max-height: 88vh;
+      top: 6vh;
       background: var(--panel);
-      border-top-left-radius: 18px;
-      border-top-right-radius: 18px;
-      z-index: 1001;
+      border-top-left-radius: 22px;
+      border-top-right-radius: 22px;
+      z-index: 2001;
       box-shadow: var(--shadow-sheet);
       transform: translateY(100%);
-      transition: transform 0.3s cubic-bezier(0.1, 0.9, 0.2, 1);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
       display: flex;
       flex-direction: column;
+      overflow: hidden;
     }
 
     .bottom-sheet.active {
       transform: translateY(0);
     }
 
-    .sheet-handle-area {
-      padding: 10px 0 6px;
+    .sheet-top-bar {
+      padding: 12px 20px;
       display: flex;
-      justify-content: center;
-      cursor: pointer;
-    }
-
-    .sheet-handle {
-      width: 40px;
-      height: 5px;
-      background: var(--line);
-      border-radius: 3px;
-    }
-
-    .sheet-content {
-      padding: 12px 20px 30px;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .sheet-header {
-      display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: space-between;
-      margin-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+      background: var(--paper);
     }
 
-    .sheet-year {
+    .sheet-year-badge {
       font-family: Georgia, serif;
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 700;
       color: var(--accent);
     }
 
-    .sheet-close {
-      background: var(--paper);
-      border: none;
-      font-size: 20px;
-      width: 32px;
-      height: 32px;
+    .sheet-close-btn {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      font-size: 22px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      color: var(--muted);
+      color: var(--ink);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .sheet-content {
+      padding: 20px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      flex: 1;
     }
 
     .sheet-title {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 700;
       line-height: 1.3;
-      margin: 0 0 12px 0;
+      margin: 0 0 14px 0;
       color: var(--ink);
     }
 
     .sheet-text {
-      font-size: 14px;
+      font-size: 15px;
       line-height: 1.6;
       color: #33414d;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
 
     .sheet-section-title {
@@ -341,25 +336,26 @@
       letter-spacing: .08em;
       color: var(--accent);
       font-weight: 700;
-      margin: 14px 0 6px 0;
+      margin: 16px 0 8px 0;
     }
 
     .sheet-list {
-      margin: 0 0 14px 0;
+      margin: 0 0 16px 0;
       padding-left: 18px;
-      font-size: 13px;
+      font-size: 14px;
       color: var(--ink);
       line-height: 1.5;
     }
 
     .sheet-status-box {
-      padding: 10px 12px;
+      padding: 12px 14px;
       background: var(--accent-soft);
-      border-radius: 6px;
-      font-size: 12px;
+      border-radius: 8px;
+      font-size: 13px;
       color: var(--accent);
-      font-weight: 500;
-      margin-bottom: 14px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      border-left: 3px solid var(--accent);
     }
 
     .loader-box {
@@ -372,33 +368,38 @@
 </head>
 
 <body>
-  <header class="mobile-header">
-    <div class="brand-bar">
-      <h1 class="brand-title">DemocrHistory</h1>
-      <a href="index.html?desktop=1" class="desktop-link">Vista Desktop</a>
-    </div>
+  <!-- Top Header Wrapper (Scorre via normalmente con la pagina) -->
+  <div class="top-wrapper">
+    <header class="mobile-header">
+      <div class="brand-bar">
+        <h1 class="brand-title">DemocrHistory</h1>
+        <a href="index.html?desktop=1" class="desktop-link">Vista Desktop</a>
+      </div>
 
-    <div class="search-box">
-      <input id="mobile-search" type="search" placeholder="Cerca eventi, attori, luoghi..." aria-label="Cerca">
-    </div>
+      <div class="search-box">
+        <input id="mobile-search" type="search" placeholder="Cerca eventi, attori, luoghi..." aria-label="Cerca">
+      </div>
 
-    <div class="filters-scroll">
-      <select id="mobile-dataset">
-        <option value="data/Italian DemocrHistory.json">Database Principale</option>
-      </select>
-      <select id="mobile-type">
-        <option value="">Tutti i tipi</option>
-      </select>
-      <select id="mobile-certainty">
-        <option value="">Tutti gli stati</option>
-      </select>
-      <button id="mobile-prelude-btn" class="toggle-prelude-btn">Prima del 1943: OFF</button>
-    </div>
-  </header>
+      <div class="filters-scroll">
+        <select id="mobile-dataset">
+          <option value="data/Italian DemocrHistory.json">Database Principale</option>
+        </select>
+        <select id="mobile-type">
+          <option value="">Tutti i tipi</option>
+        </select>
+        <select id="mobile-certainty">
+          <option value="">Tutti gli stati</option>
+        </select>
+        <button id="mobile-prelude-btn" class="toggle-prelude-btn">Prima del 1943: OFF</button>
+        <label for="mobile-file-input" class="upload-btn">📂 Carica JSON</label>
+        <input id="mobile-file-input" type="file" accept="application/json" style="display:none;">
+      </div>
+    </header>
 
-  <div class="mobile-stats">
-    <div>Eventi trovati: <strong id="mobile-count">0</strong></div>
-    <div>Anni: <strong id="mobile-range">-</strong></div>
+    <div class="mobile-stats">
+      <div>Eventi trovati: <strong id="mobile-count">0</strong></div>
+      <div>Anni: <strong id="mobile-range">-</strong></div>
+    </div>
   </div>
 
   <main>
@@ -406,11 +407,12 @@
     <div id="mobile-feed" class="timeline-feed"></div>
   </main>
 
-  <!-- Bottom Sheet Modal for Detail View -->
+  <!-- Modal Overlay Panel per Approfondimento Evento (Si apre sopra lo schermo) -->
   <div id="sheet-overlay" class="sheet-overlay"></div>
   <div id="bottom-sheet" class="bottom-sheet">
-    <div id="sheet-handle" class="sheet-handle-area">
-      <div class="sheet-handle"></div>
+    <div class="sheet-top-bar">
+      <span id="sheet-year" class="sheet-year-badge">Anno</span>
+      <button id="sheet-close-btn" class="sheet-close-btn" aria-label="Chiudi">&times;</button>
     </div>
     <div id="sheet-content" class="sheet-content"></div>
   </div>
@@ -431,7 +433,7 @@
 
     function renderFeed() {
       const activeList = state.showPrelude ? [...state.preEvents, ...state.events] : state.events;
-      const query = $('mobile-search').value.trim().lowerCase || $('mobile-search').value.trim().toLowerCase();
+      const query = $('mobile-search').value.trim().toLowerCase();
       const typeFilter = $('mobile-type').value;
       const certFilter = $('mobile-certainty').value;
 
@@ -441,7 +443,7 @@
           .toLowerCase()
           .includes(query);
         const matchesType = !typeFilter || (ev.tipo_di_fatto || []).includes(typeFilter);
-        const matchesCert = !certFilter || ev.stato_della_ricostruzione === certFilter;
+        const matchesCert = matchCertainty(ev.stato_della_ricostruzione, certFilter);
         return matchesQuery && matchesType && matchesCert;
       });
 
@@ -478,15 +480,13 @@
     }
 
     function openBottomSheet(ev) {
+      $('sheet-year').textContent = `Anno ${ev.anno}`;
+      
       const actors = (ev.responsabili_o_attori || []).map(a => `<li><strong>${escapeHtml(a.nome)}</strong>: ${escapeHtml(a.ruolo)}</li>`).join('');
       const links = Object.entries(ev.wikilinks || {}).map(([name, url]) => `<li><a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(name)}</a></li>`).join('');
       const fonti = (ev.fonti || []).map(f => `<li><a href="${escapeHtml(f.url || '#')}" target="_blank" rel="noreferrer">${escapeHtml(f.titolo)}</a> (${escapeHtml(f.tipo)})</li>`).join('');
 
       $('sheet-content').innerHTML = `
-        <div class="sheet-header">
-          <span class="sheet-year">Anno ${ev.anno}</span>
-          <button id="sheet-close-btn" class="sheet-close">&times;</button>
-        </div>
         <h2 class="sheet-title">${escapeHtml(ev.titolo)}</h2>
         <div class="sheet-status-box">${escapeHtml(ev.stato_della_ricostruzione || 'Stato della ricostruzione non indicato')}</div>
         <p class="sheet-text">${escapeHtml(ev.descrizione)}</p>
@@ -499,33 +499,53 @@
 
       $('sheet-overlay').classList.add('active');
       $('bottom-sheet').classList.add('active');
-
-      $('sheet-close-btn').addEventListener('click', closeBottomSheet);
+      document.body.style.overflow = 'hidden';
     }
 
     function closeBottomSheet() {
       $('sheet-overlay').classList.remove('active');
       $('bottom-sheet').classList.remove('active');
+      document.body.style.overflow = '';
     }
 
+    $('sheet-close-btn').addEventListener('click', closeBottomSheet);
     $('sheet-overlay').addEventListener('click', closeBottomSheet);
-    $('sheet-handle').addEventListener('click', closeBottomSheet);
+
+    function matchCertainty(eventStatus, filterValue) {
+      if (!filterValue) return true;
+      const s = (eventStatus || '').toLowerCase();
+      if (filterValue === 'documentato') return s.includes('documentat') || s.includes('cronologia') || s.includes('storic');
+      if (filterValue === 'giudiziario') return s.includes('giudiziar') || s.includes('sentenza') || s.includes('processo') || s.includes('parlamentar') || s.includes('accertat');
+      if (filterValue === 'controverso') return s.includes('controvers') || s.includes('ipotesi') || s.includes('discuss') || s.includes('presunt');
+      return true;
+    }
 
     function setupFilters() {
       const allEvents = [...state.preEvents, ...state.events];
       const types = new Set();
-      const certs = new Set();
 
       allEvents.forEach((ev) => {
         (ev.tipo_di_fatto || []).forEach(t => types.add(t));
-        if (ev.stato_della_ricostruzione) certs.add(ev.stato_della_ricostruzione);
       });
 
       const typeSelect = $('mobile-type');
       typeSelect.innerHTML = '<option value="">Tutti i tipi</option>' + [...types].map(t => `<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join('');
 
       const certSelect = $('mobile-certainty');
-      certSelect.innerHTML = '<option value="">Tutti gli stati</option>' + [...certs].map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
+      certSelect.innerHTML = `
+        <option value="">Tutti gli stati</option>
+        <option value="documentato">Fatto documentato</option>
+        <option value="giudiziario">Accertato (Sentenza / Atti)</option>
+        <option value="controverso">Controverso / Ipotesi</option>
+      `;
+    }
+
+    function loadData(data) {
+      state.preEvents = data.pre_eventi || [];
+      state.events = data.eventi || [];
+      $('loader').style.display = 'none';
+      setupFilters();
+      renderFeed();
     }
 
     function loadDataset(url) {
@@ -533,13 +553,7 @@
       $('mobile-feed').innerHTML = '';
       fetch(encodeURI(url))
         .then(res => res.json())
-        .then(data => {
-          state.preEvents = data.pre_eventi || [];
-          state.events = data.eventi || [];
-          $('loader').style.display = 'none';
-          setupFilters();
-          renderFeed();
-        })
+        .then(loadData)
         .catch(err => {
           console.error(err);
           $('loader').textContent = 'Errore nel caricamento del database.';
@@ -557,7 +571,14 @@
       renderFeed();
     });
 
-    // Auto discover JSON files from GitHub API
+    $('mobile-file-input').addEventListener('change', (event) => {
+      const file = event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => loadData(JSON.parse(reader.result));
+      reader.readAsText(file);
+    });
+
     function discoverDatasets() {
       const select = $('mobile-dataset');
       fetch('https://api.github.com/repos/Jasssbo/DemocrHistory/contents/data')
