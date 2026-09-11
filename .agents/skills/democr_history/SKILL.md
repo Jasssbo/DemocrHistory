@@ -62,7 +62,7 @@ Nell'analizzare e classificare gli eventi in `Italian DemocrHistory.json`, consi
 
 ## 4. Struttura del Database JSON
 
-Il file principale è **`Italian DemocrHistory.json`** nella radice del repository. Ha le seguenti sezioni di primo livello:
+Il file principale è **`data/Italian DemocrHistory.json`** nella cartella `data/` del repository. Ha le seguenti sezioni di primo livello:
 
 | Campo | Contenuto |
 |---|---|
