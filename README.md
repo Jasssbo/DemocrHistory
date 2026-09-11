@@ -1,311 +1,120 @@
-# Guida per creare una versione personale del JSON storico
+# DemocrHistory 🇮🇹📜
+### Archivio e Timeline Interattiva per la Storia della Repubblica Italiana
 
-Questo documento spiega come costruire una versione personale del database storico in modo coerente, leggibile e facili da aggiornare. L'obiettivo non e' inventare un archivio arbitrario, ma mantenere una struttura uniforme che possa essere usata da una timeline, da schede di dettaglio, da filtri e da mappe.
+**DemocrHistory** è un progetto **open source e divulgativo** nato per rendere accessibile, consultabile e partecipata la ricostruzione storiografica della storia della Repubblica Italiana — dal secondo dopoguerra agli anni 2000 — attraverso una timeline dinamica, filtri tematici e schede di approfondimento analitico.
 
-## 1. Principio generale
+---
 
-Il JSON deve descrivere eventi storici come unità autonome, ordinate cronologicamente e annotate con lo stesso livello di precisione. Ogni evento deve essere comprensibile anche senza dover leggere il resto del file.
+## 💡 La Missione: Divulgazione e Valorizzazione delle Fonti
 
-Le regole chiave sono:
+Questo progetto **non nasce per sostituirsi agli archivi esistenti**, ma al contrario per **dare massima visibilità, modernità espositiva e fruibilità digitale** all'immenso patrimonio informativo raccolto da ricercatori, storici e progetti indipendenti nel corso dei decenni.
 
-- ogni evento ha un identificatore stabile;
-- il titolo e la descrizione devono essere chiari e neutrali;
-- data, luogo, attori, classificazione e stato della ricostruzione sono separati;
-- le interpretazioni e le accuse non devono essere presentate come fatti accertati;
-- i collegamenti tra eventi devono usare riferimenti espliciti, non solo testo libero.
+In particolare, il database di DemocrHistory è stato arricchito ed è debitamente debitore del lavoro straordinario svolto da **Strano Network** con il loro storico archivio digitale:
 
-## 2. Struttura del file
+> 🔗 **Fonte di riferimento essenziale**: [Strano Network - Cronologia delle Stragi (1942-2002)](https://www.strano.net/stragi/stragi/crono/indcro.htm)  
+> Visita il progetto originale e la loro bibliografia su [strano.net](https://www.strano.net/).
 
-Il file principale contiene una struttura a più livelli:
+L'obiettivo di DemocrHistory è permettere a studenti, cittadini e ricercatori di esplorare questi fatti storici con strumenti web moderni (timeline interattiva, filtri per stato della ricostruzione, attori, entità e dispositivi mobili).
+
+---
+
+## 👐 Progetto Open Source e Partecipato
+
+DemocrHistory è un **progetto aperto a tutti**. La struttura dei dati è concepita per essere semplice, trasparentemente verificabile e modificabile a mano senza sovrastrutture complesse.
+
+### Come contribuire:
+
+1. **Aggiungere o correggere eventi via GitHub (Pull Request)**:
+   - I file dei dati risiedono nella cartella [`data/`](file:///home/mintmzu/MyRepos/DemocrHistory/data/) (es. `data/Italian DemocrHistory.json`).
+   - Puoi modificare un file JSON esistente o aggiungerne uno nuovo nella cartella `data/` ed aprire una **Pull Request**. Quando approvata, la tua integrazione apparirà automaticamente sul sito!
+2. **Caricamento locale nell'interfaccia**:
+   - Puoi caricare ed esplorare un tuo file JSON personale direttamente nell'interfaccia web (tramite il pulsante *"📂 Carica JSON"*), senza bisogno di effettuare commit.
+
+---
+
+## 📱 Interfaccia Web Responsive (Desktop & Mobile)
+
+L'applicazione web è progettata per essere utilizzata con la massima fluidità su qualsiasi dispositivo:
+- **Vista Desktop (`index.html`)**: Layout a colonne con timeline principale, dettagli affiancati e filtri avanzati.
+- **Vista Mobile (`mobile.html`)**: Interfaccia *mobile-first* per smartphone con scheda di approfondimento in sovrapposizione (*modal sheet*) e navigazione ottimizzata al tocco.
+
+---
+
+## 📐 Struttura del Database JSON
+
+Tutti i file JSON posizionati in `data/` seguono uno schema rigoroso per garantire uniformità e compatibilità.
+
+### Schema di un evento standard:
 
 ```json
 {
-  "titolo": "",
-  "lingua": "it",
-  "natura_del_documento": "",
-  "nota_metodologica": "",
-  "specifica_database": {
-    "unita_principale": "evento_storico",
-    "principi": [],
-    "campi_evento": {},
-    "viste_gui_consigliate": []
+  "anno": 1969,
+  "titolo": "Strage di Piazza Fontana",
+  "data": {
+    "inizio": "1969-12-12",
+    "fine": "1969-12-12",
+    "precisione": "giorno"
   },
-  "distinzioni_utili_per_descrivere_i_documenti": {
-    "periodo": "",
-    "tipo_di_fatto": [],
-    "scala": [],
-    "attori": [],
-    "ruolo_degli_attori": [],
-    "stato_della_ricostruzione": [],
-    "relazioni": []
+  "luogo": {
+    "nome": "Milano",
+    "paese": "Italia"
   },
-  "attori_e_sigle": {
-    "partiti_e_movimenti": [],
-    "istituzioni_e_servizi": [],
-    "organizzazioni_e_reti": [],
-    "persone_citate": []
+  "descrizione": "Una bomba esplode nella sede della Banca Nazionale dell'Agricoltura a Piazza Fontana a Milano, provocando 17 morti e oltre 80 feriti.",
+  "dati_concreti": [
+    "Attentato del 12 dicembre 1969 a Milano.",
+    "Ritenuto l'evento d'inizio della strategia della tensione in Italia."
+  ],
+  "responsabili_o_attori": [
+    { "nome": "Ordine Nuovo", "ruolo": "gruppo eversivo della destra radicale" },
+    { "nome": "Franco Freda", "ruolo": "esponente di Ordine Nuovo" }
+  ],
+  "entita_coinvolte": ["Banca Nazionale dell'Agricoltura", "Ordine Nuovo", "Polizia di Stato"],
+  "tipo_di_fatto": [
+    "violenza politica o strage",
+    "servizi segreti e apparati dello Stato"
+  ],
+  "scala": "nazionale",
+  "stato_della_ricostruzione": "fatto documentato ed accertato in sede giudiziaria e parlamentare",
+  "wikilinks": {
+    "Strage_di_Piazza_Fontana": "https://it.wikipedia.org/wiki/Strage_di_Piazza_Fontana"
   },
-  "eventi": [
+  "fonti": [
     {
-      "anno": 0,
-      "titolo": "",
-      "data": {
-        "inizio": "AAAA-MM-GG",
-        "fine": "AAAA-MM-GG",
-        "precisione": "anno"
-      },
-      "luogo": {
-        "nome": "",
-        "paese": "",
-        "coordinate": null
-      },
-      "descrizione": "",
-      "dati_concreti": [],
-      "responsabili_o_attori": [
-        {
-          "nome": "",
-          "ruolo": ""
-        }
-      ],
-      "entita_coinvolte": [],
-      "tipo_di_fatto": [],
-      "scala": "",
-      "stato_della_ricostruzione": "",
-      "wikilinks": {},
-      "fonti": []
+      "tipo": "voce di sintesi",
+      "titolo": "Strano Network - Cronologia delle stragi (1969)",
+      "url": "https://www.strano.net/stragi/stragi/crono/crono69.htm"
     }
   ]
 }
 ```
 
-## 3. Separazione tra pre-eventi ed eventi
+### Vocabolario Controllato Ufficiale:
 
-Il file distingue due raccolte cronologiche:
+Per garantire la massima pulizia del database, sono ammessi esclusivamente i seguenti valori per i campi di classificazione:
 
-- `pre_eventi`: eventi anteriori al 1943, mostrati dall'interfaccia solo quando si apre la tendina "Prima del 1943";
-- `eventi`: eventi dal 1943 in poi, mostrati normalmente nella timeline principale.
+#### `tipo_di_fatto` (Ammessi):
+- `"politico-istituzionale"`
+- `"sociale-economico"`
+- `"violenza politica o strage"`
+- `"servizi segreti e apparati dello Stato"`
+- `"mafia e criminalita organizzata"`
+- `"massoneria e rapporti con la Chiesa"`
+- `"politica internazionale e Guerra fredda"`
+- `"inchiesta giudiziaria o parlamentare"`
+- `"cultura e societa civile"`
 
-Quando aggiungi un record, inseriscilo in `pre_eventi` se l'anno principale e precedente al 1943; per il 1943 e gli anni successivi usa `eventi`. Mantieni in entrambe le raccolte lo stesso formato dei campi e l'ordine cronologico.
+#### `scala` (Ammessi):
+- `"locale"`, `"nazionale"`, `"internazionale"`
 
-## 4. Ordine delle informazioni dentro ogni evento
+#### `data.precisione` (Ammessi):
+- `"giorno"`, `"mese"`, `"anno"`, `"intervallo"`
 
-Per evitare confusione e garantire compatibilità con filtri e viste grafiche, seguire lo stesso ordine di campi per tutti gli eventi. L'ordine consigliato e':
+#### `fonti[].tipo` (Ammessi):
+- `"voce di sintesi"`, `"monografia"`, `"relazione parlamentare"`, `"enciclopedia"`, `"atti giudiziari"`
 
-1. `anno`
-2. `titolo`
-3. `data`
-4. `luogo`
-5. `descrizione`
-6. `dati_concreti`
-7. `responsabili_o_attori`
-8. `entita_coinvolte`
-9. `tipo_di_fatto`
-10. `scala`
-11. `stato_della_ricostruzione`
-12. `wikilinks`
-13. `fonti`
+---
 
-Questo ordine rende il file più facile da leggere a colpo d'occhio e aiuta le interfacce a mostrare in modo naturale la timeline, la scheda dell'evento e i filtri.
+## 📜 Licenza e Crediti
 
-## 5. Criteri per i campi principali
-
-### 5.1 `anno` e `data`
-
-- `anno` e il riferimento rapido per ordinare la timeline.
-- `data.inizio` e `data.fine` vanno usati solo quando si hanno date precise o un intervallo noto.
-- `precisione` deve indicare il livello di certezza:
-  - `giorno`
-  - `mese`
-  - `anno`
-  - `intervallo`
-
-Esempio:
-
-```json
-"data": {
-  "inizio": "1943-09-03",
-  "fine": "1943-09-08",
-  "precisione": "giorno"
-}
-```
-
-Se l'evento e molto generico, usare un anno e lasciare `inizio` e `fine` come `null` oppure come anno completo, ma mantenere la precisione coerente.
-
-### 5.2 `titolo` e `descrizione`
-
-- `titolo` deve essere breve, chiaro e identificabile in una timeline.
-- `descrizione` deve essere un riassunto neutro, senza opinioni personali.
-- Evitare formule troppo lunghe e troppo interpretative.
-
-### 5.3 `luogo`
-
-Il campo `luogo` va scritto in modo strutturato:
-
-```json
-"luogo": {
-  "nome": "Roma",
-  "paese": "Italia",
-  "coordinate": null
-}
-```
-
-- `nome` e il nome leggibile del luogo;
-- `paese` indica l'area storica o il contesto politico;
-- `coordinate` e opzionale e va usato solo se realmente si hanno dati geografici affidabili.
-
-### 5.4 `responsabili_o_attori` e `entita_coinvolte`
-
-Gli attori vanno registrati come oggetti con nome e ruolo, non come stringhe libere.
-
-```json
-"responsabili_o_attori": [
-  { "nome": "Pietro Badoglio", "ruolo": "attore istituzionale" },
-  { "nome": "Governo italiano", "ruolo": "istituzione coinvolta" }
-]
-```
-
-`entita_coinvolte` invece e una lista semplificata di nomi, utile per filtri e ricerche veloci.
-
-### 5.5 `tipo_di_fatto` e `scala`
-
-`tipo_di_fatto` deve usare una tassonomia costante. Ad esempio:
-
-- `politico-istituzionale`
-- `sociale-economico`
-- `violenza politica o strage`
-- `servizi segreti e apparati dello Stato`
-- `mafia e criminalita organizzata`
-- `massoneria e rapporti con la Chiesa`
-- `politica internazionale e Guerra fredda`
-- `inchiesta giudiziaria o parlamentare`
-- `cultura e societa civile`
-
-`scala` invece deve essere una tra:
-
-- `locale`
-- `nazionale`
-- `internazionale`
-
-### 5.6 `stato_della_ricostruzione`
-
-Questo campo e fondamentale. Serve a distinguere fatti documentati da interpretazioni, accuse o ipotesi. Un buon valore deve evidenziare il grado di certezza senza trasformare un'ipotesi in un fatto stabilito.
-
-Valori consigliati:
-
-- `evento documentato`
-- `tesi storica da verificare`
-- `responsabilita controversa`
-- `informazione incompleta`
-- `sintesi interpretativa`
-
-### 5.7 `dati_concreti` e `fonti`
-
-`dati_concreti` contiene fatti verificabili o frasi dettagliate che supportano la voce. `fonti` deve contenere le fonti documentarie o storiografiche in modo strutturato, separate dai collegamenti informativi.
-
-Le fonti non devono essere confuse con i `wikilinks`, che servono solo come introduzione e non come prova.
-
-### 5.8 `wikilinks`
-
-`wikilinks` e un oggetto di collegamenti utili, con etichetta e URL. Esempio:
-
-```json
-"wikilinks": {
-  "Massoneria": "https://it.wikipedia.org/wiki/Massoneria",
-  "Napoleone": "https://it.wikipedia.org/wiki/Napoleone_Bonaparte"
-}
-```
-
-Questi link devono essere introduttivi e non sostituire le fonti principali.
-
-## 6. Criteri di qualità del contenuto
-
-Per creare una versione personale, rispettare queste regole:
-
-1. Mantieni un linguaggio neutro e storico.
-2. Separare fatti, interpretazioni e accuse.
-3. Non inventare attori, date o collegamenti se non sono supportati.
-4. Usa sempre la stessa terminologia per tipi di fatto, attori e gradi di certezza.
-5. Mantieni una cronologia coerente, cioe gli eventi vanno ordinati per anno e, quando possibile, per data di inizio.
-6. Non mescolare elementi di livello diverso nello stesso campo.
-7. Se un evento e controverso, lo si marca esplicitamente nello stato della ricostruzione.
-
-## 7. Come creare una versione personale
-
-### Passo 1: copiare la struttura di base
-
-Copia la struttura del file principale e mantieni identici i nodi principali:
-
-- `titolo`
-- `lingua`
-- `natura_del_documento`
-- `nota_metodologica`
-- `specifica_database`
-- `distinzioni_utili_per_descrivere_i_documenti`
-- `attori_e_sigle`
-- `eventi`
-
-### Passo 2: personalizzare il contenuto
-
-Decidi quali eventi vuoi includere, aggiungere o rimuovere. La chiave e' mantenere la stessa logica di classificazione e la stessa struttura del record.
-
-### Passo 3: preservare la coerenza dei vocaboli
-
-Se usi un nuovo tipo di fatto, aggiungilo anche in `distinzioni_utili_per_descrivere_i_documenti.tipo_di_fatto` e usa lo stesso nome in tutti gli eventi.
-
-### Passo 4: mantenere l'ordine cronologico
-
-La lista `eventi` deve essere ordinata in senso cronologico, dal piu' antico al piu' recente. Se un evento non ha data certa, va inserito con la precisione piu' bassa possibile e marcato nel campo `stato_della_ricostruzione`.
-
-### Passo 5: verificare la leggibilita'
-
-Prima di salvare il file, controlla che:
-
-- ogni evento abbia titolo, anno e descrizione;
-- ogni attore abbia un ruolo;
-- i tipi di fatto siano sempre usati nello stesso modo;
-- la struttura dei campi rimanga costante.
-
-## 7. Esempio di evento ben costruito
-
-```json
-{
-  "anno": 1945,
-  "titolo": "Fine dell'OSS",
-  "data": {
-    "inizio": "1945-09-20",
-    "fine": "1945-09-20",
-    "precisione": "giorno"
-  },
-  "luogo": {
-    "nome": "Stati Uniti",
-    "paese": "USA",
-    "coordinate": null
-  },
-  "descrizione": "L'Office of Strategic Services fu sciolto il 20 settembre 1945.",
-  "dati_concreti": [
-    "Scioglimento dell'OSS: 20 settembre 1945.",
-    "La CIA fu istituita nel 1947."
-  ],
-  "responsabili_o_attori": [
-    { "nome": "OSS", "ruolo": "organizzazione sciolta" },
-    { "nome": "CIA", "ruolo": "organizzazione successiva" }
-  ],
-  "entita_coinvolte": ["USA", "OSS", "CIA"],
-  "tipo_di_fatto": [
-    "servizi segreti e apparati dello Stato",
-    "politica internazionale e Guerra fredda"
-  ],
-  "scala": "internazionale",
-  "stato_della_ricostruzione": "evento documentato",
-  "wikilinks": {
-    "OSS": "https://it.wikipedia.org/wiki/Office_of_Strategic_Services"
-  },
-  "fonti": []
-}
-```
-
-## 8. Regola pratica finale
-
-Se vuoi creare una versione personale, non partire da zero con categorie libere. Parti dalla struttura esistente, mantieni lo stesso ordine, gli stessi nomi e la stessa logica di classificazione, poi sostituisci i contenuti con i tuoi eventi, attori e documenti.
-
-In questo modo il JSON resta leggibile, comparabile e facilmente integrabile con una UI come timeline, scheda dettagliata, filtro e mappa.
+- **Licenza**: Progetto distribuito sotto licenza Open Source.
+- **Ringraziamenti speciali**: A tutti i ricercatori, archivi indipendenti e in particolare a **Strano Network** per la loro preziosa opera di storiografia e documentazione digitale.
