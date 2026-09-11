@@ -63,20 +63,25 @@
 	"eventi": [
 		{
 			"anno": 1805,
-			"titolo": "Diffusione della massoneria in Italia",
-			"data": {"inizio": "1805-01-01", "fine": "1805-12-31", "precisione": "anno"},
-			"luogo": {"nome": "Regno d'Italia napoleonico", "paese": "Italia"},
-			"descrizione": "Secondo la tavola, Napoleone porta la massoneria in Italia tramite le repubbliche italiane.",
-			"dati_concreti": ["La massoneria era gia presente in diversi Stati italiani prima dell'eta napoleonica.", "Durante il periodo napoleonico le logge furono riorganizzate e sottoposte a forme di controllo politico-amministrativo.", "Non e corretto attribuire a un solo anno o alla sola persona di Napoleone la nascita della massoneria italiana."],
-			"responsabili_o_attori": [{"nome": "Napoleone", "ruolo": "promotore indicato dalla fonte"}],
-			"entita_coinvolte": ["repubbliche italiane", "massoneria"],
+			"titolo": "Riorganizzazione napoleonica della massoneria e fondazione del Grande Oriente d'Italia",
+			"data": {"inizio": "1805-03-16", "fine": "1805-06-20", "precisione": "giorno"},
+			"luogo": {"nome": "Milano e Regno d'Italia napoleonico", "paese": "Italia"},
+			"descrizione": "Nel 1805, nel contesto del Regno d'Italia napoleonico, fu istituito a Milano il Supremo Consiglio d'Italia del Rito scozzese antico e accettato e il 20 giugno venne costituito il Grande Oriente d'Italia. L'organizzazione massonica italiana non nacque allora: logge erano documentate nella penisola già dal Settecento. L'eta napoleonica ne favori però la riorganizzazione in forme legate alle istituzioni del nuovo regime.",
+			"dati_concreti": ["La presenza di logge massoniche in territori italiani e documentata almeno dal XVIII secolo, con una loggia a Napoli nel 1728 e altre esperienze in diversi Stati italiani.", "Il Supremo Consiglio d'Italia del Rito scozzese antico e accettato fu istituito il 16 marzo 1805.", "Il Grande Oriente d'Italia fu costituito ritualmente a Milano il 20 giugno 1805.", "Eugenio di Beauharnais fu indicato come Sovrano Gran Commendatore e Gioacchino Murat come Gran Cancelliere nella struttura del 1805.", "Il rapporto diretto tra Napoleone e la fondazione dell'organizzazione va descritto come contesto politico e influenza del regime, non come fondazione personale documentata da questo evento."],
+			"responsabili_o_attori": [{"nome": "Napoleone", "ruolo": "capo politico del sistema imperiale nel cui contesto avvenne la riorganizzazione"}, {"nome": "Eugenio di Beauharnais", "ruolo": "Sovrano Gran Commendatore indicato nella struttura del 1805"}, {"nome": "Gioacchino Murat", "ruolo": "Gran Cancelliere indicato nella struttura del 1805"}, {"nome": "Alexandre François Auguste de Grasse Tilly", "ruolo": "fondatore del Supremo Consiglio d'Italia del Rito scozzese antico e accettato"}, {"nome": "Gian Domenico Romagnosi", "ruolo": "Grande Esperto nell'atto di costituzione indicato"}],
+			"entita_coinvolte": ["Regno d'Italia napoleonico", "Supremo Consiglio d'Italia del Rito scozzese antico e accettato", "Grande Oriente d'Italia", "massoneria"],
 			"tipo_di_fatto": ["politico-istituzionale", "massoneria"],
 			"scala": "nazionale",
-			"stato_della_ricostruzione": "tesi storica da verificare",
+			"stato_della_ricostruzione": "evento documentato; ruolo personale di Napoleone da non sovrastimare",
 			"wikilinks": {
 				"Massoneria": "https://it.wikipedia.org/wiki/Massoneria",
-				"Napoleone": "https://it.wikipedia.org/wiki/Napoleone_Bonaparte"
-			}
+				"Napoleone": "https://it.wikipedia.org/wiki/Napoleone_Bonaparte",
+				"Massoneria_in_Italia": "https://it.wikipedia.org/wiki/Massoneria_in_Italia",
+				"Grande_Oriente_d_Italia": "https://it.wikipedia.org/wiki/Grande_Oriente_d%27Italia",
+				"Eugenio_di_Beauharnais": "https://it.wikipedia.org/wiki/Eugenio_di_Beauharnais",
+				"Gioacchino_Murat": "https://it.wikipedia.org/wiki/Gioacchino_Murat"
+			},
+			"fonti": [{"tipo": "enciclopedia", "titolo": "Massoneria", "autore": "Alberto Maria Ghisalberti", "editore": "Treccani", "url": "https://www.treccani.it/enciclopedia/massoneria_(Enciclopedia-Italiana)/"}, {"tipo": "voce di sintesi", "titolo": "Massoneria in Italia", "url": "https://it.wikipedia.org/wiki/Massoneria_in_Italia"}]
 		},
 		{
 			"anno": 1911,
@@ -356,6 +361,27 @@
 			"wikilinks": {
 				"SIFAR": "https://it.wikipedia.org/wiki/SIFAR",
 				"Quirinale": "https://it.wikipedia.org/wiki/Palazzo_del_Quirinale"
+			}
+		},
+		{
+			"anno": 1964,
+			"titolo": "Crisi della lira e riequilibrio economico",
+			"data": {"inizio": "1963-01-01", "fine": "1964-12-31", "precisione": "intervallo"},
+			"luogo": {"nome": "Italia", "paese": "Repubblica Italiana"},
+			"descrizione": "Tra il 1963 e il 1964 l'Italia affronto una crisi della bilancia dei pagamenti e pressioni sulla lira, dopo la forte crescita dei consumi, degli investimenti e dei salari durante il miracolo economico. Il deflusso di capitali e il peggioramento dei conti con l'estero spinsero il Governo e la Banca d'Italia verso misure restrittive e di riequilibrio, contribuendo al rallentamento dell'economia.",
+			"dati_concreti": ["Nel 1963 il saldo dei pagamenti con l'estero peggioro e le riserve valutarie furono sottoposte a pressione.", "La crisi fu affrontata con una stretta monetaria e creditizia, il contenimento della domanda interna e misure volte a sostenere la stabilita della lira.", "Nel 1964 la crescita rallento rispetto agli anni precedenti e la bilancia dei pagamenti torno verso il riequilibrio.", "La crisi non coincise con una svalutazione ufficiale della lira: il cambio della moneta rimase formalmente invariato."],
+			"responsabili_o_attori": [{"nome": "Amintore Fanfani", "ruolo": "presidente del Consiglio nella fase iniziale della crisi del 1963"}, {"nome": "Giovanni Leone", "ruolo": "presidente del Consiglio nella fase transitoria del 1963"}, {"nome": "Aldo Moro", "ruolo": "presidente del Consiglio durante la seconda fase della crisi"}, {"nome": "Emilio Colombo", "ruolo": "ministro del Tesoro dal 1963 e responsabile della politica finanziaria"}, {"nome": "Antonio Giolitti", "ruolo": "ministro del Bilancio e della programmazione economica nel governo Moro I"}, {"nome": "Antonio Segni", "ruolo": "presidente della Repubblica nel periodo della crisi"}, {"nome": "Guido Carli", "ruolo": "governatore della Banca d'Italia e negoziatore dei finanziamenti esterni"}, {"nome": "Paolo Baffi", "ruolo": "direttore generale della Banca d'Italia nella fase iniziale"}],
+			"entita_coinvolte": ["Banca d'Italia", "Governo", "Ministero del Tesoro", "Ministero del Bilancio", "lira italiana", "bilancia dei pagamenti"],
+			"tipo_di_fatto": ["sociale-economico", "politico-istituzionale"],
+			"scala": "nazionale",
+			"stato_della_ricostruzione": "evento documentato; cause e peso delle singole misure sono oggetto di interpretazione economica",
+			"wikilinks": {
+				"Crisi_della_lira_del_1963-1964": "https://it.wikipedia.org/wiki/Crisi_della_lira_del_1963-1964",
+				"Banca_d_Italia": "https://it.wikipedia.org/wiki/Banca_d%27Italia",
+				"Miracolo_economico_italiano": "https://it.wikipedia.org/wiki/Miracolo_economico_italiano",
+				"Aldo_Moro": "https://it.wikipedia.org/wiki/Aldo_Moro",
+				"Emilio_Colombo": "https://it.wikipedia.org/wiki/Emilio_Colombo",
+				"Guido_Carli": "https://it.wikipedia.org/wiki/Guido_Carli"
 			}
 		},
 		{
