@@ -56,9 +56,9 @@
 	},
 	"attori_e_sigle": {
 		"partiti_e_movimenti": ["PCI", "DC", "PSI", "Partito Popolare Italiano", "Potere Operaio", "Brigate Rosse", "Fronte Nazionale", "Avanguardia Nazionale", "GAP di Feltrinelli"],
-		"istituzioni_e_servizi": ["Stato italiano", "Governo", "Parlamento", "Carabinieri", "SIFAR", "SID", "OSS", "CIA", "Servizi segreti italiani", "Santa Sede", "NATO"],
+		"istituzioni_e_servizi": ["Stato italiano", "Governo", "Parlamento", "Carabinieri", "SIFAR", "SID", "OSS", "AMGOT", "CIA", "Servizi segreti italiani", "Santa Sede", "NATO"],
 		"organizzazioni_e_reti": ["Grande Oriente d'Italia", "massoneria", "mafia", "X MAS", "Ordine Nuovo", "Stay Behind-Gladio", "Operazione Underworld"],
-		"persone_citate": ["Napoleone", "Alcide De Gasperi", "Giovanni De Lorenzo", "Antonio Segni", "Enrico Mattei", "Eugenio Cefis", "Giordano Gamberini", "Licio Gelli", "Junio Valerio Borghese", "Gianadelio Maletti", "Guido Giannettini", "Remo Orlandini", "Vincenzo Vinciguerra", "Giangiacomo Feltrinelli", "Aldo Moro", "Corrado Simioni", "Pier Paolo Pasolini", "Mauro De Mauro", "Salvatore Giuliano"]
+		"persone_citate": ["Napoleone", "Alcide De Gasperi", "Giovanni De Lorenzo", "Antonio Segni", "Enrico Mattei", "Eugenio Cefis", "Giordano Gamberini", "Licio Gelli", "Junio Valerio Borghese", "Gianadelio Maletti", "Guido Giannettini", "Remo Orlandini", "Vincenzo Vinciguerra", "Giangiacomo Feltrinelli", "Aldo Moro", "Corrado Simioni", "Pier Paolo Pasolini", "Mauro De Mauro", "Salvatore Giuliano", "Max Corvo", "Earl Brennan", "Charles Poletti", "Calogero Vizzini", "Giuseppe Genco Russo"]
 	},
 	"struttura_cronologica": {
 		"pre_eventi": "eventi anteriori al 1943; vengono mostrati nella timeline solo quando l'utente apre la tendina Prima del 1943",
@@ -164,6 +164,29 @@
 	],
 	"eventi": [
 		{
+			"anno": 1942,
+			"titolo": "Operazione Underworld: cooperazione tra intelligence navale e criminalita organizzata",
+			"data": {"inizio": "1942-01-01", "fine": "1945-09-02", "precisione": "intervallo"},
+			"luogo": {"nome": "Porti della costa nord-orientale degli Stati Uniti", "paese": "USA"},
+			"descrizione": "Operation Underworld fu il nome attribuito alla cooperazione avviata durante la Seconda guerra mondiale tra autorita statunitensi, in particolare l'Office of Naval Intelligence, e alcune figure della criminalita organizzata italo-americana ed ebraico-americana. L'obiettivo era rafforzare la sicurezza del waterfront, raccogliere informazioni su possibili sabotatori o spie dell'Asse, ridurre i rischi di scioperi e limitare furti e mercato nero nei porti strategici. Il collegamento con l'Italia passa per il diverso teatro OSS-AMGOT in Sicilia: stesso contesto bellico e possibili continuita di reti, ma non la stessa operazione.",
+			"dati_concreti": ["Nel 1942 il comandante Charles R. Haffenden dell'Office of Naval Intelligence nel Terzo Distretto Navale di New York costituì un'unita speciale per la sicurezza del waterfront.", "Joseph Lanza, legato al Fulton Fish Market, fu utilizzato per ottenere informazioni sull'ambiente portuale, sui sindacati e sulle attivita sospette.", "Meyer Lansky fece da intermediario per raggiungere Lucky Luciano, allora detenuto nello Stato di New York.", "La collaborazione con Luciano fu associata a informazioni e contatti nel porto; non è dimostrato che abbia personalmente fermato sabotaggi specifici.", "La commutazione della pena di Luciano nel 1946 e la sua deportazione in Italia furono successive all'operazione e non provano da sole la natura o l'ampiezza dell'accordo.", "Il presunto sabotaggio della nave Normandie nel porto di New York non è una prova accertata dell'azione mafiosa: le ricostruzioni disponibili lo considerano con ogni probabilita un incidente.", "Un collegamento con l'Italia esiste nello stesso contesto bellico attraverso le successive attività dell'OSS e dell'AMGOT in Sicilia, ma queste furono strutture e operazioni distinte da Underworld."],
+			"responsabili_o_attori": [{"nome": "Charles R. Haffenden", "ruolo": "comandante dell'Office of Naval Intelligence coinvolto nell'unita di sicurezza del waterfront"}, {"nome": "Joseph Lanza", "ruolo": "intermediario del Fulton Fish Market e fonte di informazioni sul porto"}, {"nome": "Meyer Lansky", "ruolo": "intermediario tra autorita e ambienti criminali"}, {"nome": "Lucky Luciano", "ruolo": "detenuto e figura della criminalita organizzata contattata per la cooperazione"}, {"nome": "Office of Naval Intelligence", "ruolo": "servizio informativo navale statunitense coinvolto"}, {"nome": "autorita portuali e sindacati", "ruolo": "soggetti interessati dalle misure di sicurezza e controllo del lavoro portuale"}],
+			"entita_coinvolte": ["criminalita organizzata italo-americana", "criminalita organizzata ebraico-americana", "Office of Naval Intelligence", "Marina degli Stati Uniti", "porti della costa atlantica", "sindacati portuali"],
+			"tipo_di_fatto": ["mafia e criminalita organizzata", "servizi segreti e apparati dello Stato", "politica internazionale e Guerra fredda"],
+			"scala": "internazionale",
+			"stato_della_ricostruzione": "cooperazione documentata; efficacia operativa e singoli episodi restano discussi",
+			"wikilinks": {
+				"Lucky_Luciano": "https://it.wikipedia.org/wiki/Lucky_Luciano",
+				"Meyer_Lansky": "https://it.wikipedia.org/wiki/Meyer_Lansky",
+				"Joseph_Lanza": "https://it.wikipedia.org/wiki/Joseph_Lanza",
+				"Office_of_Naval_Intelligence": "https://it.wikipedia.org/wiki/Office_of_Naval_Intelligence",
+				"Operazione_Underworld": "https://it.wikipedia.org/wiki/Operazione_Underworld",
+				"OSS": "https://it.wikipedia.org/wiki/Office_of_Strategic_Services",
+				"AMGOT": "https://it.wikipedia.org/wiki/Governo_militare_alleato_dei_territori_occupati"
+			},
+			"fonti": [{"tipo": "monografia", "titolo": "The Luciano Project: The Secret Wartime Collaboration of the Mafia and the U.S. Navy", "autore": "Rodney Campbell", "editore": "McGraw-Hill", "anno": 1977}, {"tipo": "monografia", "titolo": "Mafia Allies. The True Story of America's Secret Alliance with the Mob in World War II", "autore": "Tim Newark", "editore": "Zenith Press", "anno": 2007}, {"tipo": "voce di sintesi", "titolo": "Operazione Underworld", "url": "https://it.wikipedia.org/wiki/Operazione_Underworld"}]
+		},
+		{
 			"anno": 1943,
 			"titolo": "Armistizio Italia-USA e riorganizzazione politica",
 			"data": {"inizio": "1943-09-03", "fine": "1943-09-08", "precisione": "giorno"},
@@ -181,23 +204,45 @@
 			}
 		},
 		{
-			"anno": 1944,
-			"titolo": "Operazione Underworld e rientro dei massoni a Palazzo Giustiniani",
-			"data": {"inizio": "1942-01-01", "fine": "1945-09-02", "precisione": "intervallo"},
-			"luogo": {"nome": "Stati Uniti e Italia meridionale", "paese": "USA e Italia"},
-			"descrizione": "La fonte collega l'Operazione Underworld a Lucky Luciano, Calogero Vizzini e all'OSS; indica inoltre il ritorno dei massoni a Palazzo Giustiniani e i legami con il Senato.",
-			"dati_concreti": ["Operation Underworld fu il nome attribuito alla collaborazione tra autorita navali statunitensi, ambienti portuali e criminalita organizzata per la sicurezza dei porti durante la Seconda guerra mondiale.", "Lucky Luciano fu scarcerato nel 1946 e deportato in Italia: questo dato non dimostra da solo un accordo operativo con l'OSS.", "Il collegamento diretto tra Operation Underworld, il ritorno del GOI a Palazzo Giustiniani e il Senato richiede fonti specifiche e non e un fatto automaticamente dimostrato."],
-			"responsabili_o_attori": [{"nome": "Lucky Luciano", "ruolo": "attore criminale indicato"}, {"nome": "Calogero Vizzini", "ruolo": "attore mafioso indicato"}, {"nome": "OSS", "ruolo": "servizio coinvolto secondo la tavola"}],
-			"entita_coinvolte": ["mafia", "OSS", "USA", "Grande Oriente d'Italia", "Senato"],
-			"tipo_di_fatto": ["mafia e criminalita organizzata", "servizi segreti e apparati dello Stato", "massoneria"],
+			"anno": 1943,
+			"titolo": "OSS, AMGOT e riorganizzazione del potere in Sicilia",
+			"data": {"inizio": "1943-07-22", "fine": "1944-03-01", "precisione": "intervallo"},
+			"luogo": {"nome": "Sicilia e Villalba", "paese": "Italia"},
+			"descrizione": "Dopo lo sbarco alleato in Sicilia, l'OSS raccolse informazioni e l'AMGOT amministrò temporaneamente il territorio occupato. Nel vuoto istituzionale creato dalla caduta del fascismo, alcuni esponenti mafiosi locali recuperarono influenza e furono utilizzati o riconosciuti come interlocutori dalle autorità alleate. Il caso di Calogero Vizzini mostra questo intreccio locale, ma non dimostra che la mafia siciliana abbia organizzato lo sbarco o che esistesse un accordo generale con Lucky Luciano.",
+			"dati_concreti": ["La Sicilia fu il primo territorio italiano amministrato dall'AMGOT dopo la resa di Palermo del 22 luglio 1943.", "L'OSS istituì una Sezione Italia per raccogliere informazioni sulle difese, sul territorio e sugli ambienti politici italiani.", "Charles Poletti ebbe un ruolo negli affari civili dell'amministrazione militare alleata in Sicilia.", "Calogero Vizzini fu insediato come sindaco di Villalba durante la fase AMGOT e risulta indicato da alcune ricostruzioni come informatore OSS con il nome in codice Bull Frog.", "Le storie sul reclutamento di Vizzini e Genco Russo da parte di Lucky Luciano per preparare lo sbarco sono controverse e non provano un accordo operativo generale.", "Il ritorno della mafia nella vita politica ed economica siciliana va collegato anche alla continuita delle reti locali, al vuoto di potere e al mercato nero, non soltanto a un intervento americano."],
+			"responsabili_o_attori": [{"nome": "Office of Strategic Services", "ruolo": "raccolta informativa e collegamento con reti locali"}, {"nome": "AMGOT", "ruolo": "amministrazione militare alleata della Sicilia occupata"}, {"nome": "Max Corvo", "ruolo": "responsabile della Sezione Italia dell'OSS"}, {"nome": "Earl Brennan", "ruolo": "organizzatore della rete informativa italiana dell'OSS"}, {"nome": "Charles Poletti", "ruolo": "responsabile degli affari civili nell'amministrazione alleata"}, {"nome": "Calogero Vizzini", "ruolo": "figura mafiosa locale e interlocutore/informatore indicato nella fase AMGOT"}, {"nome": "Giuseppe Genco Russo", "ruolo": "esponente mafioso siciliano citato nelle ricostruzioni controverse"}],
+			"entita_coinvolte": ["OSS", "AMGOT", "USA", "Regno Unito", "Cosa nostra siciliana", "amministrazioni locali siciliane", "Movimento per l'Indipendenza della Sicilia"],
+			"tipo_di_fatto": ["servizi segreti e apparati dello Stato", "mafia e criminalita organizzata", "politico-istituzionale", "politica internazionale e Guerra fredda"],
 			"scala": "internazionale",
-			"stato_della_ricostruzione": "tesi riportata; da verificare",
+			"stato_della_ricostruzione": "amministrazione alleata documentata; nessi operativi tra mafia, OSS e sbarco sono controversi",
 			"wikilinks": {
-				"Lucky_Luciano": "https://it.wikipedia.org/wiki/Lucky_Luciano",
+				"Sbarco_in_Sicilia": "https://it.wikipedia.org/wiki/Sbarco_in_Sicilia",
 				"OSS": "https://it.wikipedia.org/wiki/Office_of_Strategic_Services",
-				"Palazzo_Giustiniani": "https://it.wikipedia.org/wiki/Palazzo_Giustiniani"
-			}
+				"AMGOT": "https://it.wikipedia.org/wiki/Governo_militare_alleato_dei_territori_occupati",
+				"Calogero_Vizzini": "https://it.wikipedia.org/wiki/Calogero_Vizzini",
+				"Charles_Poletti": "https://it.wikipedia.org/wiki/Charles_Poletti"
+			},
+			"fonti": [{"tipo": "voce di sintesi", "titolo": "Sbarco in Sicilia", "url": "https://it.wikipedia.org/wiki/Sbarco_in_Sicilia"}, {"tipo": "voce biografica", "titolo": "Calogero Vizzini", "url": "https://it.wikipedia.org/wiki/Calogero_Vizzini"}, {"tipo": "voce istituzionale", "titolo": "Governo militare alleato dei territori occupati", "url": "https://it.wikipedia.org/wiki/Governo_militare_alleato_dei_territori_occupati"}]
 		},
+		{
+			"anno": 1944,
+			"titolo": "Rioccupazione di Palazzo Giustiniani e ricostituzione del Grande Oriente d'Italia",
+			"data": {"inizio": "1944-06-04", "fine": "1944-06-04", "precisione": "giorno"},
+			"luogo": {"nome": "Palazzo Giustiniani, Roma", "paese": "Italia"},
+			"descrizione": "Il 4 giugno 1944, dopo la liberazione di Roma, il gruppo collegato al Grande Oriente d'Italia ricostituito in esilio rioccupò Palazzo Giustiniani, sede storica dell'Ordine confiscata durante il fascismo. Nello stesso contesto furono istituiti un Comitato di gran maestranza per la riorganizzazione del Grande Oriente e un Comitato di reggenza per il Rito scozzese antico e accettato. La rioccupazione non risolse il problema della proprietà dell'edificio, che rimase oggetto di una successiva vertenza con lo Stato.",
+			"dati_concreti": ["La rioccupazione di Palazzo Giustiniani è indicata al 4 giugno 1944, in coincidenza con la liberazione di Roma.", "Il Comitato di gran maestranza era composto da Guido Laj, Gaetano Varcasia e Umberto Cipollone.", "Per la riorganizzazione del Rito scozzese antico e accettato fu istituito un Comitato di reggenza composto da Giuseppe Guastalla, Gaetano Varcasia e Umberto Cipollone.", "Nel settembre 1945 Guido Laj fu eletto Gran Maestro del Grande Oriente d'Italia.", "Il Demanio dello Stato rivendicò il possesso dell'edificio; la questione della proprietà e dell'uso della sede proseguì in sede giudiziaria e negoziale."],
+			"responsabili_o_attori": [{"nome": "Grande Oriente d'Italia in esilio", "ruolo": "organizzazione che rioccupò la sede e avviò la ricostituzione"}, {"nome": "Guido Laj", "ruolo": "membro del Comitato di gran maestranza e futuro Gran Maestro"}, {"nome": "Gaetano Varcasia", "ruolo": "membro del Comitato di gran maestranza e del Comitato di reggenza"}, {"nome": "Umberto Cipollone", "ruolo": "membro del Comitato di gran maestranza e del Comitato di reggenza"}, {"nome": "Giuseppe Guastalla", "ruolo": "membro del Comitato di reggenza del Rito scozzese"}, {"nome": "Demanio dello Stato", "ruolo": "soggetto che rivendicò il possesso dell'edificio"}],
+			"entita_coinvolte": ["Grande Oriente d'Italia", "Rito scozzese antico e accettato", "Palazzo Giustiniani", "Demanio dello Stato", "Roma liberata"],
+			"tipo_di_fatto": ["politico-istituzionale", "massoneria", "inchiesta giudiziaria o parlamentare"],
+			"scala": "nazionale",
+			"stato_della_ricostruzione": "rioccupazione documentata; proprietà e legittimazione dell'uso furono oggetto di vertenza",
+			"wikilinks": {
+				"Grande_Oriente_d_Italia": "https://it.wikipedia.org/wiki/Grande_Oriente_d%27Italia",
+				"Palazzo_Giustiniani": "https://it.wikipedia.org/wiki/Palazzo_Giustiniani_(Roma)",
+				"Liberazione_di_Roma": "https://it.wikipedia.org/wiki/Liberazione_di_Roma"
+			},
+			"fonti": [{"tipo": "voce di sintesi", "titolo": "Grande Oriente d'Italia", "url": "https://it.wikipedia.org/wiki/Grande_Oriente_d%27Italia"}, {"tipo": "fonte istituzionale", "titolo": "La storia del Grande Oriente d'Italia", "url": "https://www.grandeoriente.it/chi-siamo/la-storia/"}]
+		},		
 		{
 			"anno": 1945,
 			"titolo": "Fine dell'OSS",
