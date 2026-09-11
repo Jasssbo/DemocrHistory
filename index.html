@@ -34,9 +34,9 @@
     h1 { max-width: 760px; margin: 12px 0 8px; font-size: clamp(32px, 5vw, 64px); line-height: .98; font-weight: 500; }
     .intro { max-width: 690px; margin: 0; color: var(--muted); font: 16px/1.5 Arial, sans-serif; }
     .workspace { display: grid; grid-template-columns: 150px minmax(0, 1.25fr) minmax(330px, .75fr); gap: 28px; padding: 28px 0 50px; }
-    .prelude-panel { position: sticky; top: 20px; align-self: start; }
+    .prelude-panel { position: sticky; top: 20px; align-self: start; max-height: calc(100vh - 40px); overflow-y: auto; }
     .prelude-panel details { background: var(--panel); border: 1px solid var(--line); box-shadow: var(--shadow); }
-    .prelude-panel summary { padding: 14px 12px; color: var(--accent); cursor: pointer; font: 700 12px/1.3 Arial, sans-serif; }
+    .prelude-panel summary { position: sticky; top: 0; z-index: 1; padding: 14px 12px; color: var(--accent); background: var(--panel); cursor: pointer; font: 700 12px/1.3 Arial, sans-serif; }
     .prelude-panel p { margin: 0; padding: 0 12px 12px; color: var(--muted); font: 12px/1.45 Arial, sans-serif; }
     .toolbar { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 10px; margin-bottom: 18px; }
     input, select { width: 100%; min-height: 44px; padding: 10px 12px; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 3px; }
@@ -225,7 +225,7 @@
     $('certainty').addEventListener('change', render);
     $('prelude').addEventListener('toggle', (event) => { state.showPrelude = event.target.open; render(); });
     $('file').addEventListener('change', (event) => { const file = event.target.files[0]; if (!file) return; const reader = new FileReader(); reader.onload = () => loadData(JSON.parse(reader.result)); reader.readAsText(file); });
-    fetch('DemocrHistory').then((response) => response.json()).then(loadData).catch(() => { $('loader').textContent = 'Se il file e aperto localmente, usa il selettore JSON qui sotto.'; });
+    fetch('Italian DemocrHistory.json').then((response) => response.json()).then(loadData).catch(() => { $('loader').textContent = 'Se il file e aperto localmente, usa il selettore JSON qui sotto.'; });
   </script>
 </body>
 </html>
