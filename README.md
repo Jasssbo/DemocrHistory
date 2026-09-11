@@ -78,7 +78,16 @@ Il file principale contiene una struttura a più livelli:
 }
 ```
 
-## 3. Ordine delle informazioni dentro ogni evento
+## 3. Separazione tra pre-eventi ed eventi
+
+Il file distingue due raccolte cronologiche:
+
+- `pre_eventi`: eventi anteriori al 1943, mostrati dall'interfaccia solo quando si apre la tendina "Prima del 1943";
+- `eventi`: eventi dal 1943 in poi, mostrati normalmente nella timeline principale.
+
+Quando aggiungi un record, inseriscilo in `pre_eventi` se l'anno principale e precedente al 1943; per il 1943 e gli anni successivi usa `eventi`. Mantieni in entrambe le raccolte lo stesso formato dei campi e l'ordine cronologico.
+
+## 4. Ordine delle informazioni dentro ogni evento
 
 Per evitare confusione e garantire compatibilità con filtri e viste grafiche, seguire lo stesso ordine di campi per tutti gli eventi. L'ordine consigliato e':
 
@@ -98,9 +107,9 @@ Per evitare confusione e garantire compatibilità con filtri e viste grafiche, s
 
 Questo ordine rende il file più facile da leggere a colpo d'occhio e aiuta le interfacce a mostrare in modo naturale la timeline, la scheda dell'evento e i filtri.
 
-## 4. Criteri per i campi principali
+## 5. Criteri per i campi principali
 
-### 4.1 `anno` e `data`
+### 5.1 `anno` e `data`
 
 - `anno` e il riferimento rapido per ordinare la timeline.
 - `data.inizio` e `data.fine` vanno usati solo quando si hanno date precise o un intervallo noto.
@@ -122,13 +131,13 @@ Esempio:
 
 Se l'evento e molto generico, usare un anno e lasciare `inizio` e `fine` come `null` oppure come anno completo, ma mantenere la precisione coerente.
 
-### 4.2 `titolo` e `descrizione`
+### 5.2 `titolo` e `descrizione`
 
 - `titolo` deve essere breve, chiaro e identificabile in una timeline.
 - `descrizione` deve essere un riassunto neutro, senza opinioni personali.
 - Evitare formule troppo lunghe e troppo interpretative.
 
-### 4.3 `luogo`
+### 5.3 `luogo`
 
 Il campo `luogo` va scritto in modo strutturato:
 
@@ -144,7 +153,7 @@ Il campo `luogo` va scritto in modo strutturato:
 - `paese` indica l'area storica o il contesto politico;
 - `coordinate` e opzionale e va usato solo se realmente si hanno dati geografici affidabili.
 
-### 4.4 `responsabili_o_attori` e `entita_coinvolte`
+### 5.4 `responsabili_o_attori` e `entita_coinvolte`
 
 Gli attori vanno registrati come oggetti con nome e ruolo, non come stringhe libere.
 
@@ -157,7 +166,7 @@ Gli attori vanno registrati come oggetti con nome e ruolo, non come stringhe lib
 
 `entita_coinvolte` invece e una lista semplificata di nomi, utile per filtri e ricerche veloci.
 
-### 4.5 `tipo_di_fatto` e `scala`
+### 5.5 `tipo_di_fatto` e `scala`
 
 `tipo_di_fatto` deve usare una tassonomia costante. Ad esempio:
 
@@ -177,7 +186,7 @@ Gli attori vanno registrati come oggetti con nome e ruolo, non come stringhe lib
 - `nazionale`
 - `internazionale`
 
-### 4.6 `stato_della_ricostruzione`
+### 5.6 `stato_della_ricostruzione`
 
 Questo campo e fondamentale. Serve a distinguere fatti documentati da interpretazioni, accuse o ipotesi. Un buon valore deve evidenziare il grado di certezza senza trasformare un'ipotesi in un fatto stabilito.
 
@@ -189,13 +198,13 @@ Valori consigliati:
 - `informazione incompleta`
 - `sintesi interpretativa`
 
-### 4.7 `dati_concreti` e `fonti`
+### 5.7 `dati_concreti` e `fonti`
 
 `dati_concreti` contiene fatti verificabili o frasi dettagliate che supportano la voce. `fonti` deve contenere le fonti documentarie o storiografiche in modo strutturato, separate dai collegamenti informativi.
 
 Le fonti non devono essere confuse con i `wikilinks`, che servono solo come introduzione e non come prova.
 
-### 4.8 `wikilinks`
+### 5.8 `wikilinks`
 
 `wikilinks` e un oggetto di collegamenti utili, con etichetta e URL. Esempio:
 
@@ -208,7 +217,7 @@ Le fonti non devono essere confuse con i `wikilinks`, che servono solo come intr
 
 Questi link devono essere introduttivi e non sostituire le fonti principali.
 
-## 5. Criteri di qualità del contenuto
+## 6. Criteri di qualità del contenuto
 
 Per creare una versione personale, rispettare queste regole:
 
@@ -220,7 +229,7 @@ Per creare una versione personale, rispettare queste regole:
 6. Non mescolare elementi di livello diverso nello stesso campo.
 7. Se un evento e controverso, lo si marca esplicitamente nello stato della ricostruzione.
 
-## 6. Come creare una versione personale
+## 7. Come creare una versione personale
 
 ### Passo 1: copiare la struttura di base
 

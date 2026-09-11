@@ -33,7 +33,11 @@
     .eyebrow { color: var(--accent); font: 700 12px/1.2 Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
     h1 { max-width: 760px; margin: 12px 0 8px; font-size: clamp(32px, 5vw, 64px); line-height: .98; font-weight: 500; }
     .intro { max-width: 690px; margin: 0; color: var(--muted); font: 16px/1.5 Arial, sans-serif; }
-    .workspace { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(330px, .75fr); gap: 28px; padding: 28px 0 50px; }
+    .workspace { display: grid; grid-template-columns: 150px minmax(0, 1.25fr) minmax(330px, .75fr); gap: 28px; padding: 28px 0 50px; }
+    .prelude-panel { position: sticky; top: 20px; align-self: start; }
+    .prelude-panel details { background: var(--panel); border: 1px solid var(--line); box-shadow: var(--shadow); }
+    .prelude-panel summary { padding: 14px 12px; color: var(--accent); cursor: pointer; font: 700 12px/1.3 Arial, sans-serif; }
+    .prelude-panel p { margin: 0; padding: 0 12px 12px; color: var(--muted); font: 12px/1.45 Arial, sans-serif; }
     .toolbar { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 10px; margin-bottom: 18px; }
     input, select { width: 100%; min-height: 44px; padding: 10px 12px; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 3px; }
     .summary { display: flex; gap: 22px; margin: 0 0 20px; color: var(--muted); font: 12px Arial, sans-serif; text-transform: uppercase; letter-spacing: .06em; }
@@ -97,6 +101,12 @@
       <p class="intro">Una vista ordinata per data per esplorare attori, categorie, stato della ricostruzione e collegamenti documentari.</p>
     </header>
     <section class="workspace">
+      <aside class="prelude-panel">
+        <details id="prelude">
+          <summary>Prima del 1943</summary>
+          <p>Apri per includere nella timeline gli eventi precedenti all'armistizio.</p>
+        </details>
+      </aside>
       <div>
         <div class="toolbar">
           <input id="search" type="search" placeholder="Cerca eventi, attori, luoghi..." aria-label="Cerca">
@@ -123,15 +133,20 @@
     </section>
   </main>
   <script>
-    const state = { events: [], filtered: [] };
+    const state = { events: [], preEvents: [], filtered: [], showPrelude: false };
+    const mainYear = 1943;
     const $ = (id) => document.getElementById(id);
+
+    function allEvents() {
+      return [...state.preEvents, ...state.events];
+    }
 
     function flatten(event) {
       return JSON.stringify(event).toLowerCase();
     }
 
     function uniqueValues(key) {
-      return [...new Set(state.events.flatMap((event) => Array.isArray(event[key]) ? event[key] : [event[key]]).filter(Boolean))].sort();
+      return [...new Set(allEvents().flatMap((event) => Array.isArray(event[key]) ? event[key] : [event[key]]).filter(Boolean))].sort();
     }
 
     function setupFilters() {
@@ -176,7 +191,8 @@
       const query = $('search').value.toLowerCase().trim();
       const type = $('type').value;
       const certainty = $('certainty').value;
-      state.filtered = state.events.filter((event) => (!query || flatten(event).includes(query)) && (!type || event.tipo_di_fatto?.includes(type)) && (!certainty || event.stato_della_ricostruzione === certainty));
+      const visibleEvents = state.showPrelude ? allEvents() : state.events;
+      state.filtered = visibleEvents.filter((event) => (state.showPrelude || event.anno >= mainYear) && (!query || flatten(event).includes(query)) && (!type || event.tipo_di_fatto?.includes(type)) && (!certainty || event.stato_della_ricostruzione === certainty));
       $('count').textContent = state.filtered.length;
       const years = state.filtered.map((event) => event.anno).sort((a, b) => a - b);
       $('range').textContent = years.length ? `${years[0]}–${years[years.length - 1]}` : '-';
@@ -203,10 +219,11 @@
 
     function escapeHtml(value) { return String(value ?? '').replace(/[&<>'"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char])); }
 
-    function loadData(data) { state.events = data.eventi || []; setupFilters(); render(); }
+    function loadData(data) { state.preEvents = data.pre_eventi || []; state.events = data.eventi || []; setupFilters(); render(); }
     $('search').addEventListener('input', render);
     $('type').addEventListener('change', render);
     $('certainty').addEventListener('change', render);
+    $('prelude').addEventListener('toggle', (event) => { state.showPrelude = event.target.open; render(); });
     $('file').addEventListener('change', (event) => { const file = event.target.files[0]; if (!file) return; const reader = new FileReader(); reader.onload = () => loadData(JSON.parse(reader.result)); reader.readAsText(file); });
     fetch('DemocrHistory').then((response) => response.json()).then(loadData).catch(() => { $('loader').textContent = 'Se il file e aperto localmente, usa il selettore JSON qui sotto.'; });
   </script>

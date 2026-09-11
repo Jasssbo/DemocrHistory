@@ -60,7 +60,11 @@
 		"organizzazioni_e_reti": ["Grande Oriente d'Italia", "massoneria", "mafia", "X MAS", "Ordine Nuovo", "Stay Behind-Gladio", "Operazione Underworld"],
 		"persone_citate": ["Napoleone", "Alcide De Gasperi", "Giovanni De Lorenzo", "Antonio Segni", "Enrico Mattei", "Eugenio Cefis", "Giordano Gamberini", "Licio Gelli", "Junio Valerio Borghese", "Gianadelio Maletti", "Guido Giannettini", "Remo Orlandini", "Vincenzo Vinciguerra", "Giangiacomo Feltrinelli", "Aldo Moro", "Corrado Simioni", "Pier Paolo Pasolini", "Mauro De Mauro", "Salvatore Giuliano"]
 	},
-	"eventi": [
+	"struttura_cronologica": {
+		"pre_eventi": "eventi anteriori al 1943; vengono mostrati nella timeline solo quando l'utente apre la tendina Prima del 1943",
+		"eventi": "eventi dal 1943 in poi; costituiscono la timeline principale"
+	},
+	"pre_eventi": [
 		{
 			"anno": 1805,
 			"titolo": "Riorganizzazione napoleonica della massoneria e fondazione del Grande Oriente d'Italia",
@@ -156,7 +160,9 @@
 				"Grande_Oriente_d_Italia": "https://it.wikipedia.org/wiki/Grande_Oriente_d%27Italia",
 				"Palazzo_Giustiniani": "https://it.wikipedia.org/wiki/Palazzo_Giustiniani"
 			}
-		},
+			}
+	],
+	"eventi": [
 		{
 			"anno": 1943,
 			"titolo": "Armistizio Italia-USA e riorganizzazione politica",
