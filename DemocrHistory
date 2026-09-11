@@ -1,0 +1,511 @@
+{
+	"titolo": "Report di indagine sulla storia della Repubblica italiana",
+	"lingua": "it",
+	"natura_del_documento": "Report storico organizzato per eventi, attori, istituzioni e linee interpretative.",
+	"nota_metodologica": "Le voci distinguono tra fatti documentati, interpretazioni storiografiche e responsabilita controverse. I collegamenti Wikipedia sono risorse introduttive e non sostituiscono le fonti accademiche o gli atti giudiziari.",
+	"specifica_database": {
+		"unita_principale": "evento_storico",
+		"principi": [
+			"Ogni evento deve avere un identificatore stabile e un titolo breve.",
+			"Le date devono distinguere tra data precisa, anno noto e intervallo temporale.",
+			"Le persone, le istituzioni e le organizzazioni devono essere registrate come attori con un ruolo nel singolo evento.",
+			"Le fonti devono essere separate dai wikilinks e devono indicare il tipo di documento e il livello di attendibilita.",
+			"Le ipotesi e le responsabilita controverse devono essere espresse nello stato della ricostruzione, senza trasformarle in fatti accertati.",
+			"Le relazioni tra eventi devono usare identificatori, non solo testo libero."
+		],
+		"campi_evento": {
+			"id_evento": "identificatore univoco, ad esempio EVT-1946-001",
+			"anno": "anno principale dell'evento, mantenuto per ordinamento rapido",
+			"data": {"inizio": "AAAA-MM-GG o null", "fine": "AAAA-MM-GG o null", "precisione": ["giorno", "mese", "anno", "intervallo"]},
+			"luogo": {"nome": "luogo leggibile", "paese": "Stato o area storica", "coordinate": "opzionali"},
+			"titolo": "nome sintetico mostrato nella timeline",
+			"descrizione": "riassunto neutrale dell'evento",
+			"attori": "array di persone, gruppi e istituzioni con ruolo e identificatore",
+			"classificazione": "tipo di fatto, scala e parole chiave",
+			"stato_della_ricostruzione": "grado di certezza o controversia",
+			"fonti": "fonti documentarie o storiografiche strutturate",
+			"relazioni": "collegamenti verso altri id_evento con tipo di relazione",
+			"wikilinks": "collegamenti introduttivi a pagine Wikipedia pertinenti"
+		},
+		"viste_gui_consigliate": [
+			{"nome": "timeline", "usa": ["anno", "data", "titolo", "tipo_di_fatto", "stato_della_ricostruzione"]},
+			{"nome": "scheda_evento", "usa": ["descrizione", "attori", "luogo", "fonti", "wikilinks", "relazioni"]},
+			{"nome": "mappa", "usa": ["luogo.nome", "luogo.coordinate", "anno", "tipo_di_fatto"]},
+			{"nome": "rete", "usa": ["attori", "relazioni", "id_evento"]},
+			{"nome": "filtri", "usa": ["intervallo_temporale", "tipo_di_fatto", "scala", "attore", "stato_della_ricostruzione"]}
+		]
+	},
+	"distinzioni_utili_per_descrivere_i_documenti": {
+		"periodo": "anno o intervallo temporale",
+		"tipo_di_fatto": [
+			"politico-istituzionale",
+			"sociale-economico",
+			"violenza politica o strage",
+			"servizi segreti e apparati dello Stato",
+			"mafia e criminalita organizzata",
+			"massoneria e rapporti con la Chiesa",
+			"politica internazionale e Guerra fredda",
+			"inchiesta giudiziaria o parlamentare",
+			"cultura e societa civile"
+		],
+		"scala": ["locale", "nazionale", "internazionale"],
+		"attori": ["persona", "partito", "istituzione", "organizzazione clandestina", "gruppo sociale", "Stato estero"],
+		"ruolo_degli_attori": ["promotore", "esecutore", "vittima", "indagato", "accusato", "testimone", "istituzione coinvolta"],
+		"stato_della_ricostruzione": ["evento documentato", "tesi o accusa riportata", "responsabilita controversa", "informazione incompleta"],
+		"relazioni": ["causa", "reazione", "finanziamento", "protezione", "collegamento", "successione", "inchiesta su"]
+	},
+	"attori_e_sigle": {
+		"partiti_e_movimenti": ["PCI", "DC", "PSI", "Partito Popolare Italiano", "Potere Operaio", "Brigate Rosse", "Fronte Nazionale", "Avanguardia Nazionale", "GAP di Feltrinelli"],
+		"istituzioni_e_servizi": ["Stato italiano", "Governo", "Parlamento", "Carabinieri", "SIFAR", "SID", "OSS", "CIA", "Servizi segreti italiani", "Santa Sede", "NATO"],
+		"organizzazioni_e_reti": ["Grande Oriente d'Italia", "massoneria", "mafia", "X MAS", "Ordine Nuovo", "Stay Behind-Gladio", "Operazione Underworld"],
+		"persone_citate": ["Napoleone", "Alcide De Gasperi", "Giovanni De Lorenzo", "Antonio Segni", "Enrico Mattei", "Eugenio Cefis", "Giordano Gamberini", "Licio Gelli", "Junio Valerio Borghese", "Gianadelio Maletti", "Guido Giannettini", "Remo Orlandini", "Vincenzo Vinciguerra", "Giangiacomo Feltrinelli", "Aldo Moro", "Corrado Simioni", "Pier Paolo Pasolini", "Mauro De Mauro", "Salvatore Giuliano"]
+	},
+	"eventi": [
+		{
+			"anno": 1805,
+			"titolo": "Diffusione della massoneria in Italia",
+			"data": {"inizio": "1805-01-01", "fine": "1805-12-31", "precisione": "anno"},
+			"luogo": {"nome": "Regno d'Italia napoleonico", "paese": "Italia"},
+			"descrizione": "Secondo la tavola, Napoleone porta la massoneria in Italia tramite le repubbliche italiane.",
+			"dati_concreti": ["La massoneria era gia presente in diversi Stati italiani prima dell'eta napoleonica.", "Durante il periodo napoleonico le logge furono riorganizzate e sottoposte a forme di controllo politico-amministrativo.", "Non e corretto attribuire a un solo anno o alla sola persona di Napoleone la nascita della massoneria italiana."],
+			"responsabili_o_attori": [{"nome": "Napoleone", "ruolo": "promotore indicato dalla fonte"}],
+			"entita_coinvolte": ["repubbliche italiane", "massoneria"],
+			"tipo_di_fatto": ["politico-istituzionale", "massoneria"],
+			"scala": "nazionale",
+			"stato_della_ricostruzione": "tesi storica da verificare",
+			"wikilinks": {
+				"Massoneria": "https://it.wikipedia.org/wiki/Massoneria",
+				"Napoleone": "https://it.wikipedia.org/wiki/Napoleone_Bonaparte"
+			}
+		},
+		{
+			"anno": 1911,
+			"titolo": "Il Grande Oriente d'Italia acquista Palazzo Giustiniani",
+			"data": {"inizio": "1911-01-01", "fine": "1911-12-31", "precisione": "anno"},
+			"luogo": {"nome": "Roma", "paese": "Regno d'Italia"},
+			"descrizione": "Il GOI acquista Palazzo Giustiniani tramite la societa Urbs e lo usa come sede.",
+			"dati_concreti": ["Palazzo Giustiniani si trova a Roma, in via della Dogana Vecchia.", "Il Grande Oriente d'Italia utilizzo il palazzo come sede fino alle confische e agli espropri del periodo fascista.", "La societa Urbs e indicata come soggetto giuridico dell'acquisto."],
+			"responsabili_o_attori": [{"nome": "Grande Oriente d'Italia", "ruolo": "acquirente"}, {"nome": "Urbs", "ruolo": "societa acquirente"}],
+			"entita_coinvolte": ["Grande Oriente d'Italia", "Urbs", "Palazzo Giustiniani"],
+			"tipo_di_fatto": ["massoneria", "politico-istituzionale"],
+			"scala": "nazionale",
+			"stato_della_ricostruzione": "evento storico da documentare",
+			"wikilinks": {
+				"Grande_Oriente_d_Italia": "https://it.wikipedia.org/wiki/Grande_Oriente_d%27Italia",
+				"Palazzo_Giustiniani": "https://it.wikipedia.org/wiki/Palazzo_Giustiniani"
+			}
+		},
+		{
+			"anno": 1918,
+			"titolo": "Fine della Prima guerra mondiale",
+			"data": {"inizio": "1918-11-03", "fine": "1918-11-11", "precisione": "giorno"},
+			"luogo": {"nome": "Europa e Italia", "paese": "Regno d'Italia"},
+			"descrizione": "L'Italia firmo l'armistizio con l'Impero austro-ungarico il 3 novembre 1918; la cessazione generale dei combattimenti sul fronte occidentale avvenne l'11 novembre. L'espressione vittoria mutilata fu coniata nel dopoguerra per descrivere il contrasto tra le aspettative territoriali italiane e gli esiti diplomatici, soprattutto dopo il trattato di Saint-Germain del 1919.",
+			"dati_concreti": ["Armistizio di Villa Giusti: 3 novembre 1918.", "Fine della Prima guerra mondiale sul fronte occidentale: 11 novembre 1918.", "Il trattato di Saint-Germain fu firmato il 10 settembre 1919."],
+			"responsabili_o_attori": [{"nome": "popolazione italiana", "ruolo": "soggetto sociale"}, {"nome": "cattolici", "ruolo": "elettorato"}],
+			"entita_coinvolte": ["Italia", "Chiesa"],
+			"tipo_di_fatto": ["politico-istituzionale", "sociale-economico"],
+			"scala": "nazionale",
+			"stato_della_ricostruzione": "sintesi interpretativa",
+			"wikilinks": {
+				"Prima_guerra_mondiale": "https://it.wikipedia.org/wiki/Prima_guerra_mondiale",
+				"Vittoria_mutilata": "https://it.wikipedia.org/wiki/Vittoria_mutilata"
+			}
+		},
+		{
+			"anno": 1919,
+			"titolo": "Fine del Non expedit e nascita del Partito Popolare Italiano",
+			"data": {"inizio": "1919-01-01", "fine": "1919-12-31", "precisione": "anno"},
+			"luogo": {"nome": "Italia", "paese": "Regno d'Italia"},
+			"descrizione": "Il Non expedit fu la direttiva con cui papa Pio IX, nel 1874, sconsiglio ai cattolici italiani di partecipare alle elezioni politiche del Regno d'Italia. La direttiva fu attenuata in modo progressivo, soprattutto dal 1904, fino al superamento politico del divieto nel primo dopoguerra. Nel 1919 don Luigi Sturzo fondo il Partito Popolare Italiano, segnando l'ingresso organizzato dei cattolici nella politica nazionale.",
+			"dati_concreti": [
+				"Il Non expedit risale al 1874 e non fu una legge dello Stato italiano.",
+				"Il divieto riguardava la partecipazione alle elezioni politiche, non ogni forma di attivita sociale o amministrativa.",
+				"Nel 1904 papa Pio X autorizzo deroghe alla non partecipazione in alcune circostanze politiche.",
+				"Il Partito Popolare Italiano fu fondato da don Luigi Sturzo nel gennaio 1919."
+			],
+			"responsabili_o_attori": [{"nome": "Pio IX", "ruolo": "promotore della direttiva del 1874"}, {"nome": "Pio X", "ruolo": "papa che autorizzo deroghe alla direttiva"}, {"nome": "Luigi Sturzo", "ruolo": "fondatore del Partito Popolare Italiano"}, {"nome": "Partito Popolare Italiano", "ruolo": "nuovo soggetto politico"}],
+			"entita_coinvolte": ["Partito Popolare Italiano", "Chiesa"],
+			"tipo_di_fatto": ["politico-istituzionale", "massoneria e rapporti con la Chiesa"],
+			"scala": "nazionale",
+			"stato_della_ricostruzione": "evento documentato; il superamento del Non expedit fu graduale",
+			"wikilinks": {
+				"Non_expedit": "https://it.wikipedia.org/wiki/Non_expedit",
+				"Partito_Popolare_Italiano": "https://it.wikipedia.org/wiki/Partito_Popolare_Italiano"
+			}
+		},
+		{
+			"anno": 1926,
+			"titolo": "Scioglimento della massoneria e confisca di Palazzo Giustiniani",
+			"data": {"inizio": "1925-11-26", "fine": "1926-05-22", "precisione": "intervallo"},
+			"luogo": {"nome": "Roma e Italia", "paese": "Regno d'Italia"},
+			"descrizione": "Il fascismo scioglie la massoneria, occupa Palazzo Giustiniani e lo assegna al Senato; la tavola parla di confisca e persecuzione del GOI.",
+			"dati_concreti": ["La legge n. 2029 del 26 novembre 1925 impose la dichiarazione degli appartenenti ad associazioni e societa segrete.", "Il regio decreto-legge n. 229 del 22 novembre 1925 colpi le associazioni massoniche.", "Nel 1926 Palazzo Giustiniani fu sottratto al Grande Oriente d'Italia e destinato al Senato."],
+			"responsabili_o_attori": [{"nome": "fascismo", "ruolo": "promotore ed esecutore"}, {"nome": "Stato", "ruolo": "assegnatario dell'immobile"}, {"nome": "Grande Oriente d'Italia", "ruolo": "organizzazione colpita"}],
+			"entita_coinvolte": ["fascismo", "Grande Oriente d'Italia", "Senato", "Palazzo Giustiniani"],
+			"tipo_di_fatto": ["politico-istituzionale", "massoneria"],
+			"scala": "nazionale",
+			"stato_della_ricostruzione": "evento storico da documentare",
+			"wikilinks": {
+				"Leggi_fascistissime": "https://it.wikipedia.org/wiki/Leggi_fascistissime",
+				"Grande_Oriente_d_Italia": "https://it.wikipedia.org/wiki/Grande_Oriente_d%27Italia",
+				"Palazzo_Giustiniani": "https://it.wikipedia.org/wiki/Palazzo_Giustiniani"
+			}
+		},
+		{
+			"anno": 1943,
+			"titolo": "Armistizio Italia-USA e riorganizzazione politica",
+			"data": {"inizio": "1943-09-03", "fine": "1943-09-08", "precisione": "giorno"},
+			"luogo": {"nome": "Cassibile e Roma", "paese": "Italia"},
+			"descrizione": "L'armistizio di Cassibile fu firmato il 3 settembre 1943 tra il Regno d'Italia e gli Alleati e annunciato l'8 settembre dal governo Badoglio. Dopo l'annuncio, l'esercito tedesco occupo gran parte dell'Italia e il governo italiano si trasferi a Brindisi sotto protezione alleata.",
+			"dati_concreti": ["Firma dell'armistizio: Cassibile, 3 settembre 1943.", "Annuncio pubblico: 8 settembre 1943.", "Protagonisti della firma: il generale Giuseppe Castellano e il generale Walter Bedell Smith."],
+			"responsabili_o_attori": [{"nome": "Pietro Badoglio", "ruolo": "attore istituzionale"}, {"nome": "Castellano", "ruolo": "negoziatore indicato"}, {"nome": "Dwight Smith", "ruolo": "rappresentante alleato indicato"}],
+			"entita_coinvolte": ["Italia", "USA", "OSS", "Grande Oriente d'Italia", "massoneria"],
+			"tipo_di_fatto": ["politica internazionale e Guerra fredda", "politico-istituzionale"],
+			"scala": "internazionale",
+			"stato_della_ricostruzione": "sintesi della fonte",
+			"wikilinks": {
+				"Armistizio_di_Cassibile": "https://it.wikipedia.org/wiki/Armistizio_di_Cassibile",
+				"Pietro_Badoglio": "https://it.wikipedia.org/wiki/Pietro_Badoglio"
+			}
+		},
+		{
+			"anno": 1944,
+			"titolo": "Operazione Underworld e rientro dei massoni a Palazzo Giustiniani",
+			"data": {"inizio": "1942-01-01", "fine": "1945-09-02", "precisione": "intervallo"},
+			"luogo": {"nome": "Stati Uniti e Italia meridionale", "paese": "USA e Italia"},
+			"descrizione": "La fonte collega l'Operazione Underworld a Lucky Luciano, Calogero Vizzini e all'OSS; indica inoltre il ritorno dei massoni a Palazzo Giustiniani e i legami con il Senato.",
+			"dati_concreti": ["Operation Underworld fu il nome attribuito alla collaborazione tra autorita navali statunitensi, ambienti portuali e criminalita organizzata per la sicurezza dei porti durante la Seconda guerra mondiale.", "Lucky Luciano fu scarcerato nel 1946 e deportato in Italia: questo dato non dimostra da solo un accordo operativo con l'OSS.", "Il collegamento diretto tra Operation Underworld, il ritorno del GOI a Palazzo Giustiniani e il Senato richiede fonti specifiche e non e un fatto automaticamente dimostrato."],
+			"responsabili_o_attori": [{"nome": "Lucky Luciano", "ruolo": "attore criminale indicato"}, {"nome": "Calogero Vizzini", "ruolo": "attore mafioso indicato"}, {"nome": "OSS", "ruolo": "servizio coinvolto secondo la tavola"}],
+			"entita_coinvolte": ["mafia", "OSS", "USA", "Grande Oriente d'Italia", "Senato"],
+			"tipo_di_fatto": ["mafia e criminalita organizzata", "servizi segreti e apparati dello Stato", "massoneria"],
+			"scala": "internazionale",
+			"stato_della_ricostruzione": "tesi riportata; da verificare",
+			"wikilinks": {
+				"Lucky_Luciano": "https://it.wikipedia.org/wiki/Lucky_Luciano",
+				"OSS": "https://it.wikipedia.org/wiki/Office_of_Strategic_Services",
+				"Palazzo_Giustiniani": "https://it.wikipedia.org/wiki/Palazzo_Giustiniani"
+			}
+		},
+		{
+			"anno": 1945,
+			"titolo": "Fine dell'OSS",
+			"data": {"inizio": "1945-09-20", "fine": "1947-09-18", "precisione": "giorno"},
+			"luogo": {"nome": "Stati Uniti", "paese": "USA"},
+			"descrizione": "L'Office of Strategic Services fu sciolto il 20 settembre 1945. La Central Intelligence Agency non nacque nello stesso anno: fu istituita il 18 settembre 1947 dal National Security Act del 1947.",
+			"dati_concreti": ["Scioglimento dell'OSS: 20 settembre 1945.", "Istituzione della CIA: 18 settembre 1947.", "OSS e CIA sono organizzazioni diverse, anche se parte del personale e delle funzioni conflui nella nuova agenzia."],
+			"responsabili_o_attori": [{"nome": "OSS", "ruolo": "organizzazione sciolta"}, {"nome": "CIA", "ruolo": "organizzazione successiva"}],
+			"entita_coinvolte": ["USA", "OSS", "CIA"],
+			"tipo_di_fatto": ["servizi segreti e apparati dello Stato", "politica internazionale e Guerra fredda"],
+			"scala": "internazionale",
+			"stato_della_ricostruzione": "evento riportato",
+			"wikilinks": {
+				"OSS": "https://it.wikipedia.org/wiki/Office_of_Strategic_Services",
+				"CIA": "https://it.wikipedia.org/wiki/Central_Intelligence_Agency"
+			}
+		},
+		{
+			"anno": 1946,
+			"titolo": "Nascita della Repubblica italiana",
+			"data": {"inizio": "1946-06-02", "fine": "1946-06-18", "precisione": "intervallo"},
+			"luogo": {"nome": "Italia", "paese": "Repubblica Italiana"},
+			"descrizione": "Il 2 giugno 1946 si tennero il referendum istituzionale tra monarchia e repubblica e le elezioni per l'Assemblea Costituente. Il 10 giugno la Corte di cassazione proclamo il risultato provvisorio; il 18 giugno la forma repubblicana fu confermata e Umberto II lascio l'Italia.",
+			"dati_concreti": ["Data del referendum e delle elezioni: 2 giugno 1946.", "L'Assemblea Costituente era composta da 556 deputati.", "La Costituzione fu promulgata il 27 dicembre 1947 ed entro in vigore il 1 gennaio 1948."],
+			"responsabili_o_attori": [{"nome": "elettorato italiano", "ruolo": "corpo elettorale"}, {"nome": "Democrazia Cristiana", "ruolo": "partito vincitore indicato"}, {"nome": "Alcide De Gasperi", "ruolo": "presidente del Consiglio"}],
+			"entita_coinvolte": ["DC", "PCI", "PSI", "monarchia", "Repubblica", "Governo", "Assemblea Costituente"],
+			"tipo_di_fatto": ["politico-istituzionale", "sociale-economico"],
+			"scala": "nazionale",
+			"stato_della_ricostruzione": "evento documentato nella tavola",
+			"wikilinks": {
+				"Referendum_istituzionale_del_1946": "https://it.wikipedia.org/wiki/Referendum_istituzionale_del_1946",
+				"Repubblica_Italiana": "https://it.wikipedia.org/wiki/Repubblica_Italiana",
+				"Assemblea_Costituente": "https://it.wikipedia.org/wiki/Assemblea_Costituente_della_Repubblica_Italiana"
+			}
+		},
+		{
+			"anno": 1947,
+			"titolo": "Crisi del maggio e strage di Portella della Ginestra",
+			"data": {"inizio": "1947-05-01", "fine": "1947-05-31", "precisione": "mese"},
+			"luogo": {"nome": "Portella della Ginestra, Piana degli Albanesi", "paese": "Italia"},
+			"descrizione": "Il 1 maggio 1947 una manifestazione contadina a Portella della Ginestra, in Sicilia, fu colpita da colpi d'arma da fuoco: morirono 11 persone e decine rimasero ferite. L'esecutore materiale riconosciuto nei procedimenti fu la banda di Salvatore Giuliano; i mandanti politici non furono accertati in modo definitivo.",
+			"dati_concreti": ["Data della strage: 1 maggio 1947.", "Vittime: 11 morti e numerosi feriti.", "La banda di Salvatore Giuliano fu indicata come responsabile materiale.", "Le ipotesi su mandanti politici e collegamenti con apparati statali restano oggetto di controversia storiografica."],
+			"responsabili_o_attori": [{"nome": "Salvatore Giuliano", "ruolo": "esecutore indicato"}, {"nome": "X MAS", "ruolo": "coinvolgimento indicato"}, {"nome": "OSS", "ruolo": "coinvolgimento indicato"}, {"nome": "PCI", "ruolo": "forza politica colpita"}],
+			"entita_coinvolte": ["DC", "PCI", "Piano Marshall", "X MAS", "OSS", "mafia"],
+			"tipo_di_fatto": ["violenza politica o strage", "politico-istituzionale", "servizi segreti e apparati dello Stato"],
+			"scala": "nazionale",
+			"stato_della_ricostruzione": "responsabilita controverse; la tavola presenta accuse",
+			"wikilinks": {
+				"Strage_di_Portella_della_Ginestra": "https://it.wikipedia.org/wiki/Strage_di_Portella_della_Ginestra",
+				"Piano_Marshall": "https://it.wikipedia.org/wiki/Piano_Marshall"
+			}
+		},
+		{
+			"anno": 1948,
+			"titolo": "Piano Marshall e contrapposizione politica",
+			"data": {"inizio": "1948-04-18", "fine": "1948-04-18", "precisione": "giorno"},
+			"luogo": {"nome": "Italia", "paese": "Repubblica Italiana"},
+			"descrizione": "Il Piano Marshall fu il programma statunitense di aiuti per la ricostruzione europea, avviato nel 1948. Nelle elezioni politiche italiane del 18 aprile 1948 la Democrazia Cristiana ottenne la maggioranza relativa e governo; il Fronte Democratico Popolare, legato a PCI e PSI, fu la principale forza di opposizione.",
+			"dati_concreti": ["Elezioni politiche: 18 aprile 1948.", "Il Piano Marshall fu proposto il 5 giugno 1947 e attuato dal 1948.", "L'Italia aderì al programma di ricostruzione europea insieme agli altri paesi partecipanti."],
+			"responsabili_o_attori": [{"nome": "USA", "ruolo": "promotore del Piano Marshall"}, {"nome": "DC", "ruolo": "forza di governo"}, {"nome": "PCI", "ruolo": "forza di opposizione indicata"}],
+			"entita_coinvolte": ["USA", "DC", "PCI", "Piano Marshall"],
+			"tipo_di_fatto": ["politica internazionale e Guerra fredda", "sociale-economico"],
+			"scala": "internazionale",
+			"stato_della_ricostruzione": "sintesi interpretativa",
+			"wikilinks": {
+				"Piano_Marshall": "https://it.wikipedia.org/wiki/Piano_Marshall",
+				"Elezioni_politiche_italiane_del_1948": "https://it.wikipedia.org/wiki/Elezioni_politiche_italiane_del_1948"
+			}
+		},
+		{
+			"anno": 1949,
+			"titolo": "Ingresso dell'Italia nella NATO e nascita della rete Stay Behind",
+			"data": {"inizio": "1949-04-04", "fine": "1949-04-04", "precisione": "giorno"},
+			"luogo": {"nome": "Washington e Italia", "paese": "USA e Italia"},
+			"descrizione": "Il 4 aprile 1949 l'Italia fu tra i dodici Stati fondatori della NATO. La rete italiana Stay Behind, in seguito associata al nome Gladio, fu concepita per una possibile resistenza clandestina in caso di occupazione; la sua storia, i rapporti internazionali e le responsabilita operative sono oggetto di indagini e controversie.",
+			"dati_concreti": ["Firma del Trattato del Nord Atlantico: 4 aprile 1949.", "L'Italia fu uno dei dodici membri fondatori.", "Il nome Gladio divenne pubblico durante le rivelazioni istituzionali del 1990."],
+			"responsabili_o_attori": [{"nome": "NATO", "ruolo": "alleanza di appartenenza"}, {"nome": "CIA", "ruolo": "partner indicato"}, {"nome": "servizi segreti italiani", "ruolo": "partner indicato"}, {"nome": "Giovanni De Lorenzo", "ruolo": "capo indicato per la fase successiva"}],
+			"entita_coinvolte": ["Italia", "NATO", "CIA", "Stay Behind-Gladio"],
+			"tipo_di_fatto": ["politica internazionale e Guerra fredda", "servizi segreti e apparati dello Stato"],
+			"scala": "internazionale",
+			"stato_della_ricostruzione": "evento e interpretazione da verificare",
+			"wikilinks": {
+				"NATO": "https://it.wikipedia.org/wiki/Organizzazione_del_Trattato_dell%27Atlantico_del_Nord",
+				"Operazione_Gladio": "https://it.wikipedia.org/wiki/Operazione_Gladio"
+			}
+		},
+		{
+			"anno": 1949,
+			"titolo": "Nascita del SIFAR",
+			"data": {"inizio": "1949-03-30", "fine": "1949-03-30", "precisione": "giorno"},
+			"luogo": {"nome": "Roma", "paese": "Italia"},
+			"descrizione": "Il Servizio Informazioni delle Forze Armate (SIFAR) fu istituito nel 1949 come servizio informativo militare, in sostituzione del SIM. Giovanni De Lorenzo non fu il fondatore ne il primo responsabile: divenne direttore del SIFAR nel 1955.",
+			"dati_concreti": ["Istituzione del SIFAR: 30 marzo 1949.", "Il SIFAR sostitui il Servizio informazioni militare (SIM).", "Giovanni De Lorenzo diresse il SIFAR dal 1955 al 1962."],
+			"responsabili_o_attori": [{"nome": "Stato italiano", "ruolo": "istituzione del servizio"}, {"nome": "Giovanni De Lorenzo", "ruolo": "direttore in una fase successiva"}],
+			"entita_coinvolte": ["SIFAR", "Stato italiano"],
+			"tipo_di_fatto": ["servizi segreti e apparati dello Stato"],
+			"scala": "nazionale",
+			"stato_della_ricostruzione": "evento riportato",
+			"wikilinks": {
+				"SIFAR": "https://it.wikipedia.org/wiki/SIFAR",
+				"Giovanni_De_Lorenzo": "https://it.wikipedia.org/wiki/Giovanni_De_Lorenzo"
+			}
+		},
+		{
+			"anno": 1957,
+			"titolo": "Apertura dei Supermarkets Italiani",
+			"data": {"inizio": "1957-01-01", "fine": "1957-12-31", "precisione": "anno"},
+			"luogo": {"nome": "Milano", "paese": "Italia"},
+			"descrizione": "A Milano nasce il primo supermercato indicato nella tavola, collegato a Nelson Rockefeller, Marco Brunelli, Franco Bertolini e Caprotti.",
+			"dati_concreti": ["La societa Supermarkets Italiani fu costituita nel 1957.", "Il primo punto vendita della catena apri a Milano nel 1957; la societa sarebbe poi diventata Esselunga.", "Bernardo Caprotti fu una figura centrale nello sviluppo dell'impresa; i ruoli attribuiti agli altri nomi richiedono documentazione distinta."],
+			"responsabili_o_attori": [{"nome": "Nelson Rockefeller", "ruolo": "finanziatore o promotore indicato"}, {"nome": "Marco Brunelli", "ruolo": "promotore indicato"}, {"nome": "Franco Bertolini", "ruolo": "promotore indicato"}, {"nome": "Caprotti", "ruolo": "promotore indicato"}],
+			"entita_coinvolte": ["Supermarkets Italiani", "USA"],
+			"tipo_di_fatto": ["sociale-economico", "cultura e societa civile"],
+			"scala": "nazionale",
+			"stato_della_ricostruzione": "evento riportato",
+			"wikilinks": {
+				"Esselunga": "https://it.wikipedia.org/wiki/Esselunga",
+				"Bernardo_Caprotti": "https://it.wikipedia.org/wiki/Bernardo_Caprotti"
+			}
+		},
+		{
+			"anno": 1960,
+			"titolo": "Governo Tambroni e Piano Marzano",
+			"data": {"inizio": "1960-03-25", "fine": "1960-07-19", "precisione": "giorno"},
+			"luogo": {"nome": "Roma, Genova e Reggio Emilia", "paese": "Italia"},
+			"descrizione": "Il governo Tambroni, formato nel marzo 1960, ottenne la fiducia anche grazie ai voti del MSI. La decisione di autorizzare il congresso missino a Genova provoco proteste e scontri; dopo le vittime delle manifestazioni di luglio, Tambroni si dimise. Il cosiddetto Piano Marzano e una ricostruzione separata, da documentare con fonti specifiche.",
+			"dati_concreti": ["Governo Tambroni: in carica dal 25 marzo al 19 luglio 1960.", "A Genova le proteste iniziarono il 30 giugno 1960.", "Il 7 luglio 1960 a Reggio Emilia morirono cinque manifestanti durante gli scontri.", "Il Piano Marzano non deve essere presentato come un golpe accertato senza una fonte primaria o giudiziaria."],
+			"responsabili_o_attori": [{"nome": "Governo Tambroni", "ruolo": "governo coinvolto"}, {"nome": "MSI", "ruolo": "sostegno politico indicato"}, {"nome": "Marzano", "ruolo": "autore indicato del piano"}],
+			"entita_coinvolte": ["MSI", "Stato", "Carabinieri", "societa civile"],
+			"tipo_di_fatto": ["politico-istituzionale", "violenza politica o strage"],
+			"scala": "nazionale",
+			"stato_della_ricostruzione": "evento e ricostruzione da verificare",
+			"wikilinks": {
+				"Governo_Tambroni": "https://it.wikipedia.org/wiki/Governo_Tambroni",
+				"Giovanni_Tambroni": "https://it.wikipedia.org/wiki/Giovanni_Tambroni"
+			}
+		},
+		{
+			"anno": 1962,
+			"titolo": "Morte di Enrico Mattei e successione di Cefis",
+			"data": {"inizio": "1962-10-27", "fine": "1962-10-27", "precisione": "giorno"},
+			"luogo": {"nome": "Bascape, provincia di Pavia", "paese": "Italia"},
+			"descrizione": "Il 27 ottobre 1962 l'aereo di Enrico Mattei, presidente dell'ENI, precipitò nei pressi di Bascape durante il volo da Catania a Milano. Mattei, il pilota Irnerio Bertuzzi e il giornalista americano William McHale morirono. Le indagini successive hanno discusso l'ipotesi di sabotaggio, ma l'attribuzione dei mandanti resta controversa.",
+			"dati_concreti": ["Data dell'incidente: 27 ottobre 1962.", "A bordo morirono Enrico Mattei, Irnerio Bertuzzi e William McHale.", "Eugenio Cefis divenne presidente dell'ENI nel 1963."],
+			"responsabili_o_attori": [{"nome": "Enrico Mattei", "ruolo": "vittima"}, {"nome": "Eugenio Cefis", "ruolo": "successore indicato"}, {"nome": "sette sorelle", "ruolo": "interessi petroliferi indicati"}],
+			"entita_coinvolte": ["ENI", "USA", "sette sorelle"],
+			"tipo_di_fatto": ["violenza politica o strage", "sociale-economico", "politica internazionale e Guerra fredda"],
+			"scala": "internazionale",
+			"stato_della_ricostruzione": "morte controversa; responsabilita non definite nella fonte",
+			"wikilinks": {
+				"Enrico_Mattei": "https://it.wikipedia.org/wiki/Enrico_Mattei",
+				"Eugenio_Cefis": "https://it.wikipedia.org/wiki/Eugenio_Cefis"
+			}
+		},
+		{
+			"anno": 1963,
+			"titolo": "Sorveglianza del Quirinale e del Vaticano",
+			"data": {"inizio": "1963-01-01", "fine": "1963-12-31", "precisione": "anno"},
+			"luogo": {"nome": "Roma", "paese": "Italia"},
+			"descrizione": "La ricostruzione attribuisce al SIFAR attivita di sorveglianza in sedi istituzionali e vaticane. Il dato utilizzabile nel database e l'esistenza di accuse e discussioni sulle deviazioni del servizio; l'installazione di specifici microfoni o videocamere deve essere collegata a un documento verificabile prima di essere trattata come fatto accertato.",
+			"dati_concreti": ["Il SIFAR era il servizio informativo militare italiano attivo dal 1949 al 1966.", "Le attivita di schedatura e raccolta informativa del SIFAR furono discusse nelle inchieste sul caso De Lorenzo.", "Non e indicata una fonte primaria sufficiente per confermare installazioni specifiche al Quirinale o in Vaticano."],
+			"responsabili_o_attori": [{"nome": "SIFAR", "ruolo": "autore indicato"}],
+			"entita_coinvolte": ["SIFAR", "Quirinale", "Vaticano"],
+			"tipo_di_fatto": ["servizi segreti e apparati dello Stato", "massoneria e rapporti con la Chiesa"],
+			"scala": "nazionale",
+			"stato_della_ricostruzione": "accusa riportata; da verificare",
+			"wikilinks": {
+				"SIFAR": "https://it.wikipedia.org/wiki/SIFAR",
+				"Quirinale": "https://it.wikipedia.org/wiki/Palazzo_del_Quirinale"
+			}
+		},
+		{
+			"anno": 1964,
+			"titolo": "Piano Solo",
+			"data": {"inizio": "1964-06-01", "fine": "1964-07-31", "precisione": "mese"},
+			"luogo": {"nome": "Roma e Italia", "paese": "Repubblica Italiana"},
+			"descrizione": "Giovanni De Lorenzo e indicato come promotore del Piano Solo, con appoggio politico del presidente Antonio Segni e opposizione all'evoluzione del centrosinistra.",
+			"dati_concreti": ["Il Piano Solo fu elaborato nel 1964 dal comandante generale dell'Arma dei Carabinieri Giovanni De Lorenzo.", "Il piano prevedeva l'impiego dell'Arma in caso di emergenza politica e la predisposizione di elenchi di persone da controllare o arrestare.", "La vicenda divenne pubblica nel 1967 attraverso le inchieste giornalistiche e parlamentari sul SIFAR."],
+			"responsabili_o_attori": [{"nome": "Giovanni De Lorenzo", "ruolo": "promotore indicato"}, {"nome": "Antonio Segni", "ruolo": "appoggio politico indicato"}, {"nome": "SIFAR", "ruolo": "apparato coinvolto"}],
+			"entita_coinvolte": ["SIFAR", "Carabinieri", "Presidenza della Repubblica", "USA"],
+			"tipo_di_fatto": ["servizi segreti e apparati dello Stato", "politico-istituzionale"],
+			"scala": "nazionale",
+			"stato_della_ricostruzione": "responsabilita e dinamica da verificare",
+			"wikilinks": {
+				"Piano_Solo": "https://it.wikipedia.org/wiki/Piano_Solo",
+				"Giovanni_De_Lorenzo": "https://it.wikipedia.org/wiki/Giovanni_De_Lorenzo",
+				"Antonio_Segni": "https://it.wikipedia.org/wiki/Antonio_Segni"
+			}
+		},
+		{
+			"anno": 1966,
+			"titolo": "Scandalo SIFAR e trasformazione in SID",
+			"data": {"inizio": "1966-01-01", "fine": "1966-12-31", "precisione": "anno"},
+			"luogo": {"nome": "Roma e Italia", "paese": "Italia"},
+			"descrizione": "Nel 1966 lo scandalo legato agli archivi e alle attivita del SIFAR porto alla rimozione di Giovanni De Lorenzo dal vertice dell'Arma dei Carabinieri. La riforma dei servizi porto alla sostituzione del SIFAR con il SID, istituito nello stesso anno e operativo dal 1967.",
+			"dati_concreti": ["Giovanni De Lorenzo fu rimosso dal comando generale dei Carabinieri nel 1966.", "Il SID sostitui il SIFAR nel quadro della riforma dei servizi informativi.", "Le inchieste parlamentari esaminarono gli archivi e l'uso politico delle informazioni raccolte."],
+			"responsabili_o_attori": [{"nome": "Giovanni De Lorenzo", "ruolo": "dirigente rimosso"}, {"nome": "SIFAR", "ruolo": "servizio coinvolto"}, {"nome": "SID", "ruolo": "servizio successivo"}],
+			"entita_coinvolte": ["SIFAR", "SID", "Carabinieri", "Parlamento"],
+			"tipo_di_fatto": ["servizi segreti e apparati dello Stato", "inchiesta giudiziaria o parlamentare"],
+			"scala": "nazionale",
+			"stato_della_ricostruzione": "evento riportato; dettagli da verificare",
+			"wikilinks": {
+				"SIFAR": "https://it.wikipedia.org/wiki/SIFAR",
+				"SID": "https://it.wikipedia.org/wiki/Servizio_Informazioni_Difesa"
+			}
+		},
+		{
+			"anno": 1968,
+			"titolo": "Morte di Renzo Rocca e commissione parlamentare sul caso SIFAR",
+			"data": {"inizio": "1968-06-27", "fine": "1968-06-27", "precisione": "giorno"},
+			"luogo": {"nome": "Roma", "paese": "Italia"},
+			"descrizione": "Renzo Rocca, dirigente del Raggruppamento unita speciali (R.E.I.) collegato agli apparati informativi, fu trovato morto a Roma nel giugno 1968. La ricostruzione giudiziaria parlo di suicidio; il caso fu discusso nel clima delle inchieste sulle strutture informative e sulle deviazioni del SIFAR.",
+			"dati_concreti": ["Renzo Rocca era un dirigente legato agli apparati informativi militari.", "La versione giudiziaria registrata nel caso fu il suicidio.", "Il collegamento con responsabilita esterne o con una commissione parlamentare richiede la citazione dell'atto specifico e non deve essere dato per accertato."],
+			"responsabili_o_attori": [{"nome": "Renzo Rocca", "ruolo": "vittima"}, {"nome": "Commissione parlamentare d'inchiesta", "ruolo": "organo investigativo"}],
+			"entita_coinvolte": ["SID", "Parlamento"],
+			"tipo_di_fatto": ["servizi segreti e apparati dello Stato", "inchiesta giudiziaria o parlamentare"],
+			"scala": "nazionale",
+			"stato_della_ricostruzione": "morte controversa; versione giudiziaria indicata come suicidio",
+			"wikilinks": {
+				"SIFAR": "https://it.wikipedia.org/wiki/SIFAR",
+				"SID": "https://it.wikipedia.org/wiki/Servizio_Informazioni_Difesa"
+			}
+		},
+		{
+			"anno": 1970,
+			"titolo": "Golpe Borghese e inizio della strategia della tensione",
+			"data": {"inizio": "1970-12-07", "fine": "1970-12-08", "precisione": "giorno"},
+			"luogo": {"nome": "Roma", "paese": "Italia"},
+			"descrizione": "Nella notte tra il 7 e l'8 dicembre 1970 gruppi legati al Fronte Nazionale di Junio Valerio Borghese occuparono per breve tempo alcuni obiettivi a Roma. L'azione fu interrotta prima dell'attuazione del piano. Le responsabilita individuali e i possibili appoggi istituzionali furono oggetto di procedimenti giudiziari e di controversie.",
+			"dati_concreti": ["Data del tentato golpe: notte tra 7 e 8 dicembre 1970.", "Organizzatore indicato: Junio Valerio Borghese.", "Il procedimento giudiziario si concluse con assoluzioni in appello nel 1984."],
+			"responsabili_o_attori": [{"nome": "Junio Valerio Borghese", "ruolo": "organizzatore indicato"}, {"nome": "Gianadelio Maletti", "ruolo": "dirigente SID indicato come informato"}, {"nome": "DC", "ruolo": "entita collegata nella tavola"}, {"nome": "CIA", "ruolo": "entita collegata nella tavola"}],
+			"entita_coinvolte": ["Fronte Nazionale", "Avanguardia Nazionale", "X MAS", "SID", "CIA", "Brigate Rosse", "Sinistra Proletaria", "Superclan"],
+			"tipo_di_fatto": ["violenza politica o strage", "servizi segreti e apparati dello Stato", "politico-istituzionale"],
+			"scala": "nazionale",
+			"stato_della_ricostruzione": "responsabilita controverse; accuse riportate",
+			"wikilinks": {
+				"Golpe_Borghese": "https://it.wikipedia.org/wiki/Golpe_Borghese",
+				"Junio_Valerio_Borghese": "https://it.wikipedia.org/wiki/Junio_Valerio_Borghese",
+				"Strategia_della_tensione": "https://it.wikipedia.org/wiki/Strategia_della_tensione"
+			}
+		},
+		{
+			"anno": 1971,
+			"titolo": "Inchiesta sul Golpe Borghese e collegamento con Piazza Fontana",
+			"data": {"inizio": "1971-01-01", "fine": "1971-12-31", "precisione": "anno"},
+			"luogo": {"nome": "Italia", "paese": "Italia"},
+			"descrizione": "Le indagini sul Golpe Borghese e sulla strage di Piazza Fontana proseguirono negli anni Settanta e coinvolsero esponenti dell'estrema destra e informatori del SID. Il collegamento tra i due procedimenti appartiene alla storia giudiziaria della strategia della tensione, ma non significa che ogni soggetto citato sia stato condannato per entrambi i fatti.",
+			"dati_concreti": ["La strage di Piazza Fontana avvenne il 12 dicembre 1969 e causo 17 morti e 88 feriti.", "Guido Giannettini fu indicato negli atti processuali come informatore del SID.", "Nel processo per Piazza Fontana la responsabilita per la strage fu attribuita in via definitiva a esponenti di Ordine Nuovo, ma i mandanti non furono definitivamente identificati."],
+			"responsabili_o_attori": [{"nome": "Guido Giannettini", "ruolo": "informatore del SID indicato"}, {"nome": "Gianadelio Maletti", "ruolo": "dirigente SID indicato"}, {"nome": "Remo Orlandini", "ruolo": "indagato o collaboratore indicato"}],
+			"entita_coinvolte": ["SID", "CIA", "Avanguardia Nazionale", "Piazza Fontana", "Golpe Borghese"],
+			"tipo_di_fatto": ["inchiesta giudiziaria o parlamentare", "servizi segreti e apparati dello Stato", "violenza politica o strage"],
+			"scala": "nazionale",
+			"stato_della_ricostruzione": "indagini e responsabilita controverse",
+			"wikilinks": {
+				"Golpe_Borghese": "https://it.wikipedia.org/wiki/Golpe_Borghese",
+				"Strage_di_Piazza_Fontana": "https://it.wikipedia.org/wiki/Strage_di_Piazza_Fontana"
+			}
+		},
+		{
+			"anno": 1972,
+			"titolo": "Bomba di Peteano e morte di Feltrinelli",
+			"data": {"inizio": "1972-03-14", "fine": "1972-05-31", "precisione": "giorno"},
+			"luogo": {"nome": "Segrate e Peteano", "paese": "Italia"},
+			"descrizione": "Il 14 marzo 1972 Giangiacomo Feltrinelli fu trovato morto nei pressi di Segrate mentre preparava un'azione di sabotaggio su un traliccio; la ricostruzione giudiziaria parlo di morte accidentale. Il 31 maggio 1972 a Peteano un'autobomba uccise tre carabinieri: anni dopo Vincenzo Vinciguerra confesso l'attentato e fu condannato.",
+			"dati_concreti": ["Morte di Giangiacomo Feltrinelli: 14 marzo 1972.", "Strage di Peteano: 31 maggio 1972.", "A Peteano morirono tre carabinieri: Antonio Ferraro, Luigi Di Gennaro e Donato Poveromo.", "Vincenzo Vinciguerra fu condannato per la strage di Peteano; i collegamenti ulteriori con altre organizzazioni devono essere indicati solo quando documentati."],
+			"responsabili_o_attori": [{"nome": "Vincenzo Vinciguerra", "ruolo": "autore indicato per Peteano"}, {"nome": "Ordine Nuovo", "ruolo": "supporto indicato"}, {"nome": "Giangiacomo Feltrinelli", "ruolo": "vittima"}, {"nome": "Corrado Simioni", "ruolo": "fornitore indicato del timer"}],
+			"entita_coinvolte": ["Carabinieri", "Ordine Nuovo", "GAP di Feltrinelli", "Stato"],
+			"tipo_di_fatto": ["violenza politica o strage", "inchiesta giudiziaria o parlamentare"],
+			"scala": "nazionale",
+			"stato_della_ricostruzione": "Peteano: responsabilita giudiziariamente ricondotta secondo la fonte; morte di Feltrinelli: ricostruzione da verificare",
+			"wikilinks": {
+				"Strage_di_Peteano": "https://it.wikipedia.org/wiki/Strage_di_Peteano",
+				"Giangiacomo_Feltrinelli": "https://it.wikipedia.org/wiki/Giangiacomo_Feltrinelli"
+			}
+		},
+		{
+			"anno": 1977,
+			"titolo": "Scuola Hyperion e compromesso storico",
+			"data": {"inizio": "1973-01-01", "fine": "1977-12-31", "precisione": "intervallo"},
+			"luogo": {"nome": "Parigi e Italia", "paese": "Francia e Italia"},
+			"descrizione": "La cosiddetta scuola Hyperion fu fondata a Parigi nel 1977 da ambienti della sinistra extraparlamentare, tra cui Corrado Simioni secondo diverse ricostruzioni. Il compromesso storico fu la strategia di avvicinamento tra PCI e DC elaborata pubblicamente da Enrico Berlinguer e sviluppata nel confronto con Aldo Moro tra il 1973 e il 1978; i due fenomeni non costituiscono automaticamente un unico evento causale.",
+			"dati_concreti": ["La scuola Hyperion e associata a Parigi e all'anno 1977.", "Enrico Berlinguer formulo la proposta del compromesso storico nel 1973.", "Aldo Moro e Giulio Andreotti furono protagonisti del confronto istituzionale che porto alla solidarieta nazionale del 1976-1978.", "Non e dimostrato da questi dati un rapporto operativo diretto tra Hyperion, PCI, DC e Stati Uniti."],
+			"responsabili_o_attori": [{"nome": "Corrado Simioni", "ruolo": "fondatore indicato"}, {"nome": "Enrico Berlinguer", "ruolo": "leader politico"}, {"nome": "Aldo Moro", "ruolo": "leader politico"}],
+			"entita_coinvolte": ["Scuola Hyperion", "PCI", "DC", "USA"],
+			"tipo_di_fatto": ["politico-istituzionale", "violenza politica o strage", "politica internazionale e Guerra fredda"],
+			"scala": "internazionale",
+			"stato_della_ricostruzione": "collegamenti interpretativi della fonte",
+			"wikilinks": {
+				"Scuola_Hyperion": "https://it.wikipedia.org/wiki/Scuola_Hyperion",
+				"Compromesso_storico": "https://it.wikipedia.org/wiki/Compromesso_storico"
+			}
+		},
+		{
+			"anno": 1978,
+			"titolo": "Morte di Aldo Moro",
+			"data": {"inizio": "1978-03-16", "fine": "1978-05-09", "precisione": "intervallo"},
+			"luogo": {"nome": "Roma", "paese": "Italia"},
+			"descrizione": "Il 16 marzo 1978 Aldo Moro fu rapito in via Fani a Roma durante un agguato nel quale furono uccisi cinque uomini della scorta. Dopo 55 giorni di prigionia, il 9 maggio 1978 Moro fu trovato morto in via Caetani. Le Brigate Rosse rivendicarono il sequestro e l'uccisione; altri aspetti del caso sono stati oggetto di numerose inchieste.",
+			"dati_concreti": ["Rapimento: 16 marzo 1978.", "Durata della prigionia: 55 giorni.", "Ritrovamento del corpo: 9 maggio 1978.", "Vittime dell'agguato di via Fani: cinque agenti della scorta."],
+			"responsabili_o_attori": [{"nome": "Aldo Moro", "ruolo": "vittima"}, {"nome": "Brigate Rosse", "ruolo": "responsabilita indicata dalla fonte"}, {"nome": "PCI", "ruolo": "attore politico"}, {"nome": "DC", "ruolo": "attore politico"}],
+			"entita_coinvolte": ["Brigate Rosse", "PCI", "DC", "USA"],
+			"tipo_di_fatto": ["violenza politica o strage", "politico-istituzionale"],
+			"scala": "nazionale",
+			"stato_della_ricostruzione": "evento documentato; ulteriori collegamenti della tavola richiedono verifica",
+			"wikilinks": {
+				"Caso_Moro": "https://it.wikipedia.org/wiki/Caso_Moro",
+				"Aldo_Moro": "https://it.wikipedia.org/wiki/Aldo_Moro",
+				"Brigate_Rosse": "https://it.wikipedia.org/wiki/Brigate_Rosse"
+			}
+		}
+	],
+	"campi_da_aggiungere_per_un_lavoro_scolastico": [
+		"luogo",
+		"data_completa",
+		"vittime_e_numero_delle_vittime",
+		"fonti_storiografiche_verificate",
+		"esito_giudiziario",
+		"nesso_con_altri_eventi",
+		"parole_chiave",
+		"citazione_o_testo_originale_della_foto"
+	]
+}

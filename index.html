@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Archivio della Repubblica italiana</title>
+  <style>
+    :root {
+      --ink: #1d2730;
+      --muted: #65727c;
+      --paper: #f5f2eb;
+      --panel: #fffdf8;
+      --line: #d8d2c5;
+      --accent: #b4492d;
+      --accent-soft: #f0d7ca;
+      --green: #3f7063;
+      --shadow: 0 14px 35px rgba(36, 42, 44, .09);
+      --political: #356a8a;
+      --social: #b27b2f;
+      --violence: #b4492d;
+      --security: #397c78;
+      --organized-crime: #75484d;
+      --masonic: #8b6b38;
+      --international: #4d5b82;
+      --inquiry: #75617f;
+      --culture: #4f765d;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: Georgia, "Times New Roman", serif; }
+    button, input, select { font: inherit; }
+    .shell { width: min(1440px, calc(100% - 40px)); margin: 0 auto; }
+    header { padding: 42px 0 28px; border-bottom: 1px solid var(--line); }
+    .eyebrow { color: var(--accent); font: 700 12px/1.2 Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { max-width: 760px; margin: 12px 0 8px; font-size: clamp(32px, 5vw, 64px); line-height: .98; font-weight: 500; }
+    .intro { max-width: 690px; margin: 0; color: var(--muted); font: 16px/1.5 Arial, sans-serif; }
+    .workspace { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(330px, .75fr); gap: 28px; padding: 28px 0 50px; }
+    .toolbar { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 10px; margin-bottom: 18px; }
+    input, select { width: 100%; min-height: 44px; padding: 10px 12px; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 3px; }
+    .summary { display: flex; gap: 22px; margin: 0 0 20px; color: var(--muted); font: 12px Arial, sans-serif; text-transform: uppercase; letter-spacing: .06em; }
+    .summary strong { display: block; margin-top: 3px; color: var(--ink); font: 700 21px Georgia, serif; letter-spacing: 0; text-transform: none; }
+    .timeline { position: relative; padding-left: 29px; }
+    .timeline::before { position: absolute; top: 7px; bottom: 0; left: 7px; width: 1px; background: var(--line); content: ""; }
+    .event { --event-color: var(--accent); position: relative; margin-bottom: 14px; padding: 18px 20px; background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--event-color); box-shadow: var(--shadow); cursor: pointer; transition: transform .18s ease, border-color .18s ease; }
+    .event:hover, .event.active { transform: translateX(4px); border-color: var(--event-color); }
+    .event::before { position: absolute; top: 22px; left: -35px; width: 11px; height: 11px; border: 3px solid var(--paper); border-radius: 50%; background: var(--event-color); box-shadow: 0 0 0 1px var(--event-color); content: ""; }
+    .event.type-political { --event-color: var(--political); }
+    .event.type-social { --event-color: var(--social); }
+    .event.type-violence { --event-color: var(--violence); }
+    .event.type-security { --event-color: var(--security); }
+    .event.type-organized-crime { --event-color: var(--organized-crime); }
+    .event.type-masonic { --event-color: var(--masonic); }
+    .event.type-international { --event-color: var(--international); }
+    .event.type-inquiry { --event-color: var(--inquiry); }
+    .event.type-culture { --event-color: var(--culture); }
+      .legend { display: flex; flex-wrap: wrap; gap: 8px 14px; margin: 0 0 20px; color: var(--muted); font: 11px Arial, sans-serif; }
+      .legend-item { display: inline-flex; align-items: center; gap: 6px; }
+      .legend-swatch { width: 10px; height: 10px; border-radius: 50%; background: var(--legend-color); }
+      .legend-swatch.political { --legend-color: var(--political); }
+      .legend-swatch.social { --legend-color: var(--social); }
+      .legend-swatch.violence { --legend-color: var(--violence); }
+      .legend-swatch.security { --legend-color: var(--security); }
+      .legend-swatch.organized-crime { --legend-color: var(--organized-crime); }
+      .legend-swatch.masonic { --legend-color: var(--masonic); }
+      .legend-swatch.international { --legend-color: var(--international); }
+      .legend-swatch.inquiry { --legend-color: var(--inquiry); }
+      .legend-swatch.culture { --legend-color: var(--culture); }
+    .event:hover, .event.active { transform: translateX(4px); border-color: var(--accent); }
+    .event::before { position: absolute; top: 22px; left: -35px; width: 11px; height: 11px; border: 3px solid var(--paper); border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 1px var(--accent); content: ""; }
+    .event-top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+    .year { color: var(--accent); font: 700 18px Arial, sans-serif; }
+    .event-meta { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; }
+    .event-type { display: inline-flex; align-items: center; gap: 5px; padding: 5px 8px; color: var(--event-color); background: color-mix(in srgb, var(--event-color) 12%, white); border: 1px solid color-mix(in srgb, var(--event-color) 30%, white); border-radius: 2px; font: 700 11px Arial, sans-serif; }
+    .event-type i { width: 7px; height: 7px; border-radius: 50%; background: var(--event-color); }
+    .event h2 { margin: 5px 0 9px; font-size: 22px; font-weight: 500; line-height: 1.1; }
+    .event p { margin: 0 0 14px; color: #45515a; font: 14px/1.5 Arial, sans-serif; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chip { padding: 5px 8px; color: var(--green); background: #e7efea; border-radius: 2px; font: 11px Arial, sans-serif; }
+    .detail { position: sticky; top: 20px; align-self: start; padding: 24px; background: var(--panel); border: 1px solid var(--line); box-shadow: var(--shadow); }
+    .detail.empty { color: var(--muted); font: 15px/1.5 Arial, sans-serif; }
+    .detail h2 { margin: 8px 0 14px; font-size: 30px; font-weight: 500; line-height: 1.05; }
+    .detail h3 { margin: 24px 0 8px; color: var(--accent); font: 700 11px Arial, sans-serif; letter-spacing: .1em; text-transform: uppercase; }
+    .detail p, .detail li { color: #45515a; font: 14px/1.55 Arial, sans-serif; }
+    .detail ul { margin: 0; padding-left: 18px; }
+    .detail a { color: var(--accent); }
+    .status { margin-top: 16px; padding: 10px; background: var(--accent-soft); font: 12px/1.4 Arial, sans-serif; }
+    .loader { padding: 18px; background: var(--panel); border: 1px dashed var(--line); color: var(--muted); font: 14px Arial, sans-serif; }
+    .file { margin-top: 10px; }
+    @media (max-width: 850px) { .workspace { grid-template-columns: 1fr; } .detail { position: static; } .toolbar { grid-template-columns: 1fr; } }
+    @media (max-width: 520px) { .shell { width: min(100% - 24px, 1440px); } header { padding-top: 28px; } .event-top { display: block; } }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div class="eyebrow">Archivio storico · esplorazione eventi</div>
+      <h1>La Repubblica italiana, evento dopo evento.</h1>
+      <p class="intro">Una vista ordinata per data per esplorare attori, categorie, stato della ricostruzione e collegamenti documentari.</p>
+    </header>
+    <section class="workspace">
+      <div>
+        <div class="toolbar">
+          <input id="search" type="search" placeholder="Cerca eventi, attori, luoghi..." aria-label="Cerca">
+          <select id="type" aria-label="Filtra per tipo"><option value="">Tutti i tipi</option></select>
+          <select id="certainty" aria-label="Filtra per stato"><option value="">Tutti gli stati</option></select>
+        </div>
+        <div class="summary"><div>Eventi<strong id="count">0</strong></div><div>Intervallo<strong id="range">-</strong></div></div>
+                <div class="legend" aria-label="Legenda dei colori per tipo di evento">
+                  <span class="legend-item"><i class="legend-swatch political"></i>Politica</span>
+                  <span class="legend-item"><i class="legend-swatch social"></i>Societa ed economia</span>
+                  <span class="legend-item"><i class="legend-swatch violence"></i>Violenza</span>
+                  <span class="legend-item"><i class="legend-swatch security"></i>Servizi e apparati</span>
+                  <span class="legend-item"><i class="legend-swatch organized-crime"></i>Criminalita organizzata</span>
+                  <span class="legend-item"><i class="legend-swatch masonic"></i>Massoneria</span>
+                  <span class="legend-item"><i class="legend-swatch international"></i>Guerra fredda</span>
+                  <span class="legend-item"><i class="legend-swatch inquiry"></i>Inchieste</span>
+                  <span class="legend-item"><i class="legend-swatch culture"></i>Cultura e societa civile</span>
+                </div>
+        <div id="loader" class="loader">Caricamento del database...</div>
+        <div id="timeline" class="timeline" hidden></div>
+        <label class="file">Carica un JSON manualmente <input id="file" type="file" accept="application/json"></label>
+      </div>
+      <aside id="detail" class="detail empty">Seleziona un evento nella timeline per aprire la scheda completa.</aside>
+    </section>
+  </main>
+  <script>
+    const state = { events: [], filtered: [] };
+    const $ = (id) => document.getElementById(id);
+
+    function flatten(event) {
+      return JSON.stringify(event).toLowerCase();
+    }
+
+    function uniqueValues(key) {
+      return [...new Set(state.events.flatMap((event) => Array.isArray(event[key]) ? event[key] : [event[key]]).filter(Boolean))].sort();
+    }
+
+    function setupFilters() {
+      uniqueValues('tipo_di_fatto').forEach((value) => $('type').append(new Option(value, value)));
+      uniqueValues('stato_della_ricostruzione').forEach((value) => $('certainty').append(new Option(value, value)));
+    }
+
+    function eventTypeClass(event) {
+      const types = (event.tipo_di_fatto || []).join(' ').toLowerCase();
+      const categories = [
+        ['violenza', 'violence'],
+        ['mafia', 'organized-crime'],
+        ['criminalita', 'organized-crime'],
+        ['servizi segreti', 'security'],
+        ['inchiesta', 'inquiry'],
+        ['massoneria', 'masonic'],
+        ['guerra fredda', 'international'],
+        ['politica internazionale', 'international'],
+        ['sociale', 'social'],
+        ['cultura', 'culture'],
+        ['politico-istituzionale', 'political']
+      ];
+      return categories.find(([label]) => types.includes(label))?.[1] || 'political';
+    }
+
+    function eventTypeLabel(event) {
+      const labels = {
+        political: 'Politica',
+        social: 'Societa ed economia',
+        violence: 'Violenza politica',
+        security: 'Servizi e apparati',
+        'organized-crime': 'Criminalita organizzata',
+        masonic: 'Massoneria',
+        international: 'Guerra fredda',
+        inquiry: 'Inchiesta',
+        culture: 'Cultura e societa civile'
+      };
+      return labels[eventTypeClass(event)];
+    }
+
+    function render() {
+      const query = $('search').value.toLowerCase().trim();
+      const type = $('type').value;
+      const certainty = $('certainty').value;
+      state.filtered = state.events.filter((event) => (!query || flatten(event).includes(query)) && (!type || event.tipo_di_fatto?.includes(type)) && (!certainty || event.stato_della_ricostruzione === certainty));
+      $('count').textContent = state.filtered.length;
+      const years = state.filtered.map((event) => event.anno).sort((a, b) => a - b);
+      $('range').textContent = years.length ? `${years[0]}–${years[years.length - 1]}` : '-';
+      $('timeline').innerHTML = state.filtered.map((event, index) => `
+        <article class="event type-${eventTypeClass(event)}" data-index="${index}" tabindex="0">
+          <div class="event-top"><span class="year">${event.anno}</span><span class="event-meta"><span class="chip">${event.scala || 'scala non indicata'}</span><span class="event-type"><i></i>${escapeHtml(eventTypeLabel(event))}</span></span></div>
+          <h2>${escapeHtml(event.titolo)}</h2>
+          <p>${escapeHtml(event.descrizione)}</p>
+          <div class="chips">${(event.tipo_di_fatto || []).map((item) => `<span class="chip">${escapeHtml(item)}</span>`).join('')}</div>
+        </article>`).join('');
+      $('timeline').hidden = false;
+      $('loader').hidden = true;
+      document.querySelectorAll('.event').forEach((card) => card.addEventListener('click', () => showDetail(state.filtered[Number(card.dataset.index)], card)));
+    }
+
+    function showDetail(event, card) {
+      document.querySelectorAll('.event').forEach((item) => item.classList.remove('active'));
+      card.classList.add('active');
+      const actors = (event.responsabili_o_attori || []).map((actor) => `<li><strong>${escapeHtml(actor.nome)}</strong>: ${escapeHtml(actor.ruolo)}</li>`).join('');
+      const links = Object.entries(event.wikilinks || {}).map(([name, url]) => `<li><a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(name)}</a></li>`).join('');
+      $('detail').className = 'detail';
+      $('detail').innerHTML = `<div class="eyebrow">Evento · ${event.anno}</div><h2>${escapeHtml(event.titolo)}</h2><p>${escapeHtml(event.descrizione)}</p><div class="status">${escapeHtml(event.stato_della_ricostruzione || 'Stato non indicato')}</div><h3>Attori</h3><ul>${actors || '<li>Non indicati</li>'}</ul><h3>Classificazione</h3><p>${escapeHtml((event.tipo_di_fatto || []).join(' · '))}</p><h3>Entita coinvolte</h3><p>${escapeHtml((event.entita_coinvolte || []).join(' · '))}</p><h3>Wikilinks</h3><ul>${links || '<li>Nessun collegamento</li>'}</ul>`;
+    }
+
+    function escapeHtml(value) { return String(value ?? '').replace(/[&<>'"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char])); }
+
+    function loadData(data) { state.events = data.eventi || []; setupFilters(); render(); }
+    $('search').addEventListener('input', render);
+    $('type').addEventListener('change', render);
+    $('certainty').addEventListener('change', render);
+    $('file').addEventListener('change', (event) => { const file = event.target.files[0]; if (!file) return; const reader = new FileReader(); reader.onload = () => loadData(JSON.parse(reader.result)); reader.readAsText(file); });
+    fetch('DemocrHistory').then((response) => response.json()).then(loadData).catch(() => { $('loader').textContent = 'Se il file e aperto localmente, usa il selettore JSON qui sotto.'; });
+  </script>
+</body>
+</html>
