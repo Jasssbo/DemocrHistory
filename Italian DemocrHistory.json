@@ -348,20 +348,25 @@
 		},
 		{
 			"anno": 1957,
-			"titolo": "Apertura dei Supermarkets Italiani",
-			"data": {"inizio": "1957-01-01", "fine": "1957-12-31", "precisione": "anno"},
-			"luogo": {"nome": "Milano", "paese": "Italia"},
-			"descrizione": "A Milano nasce il primo supermercato indicato nella tavola, collegato a Nelson Rockefeller, Marco Brunelli, Franco Bertolini e Caprotti.",
-			"dati_concreti": ["La societa Supermarkets Italiani fu costituita nel 1957.", "Il primo punto vendita della catena apri a Milano nel 1957; la societa sarebbe poi diventata Esselunga.", "Bernardo Caprotti fu una figura centrale nello sviluppo dell'impresa; i ruoli attribuiti agli altri nomi richiedono documentazione distinta."],
-			"responsabili_o_attori": [{"nome": "Nelson Rockefeller", "ruolo": "finanziatore o promotore indicato"}, {"nome": "Marco Brunelli", "ruolo": "promotore indicato"}, {"nome": "Franco Bertolini", "ruolo": "promotore indicato"}, {"nome": "Caprotti", "ruolo": "promotore indicato"}],
-			"entita_coinvolte": ["Supermarkets Italiani", "USA"],
+			"titolo": "Fondazione di Supermarkets Italiani e apertura del primo supermercato",
+			"data": {"inizio": "1957-04-13", "fine": "1957-11-27", "precisione": "giorno"},
+			"luogo": {"nome": "Milano, viale Regina Giovanna", "paese": "Italia"},
+			"descrizione": "Il 13 aprile 1957 fu costituita a Milano Supermarkets Italiani S.p.A., società della grande distribuzione fondata con capitale statunitense e soci italiani. Il primo punto vendita fu inaugurato il 27 novembre 1957 in viale Regina Giovanna, in un'ex officina riconvertita a supermercato. L'insegna e il modello di vendita, ispirati alla grande distribuzione statunitense, introdussero in Italia una nuova forma di acquisto alimentare e costituirono l'origine della futura Esselunga.",
+			"dati_concreti": ["Costituzione della società: 13 aprile 1957, a Milano.", "Capitale sociale iniziale: un milione di lire.", "La quota iniziale era sottoscritta per il 51% dall'International Basic Economy Corporation (IBEC), collegata a Nelson Rockefeller.", "Tra i soci italiani figuravano gli industriali tessili Bernardo e Guido Caprotti(18%), gli imprenditori e proprietari del Corriere della Sera Mario e Vittorio Crespi(16,5%), Marco Brunelli figlio di un noto antiquario milanese (10,3%), la Principessa Laetitia Boncompagni (amica personale di Nelson, 3%) e Franco Bertolini consigliere finanziario dei Crespi (1,2%).", "Primo punto vendita: inaugurazione il 27 novembre 1957 in viale Regina Giovanna, oggi viale Regina Giovanna 34.", "Il negozio era ricavato da un'ex officina e adottava l'insegna 'Supermarket', progettata da Max Huber.", "Nel 1961 i fratelli Caprotti acquisirono il 51% fino ad allora detenuto da Rockefeller; Bernardo Caprotti divenne amministratore delegato nel 1965.", "Il nome Esselunga si affermò successivamente a partire dalla 'S' allungata dell'insegna Supermarket; la holding mantenne il nome Supermarkets Italiani."],
+			"responsabili_o_attori": [{"nome": "Nelson Rockefeller", "ruolo": "promotore dell'investimento attraverso IBEC"}, {"nome": "International Basic Economy Corporation", "ruolo": "azionista di maggioranza iniziale"}, {"nome": "Bernardo Caprotti", "ruolo": "socio italiano e futuro amministratore delegato"}, {"nome": "Guido Caprotti", "ruolo": "socio italiano"}, {"nome": "Marco Brunelli", "ruolo": "socio italiano"}, {"nome": "Mario e Vittorio Crespi", "ruolo": "soci italiani"}, {"nome": "Laetitia Boncompagni", "ruolo": "socia italiana"}, {"nome": "Franco Bertolini", "ruolo": "socio e consigliere finanziario"}, {"nome": "Max Huber", "ruolo": "autore dell'insegna Supermarket"}],
+			"entita_coinvolte": ["Supermarkets Italiani S.p.A.", "International Basic Economy Corporation", "famiglia Caprotti", "famiglia Crespi", "Milano", "grande distribuzione organizzata"],
 			"tipo_di_fatto": ["sociale-economico", "cultura e societa civile"],
 			"scala": "nazionale",
-			"stato_della_ricostruzione": "evento riportato",
+			"stato_della_ricostruzione": "fondazione e apertura documentate; ricostruzioni su ulteriori collegamenti politici richiedono fonti specifiche",
 			"wikilinks": {
 				"Esselunga": "https://it.wikipedia.org/wiki/Esselunga",
-				"Bernardo_Caprotti": "https://it.wikipedia.org/wiki/Bernardo_Caprotti"
-			}
+				"Bernardo_Caprotti": "https://it.wikipedia.org/wiki/Bernardo_Caprotti",
+				"Nelson_Rockefeller": "https://it.wikipedia.org/wiki/Nelson_Rockefeller",
+				"IBEC": "https://dimes.rockarch.org/collections/PM8C27JgYRkXRJ843Tk9Lg",
+				"Grande_distribuzione_organizzata": "https://it.wikipedia.org/wiki/Grande_distribuzione_organizzata",
+				"Max_Huber": "https://it.wikipedia.org/wiki/Max_Huber_(designer)"
+			},
+			"fonti": [{"tipo": "enciclopedia", "titolo": "Esselunga", "autore": "Treccani", "url": "https://www.treccani.it/enciclopedia/esselunga/"}, {"tipo": "voce di sintesi", "titolo": "Esselunga", "url": "https://it.wikipedia.org/wiki/Esselunga"}, {"tipo": "monografia", "titolo": "La spesa è uguale per tutti. L'avventura dei supermercati in Italia", "autore": "Emanuela Scarpellini", "editore": "Marsilio", "anno": 2007}]
 		},
 		{
 			"anno": 1960,
