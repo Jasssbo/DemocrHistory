@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>DemocrHistory Mobile · Cronologia della Repubblica Italiana</title>
+  <style>
+    :root {
+      --ink: #1d2730;
+      --muted: #65727c;
+      --paper: #f7f4ed;
+      --panel: #ffffff;
+      --line: #e2dcd0;
+      --accent: #b4492d;
+      --accent-soft: #f8ece6;
+      --shadow: 0 4px 20px rgba(0, 0, 0, .08);
+      --shadow-sheet: 0 -8px 30px rgba(0, 0, 0, .18);
+      
+      --political: #356a8a;
+      --social: #b27b2f;
+      --violence: #b4492d;
+      --security: #397c78;
+      --organized-crime: #75484d;
+      --masonic: #8b6b38;
+      --international: #4d5b82;
+      --inquiry: #75617f;
+      --culture: #4f765d;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+      overflow-x: hidden;
+      padding-bottom: 80px;
+    }
+
+    /* Sticky Mobile Header */
+    .mobile-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(247, 244, 237, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+      padding: 12px 16px;
+    }
+
+    .brand-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .brand-title {
+      font-family: Georgia, serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 0;
+    }
+
+    .desktop-link {
+      font-size: 12px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 4px 8px;
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+    }
+
+    .search-box {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font-size: 14px;
+      background: var(--panel);
+      outline: none;
+    }
+
+    .search-box input:focus {
+      border-color: var(--accent);
+    }
+
+    /* Filter Controls Row */
+    .filters-scroll {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: none;
+    }
+
+    .filters-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .filters-scroll select,
+    .filters-scroll button {
+      padding: 6px 12px;
+      font-size: 12px;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--ink);
+      white-space: nowrap;
+      outline: none;
+    }
+
+    .filters-scroll select:focus {
+      border-color: var(--accent);
+    }
+
+    .toggle-prelude-btn {
+      background: var(--accent-soft) !important;
+      color: var(--accent) !important;
+      border-color: var(--accent) !important;
+      font-weight: 600;
+    }
+
+    /* Stats bar */
+    .mobile-stats {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 16px;
+      font-size: 12px;
+      color: var(--muted);
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .mobile-stats strong {
+      color: var(--ink);
+    }
+
+    /* Event Feed */
+    .timeline-feed {
+      padding: 12px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .mobile-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 14px 16px;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mobile-card:active {
+      transform: scale(0.98);
+      background: #faf8f5;
+    }
+
+    .mobile-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+
+    .badge-year {
+      font-family: Georgia, serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--accent);
+    }
+
+    .badge-date {
+      font-size: 11px;
+      color: var(--muted);
+      background: var(--paper);
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .mobile-card-title {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.35;
+      color: var(--ink);
+      margin: 0 0 6px 0;
+    }
+
+    .mobile-card-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.45;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin: 0 0 8px 0;
+    }
+
+    .chips-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .chip {
+      font-size: 10px;
+      padding: 2px 7px;
+      border-radius: 12px;
+      background: var(--paper);
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    /* Detail Bottom Sheet Modal */
+    .sheet-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    .sheet-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .bottom-sheet {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      max-height: 88vh;
+      background: var(--panel);
+      border-top-left-radius: 18px;
+      border-top-right-radius: 18px;
+      z-index: 1001;
+      box-shadow: var(--shadow-sheet);
+      transform: translateY(100%);
+      transition: transform 0.3s cubic-bezier(0.1, 0.9, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .bottom-sheet.active {
+      transform: translateY(0);
+    }
+
+    .sheet-handle-area {
+      padding: 10px 0 6px;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .sheet-handle {
+      width: 40px;
+      height: 5px;
+      background: var(--line);
+      border-radius: 3px;
+    }
+
+    .sheet-content {
+      padding: 12px 20px 30px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .sheet-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .sheet-year {
+      font-family: Georgia, serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .sheet-close {
+      background: var(--paper);
+      border: none;
+      font-size: 20px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--muted);
+    }
+
+    .sheet-title {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin: 0 0 12px 0;
+      color: var(--ink);
+    }
+
+    .sheet-text {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #33414d;
+      margin-bottom: 16px;
+    }
+
+    .sheet-section-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--accent);
+      font-weight: 700;
+      margin: 14px 0 6px 0;
+    }
+
+    .sheet-list {
+      margin: 0 0 14px 0;
+      padding-left: 18px;
+      font-size: 13px;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+
+    .sheet-status-box {
+      padding: 10px 12px;
+      background: var(--accent-soft);
+      border-radius: 6px;
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+
+    .loader-box {
+      text-align: center;
+      padding: 40px 16px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="mobile-header">
+    <div class="brand-bar">
+      <h1 class="brand-title">DemocrHistory</h1>
+      <a href="index.html?desktop=1" class="desktop-link">Vista Desktop</a>
+    </div>
+
+    <div class="search-box">
+      <input id="mobile-search" type="search" placeholder="Cerca eventi, attori, luoghi..." aria-label="Cerca">
+    </div>
+
+    <div class="filters-scroll">
+      <select id="mobile-dataset">
+        <option value="data/Italian DemocrHistory.json">Database Principale</option>
+      </select>
+      <select id="mobile-type">
+        <option value="">Tutti i tipi</option>
+      </select>
+      <select id="mobile-certainty">
+        <option value="">Tutti gli stati</option>
+      </select>
+      <button id="mobile-prelude-btn" class="toggle-prelude-btn">Prima del 1943: OFF</button>
+    </div>
+  </header>
+
+  <div class="mobile-stats">
+    <div>Eventi trovati: <strong id="mobile-count">0</strong></div>
+    <div>Anni: <strong id="mobile-range">-</strong></div>
+  </div>
+
+  <main>
+    <div id="loader" class="loader-box">Caricamento database in corso...</div>
+    <div id="mobile-feed" class="timeline-feed"></div>
+  </main>
+
+  <!-- Bottom Sheet Modal for Detail View -->
+  <div id="sheet-overlay" class="sheet-overlay"></div>
+  <div id="bottom-sheet" class="bottom-sheet">
+    <div id="sheet-handle" class="sheet-handle-area">
+      <div class="sheet-handle"></div>
+    </div>
+    <div id="sheet-content" class="sheet-content"></div>
+  </div>
+
+  <script>
+    const state = {
+      preEvents: [],
+      events: [],
+      showPrelude: false,
+      filtered: []
+    };
+
+    const $ = (id) => document.getElementById(id);
+
+    function escapeHtml(val) {
+      return String(val ?? '').replace(/[&<>'"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[c]));
+    }
+
+    function renderFeed() {
+      const activeList = state.showPrelude ? [...state.preEvents, ...state.events] : state.events;
+      const query = $('mobile-search').value.trim().lowerCase || $('mobile-search').value.trim().toLowerCase();
+      const typeFilter = $('mobile-type').value;
+      const certFilter = $('mobile-certainty').value;
+
+      state.filtered = activeList.filter((ev) => {
+        const matchesQuery = !query || [ev.titolo, ev.descrizione, (ev.dati_concreti || []).join(' '), (ev.entita_coinvolte || []).join(' '), (ev.luogo?.nome || '')]
+          .join(' ')
+          .toLowerCase()
+          .includes(query);
+        const matchesType = !typeFilter || (ev.tipo_di_fatto || []).includes(typeFilter);
+        const matchesCert = !certFilter || ev.stato_della_ricostruzione === certFilter;
+        return matchesQuery && matchesType && matchesCert;
+      });
+
+      $('mobile-count').textContent = state.filtered.length;
+      if (state.filtered.length > 0) {
+        const minYear = Math.min(...state.filtered.map(e => e.anno));
+        const maxYear = Math.max(...state.filtered.map(e => e.anno));
+        $('mobile-range').textContent = minYear === maxYear ? minYear : `${minYear} - ${maxYear}`;
+      } else {
+        $('mobile-range').textContent = '-';
+      }
+
+      const feed = $('mobile-feed');
+      feed.innerHTML = state.filtered.map((ev, idx) => `
+        <article class="mobile-card" data-index="${idx}">
+          <div class="mobile-card-top">
+            <span class="badge-year">${ev.anno}</span>
+            <span class="badge-date">${escapeHtml(ev.data?.inizio || ev.anno)}</span>
+          </div>
+          <h2 class="mobile-card-title">${escapeHtml(ev.titolo)}</h2>
+          <p class="mobile-card-desc">${escapeHtml(ev.descrizione)}</p>
+          <div class="chips-row">
+            ${(ev.tipo_di_fatto || []).map(t => `<span class="chip">${escapeHtml(t)}</span>`).join('')}
+          </div>
+        </article>
+      `).join('');
+
+      document.querySelectorAll('.mobile-card').forEach((card) => {
+        card.addEventListener('click', () => {
+          const idx = Number(card.dataset.index);
+          openBottomSheet(state.filtered[idx]);
+        });
+      });
+    }
+
+    function openBottomSheet(ev) {
+      const actors = (ev.responsabili_o_attori || []).map(a => `<li><strong>${escapeHtml(a.nome)}</strong>: ${escapeHtml(a.ruolo)}</li>`).join('');
+      const links = Object.entries(ev.wikilinks || {}).map(([name, url]) => `<li><a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(name)}</a></li>`).join('');
+      const fonti = (ev.fonti || []).map(f => `<li><a href="${escapeHtml(f.url || '#')}" target="_blank" rel="noreferrer">${escapeHtml(f.titolo)}</a> (${escapeHtml(f.tipo)})</li>`).join('');
+
+      $('sheet-content').innerHTML = `
+        <div class="sheet-header">
+          <span class="sheet-year">Anno ${ev.anno}</span>
+          <button id="sheet-close-btn" class="sheet-close">&times;</button>
+        </div>
+        <h2 class="sheet-title">${escapeHtml(ev.titolo)}</h2>
+        <div class="sheet-status-box">${escapeHtml(ev.stato_della_ricostruzione || 'Stato della ricostruzione non indicato')}</div>
+        <p class="sheet-text">${escapeHtml(ev.descrizione)}</p>
+        
+        ${actors ? `<div class="sheet-section-title">Attori coinvolti</div><ul class="sheet-list">${actors}</ul>` : ''}
+        ${ev.entita_coinvolte?.length ? `<div class="sheet-section-title">Entità coinvolte</div><p style="font-size: 13px;">${escapeHtml(ev.entita_coinvolte.join(' · '))}</p>` : ''}
+        ${links ? `<div class="sheet-section-title">Wikilinks</div><ul class="sheet-list">${links}</ul>` : ''}
+        ${fonti ? `<div class="sheet-section-title">Fonti storiografiche</div><ul class="sheet-list">${fonti}</ul>` : ''}
+      `;
+
+      $('sheet-overlay').classList.add('active');
+      $('bottom-sheet').classList.add('active');
+
+      $('sheet-close-btn').addEventListener('click', closeBottomSheet);
+    }
+
+    function closeBottomSheet() {
+      $('sheet-overlay').classList.remove('active');
+      $('bottom-sheet').classList.remove('active');
+    }
+
+    $('sheet-overlay').addEventListener('click', closeBottomSheet);
+    $('sheet-handle').addEventListener('click', closeBottomSheet);
+
+    function setupFilters() {
+      const allEvents = [...state.preEvents, ...state.events];
+      const types = new Set();
+      const certs = new Set();
+
+      allEvents.forEach((ev) => {
+        (ev.tipo_di_fatto || []).forEach(t => types.add(t));
+        if (ev.stato_della_ricostruzione) certs.add(ev.stato_della_ricostruzione);
+      });
+
+      const typeSelect = $('mobile-type');
+      typeSelect.innerHTML = '<option value="">Tutti i tipi</option>' + [...types].map(t => `<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join('');
+
+      const certSelect = $('mobile-certainty');
+      certSelect.innerHTML = '<option value="">Tutti gli stati</option>' + [...certs].map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
+    }
+
+    function loadDataset(url) {
+      $('loader').style.display = 'block';
+      $('mobile-feed').innerHTML = '';
+      fetch(encodeURI(url))
+        .then(res => res.json())
+        .then(data => {
+          state.preEvents = data.pre_eventi || [];
+          state.events = data.eventi || [];
+          $('loader').style.display = 'none';
+          setupFilters();
+          renderFeed();
+        })
+        .catch(err => {
+          console.error(err);
+          $('loader').textContent = 'Errore nel caricamento del database.';
+        });
+    }
+
+    $('mobile-search').addEventListener('input', renderFeed);
+    $('mobile-type').addEventListener('change', renderFeed);
+    $('mobile-certainty').addEventListener('change', renderFeed);
+    $('mobile-dataset').addEventListener('change', (e) => loadDataset(e.target.value));
+
+    $('mobile-prelude-btn').addEventListener('click', () => {
+      state.showPrelude = !state.showPrelude;
+      $('mobile-prelude-btn').textContent = state.showPrelude ? 'Prima del 1943: ON' : 'Prima del 1943: OFF';
+      renderFeed();
+    });
+
+    // Auto discover JSON files from GitHub API
+    function discoverDatasets() {
+      const select = $('mobile-dataset');
+      fetch('https://api.github.com/repos/Jasssbo/DemocrHistory/contents/data')
+        .then(res => res.json())
+        .then(files => {
+          if (Array.isArray(files)) {
+            const jsonFiles = files.filter(f => f.name.endsWith('.json'));
+            if (jsonFiles.length > 0) {
+              select.innerHTML = '';
+              jsonFiles.forEach(f => {
+                const opt = document.createElement('option');
+                opt.value = f.path;
+                opt.textContent = f.name;
+                select.appendChild(opt);
+              });
+            }
+          }
+        })
+        .catch(() => {});
+    }
+
+    discoverDatasets();
+    loadDataset('data/Italian DemocrHistory.json');
+  </script>
+</body>
+
+</html>

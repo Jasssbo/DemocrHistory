@@ -5,6 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Storiografica della Repubblica italiana</title>
+  <script>
+    if (window.innerWidth <= 768 && !location.search.includes('desktop=1')) {
+      window.location.href = 'mobile.html' + location.search;
+    }
+  </script>
   <style>
     :root {
       --ink: #1d2730;
