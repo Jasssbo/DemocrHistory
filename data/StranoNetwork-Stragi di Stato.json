@@ -1129,7 +1129,7 @@
     },
     {
       "anno": 1944,
-      "titolo": "Incontro riservato dei capi dei Cosa Nostra col generale Castellano (firmatore dell'armistizio del 43')",
+      "titolo": "Incontro riservato dei capi di Cosa Nostra col generale Castellano (firmatore dell'armistizio del 43') e Virgilio Nasi",
       "data": {
         "inizio": "1944-11-21",
         "fine": "1944-11-21",
@@ -1150,6 +1150,10 @@
         {
           "nome": "Alfred T. Nester",
           "ruolo": "Console degli Stati Uniti a Palermo"
+        },
+        {
+          "nome": "Virgilio Nasi",
+          "ruolo": "Figlio dell'ex ministro del Regno d'Italia, Nel febbraio 1945 fu chiamato a far parte della Consulta regionale siciliana, che redasse lo Statuto speciale siciliano, e poi nel settembre del 1945 deputato della Consulta Nazionale."
         }
       ],
       "entita_coinvolte": [
@@ -1179,6 +1183,11 @@
           "tipo": "wikipedia",
           "titolo": "Alfred T. Nester",
           "url": "https://it.wikipedia.org/wiki/Alfred_T._Nester"
+        },
+        {
+          "tipo": "wikipedia",
+          "titolo": "Virgilio Nasi",
+          "url": "https://it.wikipedia.org/wiki/Virgilio_Nasi"
         },
         {
           "tipo": "wikipedia",

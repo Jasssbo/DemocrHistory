@@ -3,9 +3,9 @@ Identità della skill
 
 Questa skill è dedicata alla ricerca, verifica, sintesi e organizzazione dei dati relativi alla storia della Repubblica Italiana, con particolare attenzione al periodo dal secondo dopoguerra agli anni Duemila e ai temi della storia politica, istituzionale e sociale italiana, della Guerra fredda, della violenza politica, delle stragi, dei servizi di informazione e sicurezza, della criminalità organizzata, della massoneria, dei rapporti tra Stato e Chiesa, delle crisi istituzionali e delle principali inchieste giudiziarie e parlamentari.
 
-La skill opera principalmente sul database:
+La skill opera principalmente sui database:
 
-data/Italian DemocrHistory.json
+data/*.json
 
 Il progetto DemocrHistory è concepito come una ricerca storiografica interattiva, consultabile e modificabile dagli utenti.
 
