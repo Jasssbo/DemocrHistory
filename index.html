@@ -689,8 +689,9 @@
       card.classList.add('active');
       const actors = (event.responsabili_o_attori || []).map((actor) => `<li><strong>${escapeHtml(actor.nome)}</strong>: ${escapeHtml(actor.ruolo)}</li>`).join('');
       const links = Object.entries(event.wikilinks || {}).map(([name, url]) => `<li><a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(name)}</a></li>`).join('');
+      const fonti = (event.fonti || []).map((f) => `<li><a href="${escapeHtml(f.url || '#')}" target="_blank" rel="noreferrer">${escapeHtml(f.titolo)}</a> (${escapeHtml(f.tipo)})</li>`).join('');
       $('detail').className = 'detail';
-      $('detail').innerHTML = `<div class="eyebrow">Evento · ${event.anno}</div><h2>${escapeHtml(event.titolo)}</h2><p>${escapeHtml(event.descrizione)}</p><div class="status">${escapeHtml(event.stato_della_ricostruzione || 'Stato non indicato')}</div><h3>Attori</h3><ul>${actors || '<li>Non indicati</li>'}</ul><h3>Classificazione</h3><p>${escapeHtml((event.tipo_di_fatto || []).join(' · '))}</p><h3>Entita coinvolte</h3><p>${escapeHtml((event.entita_coinvolte || []).join(' · '))}</p><h3>Wikilinks</h3><ul>${links || '<li>Nessun collegamento</li>'}</ul>`;
+      $('detail').innerHTML = `<div class="eyebrow">Evento · ${event.anno}</div><h2>${escapeHtml(event.titolo)}</h2><p>${escapeHtml(event.descrizione)}</p><div class="status">${escapeHtml(event.stato_della_ricostruzione || 'Stato non indicato')}</div><h3>Attori</h3><ul>${actors || '<li>Non indicati</li>'}</ul><h3>Classificazione</h3><p>${escapeHtml((event.tipo_di_fatto || []).join(' · '))}</p><h3>Entita coinvolte</h3><p>${escapeHtml((event.entita_coinvolte || []).join(' · '))}</p><h3>Wikilinks</h3><ul>${links || '<li>Nessun collegamento</li>'}</ul><h3>Fonti storiografiche</h3><ul>${fonti || '<li>Nessuna fonte indicata</li>'}</ul>`;
     }
 
     function escapeHtml(value) { return String(value ?? '').replace(/[&<>'"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char])); }

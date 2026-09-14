@@ -624,7 +624,7 @@
     },
     {
       "anno": 1943,
-      "titolo": "Un gruppo di una dozzina di agenti dell'OSS reclutato",
+      "titolo": "Un gruppo di una dozzina di agenti dell'OSS inizia ad Algeri la preparazione dello sbarco in Sicilia in collaborazione con la mafia italo-americana",
       "data": {
         "inizio": "1943-02-01",
         "fine": "1943-02-28",
@@ -1327,8 +1327,62 @@
       ]
     },
     {
+      "anno": 1944,
+      "titolo": "Incontro riservato dei capi dei Cosa Nostra col generale Castellano (firmatore dell'armistizio del 43')",
+      "data": {
+        "inizio": "1944-11-21",
+        "fine": "1944-11-21",
+        "precisione": "giorno"
+      },
+      "luogo": {
+        "nome": "Palermo, Sicilia",
+        "paese": "Italia"
+      },
+      "descrizione": "Documentato nei dispacci del console statunitense Alfred T. Nester, l'incontro tra il generale Giuseppe Castellano e i vertici di Cosa Nostra sancisce l'alleanza informale e l'infiltrazione strutturale della mafia nell'assetto politico-istituzionale del Sud Italia all'alba della Prima Repubblica. Il vertice porta alla promozione di un gruppo favorevole all'autonomia siciliana e al ripristino del potere mafioso per il controllo dell'ordine pubblico.",
+      "dati_concreti": [
+        "Incontro riservato tra il generale Giuseppe Castellano e i capi di Cosa Nostra in Sicilia.",
+        "Proposta di riaffidare il controllo del territorio al sistema mafioso tradizionale come garante dell'ordine pubblico e in funzione anticomunista.",
+        "Costituzione di un blocco di potere separatista/autonomista sostenuto dagli agrari e dai vertici mafiosi locali.",
+        "Il console USA Alfred T. Nester trasmette dettagliati rapporti a Washington evidenziando l'infiltrazione della mafia nelle istituzioni della nascente Prima Repubblica al Sud."
+      ],
+      "responsabili_o_attori": [
+        {
+          "nome": "Giuseppe Castellano",
+          "ruolo": "Generale dell'Esercito Italiano"
+        },
+        {
+          "nome": "Alfred T. Nester",
+          "ruolo": "Console degli Stati Uniti a Palermo"
+        }
+      ],
+      "entita_coinvolte": [
+        "Cosa Nostra",
+        "Esercito Italiano",
+        "Consolato degli Stati Uniti a Palermo",
+        "Movimento Indipendentista Siciliano"
+      ],
+      "tipo_di_fatto": [
+        "mafia e criminalita organizzata",
+        "politico-istituzionale"
+      ],
+      "scala": "nazionale",
+      "stato_della_ricostruzione": "fatto documentato dagli atti d'archivio e dispacci diplomatici americani (Rapporto Nester)",
+      "wikilinks": {
+        "Giuseppe_Castellano": "https://it.wikipedia.org/wiki/Giuseppe_Castellano",
+        "Alfred_T._Nester": "https://it.wikipedia.org/wiki/Alfred_T._Nester",
+        "Cosa_Nostra": "https://it.wikipedia.org/wiki/Cosa_nostra"
+      },
+      "fonti": [
+        {
+          "tipo": "documento d'archivio",
+          "titolo": "Rapporto Nester 1944",
+          "url": "Files/Rapporto Nester-1944.pdf"
+        }
+      ]
+    },
+    {
       "anno": 1945,
-      "titolo": "Il generale Giuseppe Castellano dichiara al console americano a Palermo, Alfred T",
+      "titolo": "Il generale Giuseppe Castellano, fà una dichiarazione mafiosa al console americano a Palermo Alfred T. Nester",
       "data": {
         "inizio": "1945-01-01",
         "fine": "1945-01-28",
@@ -1361,7 +1415,7 @@
     },
     {
       "anno": 1945,
-      "titolo": "Avviate trattative fra la Brigata Osoppo, l'Organizzazione Franchi",
+      "titolo": "Avviate trattative fra la Brigata Osoppo, l'Organizzazione Franchi e la X MAS",
       "data": {
         "inizio": "1945-02-01",
         "fine": "1945-02-28",
@@ -1425,7 +1479,7 @@
     },
     {
       "anno": 1945,
-      "titolo": "Un documento della Repubblica di Salò rivela la costituzione",
+      "titolo": "Un documento della Repubblica di Salò rivela la costituzione, da parte dei propri servizi segreti, di un organismo speciale",
       "data": {
         "inizio": "1945-03-21",
         "fine": "1945-03-21",
