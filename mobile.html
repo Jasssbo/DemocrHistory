@@ -382,7 +382,7 @@
 
       <div class="filters-scroll">
         <select id="mobile-dataset">
-          <option value="data/Italian DemocrHistory.json">Database Principale</option>
+          <option value="data/StranoNetwork-Stragi di Stato.json">StranoNetwork - Stragi di Stato</option>
         </select>
         <select id="mobile-type">
           <option value="">Tutti i tipi</option>
@@ -579,29 +579,59 @@
       reader.readAsText(file);
     });
 
-    function discoverDatasets() {
+    // Configurazione del database di default:
+    // Imposta il nome del file da caricare per primo (es. 'StranoNetwork-Stragi di Stato.json'),
+    // oppure imposta '' o null per caricare automaticamente il primo file .json trovato nella cartella data/
+    const DEFAULT_DATASET_NAME = 'StranoNetwork-Stragi di Stato.json';
+
+    function discoverAndLoadDatasets() {
       const select = $('mobile-dataset');
+      const params = new URLSearchParams(window.location.search);
+      const preferred = params.get('dataset') || DEFAULT_DATASET_NAME;
+
       fetch('https://api.github.com/repos/Jasssbo/DemocrHistory/contents/data')
-        .then(res => res.json())
-        .then(files => {
+        .then((res) => res.json())
+        .then((files) => {
           if (Array.isArray(files)) {
-            const jsonFiles = files.filter(f => f.name.endsWith('.json'));
+            const jsonFiles = files.filter((f) => f.name.endsWith('.json'));
             if (jsonFiles.length > 0) {
               select.innerHTML = '';
-              jsonFiles.forEach(f => {
+              jsonFiles.forEach((f) => {
                 const opt = document.createElement('option');
                 opt.value = f.path;
                 opt.textContent = f.name;
                 select.appendChild(opt);
               });
+
+              let target = jsonFiles[0].path;
+              if (preferred) {
+                const match = jsonFiles.find(
+                  (f) => f.name === preferred || f.path === preferred || f.path === 'data/' + preferred
+                );
+                if (match) target = match.path;
+              }
+              select.value = target;
+              loadDataset(target);
+              return;
             }
           }
+          fallbackLoad();
         })
-        .catch(() => {});
+        .catch(() => fallbackLoad());
+
+      function fallbackLoad() {
+        const fallbackPath = preferred ? (preferred.startsWith('data/') ? preferred : 'data/' + preferred) : 'data/StranoNetwork-Stragi di Stato.json';
+        if (select.children.length === 0) {
+          const opt = document.createElement('option');
+          opt.value = fallbackPath;
+          opt.textContent = fallbackPath.replace('data/', '');
+          select.appendChild(opt);
+        }
+        loadDataset(fallbackPath);
+      }
     }
 
-    discoverDatasets();
-    loadDataset('data/Italian DemocrHistory.json');
+    discoverAndLoadDatasets();
   </script>
 </body>
 

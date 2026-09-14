@@ -553,8 +553,7 @@
         <div class="dataset-box">
           <label for="dataset-select">Database Repository</label>
           <select id="dataset-select">
-            <option value="Italian DemocrHistory.json">Italian DemocrHistory.json (Principale)</option>
-            <option value="data/Italian DemocrHistory.json">data/Italian DemocrHistory.json</option>
+            <option value="data/StranoNetwork-Stragi di Stato.json">StranoNetwork - Stragi di Stato (Principale)</option>
           </select>
         </div>
         <div class="file-box">
@@ -730,8 +729,16 @@
       fetchDataset(event.target.value);
     });
 
-    function discoverDatasets() {
+    // Configurazione del database di default:
+    // Imposta il nome del file da caricare per primo (es. 'StranoNetwork-Stragi di Stato.json'),
+    // oppure imposta '' o null per caricare automaticamente il primo file .json trovato nella cartella data/
+    const DEFAULT_DATASET_NAME = 'StranoNetwork-Stragi di Stato.json';
+
+    function discoverAndLoadDatasets() {
       const select = $('dataset-select');
+      const params = new URLSearchParams(window.location.search);
+      const preferred = params.get('dataset') || DEFAULT_DATASET_NAME;
+
       fetch('https://api.github.com/repos/Jasssbo/DemocrHistory/contents/data')
         .then((res) => res.json())
         .then((files) => {
@@ -745,14 +752,36 @@
                 opt.textContent = f.name;
                 select.appendChild(opt);
               });
+
+              let target = jsonFiles[0].path;
+              if (preferred) {
+                const match = jsonFiles.find(
+                  (f) => f.name === preferred || f.path === preferred || f.path === 'data/' + preferred
+                );
+                if (match) target = match.path;
+              }
+              select.value = target;
+              fetchDataset(target);
+              return;
             }
           }
+          fallbackLoad();
         })
-        .catch(() => { /* Usa le opzioni HTML di fallback */ });
+        .catch(() => fallbackLoad());
+
+      function fallbackLoad() {
+        const fallbackPath = preferred ? (preferred.startsWith('data/') ? preferred : 'data/' + preferred) : 'data/StranoNetwork-Stragi di Stato.json';
+        if (select.children.length === 0) {
+          const opt = document.createElement('option');
+          opt.value = fallbackPath;
+          opt.textContent = fallbackPath.replace('data/', '');
+          select.appendChild(opt);
+        }
+        fetchDataset(fallbackPath);
+      }
     }
 
-    discoverDatasets();
-    fetchDataset('data/Italian DemocrHistory.json');
+    discoverAndLoadDatasets();
   </script>
 </body>
 
