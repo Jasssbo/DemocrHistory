@@ -1,0 +1,156 @@
+{
+  "_documentazione": "Questo file descrive la struttura dati usata dai dataset di DemocrHistory. Usalo come riferimento per creare nuovi dataset o per contribuire a quelli esistenti.",
+
+  "struttura_file": {
+    "titolo": "Nome del dataset",
+    "lingua": "Codice lingua ISO 639-1 (es. 'it')",
+    "natura_del_documento": "Breve descrizione della natura e delle fonti del dataset",
+    "nota_metodologica": "Criteri seguiti nella raccolta e nella classificazione degli eventi",
+    "pre_eventi": "Array di eventi anteriori alla timeline principale",
+    "eventi": "Array di eventi della timeline principale"
+  },
+
+  "struttura_evento": {
+    "anno": {
+      "tipo": "numero intero",
+      "descrizione": "Anno principale dell'evento, usato per l'ordinamento nella timeline",
+      "obbligatorio": true
+    },
+    "titolo": {
+      "tipo": "stringa",
+      "descrizione": "Nome sintetico dell'evento, mostrato nella timeline",
+      "obbligatorio": true
+    },
+    "data": {
+      "tipo": "oggetto",
+      "descrizione": "Intervallo temporale dell'evento",
+      "obbligatorio": true,
+      "campi": {
+        "inizio": "Data di inizio in formato AAAA-MM-GG",
+        "fine": "Data di fine in formato AAAA-MM-GG",
+        "precisione": "Uno tra: 'giorno', 'mese', 'anno', 'intervallo'"
+      }
+    },
+    "descrizione": {
+      "tipo": "stringa",
+      "descrizione": "Riassunto neutrale dell'evento",
+      "obbligatorio": true
+    },
+    "dati_concreti": {
+      "tipo": "array di stringhe",
+      "descrizione": "Fatti verificabili e circostanze documentate, separati dalla narrazione",
+      "obbligatorio": false
+    },
+    "responsabili_o_attori": {
+      "tipo": "array di oggetti",
+      "descrizione": "Persone, gruppi o istituzioni coinvolte nell'evento",
+      "obbligatorio": false,
+      "struttura_elemento": {
+        "nome": "Nome della persona, gruppo o istituzione",
+        "ruolo": "Ruolo specifico nel contesto dell'evento"
+      }
+    },
+    "entita_coinvolte": {
+      "tipo": "array di stringhe",
+      "descrizione": "Organizzazioni, istituzioni o gruppi coinvolti (senza dettaglio del ruolo)",
+      "obbligatorio": false
+    },
+    "tipo_di_fatto": {
+      "tipo": "array di stringhe",
+      "descrizione": "Classificazione tematica dell'evento",
+      "obbligatorio": false,
+      "valori_consigliati": [
+        "politico-istituzionale",
+        "sociale-economico",
+        "violenza politica o strage",
+        "servizi segreti e apparati dello Stato",
+        "mafia e criminalita organizzata",
+        "massoneria e rapporti con la Chiesa",
+        "politica internazionale e Guerra fredda",
+        "inchiesta giudiziaria o parlamentare",
+        "cultura e societa civile"
+      ]
+    },
+    "scala": {
+      "tipo": "stringa",
+      "descrizione": "Portata geografica dell'evento",
+      "obbligatorio": false,
+      "valori_consigliati": ["locale", "nazionale", "internazionale"]
+    },
+    "stato_della_ricostruzione": {
+      "tipo": "stringa",
+      "descrizione": "Grado di certezza o controversia sulla ricostruzione dei fatti",
+      "obbligatorio": false
+    },
+    "fonti": {
+      "tipo": "array di oggetti",
+      "descrizione": "Fonti di qualsiasi tipo a supporto dell'evento (documenti, articoli, pagine Wikipedia, atti giudiziari, ecc.)",
+      "obbligatorio": false,
+      "struttura_elemento": {
+        "tipo": "Tipo di fonte (es. 'wikipedia', 'documento d'archivio', 'voce di sintesi', 'enciclopedia', 'articolo')",
+        "titolo": "Titolo della fonte",
+        "url": "URL della fonte (opzionale)"
+      }
+    }
+  },
+
+  "esempio_evento_minimo": {
+    "anno": 1947,
+    "titolo": "Strage di Portella della Ginestra",
+    "data": {
+      "inizio": "1947-05-01",
+      "fine": "1947-05-01",
+      "precisione": "giorno"
+    },
+    "descrizione": "Il 1 maggio 1947 una manifestazione contadina a Portella della Ginestra fu colpita da colpi d'arma da fuoco: morirono 11 persone e decine rimasero ferite."
+  },
+
+  "esempio_evento_completo": {
+    "anno": 1947,
+    "titolo": "Strage di Portella della Ginestra",
+    "data": {
+      "inizio": "1947-05-01",
+      "fine": "1947-05-01",
+      "precisione": "giorno"
+    },
+    "descrizione": "Il 1 maggio 1947 una manifestazione contadina a Portella della Ginestra fu colpita da colpi d'arma da fuoco: morirono 11 persone e decine rimasero ferite.",
+    "dati_concreti": [
+      "Data della strage: 1 maggio 1947.",
+      "Vittime: 11 morti e numerosi feriti.",
+      "La banda di Salvatore Giuliano fu indicata come responsabile materiale."
+    ],
+    "responsabili_o_attori": [
+      {
+        "nome": "Salvatore Giuliano",
+        "ruolo": "capo della banda indicata come esecutrice materiale"
+      }
+    ],
+    "entita_coinvolte": [
+      "Banda Giuliano",
+      "Movimento contadino siciliano"
+    ],
+    "tipo_di_fatto": [
+      "violenza politica o strage",
+      "mafia e criminalita organizzata"
+    ],
+    "scala": "nazionale",
+    "stato_della_ricostruzione": "esecutore materiale accertato; mandanti politici controversi",
+    "fonti": [
+      {
+        "tipo": "voce di sintesi",
+        "titolo": "Strano Network - Cronologia delle stragi (1947)",
+        "url": "https://www.strano.net/stragi/stragi/crono/crono47.htm"
+      },
+      {
+        "tipo": "wikipedia",
+        "titolo": "Strage di Portella della Ginestra",
+        "url": "https://it.wikipedia.org/wiki/Strage_di_Portella_della_Ginestra"
+      },
+      {
+        "tipo": "wikipedia",
+        "titolo": "Salvatore Giuliano",
+        "url": "https://it.wikipedia.org/wiki/Salvatore_Giuliano"
+      }
+    ]
+  }
+}

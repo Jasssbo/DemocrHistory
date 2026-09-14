@@ -25,10 +25,11 @@ DemocrHistory è un **progetto aperto a tutti**. La struttura dei dati è concep
 ### Come contribuire:
 
 1. **Aggiungere o correggere eventi via GitHub (Pull Request)**:
-   - I file dei dati risiedono nella cartella [`data/`](file:///home/mintmzu/MyRepos/DemocrHistory/data/) (es. `data/Italian DemocrHistory.json`).
+   - I file dei dati risiedono nella cartella [`data/`].
    - Puoi modificare un file JSON esistente o aggiungerne uno nuovo nella cartella `data/` ed aprire una **Pull Request**. Quando approvata, la tua integrazione apparirà automaticamente sul sito!
 2. **Caricamento locale nell'interfaccia**:
    - Puoi caricare ed esplorare un tuo file JSON personale direttamente nell'interfaccia web (tramite il pulsante *"📂 Carica JSON"*), senza bisogno di effettuare commit.
+   - Per capire come strutturare il file, utilizza il file -> 'template.json'.
 
 ---
 
@@ -55,10 +56,6 @@ Tutti i file JSON posizionati in `data/` seguono uno schema rigoroso per garanti
     "fine": "1969-12-12",
     "precisione": "giorno"
   },
-  "luogo": {
-    "nome": "Milano",
-    "paese": "Italia"
-  },
   "descrizione": "Una bomba esplode nella sede della Banca Nazionale dell'Agricoltura a Piazza Fontana a Milano, provocando 17 morti e oltre 80 feriti.",
   "dati_concreti": [
     "Attentato del 12 dicembre 1969 a Milano.",
@@ -75,14 +72,16 @@ Tutti i file JSON posizionati in `data/` seguono uno schema rigoroso per garanti
   ],
   "scala": "nazionale",
   "stato_della_ricostruzione": "fatto documentato ed accertato in sede giudiziaria e parlamentare",
-  "wikilinks": {
-    "Strage_di_Piazza_Fontana": "https://it.wikipedia.org/wiki/Strage_di_Piazza_Fontana"
-  },
   "fonti": [
     {
       "tipo": "voce di sintesi",
       "titolo": "Strano Network - Cronologia delle stragi (1969)",
       "url": "https://www.strano.net/stragi/stragi/crono/crono69.htm"
+    },
+    {
+      "tipo": "wikipedia",
+      "titolo": "Strage di Piazza Fontana",
+      "url": "https://it.wikipedia.org/wiki/Strage_di_Piazza_Fontana"
     }
   ]
 }
