@@ -239,9 +239,9 @@ La presenza di più fonti non costituisce automaticamente una prova indipendente
 9. Distinzione obbligatoria tra fatto e interpretazione
 
 La redazione deve distinguere almeno concettualmente:
-Fatto documentato
+Fatto accertato o documentato
 
-Informazione direttamente attestata da una fonte attendibile.
+Informazione attestata da documenti precisi, fonti autorevoli (in particolare fonti legali) o verità storiche riconosciute. Il semplice inserimento nella cronologia di Strano Network non è sufficiente per considerare l'informazione un fatto accertato.
 Fatto accertato giudiziariamente
 
 Informazione stabilita da una decisione giudiziaria, specificando quando necessario il grado di giudizio e l'esito.
@@ -730,9 +730,9 @@ Le cronologie digitali possono essere molto utili per:
 
 La cronologia di Strano Network può essere utilizzata come strumento di orientamento e controllo cronologico.
 
-Non deve però essere considerata automaticamente una fonte primaria.
+Non deve però essere considerata automaticamente una fonte primaria o prova sufficiente per qualificare un evento come fatto accertato.
 
-Le informazioni rilevanti devono essere, quando possibile, verificate attraverso documenti, atti giudiziari, fonti parlamentari o storiografia specialistica.
+Nei fatti accertati devono essere inserite solo le informazioni verificate attraverso documenti precisi, verità storiche riconosciute, atti giudiziari, fonti parlamentari o fonti legali e storiografiche autorevoli.
 30. Gestione delle fonti conflittuali
 
 Quando due fonti riportano informazioni diverse:
