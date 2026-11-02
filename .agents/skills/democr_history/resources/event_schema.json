@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DemocrHistoryEvent",
+  "description": "Schema di validazione per una scheda evento di DemocrHistory",
+  "type": "object",
+  "required": [
+    "anno",
+    "titolo",
+    "descrizione"
+  ],
+  "properties": {
+    "anno": {
+      "type": "integer",
+      "description": "Anno dell'evento (es. 1947)",
+      "minimum": 1800,
+      "maximum": 2100
+    },
+    "titolo": {
+      "type": "string",
+      "description": "Titolo sintetico giornalistico (max 100-110 caratteri)",
+      "maxLength": 120
+    },
+    "data": {
+      "type": "string",
+      "description": "Data ISO YYYY-MM-DD o stringa vuota se non nota",
+      "pattern": "^$|^\\d{4}(-\\d{2}(-\\d{2})?)?$"
+    },
+    "categorie": {
+      "type": "array",
+      "description": "Categorie tematiche assegnate all'evento",
+      "items": {
+        "type": "string",
+        "enum": [
+          "politico",
+          "servizi_segreti",
+          "mafia",
+          "gruppi_terroristici",
+          "massoneria",
+          "clero",
+          "re"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "descrizione": {
+      "type": "string",
+      "description": "Sintesi enciclopedica con wikilink [[Voce]] o [[Voce|Testo]], link markdown [Testo](URL) o [Doc](Documents/file.pdf)"
+    },
+    "fonti": {
+      "type": "array",
+      "description": "Lista di riferimenti a fonti esterne (URL) o documenti locali (Documents/file.pdf)",
+      "items": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

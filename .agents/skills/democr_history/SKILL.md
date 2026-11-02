@@ -1,3 +1,8 @@
+---
+name: democr_history
+description: Curatela storiografica, fact-checking comparativo delle fonti (1943-2000) e formattazione del database cronologico di DemocrHistory. Usa questa skill quando devi aggiungere, analizzare o verificare eventi storici, confrontare fonti giudiziarie o documentali e strutturare schede JSON per il progetto.
+---
+
 # DemocrHistory — Metodologia Storiografica e Curatela del Database
 
 ## Identità e Ruolo
@@ -21,14 +26,19 @@ In ambiti sensibili e complessi (Guerra Fredda, stragismo, terrorismo, criminali
 - **Fonti Primarie e Atti Ufficiali (Priorità Massima)**: Sentenze giudiziarie definitive, atti di commissioni parlamentari, documenti d'archivio declassificati, relazioni ministeriali.
 - **Saggistica Accademica e Archivi Storici (Priorità Alta)**: Monografie di storici accreditati, dizionari biografici (es. Treccani), archivi della memoria istituzionali ([memoria.cultura.gov.it](https://memoria.cultura.gov.it/)).
 - **Archivi tematici indipendenti e Cronologie storiche (Priorità Media - da verificare)**: Banche dati come Strano Network, Wikipedia (ottima per entità e wikilink, ma da cross-validare su fatti controversi).
+- **Documenti locali in archivio (`Documents/`)**: PDF, saggi, verbali e atti declassificati memorizzati nella cartella `Documents/` del repository.
 - **Agenzie di stampa e quotidiani dell'epoca (Priorità Bassa)**: Utili per la cronaca immediata, ma soggetti a imprecisioni iniziali, censure o tentativi di depistaggio dell'epoca.
 - **Siti complottisti o non verificati**: Da escludere categoricamente.
 
 ---
 
-## 3. Schema Dati e Regole Strutturali (JSON)
+## 3. Schema Dati e Standard JSON
 
-Ogni evento deve rispettare rigorosamente la seguente struttura, senza campi aggiuntivi arbitrari:
+Per le specifiche complete dello schema JSON, consulta:
+- Schema di convalida: [`resources/event_schema.json`](resources/event_schema.json)
+- Tassonomia delle categorie: [`references/categories.md`](references/categories.md)
+
+### Esempio di evento formattato:
 
 ```json
 {
@@ -39,13 +49,16 @@ Ogni evento deve rispettare rigorosamente la seguente struttura, senza campi agg
     "mafia",
     "politico"
   ],
-  "descrizione": "Il 1° maggio 1947 una manifestazione contadina a [[Portella della Ginestra]] viene colpita da raffiche di mitra della banda di [[Salvatore Giuliano]]. Le inchieste giudiziarie accertarono il ruolo della banda criminale, mentre il contesto politico e i possibili mandanti rimasero oggetto di contrastanti ricostruzioni parlamentari e storiografiche.",
+  "descrizione": "Il 1° maggio 1947 una manifestazione contadina a [[Portella della Ginestra]] viene colpita da raffiche di mitra della banda di [[Salvatore Giuliano]]. Le inchieste giudiziarie accertarono il ruolo della banda criminale, mentre il contesto politico e i possibili mandanti rimasero oggetto di contrastanti ricostruzioni parlamentari e storiografiche. Vedi anche il [Rapporto Nester](Documents/RapportoNester-1944.pdf).",
   "fonti": [
     {
       "Wikipedia - Strage di Portella della Ginestra": "https://it.wikipedia.org/wiki/Strage_di_Portella_della_Ginestra"
     },
     {
       "Archivio Memoria - Portella": "https://memoria.cultura.gov.it"
+    },
+    {
+      "Documento d'Archivio": "Documents/RapportoNester-1944.pdf"
     }
   ]
 }
@@ -55,20 +68,13 @@ Ogni evento deve rispettare rigorosamente la seguente struttura, senza campi agg
 - **`titolo`**: Sintetico, giornalistico ed esaustivo (massimo 100-110 caratteri). Chiude con senso compiuto, identifica chiaramente *chi/cosa/dove*. Evita acronimi oscuri.
 - **`anno`**: Intero numerico (es. `1974`).
 - **`data`**: Stringa in formato ISO `"YYYY-MM-DD"` se il giorno è noto; stringa vuota `""` o solo `"YYYY"` se non accertato.
-- **`categorie`**: Array contenente **esclusivamente** un sottoinsieme delle 7 categorie supportate dall'interfaccia:
-  - `politico`
-  - `servizi_segreti`
-  - `mafia`
-  - `gruppi_terroristici`
-  - `massoneria`
-  - `clero`
-  - `re`
+- **`categorie`**: Array contenente un sottoinsieme delle 7 categorie ammesse (vedi `references/categories.md`).
 - **`descrizione`**:
   - Tono enciclopedico, asciutto, neutrale.
   - Lunghezza ideale: tra 50 e 150 parole.
   - Utilizza le doppie parentesi quadre per le entità enciclopediche: `[[Nome Voce]]` oppure `[[Nome Voce|Testo Mostrato]]`.
-  - Utilizza il formato markdown per i link esterni pertinenti: `[Testo Link](https://...)`.
-- **`fonti`**: Array di oggetti con coppia `{ "Nome Fonte o Istituzione": "URL" }`. Se la fonte proviene da un documento o saggio salvato localmente nella cartella `Documents/`, indicane il percorso relativo (es. `"Documents/nome_documento.pdf"`).
+  - Utilizza il formato markdown per link esterni o documenti locali: `[Testo Link](https://...)` o `[Nome Studio](Documents/file.pdf)`.
+- **`fonti`**: Array di oggetti `{ "Nome Fonte": "URL o Documents/file.pdf" }`.
 
 ---
 
@@ -79,4 +85,4 @@ Quando elabori un evento, segui sempre questa sequenza ordinata:
 1. **Sourcing e Cross-Check**: Raccogli i fatti da almeno due fonti indipendenti. Verifica la data precisa e il corretto inquadramento cronologico.
 2. **Analisi Comparativa**: Verifica se vi sono discordanze tra sentenze giudiziarie, atti di commissioni d'inchiesta e saggistica. Riassumi le divergenze in modo neutrale nella descrizione.
 3. **Categorizzazione e Titolazione**: Assegna le etichette corrette dal vocabolario controllato (7 categorie) e scrivi un titolo sintetico non tronco.
-4. **Validazione JSON**: Assicurati che l'oggetto JSON sia valido, senza trailing comma, e conforme allo schema del database di progetto.
+4. **Validazione JSON**: Assicurati che l'oggetto JSON sia valido, senza trailing comma, e conforme allo schema in `resources/event_schema.json`.
