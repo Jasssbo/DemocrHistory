@@ -86,3 +86,16 @@ Quando elabori un evento, segui sempre questa sequenza ordinata:
 2. **Analisi Comparativa**: Verifica se vi sono discordanze tra sentenze giudiziarie, atti di commissioni d'inchiesta e saggistica. Riassumi le divergenze in modo neutrale nella descrizione.
 3. **Categorizzazione e Titolazione**: Assegna le etichette corrette dal vocabolario controllato (7 categorie) e scrivi un titolo sintetico non tronco.
 4. **Validazione JSON**: Assicurati che l'oggetto JSON sia valido, senza trailing comma, e conforme allo schema in `resources/event_schema.json`.
+
+---
+
+## 5. Politica di Controllo Versioni Git (Human-in-the-Loop)
+
+Per garantire la massima trasparenza, verificabilità e controllo da parte dell'utente:
+
+- **Divieto di Commit/Push Automatici**: L'LLM **NON DEVE MAI** eseguire comandi di commit (`git commit`) o di push (`git push`) in autonomia.
+- **Workflow di Consegna all'Utente**:
+  1. Apportare le modifiche richieste direttamente ai file di lavoro (`data/*.json`, `Documents/`, documentazione o codice).
+  2. Fornire all'utente un riepilogo puntuale delle variazioni apportate.
+  3. Proporre all'utente un messaggio di commit convenzionale già formattato (titolo breve + elenco puntato delle novità).
+  4. Fornire all'utente il blocco di comando Git affinché sia **l'utente stesso** ad analizzare le modifiche (con `git diff`) e ad eseguire il commit e il push dal proprio terminale.
