@@ -46,6 +46,7 @@ Ideale per ricercatori, studenti e contributori che hanno esportato il proprio f
 3. Entra nella cartella [`data/`](data/) del tuo fork:
    - **Per pubblicare una nuova ricerca**: clicca su **Add file &rarr; Upload files** e carica il tuo file `.json` appena esportato.
    - **Per aggiornare l'archivio principale**: apri `data/DiacroniaDellaRepubblicaItaliana.json`, clicca sull'icona della matita (**Edit this file**) e incolla il contenuto del JSON esportato.
+   - **Per allegare studi o documenti PDF citati**: entra nella cartella [`Documents/`](Documents/) e carica i relativi file.
 4. Clicca su **Commit changes...**, inserisci una breve descrizione del tuo contributo e apri una **Pull Request** verso il repository principale cliccando su **Contribute &rarr; Open pull request**.
 
 #### Metodo B — Tramite Git da riga di comando (terminale)
@@ -59,12 +60,13 @@ cd DemocrHistory
 git checkout -b ricerca/nome-del-tuo-studio
 
 # 3. Copia il file .json esportato dall'app dentro la cartella data/
-#    (oppure aggiorna data/DiacroniaDellaRepubblicaItaliana.json)
+#    (ed eventuali documenti PDF/studi dentro Documents/)
 cp ~/Scaricati/nome_del_tuo_studio.json data/
+cp ~/Scaricati/documento_fonte.pdf Documents/
 
 # 4. Registra e invia le modifiche sul tuo repository GitHub
-git add data/
-git commit -m "Aggiunta ricerca cronologica: Nome del tuo studio"
+git add data/ Documents/
+git commit -m "Aggiunta ricerca cronologica e documenti: Nome del tuo studio"
 git push origin ricerca/nome-del-tuo-studio
 ```
 Dopo il `git push`, apri la pagina del repository su GitHub e clicca sul pulsante **Compare & pull request** per proporre la pubblicazione della tua ricerca a tutti.
@@ -136,6 +138,17 @@ Puoi scrivere il testo in italiano normale senza simboli e aggiungere nell'event
 
 ### 3. Markdown classico
 Puoi anche usare il formato Markdown standard: `[testo visibile](https://url.com)`.
+
+### 4. Link a Documenti e Studi Locali (Cartella `Documents/`)
+Puoi inserire i tuoi documenti storici, saggi, atti giudiziari o relazioni in formato PDF direttamente nella cartella `Documents/` e richiamarli o linkarli all'interno degli eventi:
+- **Nella descrizione**: usa il formato Markdown con il percorso relativo, es. `[Relazione P2](Documents/CommissioneParlamentareDInchiestaSullaP2-1981.pdf)`.
+- **Nelle fonti dell'evento**: inserisci il percorso relativo come valore dell'oggetto fonte:
+  ```json
+  "fonti": [
+    { "Commissione P2 (1981)": "Documents/CommissioneParlamentareDInchiestaSullaP2-1981.pdf" }
+  ]
+  ```
+L'interfaccia web riconosce automaticamente i documenti salvati in `Documents/` rendendoli cliccabili e consultabili direttamente dal browser.
 
 ---
 
@@ -210,6 +223,7 @@ DemocrHistory/
 ├── mobile.html         # Interfaccia Smartphone (navigazione touch a schede)
 ├── db_template.json    # Modello JSON essenziale per nuovi archivi
 ├── data/               # Archivi JSON degli eventi storici (es. DiacroniaDellaRepubblicaItaliana.json)
+├── Documents/          # Documenti storici, relazioni d'inchiesta, atti declassificati e studi (PDF, saggi)
 ├── scripts/            # Script Python di supporto per arricchimento e manutenzione del dataset
 └── README.md           # Documentazione del progetto
 ```

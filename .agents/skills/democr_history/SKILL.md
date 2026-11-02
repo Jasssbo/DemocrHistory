@@ -68,7 +68,7 @@ Ogni evento deve rispettare rigorosamente la seguente struttura, senza campi agg
   - Lunghezza ideale: tra 50 e 150 parole.
   - Utilizza le doppie parentesi quadre per le entità enciclopediche: `[[Nome Voce]]` oppure `[[Nome Voce|Testo Mostrato]]`.
   - Utilizza il formato markdown per i link esterni pertinenti: `[Testo Link](https://...)`.
-- **`fonti`**: Array di oggetti con coppia `{ "Nome Fonte o Istituzione": "URL" }`. Se la fonte proviene da un documento salvato localmente nella cartella `Files/`, indicane il nome file.
+- **`fonti`**: Array di oggetti con coppia `{ "Nome Fonte o Istituzione": "URL" }`. Se la fonte proviene da un documento o saggio salvato localmente nella cartella `Documents/`, indicane il percorso relativo (es. `"Documents/nome_documento.pdf"`).
 
 ---
 

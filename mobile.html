@@ -920,7 +920,7 @@
         <div class="form-group">
           <label for="event-desc">Descrizione *</label>
           <textarea id="event-desc" required
-            placeholder="Inserisci il testo dell'evento. Puoi usare [testo](link) o [[Pagina Wikipedia]]."></textarea>
+            placeholder="Inserisci il testo dell'evento. Puoi usare [testo](link_o_Documents/file.pdf) o [[Pagina Wikipedia]]."></textarea>
         </div>
 
         <div class="form-group">
@@ -1278,10 +1278,12 @@
       ));
     }
 
-    // Consente solo URL http(s) o percorsi relativi sicuri, bloccando javascript:/data:/vbscript:
+    // Consente solo URL http(s) o percorsi relativi sicuri (es. Documents/studio.pdf, ./, /), bloccando javascript:/data:/vbscript:
     function sanitizeUrl(url) {
       const clean = String(url ?? '').trim();
-      if (/^https?:\/\//i.test(clean) || clean.startsWith('./') || clean.startsWith('/')) {
+      if (!clean) return '';
+      if (/^(?:javascript|data|vbscript):/i.test(clean)) return '';
+      if (/^https?:\/\//i.test(clean) || clean.startsWith('./') || clean.startsWith('/') || /^(?:Documents\/|[a-zA-Z0-9_.-]+\/)/i.test(clean) || /\.(pdf|docx?|txt|md|odt|html|json)$/i.test(clean)) {
         return clean;
       }
       return '';
@@ -1644,8 +1646,8 @@
       const div = document.createElement('div');
       div.className = 'fonte-row';
       div.innerHTML = `
-        <input type="text" placeholder="Nome Fonte" value="${escapeHtml(nome)}" class="fonte-nome">
-        <input type="text" placeholder="URL" value="${escapeHtml(url)}" class="fonte-url">
+        <input type="text" placeholder="Nome Fonte (es. Wikipedia, Studio X)" value="${escapeHtml(nome)}" class="fonte-nome">
+        <input type="text" placeholder="URL o Documento locale (es. https://... o Documents/file.pdf)" value="${escapeHtml(url)}" class="fonte-url">
         <button type="button" class="btn btn-danger btn-sm btn-auto-width btn-remove-fonte" aria-label="Rimuovi fonte">✕</button>
       `;
       container.appendChild(div);
@@ -1741,10 +1743,11 @@
                 "titolo": "1. Come strutturare un evento (Es. Strage di Portella della Ginestra)",
                 "data": "1947-05-01",
                 "categorie": ["mafia", "politico"],
-                "descrizione": "Esempio reale: il 1° maggio 1947 una manifestazione contadina a [[Portella della Ginestra]] fu colpita da raffiche di mitra della banda di [[Salvatore Giuliano]]. Nel testo puoi creare link automatici a Wikipedia scrivendo [[Nome Voce]] oppure [[Nome Voce|testo visibile]], e link esterni con [Strano Network](https://www.strano.net/stragi/stragi/crono/crono47.htm). Tocca 'Modifica' nella scheda dettaglio per vedere come è compilato l'evento, oppure eliminalo quando inizi la tua ricerca.",
+                "descrizione": "Esempio reale: il 1° maggio 1947 una manifestazione contadina a [[Portella della Ginestra]] fu colpita da raffiche di mitra della banda di [[Salvatore Giuliano]]. Nel testo puoi creare link automatici a Wikipedia scrivendo [[Nome Voce]] oppure [[Nome Voce|testo visibile]], link esterni con [Strano Network](https://www.strano.net/stragi/stragi/crono/crono47.htm), o linkare documenti e studi locali salvati nella cartella Documents/ con [Documento](Documents/nome_documento.pdf). Tocca 'Modifica' nella scheda dettaglio per vedere come è compilato l'evento, oppure eliminalo quando inizi la tua ricerca.",
                 "fonti": [
                   { "Strano Network": "https://www.strano.net/stragi/stragi/crono/crono47.htm" },
-                  { "Wikipedia": "https://it.wikipedia.org/wiki/Strage_di_Portella_della_Ginestra" }
+                  { "Wikipedia": "https://it.wikipedia.org/wiki/Strage_di_Portella_della_Ginestra" },
+                  { "Documento PDF in archivio": "Documents/RapportoNester-1944.pdf" }
                 ]
               },
               "2. Come salvare e riaprire la tua ricerca personale": {
@@ -1762,7 +1765,7 @@
                 "titolo": "3. Come pubblicare e contribuire con Git / GitHub",
                 "data": "1950-01-01",
                 "categorie": ["servizi_segreti"],
-                "descrizione": "Quando la tua ricerca in formato .json è pronta, puoi scegliere di pubblicarla per tutti nel repository GitHub del progetto: carica il tuo file .json nella cartella 'data/' tramite una Pull Request (direttamente dal browser su GitHub oppure con i comandi git). Consulta il README del repository per tutti i passaggi dettagliati.",
+                "descrizione": "Quando la tua ricerca in formato .json è pronta, puoi scegliere di pubblicarla per tutti nel repository GitHub del progetto: carica il tuo file .json nella cartella 'data/' e gli eventuali saggi o documenti correlati nella cartella 'Documents/' tramite una Pull Request (direttamente dal browser su GitHub oppure con i comandi git). Consulta il README del repository per tutti i passaggi dettagliati.",
                 "fonti": [
                   { "Guida Pull Request GitHub": "https://docs.github.com/it/pull-requests" }
                 ]

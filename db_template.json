@@ -26,13 +26,16 @@
                     "mafia",
                     "politico"
                 ],
-                "descrizione": "Il 1° maggio 1947 una manifestazione contadina a [[Portella della Ginestra]] fu colpita da raffiche di mitra attribuite alla banda di [[Salvatore Giuliano]]. Usa le doppie parentesi quadre per i link automatici a Wikipedia o il formato [Strano Network](https://www.strano.net/stragi/stragi/crono/crono47.htm) per i link esterni.",
+                "descrizione": "Il 1° maggio 1947 una manifestazione contadina a [[Portella della Ginestra]] fu colpita da raffiche di mitra attribuite alla banda di [[Salvatore Giuliano]]. Usa le doppie parentesi quadre per i link automatici a Wikipedia, il formato [Strano Network](https://www.strano.net/stragi/stragi/crono/crono47.htm) per i link esterni, oppure [Documento Locale](Documents/nome_documento.pdf) per file e studi salvati nella cartella Documents.",
                 "fonti": [
                     {
                         "Strano Network": "https://www.strano.net/stragi/stragi/crono/crono47.htm"
                     },
                     {
                         "Wikipedia": "https://it.wikipedia.org/wiki/Strage_di_Portella_della_Ginestra"
+                    },
+                    {
+                        "Documento / Studio in archivio": "Documents/RapportoNester-1944.pdf"
                     }
                 ]
             }
