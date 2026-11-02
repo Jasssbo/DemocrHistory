@@ -2073,6 +2073,11 @@
           "tipo": "voce di sintesi",
           "titolo": "Strano Network - Cronologia delle stragi (1946)",
           "url": "https://www.strano.net/stragi/stragi/crono/crono46.htm"
+        },
+        {
+          "tipo": "wikipedia",
+          "titolo": "Amnistia Toglatti",
+          "url": "https://it.wikipedia.org/wiki/Amnistia_Togliatti"
         }
       ]
     },
@@ -2101,6 +2106,11 @@
           "tipo": "voce di sintesi",
           "titolo": "Strano Network - Cronologia delle stragi (1946)",
           "url": "https://www.strano.net/stragi/stragi/crono/crono46.htm"
+        },
+        {
+          "tipo": "wikipedia",
+          "titolo": "Crisi del maggio 47",
+          "url": "https://it.wikipedia.org/wiki/Crisi_del_maggio_1947"
         }
       ]
     },
@@ -2262,7 +2272,7 @@
     },
     {
       "anno": 1947,
-      "titolo": "In un memorandum al Congresso degli Stati Uniti, Allen Dulles, futuro direttore della CIA, afferma: \"..",
+      "titolo": "Allen Dulles in un memorandum al Congresso rivendica il diritto di intervento estero per la CIA",
       "data": {
         "inizio": "1947-04-25",
         "fine": "1947-04-25",
@@ -2290,6 +2300,114 @@
           "tipo": "voce di sintesi",
           "titolo": "Strano Network - Cronologia delle stragi (1947)",
           "url": "https://www.strano.net/stragi/stragi/crono/crono47.htm"
+        },
+        {
+          "tipo": "articolo",
+          "titolo": "Allen Dulles: La CIA sono io",
+          "url": "https://www.noncicredo.org/index.php?option=com_content&view=article&id=202:allen-dulles-la-cia-sono-io&Itemid=101"
+        },
+        {
+          "tipo": "libro",
+          "titolo": "The Brothers: John Foster Dulles, Allen Dulles, And Their Secret World War",
+          "autore": "Stephen Kinzer",
+          "editore": "Times Books",
+          "anno_pubblicazione": 2014
+        },
+        {
+          "tipo": "libro",
+          "titolo": "Memorie di una spia",
+          "autore": "Reinhard Gehlen",
+          "editore": "Odoya",
+          "anno_pubblicazione": 2018
+        },
+        {
+          "tipo": "libro",
+          "titolo": "La CIA storia dei servizi segreti americani",
+          "autore": "Mario Del Pero",
+          "editore": "Giunti",
+          "anno_pubblicazione": 2001
+        },
+        {
+          "tipo": "libro",
+          "titolo": "Allen Dulles mastermind of american intelligence from diplomat to spy master",
+          "autore": "Steven L. King",
+          "editore": "Pubblicazione indipendente",
+          "anno_pubblicazione": 2024
+        },
+        {
+          "tipo": "libro",
+          "titolo": "Allen Dulles: The Life of the CIA’s Most Powerful and Notorious Director",
+          "autore": "Charles Rivers",
+          "editore": "Pubblicazione indipendente",
+          "anno_pubblicazione": 2023
+        },
+        {
+          "tipo": "libro",
+          "titolo": "Allen Dulles: Spymaster: The Life and Times of the First Civilian Director of the CIA",
+          "autore": "Peter Grose",
+          "editore": "Andre Deutsch Ltd",
+          "anno_pubblicazione": 2006
+        },
+        {
+          "tipo": "libro",
+          "titolo": "Allen Dulles: Master of Spies",
+          "autore": "James Srodes",
+          "editore": "Regnery Pub",
+          "anno_pubblicazione": 1999
+        },
+        {
+          "tipo": "articolo",
+          "titolo": "Allen Dulles: La CIA sono io",
+          "url": "https://www.noncicredo.org/index.php?option=com_content&view=article&id=202:allen-dulles-la-cia-sono-io&Itemid=101"
+        },
+        {
+          "tipo": "libro",
+          "titolo": "The Brothers: John Foster Dulles, Allen Dulles, And Their Secret World War",
+          "autore": "Stephen Kinzer",
+          "editore": "Times Books",
+          "anno_pubblicazione": 2014
+        },
+        {
+          "tipo": "libro",
+          "titolo": "Memorie di una spia",
+          "autore": "Reinhard Gehlen",
+          "editore": "Odoya",
+          "anno_pubblicazione": 2018
+        },
+        {
+          "tipo": "libro",
+          "titolo": "La CIA storia dei servizi segreti americani",
+          "autore": "Mario Del Pero",
+          "editore": "Giunti",
+          "anno_pubblicazione": 2001
+        },
+        {
+          "tipo": "libro",
+          "titolo": "Allen Dulles mastermind of american intelligence from diplomat to spy master",
+          "autore": "Steven L. King",
+          "editore": "Pubblicazione indipendente",
+          "anno_pubblicazione": 2024
+        },
+        {
+          "tipo": "libro",
+          "titolo": "Allen Dulles: The Life of the CIA’s Most Powerful and Notorious Director",
+          "autore": "Charles Rivers",
+          "editore": "Pubblicazione indipendente",
+          "anno_pubblicazione": 2023
+        },
+        {
+          "tipo": "libro",
+          "titolo": "Allen Dulles: Spymaster: The Life and Times of the First Civilian Director of the CIA",
+          "autore": "Peter Grose",
+          "editore": "Andre Deutsch Ltd",
+          "anno_pubblicazione": 2006
+        },
+        {
+          "tipo": "libro",
+          "titolo": "Allen Dulles: Master of Spies",
+          "autore": "James Srodes",
+          "editore": "Regnery Pub",
+          "anno_pubblicazione": 1999
         }
       ]
     },
@@ -2512,12 +2630,31 @@
         "fine": "1948-12-31",
         "precisione": "intervallo"
       },
-      "descrizione": "L'AIL (Armata Italiana di Liberazione) organizza un traffico di armi da Trento verso il Sud.",
+      "descrizione": "L'Armata Italiana di Liberazione (AIL) fu un'organizzazione politica e paramilitare anticomunista, di tipo 'stay-behind', attiva tra il 1946 e il 1949. Fondata da Antonio Sorice (ministro della guerra del governo Badoglio) e da Giovanni Messe, arrivò a contare decine di migliaia di iscritti tra militari, ex partigiani bianchi, monarchici e reduci di Salò. L'organizzazione organizzava traffici d'armi, come quello da Trento verso il Sud, disponendo di depositi segreti riforniti anche dall'OSS/CIA. Il suo scopo era contrastare un'eventuale insurrezione comunista o un'invasione sovietica. Durante le elezioni del 18 aprile 1948 svolse un ruolo di vigilanza armata. Si sciolse intorno al 1949 per essere in seguito sostituita da Gladio.",
       "dati_concreti": [
-        "L'AIL (Armata Italiana di Liberazione) organizza un traffico di armi da Trento verso il Sud.."
+        "Fondazione dell'AIL (1946-1947) come organizzazione stay-behind anticomunista ad opera di Antonio Sorice e Giovanni Messe.",
+        "Coinvolgimento nel Comitato centrale di alti ufficiali (Siro Bernabò, Alberto Da Zara, Gustavo Reisoli, Ettore Musco, Alfredo Guzzoni, Giuseppe Pièche).",
+        "Costituzione di una rete paramilitare clandestina (20-120 mila iscritti) con depositi segreti di armi forniti in parte dai servizi segreti USA (OSS/CIA).",
+        "L'AIL organizza un traffico di armi da Trento verso il Sud Italia.",
+        "Mobilitazione per vigilanza e deterrenza armata durante la campagna elettorale del 18 aprile 1948 per prevenire colpi di Stato o insurrezioni.",
+        "Scioglimento dell'AIL intorno al 1949 con la fondazione di Gladio (sotto l'egida NATO)."
       ],
-      "responsabili_o_attori": [],
-      "entita_coinvolte": [],
+      "responsabili_o_attori": [
+        "Antonio Sorice",
+        "Giovanni Messe",
+        "Ettore Musco",
+        "Giuseppe Pièche",
+        "Siro Bernabò",
+        "Alberto Da Zara",
+        "Gustavo Reisoli",
+        "Alfredo Guzzoni"
+      ],
+      "entita_coinvolte": [
+        "Armata Italiana di Liberazione (AIL)",
+        "CIA",
+        "OSS",
+        "Comitato centrale AIL"
+      ],
       "tipo_di_fatto": [
         "politico-istituzionale"
       ],
@@ -2528,6 +2665,11 @@
           "tipo": "voce di sintesi",
           "titolo": "Strano Network - Cronologia delle stragi (1948)",
           "url": "https://www.strano.net/stragi/stragi/crono/crono48.htm"
+        },
+        {
+          "tipo": "pagina enciclopedica",
+          "titolo": "Armata italiana di liberazione",
+          "url": "https://it.wikipedia.org/wiki/Armata_italiana_di_liberazione"
         }
       ]
     },

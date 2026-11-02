@@ -1,0 +1,594 @@
+{
+    "TITOLO": "Diacronia della Repubblica Italiana",
+    "LINGUA": "it",
+    "NATURA_DEL_DOCUMENTO": "Un'analisi storica degli avvenimenti che hanno segnato la storia politica e sociale dell'Italia dalla fine della 2a Guerra Mondiale agli anni 2000",
+    "PRE-EVENTI": {
+        "Riorganizzazione napoleonica della massoneria e fondazione del Grande Oriente d'Italia": {
+            "anno": 1805,
+            "titolo": "Riorganizzazione napoleonica della massoneria e fondazione del Grande Oriente d'Italia",
+            "data": "1805-06-20",
+            "descrizione": "Nel contesto del Regno d'Italia napoleonico guidato da [[Napoleone Bonaparte]], la [[Massoneria in Italia|massoneria italiana]] — già presente nella penisola dal Settecento — fu riorganizzata in forme legate alle istituzioni del nuovo regime: il 16 marzo 1805 venne istituito a Milano il Supremo Consiglio d'Italia del Rito scozzese antico e accettato e il 20 giugno 1805 fu costituito il [[Grande Oriente d'Italia]], con [[Eugenio di Beauharnais]] indicato come Sovrano Gran Commendatore e [[Gioacchino Murat]] come Gran Cancelliere.",
+            "fonti": [
+                {
+                    "Treccani - Massoneria": "https://www.treccani.it/enciclopedia/massoneria_(Enciclopedia-Italiana)/"
+                },
+                {
+                    "Wikipedia - Massoneria in Italia": "https://it.wikipedia.org/wiki/Massoneria_in_Italia"
+                },
+                {
+                    "Wikipedia - Grande Oriente d'Italia": "https://it.wikipedia.org/wiki/Grande_Oriente_d%27Italia"
+                }
+            ],
+            "categorie": [
+                "massoneria",
+                "politico"
+            ]
+        },
+        "Il Grande Oriente d'Italia acquista Palazzo Giustiniani": {
+            "anno": 1911,
+            "titolo": "Il Grande Oriente d'Italia acquista Palazzo Giustiniani",
+            "data": "",
+            "descrizione": "Il [[Grande Oriente d'Italia]] acquista [[Palazzo Giustiniani (Roma)|Palazzo Giustiniani]] a Roma (in via della Dogana Vecchia) tramite la società Urbs, destinandolo a propria sede storica nazionale fino alle confische e agli espropri del ventennio fascista.",
+            "fonti": [
+                {
+                    "Wikipedia - Grande Oriente d'Italia": "https://it.wikipedia.org/wiki/Grande_Oriente_d%27Italia"
+                },
+                {
+                    "Wikipedia - Palazzo Giustiniani": "https://it.wikipedia.org/wiki/Palazzo_Giustiniani_(Roma)"
+                }
+            ],
+            "categorie": [
+                "massoneria",
+                "politico"
+            ]
+        },
+        "Fine della Prima guerra mondiale": {
+            "anno": 1918,
+            "titolo": "Fine della Prima guerra mondiale",
+            "data": "1918-11-03",
+            "descrizione": "Con l'[[Armistizio di Villa Giusti]] del 3 novembre 1918 e la cessazione dei combattimenti sul fronte occidentale l'11 novembre si conclude la [[Prima guerra mondiale]]. Nel dopoguerra il contrasto tra le aspettative territoriali italiane e gli esiti diplomatici (in particolare dopo il trattato di Saint-Germain del 10 settembre 1919) alimentò il mito politico della [[Vittoria mutilata]].",
+            "fonti": [
+                {
+                    "Wikipedia - Prima guerra mondiale": "https://it.wikipedia.org/wiki/Prima_guerra_mondiale"
+                },
+                {
+                    "Wikipedia - Vittoria mutilata": "https://it.wikipedia.org/wiki/Vittoria_mutilata"
+                }
+            ],
+            "categorie": [
+                "politico",
+                "re"
+            ]
+        },
+        "Fine del Non expedit e nascita del Partito Popolare Italiano": {
+            "anno": 1919,
+            "titolo": "Fine del Non expedit e nascita del Partito Popolare Italiano",
+            "data": "1919-01-18",
+            "descrizione": "Dopo il progressivo superamento del [[Non expedit]] (la direttiva con cui papa [[Papa Pio IX|Pio IX]] nel 1874 aveva sconsigliato ai cattolici di partecipare alle elezioni politiche del Regno d'Italia, già attenuata da [[Papa Pio X|Pio X]] nel 1904), nel gennaio 1919 don [[Luigi Sturzo]] fonda il [[Partito Popolare Italiano]], segnando l'ingresso organizzato dei cattolici nella vita politica nazionale.",
+            "fonti": [
+                {
+                    "Wikipedia - Non expedit": "https://it.wikipedia.org/wiki/Non_expedit"
+                },
+                {
+                    "Wikipedia - Partito Popolare Italiano": "https://it.wikipedia.org/wiki/Partito_Popolare_Italiano"
+                }
+            ],
+            "categorie": [
+                "politico",
+                "clero"
+            ]
+        },
+        "Scioglimento della massoneria e confisca di Palazzo Giustiniani": {
+            "anno": 1926,
+            "titolo": "Scioglimento della massoneria e confisca di Palazzo Giustiniani",
+            "data": "1925-11-26",
+            "descrizione": "Nel quadro delle [[Leggi fascistissime]] (legge n. 2029 del 26 novembre 1925 sulle associazioni segrete), il regime fascista mette fuori legge le logge massoniche in Italia. Nel 1926 [[Palazzo Giustiniani (Roma)|Palazzo Giustiniani]] viene sottratto al [[Grande Oriente d'Italia]] e assegnato dallo Stato al Senato.",
+            "fonti": [
+                {
+                    "Wikipedia - Leggi fascistissime": "https://it.wikipedia.org/wiki/Leggi_fascistissime"
+                },
+                {
+                    "Wikipedia - Grande Oriente d'Italia": "https://it.wikipedia.org/wiki/Grande_Oriente_d%27Italia"
+                },
+                {
+                    "Wikipedia - Palazzo Giustiniani": "https://it.wikipedia.org/wiki/Palazzo_Giustiniani_(Roma)"
+                }
+            ],
+            "categorie": [
+                "massoneria",
+                "politico"
+            ]
+        },
+        "EVENTI": {
+            "Operazione Underworld: cooperazione tra intelligence navale USA e criminalità organizzata": {
+                "anno": 1942,
+                "titolo": "Operazione Underworld: cooperazione tra intelligence navale USA e criminalità organizzata",
+                "data": "1942-01-01",
+                "descrizione": "Durante la Seconda guerra mondiale l'[[Office of Naval Intelligence]] statunitense (tramite l'unità speciale guidata dal comandante Charles R. Haffenden a New York) avvia l'[[Operazione Underworld]], cooperando con figure della criminalità organizzata come [[Joseph Lanza]], [[Meyer Lansky]] e [[Lucky Luciano]] per controllare il fronte portuale di New York, prevenire scioperi o sabotaggi dell'Asse e sorvegliare il mercato nero. Nel 1946 la pena di Luciano sarà commutata con espulsione in Italia; il contesto bellico si intreccerà poi, seppur tramite strutture distinte, con l'azione di [[Office of Strategic Services|OSS]] e [[Governo militare alleato dei territori occupati|AMGOT]] in Sicilia.",
+                "fonti": [
+                    {
+                        "Wikipedia - Operazione Underworld": "https://it.wikipedia.org/wiki/Operazione_Underworld"
+                    },
+                    {
+                        "Wikipedia - Lucky Luciano": "https://it.wikipedia.org/wiki/Lucky_Luciano"
+                    },
+                    {
+                        "Wikipedia - Office of Naval Intelligence": "https://it.wikipedia.org/wiki/Office_of_Naval_Intelligence"
+                    }
+                ],
+                "categorie": [
+                    "mafia",
+                    "servizi_segreti"
+                ]
+            },
+            "OSS, AMGOT e riorganizzazione del potere in Sicilia": {
+                "anno": 1943,
+                "titolo": "OSS, AMGOT e riorganizzazione del potere in Sicilia",
+                "data": "1943-07-22",
+                "descrizione": "Dopo lo [[Sbarco in Sicilia]] e la resa di Palermo del 22 luglio 1943, la Sezione Italia dell'[[Office of Strategic Services|OSS]] (guidata da Max Corvo ed Earl Brennan) raccoglie informazioni sul territorio mentre l'[[Governo militare alleato dei territori occupati|AMGOT]] (con [[Charles Poletti]] agli affari civili) amministra l'isola. Nel vuoto istituzionale seguito al crollo del fascismo, esponenti mafiosi locali come [[Calogero Vizzini]] (nominato sindaco di Villalba) e [[Giuseppe Genco Russo]] recuperano influenza politica ed economica come interlocutori locali.",
+                "fonti": [
+                    {
+                        "Wikipedia - Sbarco in Sicilia": "https://it.wikipedia.org/wiki/Sbarco_in_Sicilia"
+                    },
+                    {
+                        "Wikipedia - AMGOT": "https://it.wikipedia.org/wiki/Governo_militare_alleato_dei_territori_occupati"
+                    },
+                    {
+                        "Wikipedia - Calogero Vizzini": "https://it.wikipedia.org/wiki/Calogero_Vizzini"
+                    }
+                ],
+                "categorie": [
+                    "servizi_segreti",
+                    "mafia",
+                    "politico"
+                ]
+            },
+            "Armistizio Italia-USA e riorganizzazione politica": {
+                "anno": 1943,
+                "titolo": "Armistizio Italia-USA e riorganizzazione politica",
+                "data": "1943-09-03",
+                "descrizione": "L'[[Armistizio di Cassibile]] viene firmato segretamente il 3 settembre 1943 dai generali Giuseppe Castellano e Walter Bedell Smith e reso pubblico l'8 settembre dal capo del governo [[Pietro Badoglio]]. L'esercito tedesco occupa gran parte della penisola mentre il re [[Vittorio Emanuele III di Savoia|Vittorio Emanuele III]] e il governo si trasferiscono a Brindisi sotto protezione alleata.",
+                "fonti": [
+                    {
+                        "Wikipedia - Armistizio di Cassibile": "https://it.wikipedia.org/wiki/Armistizio_di_Cassibile"
+                    },
+                    {
+                        "Wikipedia - Pietro Badoglio": "https://it.wikipedia.org/wiki/Pietro_Badoglio"
+                    }
+                ],
+                "categorie": [
+                    "politico",
+                    "re"
+                ]
+            },
+            "Rioccupazione di Palazzo Giustiniani e ricostituzione del Grande Oriente d'Italia": {
+                "anno": 1944,
+                "titolo": "Rioccupazione di Palazzo Giustiniani e ricostituzione del Grande Oriente d'Italia",
+                "data": "1944-06-04",
+                "descrizione": "Il 4 giugno 1944, in coincidenza con la [[Liberazione di Roma]], gli esponenti del [[Grande Oriente d'Italia]] ricostituito in esilio rioccupano la sede storica di [[Palazzo Giustiniani (Roma)|Palazzo Giustiniani]], istituendo un Comitato di gran maestranza (Guido Laj, Gaetano Varcasia, Umberto Cipollone) e un Comitato di reggenza per il Rito scozzese. Nel settembre 1945 Guido Laj viene eletto Gran Maestro, mentre si apre una lunga vertenza con il Demanio dello Stato sulla proprietà dell'edificio.",
+                "fonti": [
+                    {
+                        "Grande Oriente d'Italia - La Storia": "https://www.grandeoriente.it/chi-siamo/la-storia/"
+                    },
+                    {
+                        "Wikipedia - Grande Oriente d'Italia": "https://it.wikipedia.org/wiki/Grande_Oriente_d%27Italia"
+                    },
+                    {
+                        "Wikipedia - Palazzo Giustiniani": "https://it.wikipedia.org/wiki/Palazzo_Giustiniani_(Roma)"
+                    }
+                ],
+                "categorie": [
+                    "massoneria",
+                    "politico"
+                ]
+            },
+            "Scioglimento dell'OSS e transizione verso la CIA": {
+                "anno": 1945,
+                "titolo": "Scioglimento dell'OSS e transizione verso la CIA",
+                "data": "1945-09-20",
+                "descrizione": "Il 20 settembre 1945 viene sciolto l'[[Office of Strategic Services]] (OSS), il servizio informativo bellico statunitense che aveva operato anche in Italia. Parte del suo personale e delle sue reti confluirà nella [[Central Intelligence Agency]] (CIA), istituita formalmente il 18 settembre 1947 con il National Security Act.",
+                "fonti": [
+                    {
+                        "Wikipedia - Office of Strategic Services": "https://it.wikipedia.org/wiki/Office_of_Strategic_Services"
+                    },
+                    {
+                        "Wikipedia - Central Intelligence Agency": "https://it.wikipedia.org/wiki/Central_Intelligence_Agency"
+                    }
+                ],
+                "categorie": [
+                    "servizi_segreti"
+                ]
+            },
+            "Nascita della Repubblica Italiana": {
+                "anno": 1946,
+                "titolo": "Nascita della Repubblica Italiana",
+                "data": "1946-06-02",
+                "descrizione": "Il 2 giugno 1946 si tengono il [[Referendum istituzionale del 1946|referendum istituzionale]] tra monarchia e repubblica e le elezioni per l'[[Assemblea Costituente della Repubblica Italiana|Assemblea Costituente]] (556 deputati), con l'affermazione della [[Democrazia Cristiana]] guidata da [[Alcide De Gasperi]] e il ruolo centrale di [[Partito Comunista Italiano|PCI]] e [[Partito Socialista Italiano|PSI]]. Il 18 giugno la Corte di cassazione conferma la vittoria della [[Repubblica Italiana]] e [[Umberto II di Savoia|Umberto II]] lascia il Paese.",
+                "fonti": [
+                    {
+                        "Wikipedia - Referendum istituzionale del 1946": "https://it.wikipedia.org/wiki/Referendum_istituzionale_del_1946"
+                    },
+                    {
+                        "Wikipedia - Assemblea Costituente": "https://it.wikipedia.org/wiki/Assemblea_Costituente_della_Repubblica_Italiana"
+                    }
+                ],
+                "categorie": [
+                    "politico",
+                    "re"
+                ]
+            },
+            "Crisi del maggio e Strage di Portella della Ginestra": {
+                "anno": 1947,
+                "titolo": "Crisi del maggio e Strage di Portella della Ginestra",
+                "data": "1947-05-01",
+                "descrizione": "Il 1° maggio 1947 una manifestazione contadina per il lavoro e la terra a [[Portella della Ginestra]] (Piana degli Albanesi, in Sicilia) viene investita da raffiche di mitra: muoiono 11 persone e 27 restano ferite. Nei procedimenti giudiziari la responsabilità materiale della [[Strage di Portella della Ginestra]] fu attribuita alla banda di [[Salvatore Giuliano]], mentre il possibile ruolo di mandanti politici, agrari, mafiosi e apparati legati alla Guerra fredda è rimasto al centro di inchieste e controversie storiografiche.",
+                "fonti": [
+                    {
+                        "Strano Network": "https://www.strano.net/stragi/stragi/crono/crono47.htm"
+                    },
+                    {
+                        "Wikipedia - Strage di Portella della Ginestra": "https://it.wikipedia.org/wiki/Strage_di_Portella_della_Ginestra"
+                    }
+                ],
+                "categorie": [
+                    "mafia",
+                    "politico",
+                    "servizi_segreti"
+                ]
+            },
+            "Piano Marshall ed elezioni politiche del 18 aprile 1948": {
+                "anno": 1948,
+                "titolo": "Piano Marshall ed elezioni politiche del 18 aprile 1948",
+                "data": "1948-04-18",
+                "descrizione": "Con l'avvio del [[Piano Marshall]] per la ricostruzione europea e l'aspra contrapposizione bipolare della Guerra fredda, nelle [[Elezioni politiche in Italia del 1948|elezioni politiche del 18 aprile 1948]] la [[Democrazia Cristiana]] ottiene la maggioranza assoluta dei seggi, mentre il [[Fronte Democratico Popolare]] (alleanza tra [[Partito Comunista Italiano|PCI]] e [[Partito Socialista Italiano|PSI]]) si colloca all'opposizione.",
+                "fonti": [
+                    {
+                        "Wikipedia - Piano Marshall": "https://it.wikipedia.org/wiki/Piano_Marshall"
+                    },
+                    {
+                        "Wikipedia - Elezioni politiche del 1948": "https://it.wikipedia.org/wiki/Elezioni_politiche_in_Italia_del_1948"
+                    }
+                ],
+                "categorie": [
+                    "politico"
+                ]
+            },
+            "Nascita del SIFAR": {
+                "anno": 1949,
+                "titolo": "Nascita del SIFAR",
+                "data": "1949-03-30",
+                "descrizione": "Il 30 marzo 1949 viene istituito a Roma il [[SIFAR]] (Servizio Informazioni delle Forze Armate) quale nuovo servizio informativo militare della Repubblica in sostituzione del SIM. Dal 1955 al 1962 il servizio sarà diretto dal generale [[Giovanni De Lorenzo]].",
+                "fonti": [
+                    {
+                        "Wikipedia - SIFAR": "https://it.wikipedia.org/wiki/SIFAR"
+                    },
+                    {
+                        "Wikipedia - Giovanni De Lorenzo": "https://it.wikipedia.org/wiki/Giovanni_De_Lorenzo"
+                    }
+                ],
+                "categorie": [
+                    "servizi_segreti"
+                ]
+            },
+            "Ingresso dell'Italia nella NATO e nascita della rete Stay Behind": {
+                "anno": 1949,
+                "titolo": "Ingresso dell'Italia nella NATO e nascita della rete Stay Behind",
+                "data": "1949-04-04",
+                "descrizione": "Il 4 aprile 1949 l'Italia firma a Washington il Trattato del Nord Atlantico come uno dei dodici Stati fondatori della [[Organizzazione del Trattato dell'Atlantico del Nord|NATO]]. Nel quadro della Guerra fredda e della cooperazione tra [[Central Intelligence Agency|CIA]] e servizi segreti italiani viene strutturata la rete clandestina Stay-Behind, divenuta nota pubblicamente nel 1990 con il nome di [[Operazione Gladio]].",
+                "fonti": [
+                    {
+                        "Wikipedia - NATO": "https://it.wikipedia.org/wiki/Organizzazione_del_Trattato_dell%27Atlantico_del_Nord"
+                    },
+                    {
+                        "Wikipedia - Operazione Gladio": "https://it.wikipedia.org/wiki/Operazione_Gladio"
+                    }
+                ],
+                "categorie": [
+                    "politico",
+                    "servizi_segreti"
+                ]
+            },
+            "Fondazione di Supermarkets Italiani e apertura del primo supermercato": {
+                "anno": 1957,
+                "titolo": "Fondazione di Supermarkets Italiani e apertura del primo supermercato",
+                "data": "1957-04-13",
+                "descrizione": "Il 13 aprile 1957 viene costituita a Milano la Supermarkets Italiani S.p.A. con il 51% del capitale sottoscritto dalla International Basic Economy Corporation (IBEC) di [[Nelson Rockefeller]] e quote di soci italiani tra cui [[Bernardo Caprotti]], Guido Caprotti, Mario e Vittorio Crespi e Marco Brunelli. Il 27 novembre 1957 apre in viale Regina Giovanna il primo punto vendita con l'insegna disegnata da [[Max Huber (designer)|Max Huber]], dando origine alla [[Grande distribuzione organizzata|grande distribuzione]] in Italia e alla futura [[Esselunga]].",
+                "fonti": [
+                    {
+                        "Treccani - Esselunga": "https://www.treccani.it/enciclopedia/esselunga/"
+                    },
+                    {
+                        "Wikipedia - Esselunga": "https://it.wikipedia.org/wiki/Esselunga"
+                    },
+                    {
+                        "Rockefeller Archive Center - IBEC": "https://dimes.rockarch.org/collections/PM8C27JgYRkXRJ843Tk9Lg"
+                    }
+                ],
+                "categorie": [
+                    "politico"
+                ]
+            },
+            "Governo Tambroni e crisi politica del luglio 1960": {
+                "anno": 1960,
+                "titolo": "Governo Tambroni e crisi politica del luglio 1960",
+                "data": "1960-03-25",
+                "descrizione": "Il [[Governo Tambroni]], guidato dal democristiano [[Fernando Tambroni]] e in carica dal 25 marzo 1960, ottiene la fiducia parlamentare con il voto determinante del [[Movimento Sociale Italiano|MSI]]. L'autorizzazione a tenere il congresso nazionale missino a Genova scatena i [[Fatti di Genova del 30 giugno 1960|fatti di Genova del 30 giugno]] e manifestazioni in tutta Italia: dopo l'uccisione di cinque manifestanti a [[Strage di Reggio Emilia|Reggio Emilia]] il 7 luglio, Tambroni rassegna le dimissioni il 19 luglio 1960.",
+                "fonti": [
+                    {
+                        "Wikipedia - Governo Tambroni": "https://it.wikipedia.org/wiki/Governo_Tambroni"
+                    },
+                    {
+                        "Wikipedia - Fatti di Genova del 30 giugno 1960": "https://it.wikipedia.org/wiki/Fatti_di_Genova_del_30_giugno_1960"
+                    }
+                ],
+                "categorie": [
+                    "politico"
+                ]
+            },
+            "Piano Marzano: piano di emergenza della pubblica sicurezza": {
+                "anno": 1960,
+                "titolo": "Piano Marzano: piano di emergenza della pubblica sicurezza",
+                "data": "1960-07",
+                "descrizione": "Nel luglio 1960 il questore di Roma Carmelo Marzano predispone un piano di emergenza per l'ordine pubblico nella capitale, con misure di contingenza interforze e l'individuazione di persone da sottoporre a fermo ('enucleandi') in caso di gravi sommosse; a differenza del successivo [[Piano Solo]] del 1964, restava un piano ordinario coordinato dalla Pubblica sicurezza.",
+                "fonti": [
+                    {
+                        "Wikipedia - Piano Solo (contesto piani di emergenza)": "https://it.wikipedia.org/wiki/Piano_Solo"
+                    }
+                ],
+                "categorie": [
+                    "servizi_segreti",
+                    "politico"
+                ]
+            },
+            "Piano di emergenza speciale della pubblica sicurezza": {
+                "anno": 1962,
+                "titolo": "Piano di emergenza speciale della pubblica sicurezza",
+                "data": "",
+                "descrizione": "Nel 1962 il capo della Polizia [[Angelo Vicari]] riordina i piani di emergenza speciale (piani E.S.) della Pubblica sicurezza. Si trattava di pianificazioni di contingenza interforze attuate attraverso prefetture e questure, distinte dal successivo [[Piano Solo]] del 1964 che avrebbe invece riservato l'intervento operativo esclusivamente all'Arma dei Carabinieri.",
+                "fonti": [
+                    {
+                        "Wikipedia - Angelo Vicari": "https://it.wikipedia.org/wiki/Angelo_Vicari"
+                    },
+                    {
+                        "Wikipedia - Piano Solo": "https://it.wikipedia.org/wiki/Piano_Solo"
+                    }
+                ],
+                "categorie": [
+                    "servizi_segreti",
+                    "politico"
+                ]
+            },
+            "Morte di Enrico Mattei e successione di Cefis": {
+                "anno": 1962,
+                "titolo": "Morte di Enrico Mattei e successione di Cefis",
+                "data": "1962-10-27",
+                "descrizione": "Il 27 ottobre 1962 l'aereo del presidente dell'[[Eni|ENI]] [[Enrico Mattei]] precipita a Bascapè (Pavia) durante il volo da Catania a Milano, causando la morte di Mattei, del pilota Irnerio Bertuzzi e del giornalista statunitense William McHale. Nel 1963 [[Eugenio Cefis]] subentra alla guida dell'ENI; le inchieste successive hanno accertato la presenza di tracce compatibili con un sabotaggio a bordo, pur restando irrisolta l'individuazione dei mandanti.",
+                "fonti": [
+                    {
+                        "Wikipedia - Enrico Mattei": "https://it.wikipedia.org/wiki/Enrico_Mattei"
+                    },
+                    {
+                        "Wikipedia - Eugenio Cefis": "https://it.wikipedia.org/wiki/Eugenio_Cefis"
+                    }
+                ],
+                "categorie": [
+                    "politico",
+                    "servizi_segreti",
+                    "mafia"
+                ]
+            },
+            "Sorveglianza e schedature del SIFAR su Quirinale e Vaticano": {
+                "anno": 1963,
+                "titolo": "Sorveglianza e schedature del SIFAR su Quirinale e Vaticano",
+                "data": "",
+                "descrizione": "Nel quadro delle deviazioni del [[SIFAR]] emerse poi con le inchieste parlamentari sul caso [[Giovanni De Lorenzo|De Lorenzo]], il servizio informativo militare svolge una vasta attività di schedatura politica e raccolta riservata di informazioni su esponenti istituzionali, partiti, [[Palazzo del Quirinale|Quirinale]] e ambienti del Vaticano.",
+                "fonti": [
+                    {
+                        "Wikipedia - SIFAR": "https://it.wikipedia.org/wiki/SIFAR"
+                    },
+                    {
+                        "Wikipedia - Palazzo del Quirinale": "https://it.wikipedia.org/wiki/Palazzo_del_Quirinale"
+                    }
+                ],
+                "categorie": [
+                    "servizi_segreti",
+                    "clero",
+                    "politico"
+                ]
+            },
+            "Crisi della lira e riequilibrio economico": {
+                "anno": 1964,
+                "titolo": "Crisi della lira e riequilibrio economico",
+                "data": "",
+                "descrizione": "Tra il 1963 e il 1964, al culmine del [[Miracolo economico italiano|miracolo economico]], l'Italia affronta la [[Crisi della lira del 1963-1964|crisi della bilancia dei pagamenti e forti pressioni sulla lira]]. I governi guidati da [[Amintore Fanfani]], [[Giovanni Leone]] e [[Aldo Moro]], insieme al ministro del Tesoro [[Emilio Colombo]], al ministro del Bilancio [[Antonio Giolitti]] e al governatore della [[Banca d'Italia]] [[Guido Carli]], attuano una stretta creditizia e negoziano prestiti internazionali, evitando la svalutazione ma frenando le riforme del primo centro-sinistra.",
+                "fonti": [
+                    {
+                        "Wikipedia - Crisi della lira del 1963-1964": "https://it.wikipedia.org/wiki/Crisi_della_lira_del_1963-1964"
+                    },
+                    {
+                        "Wikipedia - Guido Carli": "https://it.wikipedia.org/wiki/Guido_Carli"
+                    }
+                ],
+                "categorie": [
+                    "politico"
+                ]
+            },
+            "Piano Solo": {
+                "anno": 1964,
+                "titolo": "Piano Solo",
+                "data": "1964-06",
+                "descrizione": "Nel 1964 il comandante generale dei Carabinieri [[Giovanni De Lorenzo]] predispone il [[Piano Solo]], una pianificazione d'emergenza riservata esclusivamente all'Arma con il supporto delle liste del [[SIFAR]]: prevedeva l'occupazione di RAI, prefetture, centrali di comunicazione e sedi di partito, oltre all'enucleazione e deportazione in Sardegna di circa 731 esponenti politici e sindacali. La vicenda, intrecciata alle consultazioni del presidente della Repubblica [[Antonio Segni]] durante la crisi del primo governo [[Aldo Moro|Moro]] (giugno-luglio 1964), fu svelata nel 1967 ed esaminata dalla Commissione parlamentare Alessi.",
+                "fonti": [
+                    {
+                        "Wikipedia - Piano Solo": "https://it.wikipedia.org/wiki/Piano_Solo"
+                    },
+                    {
+                        "Wikipedia - Giovanni De Lorenzo": "https://it.wikipedia.org/wiki/Giovanni_De_Lorenzo"
+                    },
+                    {
+                        "Wikipedia - Antonio Segni": "https://it.wikipedia.org/wiki/Antonio_Segni"
+                    }
+                ],
+                "categorie": [
+                    "servizi_segreti",
+                    "politico"
+                ]
+            },
+            "Scandalo SIFAR e trasformazione in SID": {
+                "anno": 1966,
+                "titolo": "Scandalo SIFAR e trasformazione in SID",
+                "data": "",
+                "descrizione": "Lo scandalo sui oltre 157.000 fascicoli illegali raccolti dal [[SIFAR]] e sulle anomalie del [[Piano Solo]] porta nel 1966 alla rimozione del generale [[Giovanni De Lorenzo]] e al riordino dei servizi segreti militari: il SIFAR viene sciolto e sostituito dal [[Servizio Informazioni Difesa|SID]], operativo dal 1967.",
+                "fonti": [
+                    {
+                        "Wikipedia - SIFAR": "https://it.wikipedia.org/wiki/SIFAR"
+                    },
+                    {
+                        "Wikipedia - Servizio Informazioni Difesa (SID)": "https://it.wikipedia.org/wiki/Servizio_Informazioni_Difesa"
+                    }
+                ],
+                "categorie": [
+                    "servizi_segreti",
+                    "politico"
+                ]
+            },
+            "Morte di Renzo Rocca e commissione parlamentare sul caso SIFAR": {
+                "anno": 1968,
+                "titolo": "Morte di Renzo Rocca e commissione parlamentare sul caso SIFAR",
+                "data": "1968-06-27",
+                "descrizione": "Il 27 giugno 1968 il colonnello [[Renzo Rocca]], ex capo dell'ufficio REI (Ricerche Economiche e Industriali) del [[SIFAR]], viene trovato morto per un colpo di pistola nel suo ufficio romano alla vigilia della sua audizione davanti alla Commissione parlamentare d'inchiesta sulle deviazioni dei servizi informativi. Il caso viene archiviato come suicidio tra forti interrogativi.",
+                "fonti": [
+                    {
+                        "Wikipedia - SIFAR": "https://it.wikipedia.org/wiki/SIFAR"
+                    },
+                    {
+                        "Wikipedia - Servizio Informazioni Difesa": "https://it.wikipedia.org/wiki/Servizio_Informazioni_Difesa"
+                    }
+                ],
+                "categorie": [
+                    "servizi_segreti",
+                    "politico"
+                ]
+            },
+            "Golpe Borghese e strategia della tensione": {
+                "anno": 1970,
+                "titolo": "Golpe Borghese e strategia della tensione",
+                "data": "1970-12-07",
+                "descrizione": "Nella notte tra il 7 e l'8 dicembre 1970 militanti del [[Fronte Nazionale (1968)|Fronte Nazionale]] e di [[Avanguardia Nazionale]] guidati da [[Junio Valerio Borghese]] avviano il cosiddetto [[Golpe Borghese]] a Roma, penetrando anche nell'armeria del Ministero dell'Interno prima che l'ordine operativo venga improvvisamente revocato. La vicenda si inserisce nel clima della [[Strategia della tensione in Italia|strategia della tensione]] ed è seguita da lunghe inchieste sui rapporti con apparati del [[Servizio Informazioni Difesa|SID]].",
+                "fonti": [
+                    {
+                        "Wikipedia - Golpe Borghese": "https://it.wikipedia.org/wiki/Golpe_Borghese"
+                    },
+                    {
+                        "Wikipedia - Junio Valerio Borghese": "https://it.wikipedia.org/wiki/Junio_Valerio_Borghese"
+                    },
+                    {
+                        "Wikipedia - Strategia della tensione": "https://it.wikipedia.org/wiki/Strategia_della_tensione_in_Italia"
+                    }
+                ],
+                "categorie": [
+                    "gruppi_terroristici",
+                    "servizi_segreti",
+                    "politico"
+                ]
+            },
+            "Inchiesta sul Golpe Borghese e depistaggi su Piazza Fontana": {
+                "anno": 1971,
+                "titolo": "Inchiesta sul Golpe Borghese e depistaggi su Piazza Fontana",
+                "data": "",
+                "descrizione": "L'avvio delle indagini giudiziarie sul [[Golpe Borghese]] e gli sviluppi istruttori sulla [[Strage di piazza Fontana]] (12 dicembre 1969, 17 morti e 88 feriti) portano alla luce i legami tra cellule neofasciste di [[Ordine Nuovo]] e [[Avanguardia Nazionale]] e settori del [[Servizio Informazioni Difesa|SID]] (tra cui il reparto D di [[Gianadelio Maletti]] e l'informatore [[Guido Giannettini]]).",
+                "fonti": [
+                    {
+                        "Wikipedia - Strage di piazza Fontana": "https://it.wikipedia.org/wiki/Strage_di_piazza_Fontana"
+                    },
+                    {
+                        "Wikipedia - Golpe Borghese": "https://it.wikipedia.org/wiki/Golpe_Borghese"
+                    }
+                ],
+                "categorie": [
+                    "gruppi_terroristici",
+                    "servizi_segreti",
+                    "politico"
+                ]
+            },
+            "Morte di Giangiacomo Feltrinelli e Strage di Peteano": {
+                "anno": 1972,
+                "titolo": "Morte di Giangiacomo Feltrinelli e Strage di Peteano",
+                "data": "1972-05-31",
+                "descrizione": "Il 14 marzo 1972 l'editore e fondatore dei [[Gruppi d'Azione Partigiana|GAP]] [[Giangiacomo Feltrinelli]] viene trovato morto dilaniato da un esplosivo sotto un traliccio a Segrate, in un episodio archiviato come incidente ma rimasto discusso. Il 31 maggio 1972 nella [[Strage di Peteano]] un'autobomba attira in trappola e uccide tre carabinieri (Antonio Ferraro, Donato Poveromo e Franco Dongiovanni); dopo anni di depistaggi, il militante di [[Ordine Nuovo]] [[Vincenzo Vinciguerra]] confesserà l'attentato venendo condannato all'ergastolo.",
+                "fonti": [
+                    {
+                        "Wikipedia - Strage di Peteano": "https://it.wikipedia.org/wiki/Strage_di_Peteano"
+                    },
+                    {
+                        "Wikipedia - Giangiacomo Feltrinelli": "https://it.wikipedia.org/wiki/Giangiacomo_Feltrinelli"
+                    }
+                ],
+                "categorie": [
+                    "gruppi_terroristici",
+                    "servizi_segreti"
+                ]
+            },
+            "Scuola Hyperion e stagione del compromesso storico": {
+                "anno": 1977,
+                "titolo": "Scuola Hyperion e stagione del compromesso storico",
+                "data": "",
+                "descrizione": "Mentre in Italia si sviluppa il confronto politico sul [[Compromesso storico]] proposto da [[Enrico Berlinguer]] e perseguito da [[Aldo Moro]] con i governi di solidarietà nazionale (1976-1978), nel 1977 viene fondata a Parigi la scuola di lingue [[Scuola Hyperion|Hyperion]] da esponenti fuoriusciti della sinistra extraparlamentare (tra cui [[Corrado Simioni]], fondatore del cosiddetto Superclan), oggetto di successive inchieste giudiziarie e parlamentari su presunti crocevia informativi internazionali.",
+                "fonti": [
+                    {
+                        "Wikipedia - Scuola Hyperion": "https://it.wikipedia.org/wiki/Scuola_Hyperion"
+                    },
+                    {
+                        "Wikipedia - Compromesso storico": "https://it.wikipedia.org/wiki/Compromesso_storico"
+                    }
+                ],
+                "categorie": [
+                    "politico",
+                    "servizi_segreti",
+                    "gruppi_terroristici"
+                ]
+            },
+            "Sequestro e uccisione di Aldo Moro": {
+                "anno": 1978,
+                "titolo": "Sequestro e uccisione di Aldo Moro",
+                "data": "1978-03-16",
+                "descrizione": "Il 16 marzo 1978, nel giorno della presentazione in Parlamento del governo di solidarietà nazionale sostenuto anche dal [[Partito Comunista Italiano|PCI]], il presidente della [[Democrazia Cristiana]] [[Aldo Moro]] viene rapito in via Fani a Roma da un commando delle [[Brigate Rosse]] che uccide i cinque uomini della scorta ([[Strage di via Fani]]). Dopo 55 giorni di prigionia, il 9 maggio 1978 il corpo di Moro viene fatto ritrovare in via Caetani; il [[Caso Moro]] segna uno spartiacque nella storia della Repubblica ed è oggetto di molteplici commissioni d'inchiesta.",
+                "fonti": [
+                    {
+                        "Wikipedia - Caso Moro": "https://it.wikipedia.org/wiki/Caso_Moro"
+                    },
+                    {
+                        "Wikipedia - Aldo Moro": "https://it.wikipedia.org/wiki/Aldo_Moro"
+                    },
+                    {
+                        "Wikipedia - Brigate Rosse": "https://it.wikipedia.org/wiki/Brigate_Rosse"
+                    }
+                ],
+                "categorie": [
+                    "gruppi_terroristici",
+                    "politico",
+                    "servizi_segreti"
+                ]
+            },
+            "Strage di Bologna": {
+                "anno": 1980,
+                "titolo": "Strage di Bologna",
+                "data": "1980-08-02",
+                "descrizione": "Il 2 agosto 1980 l'esplosione di un ordigno nella sala d'aspetto di seconda classe della stazione di Bologna causa 85 morti e oltre 200 feriti. La [[Strage di Bologna]], il più grave attentato terroristico dell'Italia repubblicana nell'ambito della [[Strategia della tensione in Italia|strategia della tensione]], vede condannati in via definitiva come esecutori materiali esponenti dei [[Nuclei Armati Rivoluzionari]] (NAR), mentre le sentenze più recenti hanno ricostruito il ruolo di depistaggio e copertura legato ai vertici della [[P2|loggia massonica P2]] di [[Licio Gelli]] e ad apparati infedeli dei servizi segreti.",
+                "fonti": [
+                    {
+                        "Strano Network": "https://www.strano.net/stragi/stragi/crono/crono80.htm"
+                    },
+                    {
+                        "Wikipedia - Strage di Bologna": "https://it.wikipedia.org/wiki/Strage_di_Bologna"
+                    }
+                ],
+                "categorie": [
+                    "gruppi_terroristici",
+                    "servizi_segreti",
+                    "massoneria"
+                ]
+            }
+        }
+    }
+}
