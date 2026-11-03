@@ -585,12 +585,33 @@
 
     .section-card h3 {
       margin-top: 0;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       color: var(--muted);
       font-size: 11px;
       font-weight: 600;
       letter-spacing: .08em;
       text-transform: uppercase;
+    }
+
+    .repo-select {
+      width: 100%;
+      min-height: 38px;
+      padding: 7px 10px;
+      margin-bottom: 14px;
+      color: var(--ink);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: border-color .15s ease, background-color .15s ease;
+    }
+
+    .repo-select:focus {
+      outline: none;
+      border-color: var(--ink);
+      background: var(--panel);
     }
 
     .section-card input[type="file"] {
@@ -1074,6 +1095,12 @@
       </div>
 
       <div class="section-card">
+        <h3>Archivi in /data</h3>
+        <select id="repo-file-select" class="repo-select" aria-label="Seleziona un archivio dalla cartella /data">
+          <option value="data/DiacroniaDellaRepubblicaItaliana.json">DiacroniaDellaRepubblicaItaliana.json</option>
+          <option value="data/DiacroniaDellaRepubblicaItaliana_SintesiCompleta.json">DiacroniaDellaRepubblicaItaliana_SintesiCompleta.json</option>
+        </select>
+
         <h3>Carica un JSON Locale</h3>
         <input id="file" type="file" accept="application/json">
         <div id="file-status" class="file-status">Attivo: <strong>DiacroniaDellaRepubblicaItaliana.json</strong></div>
@@ -1376,8 +1403,26 @@
     };
 
     const DRAFT_KEY = 'democrhistory_auto_draft_v2';
-    const SOURCE_URL = 'data/DiacroniaDellaRepubblicaItaliana.json';
+    const SOURCE_PREF_KEY = 'democrhistory_selected_source';
+    const DEFAULT_SOURCE_URL = 'data/DiacroniaDellaRepubblicaItaliana.json';
+    const KNOWN_DATA_FILES = [
+      'data/DiacroniaDellaRepubblicaItaliana.json',
+      'data/DiacroniaDellaRepubblicaItaliana_SintesiCompleta.json'
+    ];
+    const repoDataFiles = [...KNOWN_DATA_FILES];
+    let currentSourceUrl = DEFAULT_SOURCE_URL;
+    try {
+      const savedSource = localStorage.getItem(SOURCE_PREF_KEY);
+      if (savedSource && savedSource.startsWith('data/') && savedSource.endsWith('.json')) {
+        currentSourceUrl = savedSource;
+        if (!repoDataFiles.includes(savedSource)) repoDataFiles.push(savedSource);
+      }
+    } catch (e) { }
     let draftSaveWarned = false;
+
+    function sourceFileName(url) {
+      return String(url || DEFAULT_SOURCE_URL).replace(/^data\//, '');
+    }
 
     // Impronta veloce (FNV-1a) del testo del JSON originale
     function hashText(text) {
@@ -1404,6 +1449,7 @@
           events: state.events,
           preEvents: state.preEvents,
           sourceSignature: state.sourceSignature,
+          sourceUrl: currentSourceUrl,
           updatedAt: new Date().toISOString()
         };
         localStorage.setItem(DRAFT_KEY, JSON.stringify(payload));
@@ -1430,6 +1476,10 @@
           state.events = (draft.events || []).map(normalizeEvent);
           state.preEvents = (draft.preEvents || []).map(normalizeEvent);
           state.sourceSignature = draft.sourceSignature || null;
+          if (draft.sourceUrl && draft.sourceUrl.startsWith('data/')) {
+            currentSourceUrl = draft.sourceUrl;
+            if (!repoDataFiles.includes(currentSourceUrl)) repoDataFiles.push(currentSourceUrl);
+          }
           // Se ho dovuto riparare ID duplicati, salvo subito così tutte le schede usano gli stessi ID
           if (ensureUniqueIds()) saveDraft();
           state.events.sort(compareEvents);
@@ -1437,6 +1487,7 @@
           state.selectedEventId = null;
           updateHeaderUI();
           render();
+          renderRepoSelectOptions(state.sourceSignature ? currentSourceUrl : '');
           const timeStr = draft.updatedAt ? new Date(draft.updatedAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : '';
           $('btn-quick-menu').innerHTML = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 4.5h11M2.5 8h11M2.5 11.5h11M5.5 2.5v4M10.5 6v4M6.5 9.5v4"/></svg><span>File</span>';
           $('file-status').innerHTML = 'Attivo: <strong>Bozza locale recuperata</strong> ' + (timeStr ? `<small>(${escapeHtml(timeStr)})</small>` : '') + ' &nbsp;<button type="button" class="btn btn-secondary btn-sm btn-auto-width" data-action="reset-original" title="Cancella la bozza locale e ricarica il file originale">Ricarica Originale</button>';
@@ -1455,9 +1506,9 @@
     }
 
     function resetToOriginal() {
-      if (confirm("Vuoi tornare all'archivio principale (DiacroniaDellaRepubblicaItaliana.json)? Eventuali modifiche non esportate in JSON andranno perse.")) {
+      if (confirm(`Vuoi tornare all'archivio (${sourceFileName(currentSourceUrl)})? Eventuali modifiche non esportate in JSON andranno perse.`)) {
         clearDraft();
-        fetchInitialData();
+        fetchInitialData(currentSourceUrl);
       }
     }
 
@@ -1465,7 +1516,7 @@
     async function checkSourceUpdate() {
       if (!state.sourceSignature) return;
       try {
-        const res = await fetch(SOURCE_URL, { cache: 'no-cache' });
+        const res = await fetch(currentSourceUrl, { cache: 'no-cache' });
         if (!res.ok) return;
         const signature = hashText(await res.text());
         if (signature !== state.sourceSignature) {
@@ -2100,7 +2151,8 @@
         loadData(sampleTemplate);
         if (state.events.length > 0) showDetail(state.events[0]);
         $('file').value = '';
-        $('file-status').innerHTML = 'Attivo: <strong>Nuovo Archivio (Template Guida)</strong> &nbsp;<button type="button" class="btn btn-secondary btn-sm btn-auto-width" data-action="reset-original" title="Torna all\'archivio principale del sito">Ricarica Originale</button>';
+        renderRepoSelectOptions('');
+        $('file-status').innerHTML = 'Attivo: <strong>Nuovo Archivio (Template Guida)</strong> &nbsp;<button type="button" class="btn btn-secondary btn-sm btn-auto-width" data-action="reset-original" title="Torna all\'archivio selezionato">Ricarica Originale</button>';
         switchTab('tab-timeline');
       }
     }
@@ -2259,7 +2311,8 @@
         try {
           const data = JSON.parse(rawText);
           loadData(data);
-          $('file-status').innerHTML = 'Attivo: <strong>' + escapeHtml(fileName) + '</strong> &nbsp;<button type="button" class="btn btn-secondary btn-sm btn-auto-width" data-action="reset-original" title="Torna all\'archivio principale del sito">Ricarica Originale</button>';
+          renderRepoSelectOptions('');
+          $('file-status').innerHTML = 'Attivo: <strong>' + escapeHtml(fileName) + '</strong> &nbsp;<button type="button" class="btn btn-secondary btn-sm btn-auto-width" data-action="reset-original" title="Torna all\'archivio selezionato">Ricarica Originale</button>';
           switchTab('tab-timeline');
         } catch (e) {
           alert('Errore nel caricamento del JSON.');
@@ -2272,6 +2325,95 @@
         alert('Errore nella lettura del file selezionato.');
       };
       reader.readAsText(file);
+    });
+
+    function renderRepoSelectOptions(selectedVal) {
+      const sel = $('repo-file-select');
+      if (!sel) return;
+      const currentVal = selectedVal !== undefined ? selectedVal : currentSourceUrl;
+      const options = [];
+      if (!currentVal) {
+        options.push('<option value="">— File locale / Template —</option>');
+      }
+      for (const path of repoDataFiles) {
+        const name = sourceFileName(path);
+        const isSel = path === currentVal ? ' selected' : '';
+        options.push(`<option value="${escapeHtml(path)}"${isSel}>${escapeHtml(name)}</option>`);
+      }
+      sel.innerHTML = options.join('');
+      sel.value = currentVal || '';
+    }
+
+    function addDiscoveredDataFiles(paths) {
+      let added = false;
+      for (const p of paths) {
+        if (p && typeof p === 'string' && p.startsWith('data/') && p.toLowerCase().endsWith('.json') && !repoDataFiles.includes(p)) {
+          repoDataFiles.push(p);
+          added = true;
+        }
+      }
+      if (added) {
+        renderRepoSelectOptions($('repo-file-select') ? $('repo-file-select').value : currentSourceUrl);
+      }
+    }
+
+    async function discoverRepoDataFiles() {
+      renderRepoSelectOptions(state.sourceSignature ? currentSourceUrl : (localStorage.getItem(DRAFT_KEY) ? '' : currentSourceUrl));
+
+      let ghOwner = 'Jasssbo';
+      let ghRepo = 'DemocrHistory';
+      const hostMatch = location.hostname.match(/^([a-zA-Z0-9-]+)\.github\.io$/i);
+      if (hostMatch) {
+        ghOwner = hostMatch[1];
+        const pathParts = location.pathname.split('/').filter(Boolean);
+        if (pathParts.length > 0 && !pathParts[0].endsWith('.html')) {
+          ghRepo = pathParts[0];
+        }
+      }
+
+      try {
+        const apiRes = await fetch(`https://api.github.com/repos/${encodeURIComponent(ghOwner)}/${encodeURIComponent(ghRepo)}/contents/data`, {
+          headers: { 'Accept': 'application/vnd.github.v3+json' }
+        });
+        if (apiRes.ok) {
+          const items = await apiRes.json();
+          if (Array.isArray(items)) {
+            const found = items
+              .filter((it) => it && it.type === 'file' && typeof it.name === 'string' && it.name.toLowerCase().endsWith('.json'))
+              .map((it) => 'data/' + it.name);
+            addDiscoveredDataFiles(found);
+          }
+        }
+      } catch (e) { }
+
+      try {
+        const dirRes = await fetch('data/', { cache: 'no-cache' });
+        if (dirRes.ok) {
+          const contentType = dirRes.headers.get('content-type') || '';
+          if (contentType.includes('text/html')) {
+            const html = await dirRes.text();
+            const matches = [...html.matchAll(/href=["']([^"'/?#]+\.json)["']/gi)];
+            const found = matches.map((m) => 'data/' + decodeURIComponent(m[1]));
+            addDiscoveredDataFiles(found);
+          }
+        }
+      } catch (e) { }
+    }
+
+    $('repo-file-select').addEventListener('change', (e) => {
+      const selectedUrl = e.target.value;
+      if (!selectedUrl) return;
+      const hasDraft = Boolean(localStorage.getItem(DRAFT_KEY));
+      if (hasDraft) {
+        if (!confirm(`Vuoi caricare "${sourceFileName(selectedUrl)}"? Eventuali modifiche salvate nella bozza locale non esportate in JSON andranno perse.`)) {
+          renderRepoSelectOptions(state.sourceSignature ? currentSourceUrl : '');
+          return;
+        }
+        clearDraft();
+      }
+      currentSourceUrl = selectedUrl;
+      try { localStorage.setItem(SOURCE_PREF_KEY, currentSourceUrl); } catch (err) { }
+      fetchInitialData(currentSourceUrl).then(() => switchTab('tab-timeline'));
     });
 
     $('btn-add-event').addEventListener('click', () => openEventModal());
@@ -2345,28 +2487,32 @@
       }
     });
 
-    async function fetchInitialData() {
+    async function fetchInitialData(targetUrl) {
+      const urlToLoad = targetUrl || currentSourceUrl || DEFAULT_SOURCE_URL;
+      currentSourceUrl = urlToLoad;
       try {
-        const res = await fetch(SOURCE_URL, { cache: 'no-cache' });
+        const res = await fetch(urlToLoad, { cache: 'no-cache' });
         if (!res.ok) throw new Error('HTTP ' + res.status);
         const text = await res.text();
         const data = JSON.parse(text);
+        renderRepoSelectOptions(urlToLoad);
         $('btn-quick-menu').innerHTML = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 4.5h11M2.5 8h11M2.5 11.5h11M5.5 2.5v4M10.5 6v4M6.5 9.5v4"/></svg><span>File</span>';
-        $('file-status').innerHTML = 'Attivo: <strong>DiacroniaDellaRepubblicaItaliana.json</strong>';
+        $('file-status').innerHTML = 'Attivo: <strong>' + escapeHtml(sourceFileName(urlToLoad)) + '</strong>';
         loadData(data, hashText(text), false);
       } catch (e) {
         console.warn('Caricamento del JSON originale fallito:', e);
         $('file-status').innerHTML = '';
-        addStatusWarning('load-error', 'Impossibile caricare ' + escapeHtml(SOURCE_URL) + '. Se hai aperto la pagina come file, avviala da un server locale oppure carica un JSON manualmente.');
+        addStatusWarning('load-error', 'Impossibile caricare ' + escapeHtml(urlToLoad) + '. Se hai aperto la pagina come file, avviala da un server locale oppure carica un JSON manualmente.');
         $('timeline').innerHTML = '<div class="file-status status-empty-box">Nessun archivio caricato: apri "Gestione" per caricare un JSON o creare un nuovo archivio.</div>';
       }
     }
 
-    // Caricamento iniziale
+    // Caricamento iniziale e scoperta file in /data
+    discoverRepoDataFiles();
     if (loadDraft()) {
       checkSourceUpdate();
     } else {
-      fetchInitialData();
+      fetchInitialData(currentSourceUrl);
     }
   </script>
 </body>
