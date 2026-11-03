@@ -1865,9 +1865,10 @@
               "categorie": ["politico"],
               "descrizione": "I Pre-Eventi servono a contestualizzare le radici storiche prima della timeline principale. Compaiono quando attivi la voce 'Pre-Timeline' nella colonna di sinistra.",
               "fonti": [{ "Wikipedia": "https://it.wikipedia.org" }]
-            },
-            "EVENTI": {
-              "1. Come strutturare un evento (Es. Strage di Portella della Ginestra)": {
+            }
+          },
+          "EVENTI": {
+            "1. Come strutturare un evento (Es. Strage di Portella della Ginestra)": {
                 "anno": 1947,
                 "titolo": "1. Come strutturare un evento (Es. Strage di Portella della Ginestra)",
                 "data": "1947-05-01",
@@ -1900,7 +1901,6 @@
                 ]
               }
             }
-          }
         };
         loadData(sampleTemplate);
         if (state.events.length > 0) showDetail(state.events[0]);
@@ -1943,13 +1943,9 @@
       const mainObj = formatEventsObj(state.events);
 
       if (state.preEvents.length > 0) {
-        doc["PRE-EVENTI"] = {
-          ...preObj,
-          "EVENTI": mainObj
-        };
-      } else {
-        doc["EVENTI"] = mainObj;
+        doc["PRE-EVENTI"] = preObj;
       }
+      doc["EVENTI"] = mainObj;
 
       return JSON.stringify(doc, null, 4);
     }

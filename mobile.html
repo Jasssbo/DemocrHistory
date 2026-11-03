@@ -4,18 +4,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Archivio Storico Mobile &amp; Editor JSON</title>
+  <title>Archivio Storico Mobile &middot; Minimal</title>
   <style>
     :root {
-      --ink: #1d2730;
-      --muted: #65727c;
-      --paper: #f5f2eb;
-      --panel: #fffdf8;
-      --line: #d8d2c5;
-      --accent: #b4492d;
-      --accent-light: #f4e8e4;
-      --shadow: 0 4px 15px rgba(36, 42, 44, .08);
-      --nav-height: 60px;
+      --ink: #1e1c18;
+      --ink-secondary: #4a453c;
+      --muted: #787062;
+      --paper: #ede6d6;
+      --panel: #f6f1e4;
+      --subtle: #e3dac7;
+      --line: #d4cab5;
+      --line-hover: #9e937d;
+      --accent: #1e1c18;
+      --radius: 0px;
+      --radius-sm: 0px;
+      --shadow-sm: none;
+      --shadow-hover: 3px 3px 0 var(--line);
+      --nav-height: 58px;
+      color-scheme: light;
+    }
+
+    :root[data-theme="dark"] {
+      --ink: #f4f4f5;
+      --ink-secondary: #a1a1aa;
+      --muted: #71717a;
+      --paper: #09090b;
+      --panel: #121215;
+      --subtle: #1c1c21;
+      --line: #27272a;
+      --line-hover: #52525b;
+      --accent: #f4f4f5;
+      --shadow-sm: none;
+      --shadow-hover: 3px 3px 0 var(--line-hover);
+      color-scheme: dark;
     }
 
     * {
@@ -28,9 +49,12 @@
       padding: 0;
       color: var(--ink);
       background: var(--paper);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
-      padding-bottom: calc(var(--nav-height) + 20px);
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding-bottom: calc(var(--nav-height) + 24px);
       min-height: 100vh;
+      transition: background-color .2s ease, color .2s ease;
     }
 
     button,
@@ -47,36 +71,96 @@
       z-index: 100;
       background: var(--panel);
       border-bottom: 1px solid var(--line);
-      padding: 12px 16px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, .04);
+      padding: 14px 16px;
     }
 
     .header-top {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
+      gap: 10px;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
     }
 
     .eyebrow {
-      color: var(--accent);
-      font: 700 11px Arial, sans-serif;
-      letter-spacing: .1em;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: .14em;
       text-transform: uppercase;
     }
 
     h1.mobile-title {
-      margin: 2px 0 0;
+      margin: 4px 0 0;
       font-size: 20px;
       font-weight: 600;
-      font-family: Georgia, serif;
-      line-height: 1.2;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      color: var(--ink);
     }
 
     .intro-text {
       margin: 6px 0 0;
-      font: 13px Arial, sans-serif;
+      font-size: 12.5px;
       color: var(--muted);
-      line-height: 1.4;
+      line-height: 1.5;
+    }
+
+    /* Theme Switcher */
+    .theme-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      margin-bottom: 14px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .theme-label {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .theme-switch {
+      display: inline-flex;
+      padding: 2px;
+      background: var(--subtle);
+      border: 1px solid var(--line);
+      border-radius: 0;
+      gap: 2px;
+    }
+
+    .theme-btn {
+      padding: 4px 9px;
+      border: none;
+      border-radius: 0;
+      background: transparent;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color .15s ease, color .15s ease;
+    }
+
+    .theme-btn:hover {
+      color: var(--ink);
+    }
+
+    .theme-btn.active {
+      background: var(--ink);
+      color: var(--paper);
     }
 
     /* Main Container */
@@ -95,10 +179,10 @@
       border-top: 1px solid var(--line);
       display: flex;
       z-index: 200;
-      box-shadow: 0 -4px 20px rgba(0, 0, 0, .06);
     }
 
     .tab-btn {
+      position: relative;
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -107,19 +191,29 @@
       background: none;
       border: none;
       color: var(--muted);
-      font: 700 11px Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
       gap: 4px;
       cursor: pointer;
       padding: 4px 0;
-      transition: color .15s ease;
-    }
-
-    .tab-btn icon {
-      font-size: 18px;
+      transition: color .15s ease, background-color .15s ease;
     }
 
     .tab-btn.active {
-      color: var(--accent);
+      color: var(--ink);
+      background: var(--subtle);
+    }
+
+    .tab-btn.active::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--ink);
     }
 
     /* Tab Contents */
@@ -141,26 +235,40 @@
     input[type="search"] {
       flex: 1;
       min-width: 0;
-      height: 44px;
-      padding: 10px 14px;
+      height: 42px;
+      padding: 9px 12px;
       color: var(--ink);
       background: var(--panel);
       border: 1px solid var(--line);
-      border-radius: 8px;
-      font-size: 15px;
+      border-radius: var(--radius);
+      font-size: 14px;
+      transition: border-color .15s ease;
+    }
+
+    input[type="search"]::placeholder {
+      color: var(--muted);
+    }
+
+    input[type="search"]:focus,
+    .year-select:focus {
+      outline: none;
+      border-color: var(--ink);
     }
 
     .year-select {
-      height: 44px;
-      min-width: 128px;
+      height: 42px;
+      min-width: 124px;
       padding: 8px 10px;
       color: var(--ink);
       background: var(--panel);
       border: 1px solid var(--line);
-      border-radius: 8px;
-      font: 700 13px Arial, sans-serif;
+      border-radius: var(--radius);
+      font-size: 12.5px;
+      font-weight: 500;
+      font-variant-numeric: tabular-nums;
       cursor: pointer;
       flex-shrink: 0;
+      transition: border-color .15s ease;
     }
 
     .summary-bar {
@@ -170,9 +278,11 @@
       background: var(--panel);
       padding: 10px 14px;
       border: 1px solid var(--line);
-      border-radius: 6px;
-      margin-bottom: 16px;
-      font: 12px Arial, sans-serif;
+      border-radius: var(--radius);
+      margin-bottom: 12px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .08em;
       color: var(--muted);
       text-transform: uppercase;
     }
@@ -180,50 +290,74 @@
     .summary-bar strong {
       color: var(--ink);
       font-size: 15px;
-      font-family: Georgia, serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      font-variant-numeric: tabular-nums;
+      margin-left: 4px;
     }
 
     /* Timeline Mobile */
     .timeline {
       position: relative;
-      padding-left: 20px;
+      padding-left: 22px;
     }
 
     .timeline::before {
       position: absolute;
-      top: 6px;
+      top: 8px;
       bottom: 0;
       left: 5px;
-      width: 2px;
+      width: 1px;
       background: var(--line);
       content: "";
     }
 
     .event-card {
       position: relative;
-      margin-bottom: 12px;
-      padding: 14px 16px;
+      margin-bottom: 10px;
+      padding: 15px 16px;
       background: var(--panel);
       border: 1px solid var(--line);
-      border-left: 4px solid var(--accent);
-      border-radius: 6px;
-      box-shadow: var(--shadow);
+      border-radius: var(--radius);
       cursor: pointer;
+      transition: border-color .15s ease, box-shadow .15s ease, background-color .15s ease;
     }
 
     .event-card:active {
-      background: var(--accent-light);
+      background: var(--subtle);
+    }
+
+    .event-card.active {
+      border-color: var(--ink);
+      box-shadow: 3px 3px 0 var(--ink);
     }
 
     .event-card::before {
       position: absolute;
-      top: 18px;
-      left: -23px;
+      top: 20px;
+      left: -21px;
       width: 9px;
       height: 9px;
       border: 2px solid var(--paper);
-      border-radius: 50%;
-      background: var(--accent);
+      border-radius: 0;
+      background: var(--cat-main, var(--muted));
+      box-shadow: 0 0 0 1px var(--cat-main-border, var(--line-hover));
+      content: "";
+      transition: transform .15s ease;
+    }
+
+    .event-card.active::before {
+      transform: scale(1.25);
+    }
+
+    .event-card::after {
+      position: absolute;
+      top: -1px;
+      bottom: -1px;
+      left: -1px;
+      width: 4px;
+      border-radius: var(--radius) 0 0 var(--radius);
+      background: var(--stripe, transparent);
       content: "";
     }
 
@@ -236,27 +370,33 @@
     }
 
     .year {
-      color: var(--accent);
-      font: 700 16px Arial, sans-serif;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      font-variant-numeric: tabular-nums;
     }
 
     .date {
-      font: 12px Arial, sans-serif;
+      font-size: 12px;
       color: var(--muted);
+      font-variant-numeric: tabular-nums;
     }
 
     .event-card h2 {
       margin: 4px 0 6px;
-      font-size: 18px;
-      font-weight: 500;
-      font-family: Georgia, serif;
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: -0.015em;
       line-height: 1.25;
+      color: var(--ink);
     }
 
     .event-card p {
       margin: 0;
-      color: #45515a;
-      font: 13px/1.45 Arial, sans-serif;
+      color: var(--ink-secondary);
+      font-size: 13.5px;
+      line-height: 1.5;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       line-clamp: 2;
@@ -268,36 +408,44 @@
     .event-card p a {
       color: inherit;
       pointer-events: none;
+      text-decoration: none;
+    }
+
+    .event-card .card-cats {
+      margin-top: 10px;
     }
 
     /* Detail View Mobile */
     .detail-container {
       background: var(--panel);
       border: 1px solid var(--line);
-      border-radius: 8px;
+      border-radius: var(--radius);
       padding: 20px 16px;
-      box-shadow: var(--shadow);
     }
 
     .detail-container h2 {
       margin: 8px 0 12px;
-      font-size: 24px;
-      font-family: Georgia, serif;
-      line-height: 1.15;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: var(--ink);
     }
 
     .detail-container h3 {
-      margin: 20px 0 8px;
-      color: var(--accent);
-      font: 700 11px Arial, sans-serif;
+      margin: 22px 0 8px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 600;
       letter-spacing: .1em;
       text-transform: uppercase;
     }
 
     .detail-container p,
     .detail-container li {
-      color: #45515a;
-      font: 14px/1.55 Arial, sans-serif;
+      color: var(--ink-secondary);
+      font-size: 14px;
+      line-height: 1.65;
     }
 
     .detail-container ul {
@@ -305,8 +453,15 @@
       padding-left: 18px;
     }
 
+    .detail-container li+li {
+      margin-top: 4px;
+    }
+
     .detail-container a {
-      color: var(--accent);
+      color: var(--ink);
+      text-decoration: underline;
+      text-decoration-color: var(--line-hover);
+      text-underline-offset: 2px;
       word-break: break-word;
     }
 
@@ -314,22 +469,29 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 6px 12px;
-      background: var(--paper);
+      padding: 7px 12px;
+      background: var(--panel);
       border: 1px solid var(--line);
-      border-radius: 4px;
-      font: 700 12px Arial, sans-serif;
+      border-radius: var(--radius-sm);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .04em;
       color: var(--ink);
       cursor: pointer;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
+    }
+
+    .detail-nav-back:active {
+      background: var(--subtle);
     }
 
     .action-bar-mobile {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 20px;
-      padding-top: 14px;
+      gap: 8px;
+      margin-top: 22px;
+      padding-top: 16px;
       border-top: 1px solid var(--line);
     }
 
@@ -338,19 +500,24 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
-      height: 42px;
-      padding: 0 14px;
-      font: 700 12px Arial, sans-serif;
-      text-transform: uppercase;
-      letter-spacing: .03em;
-      color: #fff;
-      background: var(--accent);
-      border: 1px solid var(--accent);
-      border-radius: 6px;
+      gap: 7px;
+      min-height: 40px;
+      padding: 8px 14px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .01em;
+      color: var(--panel);
+      background: var(--ink);
+      border: 1px solid var(--ink);
+      border-radius: var(--radius-sm);
       cursor: pointer;
       width: 100%;
       text-decoration: none;
+      transition: background-color .15s ease, border-color .15s ease, color .15s ease, opacity .15s ease;
+    }
+
+    .btn:active {
+      opacity: .85;
     }
 
     .btn-secondary {
@@ -359,30 +526,43 @@
       border-color: var(--line);
     }
 
+    .btn-secondary:active {
+      background: var(--subtle);
+      border-color: var(--line-hover);
+    }
+
     .btn-danger {
-      background: #a82d2d;
-      border-color: #a82d2d;
-      color: #fff;
+      background: var(--panel);
+      border-color: var(--line);
+      color: var(--ink-secondary);
+    }
+
+    .btn-danger:active {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: var(--panel);
     }
 
     .btn-sm {
-      height: 34px;
+      min-height: 32px;
+      padding: 5px 10px;
       font-size: 11px;
     }
 
     /* FAB Floating Action Button */
     .fab {
       position: fixed;
-      right: 18px;
-      bottom: calc(var(--nav-height) + 18px);
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: var(--accent);
-      color: #fff;
-      border: none;
-      font-size: 24px;
-      box-shadow: 0 4px 15px rgba(180, 73, 45, .4);
+      right: 16px;
+      bottom: calc(var(--nav-height) + 16px);
+      width: 46px;
+      height: 46px;
+      border-radius: var(--radius);
+      background: var(--ink);
+      color: var(--panel);
+      border: 1px solid var(--line);
+      font-size: 22px;
+      font-weight: 400;
+      box-shadow: 3px 3px 0 var(--line);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -390,52 +570,80 @@
       cursor: pointer;
     }
 
+    .fab:active {
+      transform: translate(1px, 1px);
+    }
+
     /* File Section Cards */
     .section-card {
       background: var(--panel);
       border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 16px;
-      margin-bottom: 16px;
-      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      padding: 16px 14px;
+      margin-bottom: 14px;
     }
 
     .section-card h3 {
       margin-top: 0;
-      margin-bottom: 12px;
-      color: var(--accent);
-      font: 700 12px Arial, sans-serif;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .08em;
       text-transform: uppercase;
+    }
+
+    .section-card input[type="file"] {
+      font-size: 12px;
+      color: var(--ink-secondary);
+      padding: 6px 0;
+      width: 100%;
+    }
+
+    .section-card input[type="file"]::file-selector-button {
+      padding: 6px 10px;
+      margin-right: 8px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: var(--subtle);
+      color: var(--ink);
+      font-size: 11px;
+      font-weight: 500;
+      cursor: pointer;
     }
 
     .file-status {
       margin-top: 8px;
-      margin-bottom: 12px;
-      font: 12px Arial, sans-serif;
+      margin-bottom: 4px;
+      font-size: 12px;
       color: var(--muted);
       background: var(--paper);
       padding: 8px 10px;
-      border: 1px dashed var(--line);
-      border-radius: 4px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
       word-break: break-all;
     }
 
     .source-warning {
-      margin-top: 6px;
-      color: #a8521d;
-      font-weight: 700;
+      margin-top: 8px;
+      padding-left: 8px;
+      border-left: 2px solid var(--ink);
+      color: var(--ink-secondary);
+      font-weight: 500;
       word-break: normal;
     }
 
     .file-status strong {
-      color: var(--accent);
+      color: var(--ink);
+      font-weight: 600;
     }
 
     /* Modal Sheet Mobile */
     .modal-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(29, 39, 48, .6);
+      background: rgba(15, 15, 17, .5);
+      backdrop-filter: blur(2px);
       display: flex;
       align-items: flex-end;
       justify-content: center;
@@ -448,13 +656,14 @@
 
     .modal-card {
       background: var(--panel);
-      border-radius: 16px 16px 0 0;
+      border-top: 1px solid var(--line);
+      border-radius: 0;
       width: 100%;
-      max-height: 90vh;
+      max-height: 92vh;
       overflow-y: auto;
-      padding: 20px 16px 30px;
-      box-shadow: 0 -10px 30px rgba(0, 0, 0, .2);
-      animation: slideUp .2s ease-out;
+      padding: 20px 16px 28px;
+      box-shadow: 0 -12px 32px rgba(0, 0, 0, .18);
+      animation: slideUp .18s ease-out;
     }
 
     @keyframes slideUp {
@@ -470,8 +679,10 @@
     .modal-card h2 {
       margin-top: 0;
       margin-bottom: 16px;
-      font-size: 20px;
-      font-family: Georgia, serif;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--ink);
       border-bottom: 1px solid var(--line);
       padding-bottom: 10px;
     }
@@ -483,9 +694,11 @@
     .form-group label {
       display: block;
       margin-bottom: 6px;
-      font: 700 11px Arial, sans-serif;
-      color: var(--accent);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--muted);
       text-transform: uppercase;
+      letter-spacing: .06em;
     }
 
     .form-group input[type="text"],
@@ -493,23 +706,35 @@
     .form-group select,
     .form-group textarea {
       width: 100%;
-      padding: 10px 12px;
+      padding: 9px 12px;
       border: 1px solid var(--line);
-      border-radius: 6px;
+      border-radius: var(--radius-sm);
       background: var(--paper);
-      font: 14px Arial, sans-serif;
+      font-size: 14px;
       color: var(--ink);
+      transition: border-color .15s ease, background-color .15s ease;
+    }
+
+    .form-group input[type="text"]:focus,
+    .form-group input[type="number"]:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--ink);
+      background: var(--panel);
     }
 
     .form-group textarea {
-      min-height: 100px;
+      min-height: 110px;
       resize: vertical;
+      line-height: 1.5;
     }
 
     .fonte-row {
       display: flex;
       gap: 6px;
       margin-bottom: 8px;
+      align-items: center;
     }
 
     .fonte-row input {
@@ -519,7 +744,7 @@
     .modal-buttons {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 10px;
+      gap: 8px;
       margin-top: 20px;
       padding-top: 14px;
       border-top: 1px solid var(--line);
@@ -540,26 +765,49 @@
       margin-bottom: 14px;
       background: var(--panel);
       border: 1px solid var(--line);
-      padding: 8px 12px;
-      border-radius: 6px;
+      border-radius: var(--radius);
     }
 
     .prelude-summary {
-      font: 700 12px Arial, sans-serif;
-      color: var(--accent);
+      padding: 11px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .02em;
+      color: var(--ink);
       cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .prelude-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .prelude-summary::after {
+      content: "+";
+      color: var(--muted);
+      font-weight: 400;
+      font-size: 15px;
+    }
+
+    .prelude-details[open] .prelude-summary::after {
+      content: "−";
     }
 
     .prelude-desc {
-      margin: 6px 0 0;
-      font: 12px Arial, sans-serif;
+      margin: 0;
+      padding: 0 14px 12px;
+      font-size: 12px;
+      line-height: 1.5;
       color: var(--muted);
     }
 
     .action-list {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 7px;
     }
 
     .btn-add-fonte-trigger {
@@ -569,7 +817,11 @@
 
     .status-empty-box {
       text-align: center;
-      padding: 20px;
+      padding: 24px 16px;
+      color: var(--muted);
+      font-size: 13px;
+      border: 1px solid var(--line);
+      background: var(--panel);
     }
 
     .nav-icon {
@@ -580,10 +832,10 @@
     }
 
     .ico {
-      width: 14px;
-      height: 14px;
+      width: 13px;
+      height: 13px;
       stroke: currentColor;
-      stroke-width: 1.7;
+      stroke-width: 1.6;
       stroke-linecap: square;
       stroke-linejoin: miter;
       fill: none;
@@ -591,16 +843,23 @@
     }
 
     .nav-icon .ico {
-      width: 16px;
-      height: 16px;
+      width: 15px;
+      height: 15px;
     }
 
-    /* ===== Categorie evento ===== */
+    /* ===== Categorie evento (unici elementi cromatici dell'interfaccia) ===== */
     .cat-filter {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      overflow-x: auto;
       gap: 6px;
-      margin: 0 0 16px;
+      margin: 0 -16px 12px;
+      padding: 2px 16px 4px;
+      scrollbar-width: none;
+    }
+
+    .cat-filter::-webkit-scrollbar {
+      display: none;
     }
 
     .cat-filter-btn {
@@ -608,30 +867,31 @@
       align-items: center;
       gap: 6px;
       flex: none;
-      padding: 6px 11px;
+      padding: 5px 11px;
       border: 1px solid var(--line);
-      border-radius: 999px;
+      border-radius: 0;
       background: var(--panel);
-      color: var(--ink);
-      font: 700 11px Arial, sans-serif;
-      letter-spacing: .03em;
+      color: var(--ink-secondary);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .01em;
       cursor: pointer;
-      transition: background-color .15s ease, color .15s ease, border-color .15s ease, transform .1s ease, box-shadow .15s ease;
+      transition: background-color .15s ease, color .15s ease, border-color .15s ease, transform .1s ease;
     }
 
     .cat-filter-btn:hover {
       border-color: var(--cat-border, var(--ink));
+      color: var(--ink);
     }
 
     .cat-filter-btn:active {
-      transform: scale(.96);
+      transform: scale(.97);
     }
 
     .cat-filter-btn.active {
       background: var(--cat, var(--ink));
-      color: var(--cat-text, #fff);
+      color: var(--cat-text, var(--paper));
       border-color: var(--cat-border, var(--ink));
-      box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
     }
 
     .cat-filter-btn.active:not(.cat-filter-all)::before {
@@ -639,17 +899,26 @@
     }
 
     .cat-count {
-      opacity: .6;
+      opacity: .55;
       font-weight: 400;
+      font-variant-numeric: tabular-nums;
     }
 
     .cat-dot {
       flex: none;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
+      width: 8px;
+      height: 8px;
+      border-radius: 0;
       background: var(--cat);
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, .25);
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .2);
+    }
+
+    :root[data-theme="dark"] .cat-dot {
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, .24);
+    }
+
+    :root[data-theme="dark"] .cat-chip {
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, .14);
     }
 
     .cat-filter-btn.active .cat-dot {
@@ -659,7 +928,7 @@
     .cat-chips {
       display: flex;
       flex-wrap: wrap;
-      gap: 4px;
+      gap: 5px;
     }
 
     .cat-chip {
@@ -667,11 +936,12 @@
       align-items: center;
       padding: 2px 8px;
       border: 1px solid var(--cat-border, var(--cat));
-      border-radius: 999px;
+      border-radius: 0;
       background: var(--cat);
       color: var(--cat-text);
-      font: 700 10px Arial, sans-serif;
-      letter-spacing: .05em;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .04em;
       text-transform: uppercase;
       white-space: nowrap;
     }
@@ -692,12 +962,13 @@
       align-items: center;
       gap: 6px;
       margin: 0;
-      padding: 7px 12px;
+      padding: 6px 12px;
       border: 1px solid var(--line);
-      border-radius: 999px;
+      border-radius: 0;
       background: var(--paper);
-      color: var(--ink);
-      font: 700 12px Arial, sans-serif;
+      color: var(--ink-secondary);
+      font-size: 12px;
+      font-weight: 500;
       letter-spacing: 0;
       text-transform: none;
       cursor: pointer;
@@ -713,13 +984,13 @@
 
     .form-group .cat-option:hover {
       border-color: var(--cat-border);
+      color: var(--ink);
     }
 
     .form-group .cat-option:has(input:checked) {
       background: var(--cat);
       color: var(--cat-text);
       border-color: var(--cat-border);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
     }
 
     .form-group .cat-option:has(input:checked)::after {
@@ -727,47 +998,8 @@
     }
 
     .form-group .cat-option:has(input:focus-visible) {
-      outline: 2px solid var(--accent);
+      outline: 2px solid var(--ink);
       outline-offset: 2px;
-    }
-
-    /* Striscia colorata della card in base alle categorie */
-    .event-card {
-      border-left-color: transparent;
-    }
-
-    .event-card::after {
-      position: absolute;
-      top: -1px;
-      bottom: -1px;
-      left: -4px;
-      width: 4px;
-      border-radius: 6px 0 0 6px;
-      background: var(--stripe, var(--accent));
-      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .08);
-      content: "";
-    }
-
-    .event-card::before {
-      background: var(--cat-main, var(--accent));
-      box-shadow: 0 0 0 1px var(--cat-main-border, var(--accent));
-    }
-
-    .event-card .card-cats {
-      margin-top: 8px;
-    }
-
-    /* Filtro categorie scorrevole orizzontalmente su mobile */
-    .cat-filter {
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      margin: 0 -16px 12px;
-      padding: 2px 16px 4px;
-      scrollbar-width: none;
-    }
-
-    .cat-filter::-webkit-scrollbar {
-      display: none;
     }
   </style>
 </head>
@@ -777,17 +1009,23 @@
   <header class="mobile-header">
     <div class="header-top">
       <div>
-        <div class="eyebrow">Archivio Storico Mobile</div>
+        <div class="eyebrow">Archivio storico</div>
         <h1 id="archive-title" class="mobile-title">Esplorazione eventi</h1>
       </div>
-      <button type="button" id="btn-quick-menu" class="btn btn-secondary btn-sm btn-auto-width"
-        onclick="switchTab('tab-manage')">
-        <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 4.5h11M2.5 8h11M2.5 11.5h11M5.5 2.5v4M10.5 6v4M6.5 9.5v4"/></svg>
-        <span>File</span>
-      </button>
+      <div class="header-actions">
+        <div class="theme-switch" role="group" aria-label="Tema interfaccia">
+          <button type="button" class="theme-btn active" data-theme-val="light" aria-pressed="true">Chiaro</button>
+          <button type="button" class="theme-btn" data-theme-val="dark" aria-pressed="false">Scuro</button>
+        </div>
+        <button type="button" id="btn-quick-menu" class="btn btn-secondary btn-sm btn-auto-width"
+          onclick="switchTab('tab-manage')">
+          <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 4.5h11M2.5 8h11M2.5 11.5h11M5.5 2.5v4M10.5 6v4M6.5 9.5v4"/></svg>
+          <span>File</span>
+        </button>
+      </div>
     </div>
     <p id="archive-intro" class="intro-text">Carica un file JSON o usa l'editor per aggiungere e modificare gli eventi
-      dal tuo smartphone.</p>
+      storici direttamente nel tuo browser.</p>
   </header>
 
   <!-- Main Container -->
@@ -804,13 +1042,13 @@
 
       <div id="cat-filter" class="cat-filter" role="group" aria-label="Filtra per categoria"></div>
       <div class="summary-bar">
-        <div>Eventi: <strong id="count">0</strong></div>
-        <div>Intervallo: <strong id="range">-</strong></div>
+        <div>Eventi <strong id="count">0</strong></div>
+        <div>Intervallo <strong id="range">-</strong></div>
       </div>
 
       <details id="prelude" class="prelude-details">
         <summary class="prelude-summary">Pre-Timeline</summary>
-        <p class="prelude-desc">Abilita la visualizzazione degli eventi storici antecedenti alla timeline principale.
+        <p class="prelude-desc">Qui puoi abilitare la visualizzazione degli eventi storici antecedenti alla timeline principale.
         </p>
       </details>
 
@@ -827,8 +1065,16 @@
 
     <!-- TAB 3: GESTIONE & FILE -->
     <div id="tab-manage" class="tab-content">
+      <div class="theme-box" role="group" aria-label="Tema interfaccia">
+        <span class="theme-label">Tema</span>
+        <div class="theme-switch">
+          <button type="button" class="theme-btn active" data-theme-val="light" aria-pressed="true">Chiaro</button>
+          <button type="button" class="theme-btn" data-theme-val="dark" aria-pressed="false">Scuro</button>
+        </div>
+      </div>
+
       <div class="section-card">
-        <h3>Caricamento File JSON</h3>
+        <h3>Carica un JSON Locale</h3>
         <input id="file" type="file" accept="application/json">
         <div id="file-status" class="file-status">Attivo: <strong>DiacroniaDellaRepubblicaItaliana.json</strong></div>
       </div>
@@ -850,7 +1096,7 @@
           </button>
           <button id="btn-edit-meta" class="btn btn-secondary" type="button">
             <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 5.5h10M3 10.5h10M6 2.5l-1 11M11 2.5l-1 11"/></svg>
-            <span>Titolo &amp; Info Studio</span>
+            <span>Titolo &amp; Info</span>
           </button>
           <button id="btn-new-archive" class="btn btn-secondary" type="button">
             <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 2h6l3 3v9h-9z"/><path d="M9.5 2v3h3"/></svg>
@@ -961,6 +1207,35 @@
   </div>
 
   <script>
+    // ===== Tema Chiaro / Scuro =====
+    const THEME_KEY = 'democrhistory_theme';
+    function applyTheme(theme) {
+      const mode = theme === 'dark' ? 'dark' : 'light';
+      if (mode === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+      document.querySelectorAll('.theme-switch .theme-btn').forEach((btn) => {
+        const active = btn.dataset.themeVal === mode;
+        btn.classList.toggle('active', active);
+        btn.setAttribute('aria-pressed', String(active));
+      });
+    }
+    try {
+      const savedTheme = localStorage.getItem(THEME_KEY);
+      if (savedTheme === 'dark' || savedTheme === 'light') applyTheme(savedTheme);
+    } catch (e) { }
+    document.querySelectorAll('.theme-switch').forEach((sw) => {
+      sw.addEventListener('click', (e) => {
+        const btn = e.target.closest('.theme-btn');
+        if (!btn) return;
+        const mode = btn.dataset.themeVal === 'dark' ? 'dark' : 'light';
+        applyTheme(mode);
+        try { localStorage.setItem(THEME_KEY, mode); } catch (err) { }
+      });
+    });
+
     // ===== Categorie evento =====
     // Nel JSON vengono salvate come lista di id, es. "categorie": ["mafia", "politico"]
     const CATEGORIES = [
@@ -1231,14 +1506,52 @@
       return changed;
     }
 
+    let lastTimelineScrollY = 0;
+
     function switchTab(tabId) {
+      const currentActive = document.querySelector('.tab-content.active');
+      if (currentActive && currentActive.id === tabId) {
+        if (tabId === 'tab-timeline') {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        return;
+      }
+
+      if (currentActive && currentActive.id === 'tab-timeline') {
+        lastTimelineScrollY = window.scrollY || window.pageYOffset || 0;
+      }
+
       document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
 
-      $(tabId).classList.add('active');
+      const targetTab = $(tabId);
+      if (targetTab) targetTab.classList.add('active');
       const btnId = 'tab-btn-' + tabId.replace('tab-', '');
       if ($(btnId)) $(btnId).classList.add('active');
-      window.scrollTo(0, 0);
+
+      if (tabId === 'tab-timeline') {
+        const scrollToTarget = () => {
+          let scrolled = false;
+          if (state.selectedEventId) {
+            const safeId = typeof CSS !== 'undefined' && CSS.escape ? CSS.escape(state.selectedEventId) : state.selectedEventId;
+            const card = $('timeline').querySelector(`.event-card[data-id="${safeId}"]`);
+            if (card) {
+              card.scrollIntoView({ block: 'center', behavior: 'auto' });
+              scrolled = true;
+            }
+          }
+          if (!scrolled && lastTimelineScrollY) {
+            window.scrollTo(0, lastTimelineScrollY);
+          }
+        };
+
+        requestAnimationFrame(() => {
+          scrollToTarget();
+          setTimeout(scrollToTarget, 30);
+        });
+      } else {
+        window.scrollTo(0, 0);
+      }
     }
 
     function allEvents() {
@@ -1511,6 +1824,7 @@
 
       state.selectedEventId = null;
       state.selectedYear = '';
+      lastTimelineScrollY = 0;
       $('detail').innerHTML = 'Seleziona un evento nella timeline per aprirne la scheda completa.';
 
       if (persistDraft) saveDraft();
@@ -1605,6 +1919,11 @@
     function showDetail(event) {
       state.selectedEventId = event._id;
 
+      $('timeline').querySelectorAll('.event-card.active').forEach((item) => item.classList.remove('active'));
+      const safeId = typeof CSS !== 'undefined' && CSS.escape ? CSS.escape(event._id) : event._id;
+      const activeCard = $('timeline').querySelector(`.event-card[data-id="${safeId}"]`);
+      if (activeCard) activeCard.classList.add('active');
+
       let fontiHtml = '';
       if (event.fonti && event.fonti.length > 0) {
         fontiHtml = event.fonti.map((f) => {
@@ -1636,6 +1955,11 @@
           <button type="button" class="btn btn-danger btn-sm" data-action="delete" data-id="${escapeHtml(event._id)}">
             <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 4.5h11M5.5 4.5V2.5h5v2M4 4.5v9h8v-9"/></svg>
             <span>Elimina</span>
+          </button>
+        </div>
+        <div style="margin-top: 14px;">
+          <button type="button" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;" data-action="back">
+            ← Torna alla Timeline
           </button>
         </div>
       `;
@@ -1736,40 +2060,40 @@
               "categorie": ["politico"],
               "descrizione": "I Pre-Eventi servono a contestualizzare le radici storiche prima della timeline principale. Compaiono quando attivi la voce 'Pre-Timeline' nella scheda Timeline.",
               "fonti": [{ "Wikipedia": "https://it.wikipedia.org" }]
+            }
+          },
+          "EVENTI": {
+            "1. Come strutturare un evento (Es. Strage di Portella della Ginestra)": {
+              "anno": 1947,
+              "titolo": "1. Come strutturare un evento (Es. Strage di Portella della Ginestra)",
+              "data": "1947-05-01",
+              "categorie": ["mafia", "politico"],
+              "descrizione": "Esempio reale: il 1° maggio 1947 una manifestazione contadina a [[Portella della Ginestra]] fu colpita da raffiche di mitra della banda di [[Salvatore Giuliano]]. Nel testo puoi creare link automatici a Wikipedia scrivendo [[Nome Voce]] oppure [[Nome Voce|testo visibile]], link esterni con [Strano Network](https://www.strano.net/stragi/stragi/crono/crono47.htm), o linkare documenti e studi locali salvati nella cartella Documents/ con [Documento](Documents/nome_documento.pdf). Tocca 'Modifica' nella scheda dettaglio per vedere come è compilato l'evento, oppure eliminalo quando inizi la tua ricerca.",
+              "fonti": [
+                { "Strano Network": "https://www.strano.net/stragi/stragi/crono/crono47.htm" },
+                { "Wikipedia": "https://it.wikipedia.org/wiki/Strage_di_Portella_della_Ginestra" },
+                { "Documento PDF in archivio": "Documents/RapportoNester-1944.pdf" }
+              ]
             },
-            "EVENTI": {
-              "1. Come strutturare un evento (Es. Strage di Portella della Ginestra)": {
-                "anno": 1947,
-                "titolo": "1. Come strutturare un evento (Es. Strage di Portella della Ginestra)",
-                "data": "1947-05-01",
-                "categorie": ["mafia", "politico"],
-                "descrizione": "Esempio reale: il 1° maggio 1947 una manifestazione contadina a [[Portella della Ginestra]] fu colpita da raffiche di mitra della banda di [[Salvatore Giuliano]]. Nel testo puoi creare link automatici a Wikipedia scrivendo [[Nome Voce]] oppure [[Nome Voce|testo visibile]], link esterni con [Strano Network](https://www.strano.net/stragi/stragi/crono/crono47.htm), o linkare documenti e studi locali salvati nella cartella Documents/ con [Documento](Documents/nome_documento.pdf). Tocca 'Modifica' nella scheda dettaglio per vedere come è compilato l'evento, oppure eliminalo quando inizi la tua ricerca.",
-                "fonti": [
-                  { "Strano Network": "https://www.strano.net/stragi/stragi/crono/crono47.htm" },
-                  { "Wikipedia": "https://it.wikipedia.org/wiki/Strage_di_Portella_della_Ginestra" },
-                  { "Documento PDF in archivio": "Documents/RapportoNester-1944.pdf" }
-                ]
-              },
-              "2. Come salvare e riaprire la tua ricerca personale": {
-                "anno": 1948,
-                "titolo": "2. Come salvare e riaprire la tua ricerca personale",
-                "data": "1948-01-01",
-                "categorie": ["politico"],
-                "descrizione": "Mentre lavori dal sito web, ogni modifica viene salvata in automatico come bozza nel tuo browser. Per conservare il tuo documento personale sul dispositivo, apri la scheda 'Gestione' e tocca 'Scarica JSON' oppure 'Salva in...': otterrai un file .json che potrai riaprire in qualsiasi momento tramite 'Carica un JSON Locale'.",
-                "fonti": [
-                  { "Formato JSON": "https://it.wikipedia.org/wiki/JSON" }
-                ]
-              },
-              "3. Come pubblicare e contribuire con Git / GitHub": {
-                "anno": 1950,
-                "titolo": "3. Come pubblicare e contribuire con Git / GitHub",
-                "data": "1950-01-01",
-                "categorie": ["servizi_segreti"],
-                "descrizione": "Quando la tua ricerca in formato .json è pronta, puoi scegliere di pubblicarla per tutti nel repository GitHub del progetto: carica il tuo file .json nella cartella 'data/' e gli eventuali saggi o documenti correlati nella cartella 'Documents/' tramite una Pull Request (direttamente dal browser su GitHub oppure con i comandi git). Consulta il README del repository per tutti i passaggi dettagliati.",
-                "fonti": [
-                  { "Guida Pull Request GitHub": "https://docs.github.com/it/pull-requests" }
-                ]
-              }
+            "2. Come salvare e riaprire la tua ricerca personale": {
+              "anno": 1948,
+              "titolo": "2. Come salvare e riaprire la tua ricerca personale",
+              "data": "1948-01-01",
+              "categorie": ["politico"],
+              "descrizione": "Mentre lavori dal sito web, ogni modifica viene salvata in automatico come bozza nel tuo browser. Per conservare il tuo documento personale sul dispositivo, apri la scheda 'Gestione' e tocca 'Scarica JSON' oppure 'Salva in...': otterrai un file .json che potrai riaprire in qualsiasi momento tramite 'Carica un JSON Locale'.",
+              "fonti": [
+                { "Formato JSON": "https://it.wikipedia.org/wiki/JSON" }
+              ]
+            },
+            "3. Come pubblicare e contribuire con Git / GitHub": {
+              "anno": 1950,
+              "titolo": "3. Come pubblicare e contribuire con Git / GitHub",
+              "data": "1950-01-01",
+              "categorie": ["servizi_segreti"],
+              "descrizione": "Quando la tua ricerca in formato .json è pronta, puoi scegliere di pubblicarla per tutti nel repository GitHub del progetto: carica il tuo file .json nella cartella 'data/' e gli eventuali saggi o documenti correlati nella cartella 'Documents/' tramite una Pull Request (direttamente dal browser su GitHub oppure con i comandi git). Consulta il README del repository per tutti i passaggi dettagliati.",
+              "fonti": [
+                { "Guida Pull Request GitHub": "https://docs.github.com/it/pull-requests" }
+              ]
             }
           }
         };
@@ -1814,13 +2138,9 @@
       const mainObj = formatEventsObj(state.events);
 
       if (state.preEvents.length > 0) {
-        doc["PRE-EVENTI"] = {
-          ...preObj,
-          "EVENTI": mainObj
-        };
-      } else {
-        doc["EVENTI"] = mainObj;
+        doc["PRE-EVENTI"] = preObj;
       }
+      doc["EVENTI"] = mainObj;
 
       return JSON.stringify(doc, null, 4);
     }
@@ -1911,6 +2231,7 @@
       const id = btn.dataset.id;
       if (btn.dataset.action === 'edit') editCurrentEvent(id);
       else if (btn.dataset.action === 'delete') deleteCurrentEvent(id);
+      else if (btn.dataset.action === 'back') switchTab('tab-timeline');
     });
 
     $('fonti-container').addEventListener('click', (e) => {
