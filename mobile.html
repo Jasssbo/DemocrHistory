@@ -1151,6 +1151,10 @@
             <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 2h6l3 3v9h-9z"/><path d="M9.5 2v3h3"/></svg>
             <span>Nuovo Archivio</span>
           </button>
+          <button id="btn-reset-github" class="btn btn-secondary" type="button" title="Elimina bozze e impostazioni salvate nel browser e ricarica i file pubblici di GitHub">
+            <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 8a5.5 5.5 0 1 1-1.6-3.9L13.5 5.5V2h-3.5l1.3 1.3"/></svg>
+            <span>Ripristina da GitHub</span>
+          </button>
         </div>
       </div>
     </div>
@@ -1525,9 +1529,17 @@
     }
 
     function resetToOriginal() {
-      if (confirm(`Vuoi tornare all'archivio (${sourceFileName(currentSourceUrl)})? Eventuali modifiche non esportate in JSON andranno perse.`)) {
+      if (confirm("Vuoi eliminare le bozze/dati salvati in locale nel browser e ricaricare lo stato pubblico da GitHub?")) {
         clearDraft();
-        fetchInitialData(currentSourceUrl);
+        try {
+          localStorage.removeItem(SOURCE_PREF_KEY);
+        } catch (e) { }
+        if ($('file')) $('file').value = '';
+        repoDataFiles.length = 0;
+        repoDataFiles.push(...KNOWN_DATA_FILES);
+        currentSourceUrl = DEFAULT_SOURCE_URL;
+        discoverRepoDataFiles(true);
+        fetchInitialData(DEFAULT_SOURCE_URL, true).then(() => switchTab('tab-timeline'));
       }
     }
 
@@ -2453,6 +2465,7 @@
     $('btn-save-as-json').addEventListener('click', saveAsJSON);
     $('btn-edit-meta').addEventListener('click', openMetaModal);
     $('btn-new-archive').addEventListener('click', newArchive);
+    $('btn-reset-github').addEventListener('click', resetToOriginal);
     $('btn-add-fonte').addEventListener('click', () => addFonteRow());
 
     $('form-event').addEventListener('submit', (e) => {
@@ -2519,17 +2532,18 @@
       }
     });
 
-    async function fetchInitialData(targetUrl) {
+    async function fetchInitialData(targetUrl, bustCache = false) {
       const urlToLoad = targetUrl || currentSourceUrl || DEFAULT_SOURCE_URL;
       currentSourceUrl = urlToLoad;
       try {
-        const res = await fetch(urlToLoad, { cache: 'no-cache' });
+        const fetchUrl = bustCache ? `${urlToLoad}?t=${Date.now()}` : urlToLoad;
+        const res = await fetch(fetchUrl, { cache: bustCache ? 'reload' : 'no-cache' });
         if (!res.ok) {
           if (urlToLoad !== DEFAULT_SOURCE_URL) {
             const idx = repoDataFiles.indexOf(urlToLoad);
             if (idx !== -1) repoDataFiles.splice(idx, 1);
             try { localStorage.setItem(SOURCE_PREF_KEY, DEFAULT_SOURCE_URL); } catch (err) { }
-            return fetchInitialData(DEFAULT_SOURCE_URL);
+            return fetchInitialData(DEFAULT_SOURCE_URL, bustCache);
           }
           throw new Error('HTTP ' + res.status);
         }
