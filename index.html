@@ -5,6 +5,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Archivio Storico &middot; Minimal</title>
+  <script>
+    // Rilevamento automatico dispositivo: reindirizza smartphone a mobile.html
+    (function () {
+      try {
+        const params = new URLSearchParams(location.search);
+        if (params.get('view') === 'desktop') {
+          sessionStorage.setItem('democrhistory_view_mode', 'desktop');
+          return;
+        }
+        if (params.get('view') === 'mobile') {
+          sessionStorage.setItem('democrhistory_view_mode', 'mobile');
+        }
+        const pref = sessionStorage.getItem('democrhistory_view_mode');
+        if (pref === 'desktop') return;
+        const uaMobile = (navigator.userAgentData && navigator.userAgentData.mobile) ||
+          /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent || '');
+        const screenMobile = window.innerWidth <= 820 && window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+        if (pref === 'mobile' || uaMobile || screenMobile) {
+          location.replace('mobile.html' + location.search + location.hash);
+        }
+      } catch (e) { }
+    })();
+  </script>
   <style>
     :root {
       --ink: #1e1c18;
@@ -968,7 +991,6 @@
           <label for="repo-file-select">Archivi in /data</label>
           <select id="repo-file-select" class="repo-select" aria-label="Seleziona un archivio dalla cartella /data">
             <option value="data/DiacroniaDellaRepubblicaItaliana.json">DiacroniaDellaRepubblicaItaliana.json</option>
-            <option value="data/DiacroniaDellaRepubblicaItaliana_SintesiCompleta.json">DiacroniaDellaRepubblicaItaliana_SintesiCompleta.json</option>
           </select>
 
           <label for="file">Carica un JSON Locale</label>
@@ -1272,8 +1294,7 @@
     const SOURCE_PREF_KEY = 'democrhistory_selected_source';
     const DEFAULT_SOURCE_URL = 'data/DiacroniaDellaRepubblicaItaliana.json';
     const KNOWN_DATA_FILES = [
-      'data/DiacroniaDellaRepubblicaItaliana.json',
-      'data/DiacroniaDellaRepubblicaItaliana_SintesiCompleta.json'
+      'data/DiacroniaDellaRepubblicaItaliana.json'
     ];
     const repoDataFiles = [...KNOWN_DATA_FILES];
     let currentSourceUrl = DEFAULT_SOURCE_URL;
@@ -2306,7 +2327,15 @@
       currentSourceUrl = urlToLoad;
       try {
         const res = await fetch(urlToLoad, { cache: 'no-cache' });
-        if (!res.ok) throw new Error('HTTP ' + res.status);
+        if (!res.ok) {
+          if (urlToLoad !== DEFAULT_SOURCE_URL) {
+            const idx = repoDataFiles.indexOf(urlToLoad);
+            if (idx !== -1) repoDataFiles.splice(idx, 1);
+            try { localStorage.setItem(SOURCE_PREF_KEY, DEFAULT_SOURCE_URL); } catch (err) { }
+            return fetchInitialData(DEFAULT_SOURCE_URL);
+          }
+          throw new Error('HTTP ' + res.status);
+        }
         const text = await res.text();
         const data = JSON.parse(text);
         renderRepoSelectOptions(urlToLoad);
