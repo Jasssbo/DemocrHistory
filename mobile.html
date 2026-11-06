@@ -1044,6 +1044,132 @@
       outline: 2px solid var(--ink);
       outline-offset: 2px;
     }
+
+    .cat-meta-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .cat-meta-header label {
+      margin-bottom: 0;
+    }
+
+    .cat-meta-hint {
+      margin: 0 0 10px;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    .cat-edit-item {
+      margin-bottom: 8px;
+      border: 1px solid transparent;
+    }
+
+    .cat-edit-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .cat-color-btn {
+      width: 36px;
+      height: 36px;
+      padding: 4px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      cursor: pointer;
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color .15s ease;
+    }
+
+    .cat-color-btn:hover {
+      border-color: var(--ink);
+    }
+
+    .cat-color-swatch {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: 1px solid rgba(128, 128, 128, .35);
+    }
+
+    .cat-edit-row input.cat-edit-label {
+      flex: 1;
+      min-width: 90px;
+    }
+
+    .cat-edit-row .cat-edit-preview {
+      flex-shrink: 0;
+      max-width: 110px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .cat-palette-panel {
+      margin-top: 6px;
+      padding: 10px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .cat-palette-swatches {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+
+    .cat-swatch-btn {
+      height: 30px;
+      border: 1px solid rgba(128, 128, 128, .4);
+      padding: 0;
+      cursor: pointer;
+      transition: transform .1s ease, border-color .1s ease;
+    }
+
+    .cat-swatch-btn.active {
+      outline: 2px solid var(--ink);
+      outline-offset: 1px;
+    }
+
+    .cat-palette-custom {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .cat-palette-custom input.cat-edit-hex {
+      width: 105px;
+      padding: 6px 8px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px;
+    }
+
+    .cat-native-picker-label {
+      position: relative;
+      margin: 0 !important;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .cat-native-picker-label input.cat-native-color {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+      border: 0;
+      padding: 0;
+    }
   </style>
 </head>
 
@@ -1144,7 +1270,7 @@
           </button>
           <button id="btn-edit-meta" class="btn btn-secondary" type="button">
             <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 5.5h10M3 10.5h10M6 2.5l-1 11M11 2.5l-1 11"/></svg>
-            <span>Titolo &amp; Info</span>
+            <span>Titolo, Info &amp; Categorie</span>
           </button>
           <button id="btn-new-archive" class="btn btn-secondary" type="button">
             <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 2h6l3 3v9h-9z"/><path d="M9.5 2v3h3"/></svg>
@@ -1236,10 +1362,10 @@
     </div>
   </div>
 
-  <!-- Modal Modifica Metadati Archivio -->
+  <!-- Modal Modifica Metadati e Categorie Archivio -->
   <div id="modal-meta" class="modal-overlay" hidden>
     <div class="modal-card">
-      <h2>Modifica Intestazione Archivio</h2>
+      <h2>Modifica Intestazione &amp; Categorie</h2>
       <form id="form-meta">
         <div class="form-group">
           <label for="meta-title">Titolo dell'Archivio</label>
@@ -1250,9 +1376,20 @@
           <textarea id="meta-nature"
             placeholder="Breve introduzione o descrizione dei contenuti dell'archivio..."></textarea>
         </div>
+        <div class="form-group">
+          <div class="cat-meta-header">
+            <label>Categorie dell'Archivio</label>
+            <button id="btn-reset-categories" class="btn btn-secondary btn-sm btn-auto-width" type="button"
+              title="Ripristina le 7 categorie storiche predefinite">Ripristina predefinite</button>
+          </div>
+          <p class="cat-meta-hint">Imposta nome e colore delle categorie per adattarle al tema del tuo archivio. Se rinomini una categoria esistente, gli eventi associati verranno aggiornati automaticamente.</p>
+          <div id="meta-categories-container"></div>
+          <button id="btn-add-category" class="btn btn-secondary btn-sm btn-add-fonte-trigger" type="button">+ Aggiungi
+            Categoria</button>
+        </div>
         <div class="modal-buttons">
           <button class="btn btn-secondary" type="button" onclick="closeMetaModal()">Annulla</button>
-          <button class="btn" type="submit">Salva Info</button>
+          <button class="btn" type="submit">Salva Impostazioni</button>
         </div>
       </form>
     </div>
@@ -1288,9 +1425,10 @@
       });
     });
 
-    // ===== Categorie evento =====
-    // Nel JSON vengono salvate come lista di id, es. "categorie": ["mafia", "politico"]
-    const CATEGORIES = [
+    // ===== Categorie evento (personalizzabili per archivio) =====
+    // Nel JSON vengono salvate come lista di id sugli eventi ("categorie": ["mafia", "politico"])
+    // e come definizione in radice ("CATEGORIE": [{ "id": "...", "label": "...", "color": "#..." }])
+    const DEFAULT_CATEGORIES = [
       { id: 'politico', label: 'Politico', color: '#2e7d4f', text: '#ffffff', border: '#2e7d4f' },
       { id: 'servizi_segreti', label: 'Servizi segreti', color: '#1f5fbf', text: '#ffffff', border: '#1f5fbf' },
       { id: 'mafia', label: 'Mafia', color: '#1b1b1b', text: '#ffffff', border: '#1b1b1b' },
@@ -1299,8 +1437,18 @@
       { id: 'clero', label: 'Clero', color: '#ffffff', text: '#1d2730', border: '#b5ad9e' },
       { id: 're', label: 'Re', color: '#e8b400', text: '#1d2730', border: '#c99c00' }
     ];
+    const EXTRA_PALETTE = [
+      '#0d9488', '#d97706', '#2563eb', '#db2777', '#4f46e5',
+      '#65a30d', '#9333ea', '#0284c7', '#dc2626', '#57534e'
+    ];
+    const PRESET_COLORS = [
+      '#2e7d4f', '#1f5fbf', '#1b1b1b', '#c62828', '#7b3fa8', '#ffffff', '#e8b400',
+      '#0d9488', '#d97706', '#2563eb', '#db2777', '#4f46e5', '#65a30d', '#0284c7',
+      '#9333ea', '#ea580c', '#78350f', '#475569'
+    ];
     const NO_CATEGORY = { id: '_none', label: 'Senza categoria', color: '#9aa3aa', text: '#ffffff', border: '#9aa3aa' };
-    const CATEGORY_MAP = Object.fromEntries(CATEGORIES.map((c) => [c.id, c]));
+    let CATEGORIES = DEFAULT_CATEGORIES.map((c) => ({ ...c }));
+    let CATEGORY_MAP = Object.fromEntries(CATEGORIES.map((c) => [c.id, c]));
     // Sinonimi accettati in lettura dal JSON (scritti a mano)
     const CATEGORY_ALIASES = {
       politica: 'politico', politici: 'politico',
@@ -1317,15 +1465,122 @@
         .replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
     }
 
-    function normalizeCategories(raw) {
+    function normalizeHexColor(value, fallback = '#2e7d4f') {
+      const s = String(value ?? '').trim();
+      if (/^#[0-9a-fA-F]{6}$/.test(s)) return s.toLowerCase();
+      if (/^#[0-9a-fA-F]{3}$/.test(s)) {
+        return ('#' + s[1] + s[1] + s[2] + s[2] + s[3] + s[3]).toLowerCase();
+      }
+      return fallback;
+    }
+
+    function computeCategoryStyle(hexColor) {
+      const hex = normalizeHexColor(hexColor);
+      const r = parseInt(hex.slice(1, 3), 16);
+      const g = parseInt(hex.slice(3, 5), 16);
+      const b = parseInt(hex.slice(5, 7), 16);
+      const lum = 0.299 * r + 0.587 * g + 0.114 * b;
+      const text = lum > 165 ? '#1d2730' : '#ffffff';
+      let border = hex;
+      if (hex === '#ffffff') {
+        border = '#b5ad9e';
+      } else if (lum > 165) {
+        const factor = lum > 225 ? 0.72 : 0.86;
+        const dr = Math.max(0, Math.round(r * factor));
+        const dg = Math.max(0, Math.round(g * factor));
+        const db = Math.max(0, Math.round(b * factor));
+        border = '#' + [dr, dg, db].map((x) => x.toString(16).padStart(2, '0')).join('');
+      }
+      return { color: hex, text, border };
+    }
+
+    function humanizeCategoryId(id) {
+      const clean = String(id ?? '').replace(/[_-]+/g, ' ').trim();
+      if (!clean) return 'Categoria';
+      return clean.charAt(0).toUpperCase() + clean.slice(1);
+    }
+
+    function setCategories(rawList) {
+      const list = [];
+      const seen = new Set();
+      let source = rawList;
+      if (source && !Array.isArray(source) && typeof source === 'object') {
+        source = Object.entries(source).map(([k, v]) => {
+          if (v && typeof v === 'object') return { id: k, ...v };
+          if (typeof v === 'string' && v.trim().startsWith('#')) return { id: k, label: humanizeCategoryId(k), color: v };
+          return { id: k, label: String(v || k) };
+        });
+      }
+      const explicitEmpty = Array.isArray(source) && source.length === 0;
+      const items = Array.isArray(source) ? source : DEFAULT_CATEGORIES;
+      items.forEach((item, idx) => {
+        if (!item) return;
+        let rawLabel = '';
+        let rawId = '';
+        let rawColor = '';
+        if (typeof item === 'string') {
+          rawLabel = item.trim();
+          rawId = categoryKey(rawLabel);
+        } else if (typeof item === 'object') {
+          rawLabel = String(item.label ?? item.nome ?? item.name ?? item.titolo ?? item.id ?? '').trim();
+          rawId = categoryKey(item.id || rawLabel);
+          rawColor = item.color ?? item.colore ?? '';
+        }
+        if (!rawId || rawId === '_none' || seen.has(rawId)) return;
+        seen.add(rawId);
+        const def = DEFAULT_CATEGORIES.find((d) => d.id === rawId);
+        const fallbackColor = def ? def.color : EXTRA_PALETTE[idx % EXTRA_PALETTE.length];
+        const style = computeCategoryStyle(rawColor || fallbackColor);
+        list.push({
+          id: rawId,
+          label: rawLabel || (def ? def.label : humanizeCategoryId(rawId)),
+          color: style.color,
+          text: style.text,
+          border: style.border
+        });
+      });
+      CATEGORIES = explicitEmpty ? [] : (list.length ? list : DEFAULT_CATEGORIES.map((c) => ({ ...c })));
+      CATEGORY_MAP = Object.fromEntries(CATEGORIES.map((c) => [c.id, c]));
+      if (typeof state !== 'undefined' && state.categoryFilter) {
+        for (const id of [...state.categoryFilter]) {
+          if (id !== NO_CATEGORY.id && !CATEGORY_MAP[id]) state.categoryFilter.delete(id);
+        }
+      }
+      buildCategoryPicker();
+    }
+
+    function normalizeCategories(raw, autoRegister = false) {
       if (raw === undefined || raw === null || raw === '') return [];
       const list = Array.isArray(raw) ? raw : String(raw).split(/[,;]/);
       const out = [];
+      let addedNew = false;
       for (const item of list) {
-        const key = categoryKey(item);
-        const id = CATEGORY_MAP[key] ? key : CATEGORY_ALIASES[key];
+        const rawStr = String(item ?? '').trim();
+        const key = categoryKey(rawStr);
+        if (!key || key === '_none') continue;
+        let id = CATEGORY_MAP[key] ? key : (CATEGORY_ALIASES[key] && CATEGORY_MAP[CATEGORY_ALIASES[key]] ? CATEGORY_ALIASES[key] : null);
+        if (!id && autoRegister) {
+          const aliasTarget = CATEGORY_ALIASES[key] || key;
+          const def = DEFAULT_CATEGORIES.find((d) => d.id === aliasTarget);
+          const color = def ? def.color : EXTRA_PALETTE[CATEGORIES.length % EXTRA_PALETTE.length];
+          const style = computeCategoryStyle(color);
+          const newCat = {
+            id: def ? def.id : key,
+            label: def ? def.label : humanizeCategoryId(rawStr || key),
+            color: style.color,
+            text: style.text,
+            border: style.border
+          };
+          if (!CATEGORY_MAP[newCat.id]) {
+            CATEGORIES.push(newCat);
+            CATEGORY_MAP[newCat.id] = newCat;
+            addedNew = true;
+          }
+          id = newCat.id;
+        }
         if (id && !out.includes(id)) out.push(id);
       }
+      if (addedNew) buildCategoryPicker();
       return out;
     }
 
@@ -1350,7 +1605,7 @@
     function categoryChipsHtml(event, extraClass = '') {
       const cats = eventCategories(event);
       if (!cats.length) return '';
-      return `<div class="cat-chips ${extraClass}">${cats.map((c) => `<span class="cat-chip" style="${categoryVars(c)}">${c.label}</span>`).join('')}</div>`;
+      return `<div class="cat-chips ${extraClass}">${cats.map((c) => `<span class="cat-chip" style="${categoryVars(c)}">${escapeHtml(c.label)}</span>`).join('')}</div>`;
     }
 
     function matchesCategoryFilter(event) {
@@ -1371,7 +1626,8 @@
       const allActive = state.categoryFilter.size === 0;
       const buttons = [...CATEGORIES, NO_CATEGORY].map((c) => {
         const active = state.categoryFilter.has(c.id);
-        return `<button type="button" id="cat-filter-${c.id}" class="cat-filter-btn ${active ? 'active' : ''}" data-cat="${c.id}" style="${categoryVars(c)}" aria-pressed="${active}"><span class="cat-dot"></span>${c.label} <span class="cat-count">${counts[c.id] || 0}</span></button>`;
+        const safeId = escapeHtml(c.id);
+        return `<button type="button" id="cat-filter-${safeId}" class="cat-filter-btn ${active ? 'active' : ''}" data-cat="${safeId}" style="${categoryVars(c)}" aria-pressed="${active}"><span class="cat-dot"></span>${escapeHtml(c.label)} <span class="cat-count">${counts[c.id] || 0}</span></button>`;
       }).join('');
       box.innerHTML = `<button type="button" id="cat-filter-all" class="cat-filter-btn cat-filter-all ${allActive ? 'active' : ''}" data-cat="" aria-pressed="${allActive}">Tutte</button>` + buttons;
     }
@@ -1379,11 +1635,18 @@
     function buildCategoryPicker() {
       const box = document.getElementById('event-categories');
       if (!box) return;
-      box.innerHTML = CATEGORIES.map((c) => `
+      if (!CATEGORIES.length) {
+        box.innerHTML = '<span class="cat-meta-hint">Nessuna categoria configurata. Usa "Titolo, Info &amp; Categorie" per crearne.</span>';
+        return;
+      }
+      box.innerHTML = CATEGORIES.map((c) => {
+        const safeId = escapeHtml(c.id);
+        return `
         <label class="cat-option" style="${categoryVars(c)}">
-          <input type="checkbox" name="categorie" value="${c.id}" id="event-cat-${c.id}">
-          <span class="cat-dot"></span>${c.label}
-        </label>`).join('');
+          <input type="checkbox" name="categorie" value="${safeId}" id="event-cat-${safeId}">
+          <span class="cat-dot"></span>${escapeHtml(c.label)}
+        </label>`;
+      }).join('');
     }
 
     function setCategoryPicker(categorie) {
@@ -1469,6 +1732,7 @@
       try {
         const payload = {
           metadata: state.metadata,
+          categories: CATEGORIES.map((c) => ({ id: c.id, label: c.label, color: c.color })),
           events: state.events,
           preEvents: state.preEvents,
           sourceSignature: state.sourceSignature,
@@ -1495,9 +1759,10 @@
         if (!raw) return false;
         const draft = JSON.parse(raw);
         if (draft && (Array.isArray(draft.events) || Array.isArray(draft.preEvents))) {
+          setCategories(draft.categories || DEFAULT_CATEGORIES);
           state.metadata = draft.metadata || state.metadata;
-          state.events = (draft.events || []).map(normalizeEvent);
-          state.preEvents = (draft.preEvents || []).map(normalizeEvent);
+          state.events = (draft.events || []).map((e) => normalizeEvent(e, true));
+          state.preEvents = (draft.preEvents || []).map((e) => normalizeEvent(e, true));
           state.sourceSignature = draft.sourceSignature || null;
           if (draft.sourceUrl && draft.sourceUrl.startsWith('data/')) {
             currentSourceUrl = draft.sourceUrl;
@@ -1805,6 +2070,9 @@
     }
 
     function parseArchiveData(data) {
+      const rawCats = getKey(data, 'categorie', 'categories') || (data.struttura_file && getKey(data.struttura_file, 'categorie', 'categories'));
+      setCategories(rawCats || DEFAULT_CATEGORIES);
+
       const metadata = {
         titolo: getKey(data, 'titolo') || (data.struttura_file && getKey(data.struttura_file, 'titolo')) || "Archivio Storico",
         natura: getKey(data, 'natura_del_documento') || (data.struttura_file && getKey(data.struttura_file, 'natura_del_documento')) || "",
@@ -1832,7 +2100,7 @@
       }
 
       if (mainEventsRaw.length === 0 && preEventsRaw.length === 0) {
-        const ignoredKeys = ['_documentazione', 'struttura_file', 'struttura_evento', 'pre_eventi', 'pre-eventi', 'preeventi', 'titolo', 'natura_del_documento', 'lingua'];
+        const ignoredKeys = ['_documentazione', 'struttura_file', 'struttura_evento', 'pre_eventi', 'pre-eventi', 'preeventi', 'titolo', 'natura_del_documento', 'lingua', 'categorie', 'categories'];
         for (const [key, val] of Object.entries(data)) {
           const normKey = key.toLowerCase().replace(/[-_]/g, '');
           if (ignoredKeys.includes(normKey)) continue;
@@ -1851,12 +2119,12 @@
 
       return {
         metadata,
-        preEvents: preEventsRaw.map(normalizeEvent),
-        events: mainEventsRaw.map(normalizeEvent)
+        preEvents: preEventsRaw.map((e) => normalizeEvent(e, true)),
+        events: mainEventsRaw.map((e) => normalizeEvent(e, true))
       };
     }
 
-    function normalizeEvent(e) {
+    function normalizeEvent(e, autoRegisterCats = false) {
       if (!e || typeof e !== 'object') return e;
       const knownKeys = ['_id', '_rawExtra', 'anno', 'data', 'titolo', 'descrizione', 'fonti', 'wikipedia', 'link', 'categorie', 'categoria', 'categories', 'category'];
       const extra = {};
@@ -1875,7 +2143,7 @@
         fonti: e.fonti ?? getKey(e, 'fonti') ?? [],
         wikipedia: e.wikipedia ?? getKey(e, 'wikipedia'),
         link: e.link ?? getKey(e, 'link'),
-        categorie: normalizeCategories(e.categorie ?? getKey(e, 'categorie', 'categoria', 'categories', 'category'))
+        categorie: normalizeCategories(e.categorie ?? getKey(e, 'categorie', 'categoria', 'categories', 'category'), autoRegisterCats)
       };
     }
 
@@ -2117,9 +2385,89 @@
       }
     }
 
+    function setRowCategoryColor(itemEl, rawColor) {
+      if (!itemEl) return;
+      const colorInput = itemEl.querySelector('.cat-edit-color');
+      const hexInput = itemEl.querySelector('.cat-edit-hex');
+      const nativeInput = itemEl.querySelector('.cat-native-color');
+      const swatchEl = itemEl.querySelector('.cat-color-swatch');
+      const hex = normalizeHexColor(rawColor, colorInput ? colorInput.value : '#2e7d4f');
+      if (colorInput) colorInput.value = hex;
+      if (hexInput && document.activeElement !== hexInput) hexInput.value = hex;
+      if (nativeInput) nativeInput.value = hex;
+      if (swatchEl) swatchEl.style.background = hex;
+      itemEl.querySelectorAll('.cat-swatch-btn').forEach((btn) => {
+        btn.classList.toggle('active', btn.dataset.color === hex);
+      });
+      updateMetaCategoryPreview(itemEl);
+    }
+
+    function updateMetaCategoryPreview(itemEl) {
+      const colorInput = itemEl.querySelector('.cat-edit-color');
+      const labelInput = itemEl.querySelector('.cat-edit-label');
+      const preview = itemEl.querySelector('.cat-edit-preview');
+      if (!colorInput || !labelInput || !preview) return;
+      const style = computeCategoryStyle(colorInput.value);
+      preview.setAttribute('style', categoryVars(style));
+      preview.textContent = labelInput.value.trim() || 'Categoria';
+    }
+
+    function addMetaCategoryRow(cat = null) {
+      const container = $('meta-categories-container');
+      if (!container) return;
+      const rowCount = container.querySelectorAll('.cat-edit-item').length;
+      const defaultColor = EXTRA_PALETTE[rowCount % EXTRA_PALETTE.length];
+      const colorVal = normalizeHexColor(cat && cat.color ? cat.color : defaultColor, defaultColor);
+      const labelVal = cat && cat.label ? cat.label : '';
+      const origId = cat && cat.id ? cat.id : '';
+      const style = computeCategoryStyle(colorVal);
+
+      const swatchesHtml = PRESET_COLORS.map((hex) => (
+        `<button type="button" class="cat-swatch-btn ${hex === colorVal ? 'active' : ''}" data-color="${hex}" style="background:${hex}" title="${hex}" aria-label="Colore ${hex}"></button>`
+      )).join('');
+
+      const item = document.createElement('div');
+      item.className = 'cat-edit-item';
+      item.dataset.origId = origId;
+      item.innerHTML = `
+        <div class="cat-edit-row">
+          <button type="button" class="cat-color-btn" title="Scegli colore categoria" aria-label="Scegli colore categoria" aria-expanded="false">
+            <span class="cat-color-swatch" style="background:${escapeHtml(colorVal)}"></span>
+          </button>
+          <input type="hidden" class="cat-edit-color" value="${escapeHtml(colorVal)}">
+          <input type="text" class="cat-edit-label" value="${escapeHtml(labelVal)}" placeholder="Nome categoria (es. Economia, Arte...)" required aria-label="Nome categoria">
+          <span class="cat-chip cat-edit-preview" style="${categoryVars(style)}">${escapeHtml(labelVal || 'Categoria')}</span>
+          <button type="button" class="btn btn-danger btn-sm btn-auto-width btn-remove-cat" title="Rimuovi categoria" aria-label="Rimuovi categoria">✕</button>
+        </div>
+        <div class="cat-palette-panel" hidden>
+          <div class="cat-palette-swatches">${swatchesHtml}</div>
+          <div class="cat-palette-custom">
+            <input type="text" class="cat-edit-hex" value="${escapeHtml(colorVal)}" maxlength="7" placeholder="#2e7d4f" aria-label="Codice colore esadecimale">
+            <label class="btn btn-secondary btn-sm btn-auto-width cat-native-picker-label" title="Apri selettore colore avanzato del dispositivo">
+              <span>Ruota colori...</span>
+              <input type="color" class="cat-native-color" value="${escapeHtml(colorVal)}" aria-label="Selettore colore avanzato">
+            </label>
+          </div>
+        </div>
+      `;
+      container.appendChild(item);
+      if (!cat) {
+        const input = item.querySelector('.cat-edit-label');
+        if (input) input.focus();
+      }
+    }
+
+    function renderMetaCategoryRows(catList) {
+      const container = $('meta-categories-container');
+      if (!container) return;
+      container.innerHTML = '';
+      (catList || []).forEach((c) => addMetaCategoryRow(c));
+    }
+
     function openMetaModal() {
       $('meta-title').value = state.metadata.titolo || '';
       $('meta-nature').value = state.metadata.natura || '';
+      renderMetaCategoryRows(CATEGORIES);
       $('modal-meta').hidden = false;
     }
 
@@ -2131,8 +2479,9 @@
       if (confirm("Vuoi creare un nuovo archivio a partire dal template guida? Le modifiche non salvate andranno perse.")) {
         const sampleTemplate = {
           "TITOLO": "Nuova Ricerca Storica (Template Guida)",
-          "NATURA_DEL_DOCUMENTO": "Modello guidato per strutturare una ricerca storica in linea temporale. Usa 'Titolo & Info' per dare un nome al tuo studio, aggiungi o modifica gli eventi e salva il tuo file .json.",
+          "NATURA_DEL_DOCUMENTO": "Modello guidato per strutturare una ricerca storica in linea temporale. Usa 'Titolo, Info & Categorie' per dare un nome al tuo studio e personalizzare le categorie e i colori, aggiungi o modifica gli eventi e salva il tuo file .json.",
           "LINGUA": "it",
+          "CATEGORIE": DEFAULT_CATEGORIES.map((c) => ({ id: c.id, label: c.label, color: c.color })),
           "PRE-EVENTI": {
             "Contesto Storico (Esempio di Pre-Evento)": {
               "anno": 1900,
@@ -2190,7 +2539,8 @@
       const doc = {
         "TITOLO": state.metadata.titolo || "Diacronia della Repubblica Italiana",
         "LINGUA": state.metadata.lingua || "it",
-        "NATURA_DEL_DOCUMENTO": state.metadata.natura || ""
+        "NATURA_DEL_DOCUMENTO": state.metadata.natura || "",
+        "CATEGORIE": CATEGORIES.map((c) => ({ id: c.id, label: c.label, color: c.color }))
       };
 
       const formatEventsObj = (arr) => {
@@ -2466,6 +2816,58 @@
     $('btn-new-archive').addEventListener('click', newArchive);
     $('btn-reset-github').addEventListener('click', resetToOriginal);
     $('btn-add-fonte').addEventListener('click', () => addFonteRow());
+    $('btn-add-category').addEventListener('click', () => addMetaCategoryRow());
+    $('btn-reset-categories').addEventListener('click', () => {
+      if (confirm('Vuoi ripristinare nell\'elenco le 7 categorie storiche predefinite? (Le modifiche saranno effettive quando toccherai "Salva Impostazioni")')) {
+        renderMetaCategoryRows(DEFAULT_CATEGORIES);
+      }
+    });
+    $('meta-categories-container').addEventListener('input', (e) => {
+      const item = e.target.closest('.cat-edit-item');
+      if (!item) return;
+      if (e.target.classList.contains('cat-native-color')) {
+        setRowCategoryColor(item, e.target.value);
+      } else if (e.target.classList.contains('cat-edit-hex')) {
+        const v = e.target.value.trim();
+        if (/^#[0-9a-fA-F]{6}$/.test(v) || /^#[0-9a-fA-F]{3}$/.test(v)) {
+          setRowCategoryColor(item, v);
+        }
+      } else {
+        updateMetaCategoryPreview(item);
+      }
+    });
+    $('meta-categories-container').addEventListener('change', (e) => {
+      const item = e.target.closest('.cat-edit-item');
+      if (!item) return;
+      if (e.target.classList.contains('cat-native-color') || e.target.classList.contains('cat-edit-hex')) {
+        setRowCategoryColor(item, e.target.value);
+      }
+    });
+    $('meta-categories-container').addEventListener('click', (e) => {
+      const item = e.target.closest('.cat-edit-item');
+      if (!item) return;
+      const removeBtn = e.target.closest('.btn-remove-cat');
+      if (removeBtn) {
+        item.remove();
+        return;
+      }
+      const colorBtn = e.target.closest('.cat-color-btn');
+      if (colorBtn) {
+        const panel = item.querySelector('.cat-palette-panel');
+        if (panel) {
+          const isOpening = panel.hidden;
+          document.querySelectorAll('#meta-categories-container .cat-palette-panel').forEach((p) => { p.hidden = true; });
+          document.querySelectorAll('#meta-categories-container .cat-color-btn').forEach((b) => b.setAttribute('aria-expanded', 'false'));
+          panel.hidden = !isOpening;
+          colorBtn.setAttribute('aria-expanded', String(isOpening));
+        }
+        return;
+      }
+      const swatchBtn = e.target.closest('.cat-swatch-btn');
+      if (swatchBtn && swatchBtn.dataset.color) {
+        setRowCategoryColor(item, swatchBtn.dataset.color);
+      }
+    });
 
     $('form-event').addEventListener('submit', (e) => {
       e.preventDefault();
@@ -2519,8 +2921,60 @@
       e.preventDefault();
       state.metadata.titolo = $('meta-title').value.trim();
       state.metadata.natura = $('meta-nature').value.trim();
+
+      const newCats = [];
+      const usedIds = new Set();
+      const renameMap = {};
+      document.querySelectorAll('#meta-categories-container .cat-edit-item').forEach((row) => {
+        const label = row.querySelector('.cat-edit-label').value.trim();
+        const color = row.querySelector('.cat-edit-color').value;
+        const origId = row.dataset.origId || '';
+        if (!label) return;
+        let baseId = categoryKey(label) || categoryKey(origId) || 'cat';
+        if (baseId === '_none') baseId = 'cat_none';
+        let finalId = baseId;
+        for (let n = 2; usedIds.has(finalId); n++) {
+          finalId = `${baseId}_${n}`;
+        }
+        usedIds.add(finalId);
+        if (origId) renameMap[origId] = finalId;
+        newCats.push({ id: finalId, label, color });
+      });
+
+      setCategories(newCats);
+
+      const remapEventCats = (ev) => {
+        if (!Array.isArray(ev.categorie)) return;
+        const updated = [];
+        for (const oldId of ev.categorie) {
+          const mapped = renameMap[oldId] || (CATEGORY_MAP[oldId] ? oldId : null);
+          if (mapped && CATEGORY_MAP[mapped] && !updated.includes(mapped)) {
+            updated.push(mapped);
+          }
+        }
+        ev.categorie = updated;
+        searchTextCache.delete(ev);
+      };
+      state.events.forEach(remapEventCats);
+      state.preEvents.forEach(remapEventCats);
+
+      if (state.categoryFilter.size) {
+        const nextFilter = new Set();
+        for (const fId of state.categoryFilter) {
+          if (fId === NO_CATEGORY.id) nextFilter.add(fId);
+          else if (renameMap[fId] && CATEGORY_MAP[renameMap[fId]]) nextFilter.add(renameMap[fId]);
+          else if (CATEGORY_MAP[fId]) nextFilter.add(fId);
+        }
+        state.categoryFilter = nextFilter;
+      }
+
       saveDraft();
       updateHeaderUI();
+      render();
+      if (state.selectedEventId) {
+        const sel = findEventById(state.selectedEventId);
+        if (sel) showDetail(sel);
+      }
       closeMetaModal();
     });
 

@@ -115,11 +115,13 @@
             "categorie": [
                 "politico"
             ]
-        },
+        }
+    },
+    "EVENTI": {
         "Nascita del Movimento Indipendentista Siciliano (MIS)": {
             "anno": 1942,
             "titolo": "Nascita del Movimento Indipendentista Siciliano (MIS)",
-            "data": "1942-09-01",
+            "data": "",
             "descrizione": "Nel settembre 1942 prende forma clandestina in Sicilia il [[Movimento per l'Indipendenza della Sicilia]] (MIS): la componente intellettuale e di sinistra antifascista è guidata da [[Antonio Canepa]] (che fonderà l'[[Esercito Volontario per l'Indipendenza della Sicilia|EVIS]]), mentre l'ala agraria e conservatrice (guidata da [[Andrea Finocchiaro Aprile]]) stabilisce contatti con esponenti della criminalità mafiosa e della nobiltà latifondista, costituendo la premessa del separatismo armato nel secondo dopoguerra.",
             "fonti": [
                 {
@@ -133,9 +135,7 @@
                 "politico",
                 "mafia"
             ]
-        }
-    },
-    "EVENTI": {
+        },
         "Operazione Underworld: cooperazione tra intelligence navale USA e criminalità organizzata": {
             "anno": 1942,
             "titolo": "Operazione Underworld: cooperazione tra intelligence navale USA e criminalità organizzata",
