@@ -160,6 +160,25 @@
                 "servizi_segreti"
             ]
         },
+        "Sbarco alleato in Sicilia (Operazione Husky) e crollo del fronte interno": {
+            "anno": 1943,
+            "titolo": "Sbarco alleato in Sicilia (Operazione Husky) e crollo del fronte interno",
+            "data": "1943-07-09",
+            "descrizione": "Nella notte tra il 9 e il 10 luglio 1943 le forze anglo-americane della 7ª Armata statunitense (generale [[George S. Patton]]) e dell'8ª Armata britannica (generale [[Bernard Law Montgomery]]) avviano lo [[Sbarco in Sicilia]] (Operazione Husky), preparato sul piano informativo dalla Sezione Italia dell'[[Office of Strategic Services|OSS]]. La rapida avanzata alleata fino alla resa di Palermo (22 luglio) e i pesanti bombardamenti aerei sulle città italiane — culminati il 19 luglio nel [[Bombardamento di Roma|bombardamento di Roma]] sul quartiere di San Lorenzo — accelerano la crisi irreversibile del regime fascista e le manovre della Corona per sganciare l'Italia dall'alleanza con la Germania nazista.",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1943": "https://www.strano.net/stragi/stragi/crono/crono43.htm"
+                },
+                {
+                    "Wikipedia - Sbarco in Sicilia": "https://it.wikipedia.org/wiki/Sbarco_in_Sicilia"
+                }
+            ],
+            "categorie": [
+                "politico",
+                "servizi_segreti",
+                "re"
+            ]
+        },
         "OSS, AMGOT e riorganizzazione del potere in Sicilia": {
             "anno": 1943,
             "titolo": "OSS, AMGOT e riorganizzazione del potere in Sicilia",
@@ -185,22 +204,88 @@
                 "politico"
             ]
         },
-        "Armistizio Italia-USA e riorganizzazione politica": {
+        "Caduta del fascismo, arresto di Mussolini e prigionia sul Gran Sasso": {
             "anno": 1943,
-            "titolo": "Armistizio Italia-USA e riorganizzazione politica",
-            "data": "1943-09-03",
-            "descrizione": "L'[[Armistizio di Cassibile]] viene firmato segretamente il 3 settembre 1943 dal generale Giuseppe Castellano e dal generale statunitense Walter Bedell Smith e reso pubblico l'8 settembre dal capo del governo [[Pietro Badoglio]]. L'esercito tedesco avvia l'occupazione della penisola (Operazione Achse), mentre il re [[Vittorio Emanuele III di Savoia|Vittorio Emanuele III]] e i vertici militari riparano a Brindisi sotto protezione alleata.",
+            "titolo": "Caduta del fascismo, arresto di Mussolini e prigionia sul Gran Sasso",
+            "data": "1943-07-25",
+            "descrizione": "Nella notte tra il 24 e il 25 luglio 1943 il [[Gran Consiglio del Fascismo]] approva a maggioranza l'[[Ordine del giorno Grandi]], che invita re [[Vittorio Emanuele III di Savoia|Vittorio Emanuele III]] a riassumere l'effettivo comando delle Forze armate. Nel pomeriggio del 25 luglio il sovrano revoca [[Benito Mussolini]], nomina capo del governo il maresciallo [[Pietro Badoglio]] e fa arrestare l'ex dittatore dai Carabinieri all'uscita da Villa Savoia. Per impedire un colpo di mano tedesco, Mussolini viene detenuto in segreto prima nelle isole di Ponza (27 luglio) e La Maddalena (7 agosto) e infine, dal 28 agosto 1943, nell'albergo rifugio di [[Campo Imperatore]], sul [[Gran Sasso d'Italia|Gran Sasso]].",
             "fonti": [
                 {
-                    "Wikipedia - Armistizio di Cassibile": "https://it.wikipedia.org/wiki/Armistizio_di_Cassibile"
+                    "Strano Network - Cronologia 1943": "https://www.strano.net/stragi/stragi/crono/crono43.htm"
                 },
                 {
-                    "Wikipedia - Pietro Badoglio": "https://it.wikipedia.org/wiki/Pietro_Badoglio"
+                    "Wikipedia - Caduta del fascismo": "https://it.wikipedia.org/wiki/Caduta_del_fascismo"
+                },
+                {
+                    "Wikipedia - Ordine del giorno Grandi": "https://it.wikipedia.org/wiki/Ordine_del_giorno_Grandi"
                 }
             ],
             "categorie": [
                 "politico",
                 "re"
+            ]
+        },
+        "Armistizio Italia-USA e riorganizzazione politica": {
+            "anno": 1943,
+            "titolo": "Armistizio Italia-USA e riorganizzazione politica",
+            "data": "1943-09-03",
+            "descrizione": "L'[[Armistizio di Cassibile]] viene firmato segretamente il 3 settembre 1943 dal generale [[Giuseppe Castellano]] e dal generale statunitense [[Walter Bedell Smith]] e proclamato alla radio l'8 settembre dal capo del governo [[Pietro Badoglio]]. Mentre la Wehrmacht attua l'[[Operazione Achse]] occupando la penisola e disarmando oltre 600.000 militari italiani lasciati privi di direttive univoche (con episodi di resistenza come a Porta San Paolo a Roma e l'[[Eccidio di Cefalonia]]), all'alba del 9 settembre il re [[Vittorio Emanuele III di Savoia|Vittorio Emanuele III]], la famiglia reale, Badoglio e gli alti comandi abbandonano Roma lungo la via Tiburtina riparando a Brindisi («[[Regno del Sud]]»); lo stesso 9 settembre a Roma i partiti antifascisti costituiscono il [[Comitato di Liberazione Nazionale]] (CLN).",
+            "fonti": [
+                {
+                    "Wikipedia - Armistizio di Cassibile": "https://it.wikipedia.org/wiki/Armistizio_di_Cassibile"
+                },
+                {
+                    "Wikipedia - Fuga di Vittorio Emanuele III": "https://it.wikipedia.org/wiki/Fuga_di_Vittorio_Emanuele_III"
+                },
+                {
+                    "Wikipedia - Comitato di Liberazione Nazionale": "https://it.wikipedia.org/wiki/Comitato_di_Liberazione_Nazionale"
+                }
+            ],
+            "categorie": [
+                "politico",
+                "re"
+            ]
+        },
+        "Liberazione di Mussolini sul Gran Sasso (Operazione Quercia) e nascita della Repubblica di Salò": {
+            "anno": 1943,
+            "titolo": "Liberazione di Mussolini sul Gran Sasso (Operazione Quercia) e nascita della Repubblica di Salò",
+            "data": "1943-09-12",
+            "descrizione": "Il 12 settembre 1943 un reparto di paracadutisti tedeschi della Luftwaffe (comandato dal maggiore Harald Mors) e un nucleo delle Waffen-SS guidato dal capitano [[Otto Skorzeny]] eseguono l'[[Operazione Quercia]] (Unternehmen Eiche): atterrati con alianti a [[Campo Imperatore]] sul [[Gran Sasso d'Italia|Gran Sasso]], liberano [[Benito Mussolini]] senza che i carabinieri di guardia oppongano resistenza armata e lo trasportano in volo al quartier generale di [[Adolf Hitler]]. Il 18 settembre da Radio Monaco Mussolini annuncia la rinascita del Partito Fascista Repubblicano e il 23 settembre 1943 costituisce nell'Italia centro-settentrionale occupata la [[Repubblica Sociale Italiana]] (RSI, nota come Repubblica di Salò), stato collaborazionista con ministeri sul lago di Garda, impegnato a fianco dell'occupante nazista nella repressione antipartigiana e nella deportazione degli ebrei.",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1943": "https://www.strano.net/stragi/stragi/crono/crono43.htm"
+                },
+                {
+                    "Wikipedia - Operazione Quercia": "https://it.wikipedia.org/wiki/Operazione_Quercia"
+                },
+                {
+                    "Wikipedia - Repubblica Sociale Italiana": "https://it.wikipedia.org/wiki/Repubblica_Sociale_Italiana"
+                }
+            ],
+            "categorie": [
+                "politico",
+                "servizi_segreti",
+                "gruppi_terroristici"
+            ]
+        },
+        "Costituzione del CLNAI e del Corpo Volontari della Libertà nella Resistenza": {
+            "anno": 1944,
+            "titolo": "Costituzione del CLNAI e del Corpo Volontari della Libertà nella Resistenza",
+            "data": "1944-01-29",
+            "descrizione": "Tra l'autunno 1943 e il 1944 si strutturano nell'Italia centro-settentrionale occupata le formazioni armate della [[Resistenza italiana]], coordinate politicamente dal [[Comitato di Liberazione Nazionale Alta Italia]] (CLNAI, investito di delega governativa il 29 gennaio 1944) e unificate militarmente dal giugno 1944 nel [[Corpo Volontari della Libertà]] (CVL, guidato dal generale [[Raffaele Cadorna Jr.|Raffaele Cadorna]] con i vicecomandanti [[Ferruccio Parri]] e [[Luigi Longo]]). Le principali componenti partigiane comprendono le [[Brigate Garibaldi]] (comuniste), le formazioni di [[Giustizia e Libertà]] (azioniste), le [[Brigate Matteotti]] (socialiste), le formazioni cattoliche e «bianche» (tra cui [[Brigate Fiamme Verdi|Fiamme Verdi]] e [[Brigate Osoppo]]) e le formazioni autonome militari.",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1944": "https://www.strano.net/stragi/stragi/crono/crono44.htm"
+                },
+                {
+                    "Wikipedia - Resistenza italiana": "https://it.wikipedia.org/wiki/Resistenza_italiana"
+                },
+                {
+                    "Wikipedia - Corpo Volontari della Libertà": "https://it.wikipedia.org/wiki/Corpo_Volontari_della_Libert%C3%A0"
+                }
+            ],
+            "categorie": [
+                "politico"
             ]
         },
         "Attentato di via Rasella ed eccidio delle Fosse Ardeatine": {
@@ -260,11 +345,55 @@
                 "politico"
             ]
         },
+        "Incontro riservato tra il generale Castellano e i vertici mafiosi nel Rapporto Nester": {
+            "anno": 1944,
+            "titolo": "Incontro riservato tra il generale Castellano e i vertici mafiosi nel Rapporto Nester",
+            "data": "1944-11-21",
+            "descrizione": "Nei dispacci declassificati trasmessi al Dipartimento di Stato dal console generale statunitense a Palermo [[Alfred T. Nester]] (vedi il [Rapporto Nester](Documents/RapportoNester-1944.pdf)), viene documentato il colloquio riservato avvenuto il 21 novembre 1944 a Palermo tra il generale [[Giuseppe Castellano]] — firmatario dell'[[Armistizio di Cassibile]] — e i capimafia siciliani guidati da [[Calogero Vizzini]]. Castellano riferisce al console Nester l'orientamento volto a impiegare la «vecchia e rispettata mafia» come forza d'ordine per la stabilizzazione sociale e in funzione anticomunista nell'isola, attestando la precoce convergenza tra apparati conservatori dello Stato, agrari e [[Cosa nostra]].",
+            "fonti": [
+                {
+                    "Rapporto Nester 1944 (Archivio di Stato)": "Documents/RapportoNester-1944.pdf"
+                },
+                {
+                    "Strano Network - Cronologia 1944": "https://www.strano.net/stragi/stragi/crono/crono44.htm"
+                },
+                {
+                    "Wikipedia - Giuseppe Castellano": "https://it.wikipedia.org/wiki/Giuseppe_Castellano"
+                }
+            ],
+            "categorie": [
+                "mafia",
+                "politico",
+                "servizi_segreti"
+            ]
+        },
+        "Eccidio di Porzûs sul confine orientale e genesi dei Gruppi Tricoloristi": {
+            "anno": 1945,
+            "titolo": "Eccidio di Porzûs sul confine orientale e genesi dei Gruppi Tricoloristi",
+            "data": "1945-02-07",
+            "descrizione": "Sul confine orientale, le forti tensioni intorno alle mire annessionistiche del IX Corpus jugoslavo di [[Josip Broz Tito]] sulla Venezia Giulia e sul Friuli — unite alle accuse rivolte alla [[Brigate Osoppo|Brigata Osoppo]] circa contatti in chiave antislava tentati dalla [[Xª Flottiglia MAS (Repubblica Sociale Italiana)|Xª MAS]] di [[Junio Valerio Borghese]] — sfociano tra il 7 e il 18 febbraio 1945 nell'[[Eccidio di Porzûs]]: un reparto di gappisti comunisti comandato da Mario Toffanin «Giacca» uccide alle malghe di Porzûs 17 partigiani osovani (cattolici e laico-azionisti), tra cui il comandante Francesco De Gregori «Bolla» e Guido Pasolini «Ermes» (per il fatto la Corte d'assise di Lucca pronuncerà pesanti condanne nel 1952). Nel dopoguerra, dai nuclei osovani in funzione anticomunista e antijugoslava nasceranno i «Gruppi Tricoloristi» e poi l'[[Organizzazione O]], confluita nel 1956 nella rete [[Operazione Gladio|Gladio]].",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1945": "https://www.strano.net/stragi/stragi/crono/crono45.htm"
+                },
+                {
+                    "Wikipedia - Eccidio di Porzûs": "https://it.wikipedia.org/wiki/Eccidio_di_Porz%C3%BBs"
+                },
+                {
+                    "Wikipedia - Brigate Osoppo": "https://it.wikipedia.org/wiki/Brigate_Osoppo"
+                }
+            ],
+            "categorie": [
+                "politico",
+                "servizi_segreti",
+                "gruppi_terroristici"
+            ]
+        },
         "Insurrezione generale del 25 aprile e Liberazione d'Italia": {
             "anno": 1945,
             "titolo": "Insurrezione generale del 25 aprile e Liberazione d'Italia",
             "data": "1945-04-25",
-            "descrizione": "Il 25 aprile 1945 il [[Comitato di Liberazione Nazionale Alta Italia]] (CLNAI), presieduto da Sandro Pertini, Leo Valiani ed Emilio Sereni, proclama l'insurrezione generale in tutti i territori occupati dai nazi-fascisti. La Resistenza partigiana e le truppe alleate liberano Milano, Torino e Genova. [[Benito Mussolini]], in fuga verso la Svizzera, viene catturato a Dongo dai partigiani e fucilato il 28 aprile a Giulino di Mezzegra.",
+            "descrizione": "Il 25 aprile 1945 il [[Comitato di Liberazione Nazionale Alta Italia]] (CLNAI), con il comitato insurrezionale composto da [[Sandro Pertini]], [[Luigi Longo]], [[Leo Valiani]] ed [[Emilio Sereni]], proclama lo sciopero e l'insurrezione nazionale in tutti i territori ancora occupati dai nazi-fascisti, assumendo i pieni poteri civili e militari. Le formazioni partigiane del [[Corpo Volontari della Libertà]] liberano Genova, Torino e Milano prima dell'arrivo delle avanguardie alleate, mentre nel pomeriggio del 25 aprile all'Arcivescovado di Milano fallisce l'ultimo tentativo di mediazione del cardinale [[Alfredo Ildefonso Schuster]] con [[Benito Mussolini]], che in serata fugge verso il lago di Como.",
             "fonti": [
                 {
                     "Wikipedia - Liberazione d'Italia": "https://it.wikipedia.org/wiki/Liberazione_d%27Italia"
@@ -274,7 +403,73 @@
                 }
             ],
             "categorie": [
-                "politico"
+                "politico",
+                "clero"
+            ]
+        },
+        "Salvataggio di Junio Valerio Borghese da parte di James Angleton (OSS) e reti post-belliche RSI": {
+            "anno": 1945,
+            "titolo": "Salvataggio di Junio Valerio Borghese da parte di James Angleton (OSS) e reti post-belliche RSI",
+            "data": "1945-04-26",
+            "descrizione": "Negli ultimi mesi di guerra gli apparati informativi della [[Repubblica Sociale Italiana|RSI]] predispongono reti clandestine destinate a operare dopo la sconfitta in funzione anticomunista. All'indomani della Liberazione di Milano, il 26 aprile 1945 il principe [[Junio Valerio Borghese]], comandante della [[Xª Flottiglia MAS (Repubblica Sociale Italiana)|Xª Flottiglia MAS]], viene prelevato dal capo del controspionaggio (X-2) dell'[[Office of Strategic Services|OSS]] in Italia [[James Jesus Angleton]], che lo fa vestire con un'uniforme statunitense e lo conduce a Roma sottraendolo alla giustizia partigiana in cambio degli archivi informativi e della collaborazione per lo sminamento dei porti. Processato a Roma, nel febbraio 1949 Borghese verrà condannato a 12 anni per collaborazionismo ma scarcerato la sera stessa per effetto dei condoni e dell'[[Amnistia Togliatti]].",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1945": "https://www.strano.net/stragi/stragi/crono/crono45.htm"
+                },
+                {
+                    "Wikipedia - Junio Valerio Borghese": "https://it.wikipedia.org/wiki/Junio_Valerio_Borghese"
+                },
+                {
+                    "Wikipedia - James Jesus Angleton": "https://it.wikipedia.org/wiki/James_Jesus_Angleton"
+                }
+            ],
+            "categorie": [
+                "servizi_segreti",
+                "politico",
+                "gruppi_terroristici"
+            ]
+        },
+        "Fuga e cattura di Mussolini, fucilazione a Giulino di Mezzegra e questione dell'«Oro di Dongo»": {
+            "anno": 1945,
+            "titolo": "Fuga e cattura di Mussolini, fucilazione a Giulino di Mezzegra e questione dell'«Oro di Dongo»",
+            "data": "1945-04-28",
+            "descrizione": "La sera del 25 aprile 1945 [[Benito Mussolini]] abbandona Milano dirigendosi verso il lago di Como e la Valtellina aggregato a una colonna motorizzata tedesca con gerarchi della [[Repubblica Sociale Italiana|RSI]], carteggi riservati e ingenti valori prelevati dalle casse statali. Il 27 aprile 1945 la colonna viene bloccata tra Musso e [[Dongo]] dai partigiani della 52ª Brigata Garibaldi «Luigi Clerici» (comandata da [[Pier Bellini delle Stelle]] «Pedro» e [[Urbano Lazzaro]] «Bill»), che riconoscono e arrestano Mussolini nascosto sotto un cappotto della Wehrmacht. Il 28 aprile 1945, in esecuzione degli ordini del [[Comitato di Liberazione Nazionale Alta Italia|CLNAI]], Mussolini e [[Claretta Petacci]] vengono fucilati a Giulino di Mezzegra (secondo la versione ufficiale del CLNAI da [[Walter Audisio]], «colonnello Valerio», benché il dibattito storiografico abbia a lungo esaminato la tesi della doppia fucilazione e la sorte del carteggio con [[Winston Churchill]]), prima dell'esposizione dei corpi a [[Piazzale Loreto]] a Milano il 29 aprile. I beni sequestrati alla colonna — oltre 160 milioni di lire dell'epoca, valute estere e decine di chili d'oro, noti come «[[Oro di Dongo]]» — furono inventariati dai comandanti garibaldini e in gran parte acquisiti dalle strutture del [[Partito Comunista Italiano|PCI]]; nei mesi seguenti i partigiani comunisti [[Luigi Canali (partigiano)|Luigi Canali]] («capitano Neri») e [[Giuseppina Tuissi]] («Gianna»), che avevano sollevato riserve sulla gestione del tesoro, vennero uccisi in circostanze rimaste oscure.",
+            "fonti": [
+                {
+                    "Wikipedia - Morte di Benito Mussolini": "https://it.wikipedia.org/wiki/Morte_di_Benito_Mussolini"
+                },
+                {
+                    "Wikipedia - Oro di Dongo": "https://it.wikipedia.org/wiki/Oro_di_Dongo"
+                },
+                {
+                    "Treccani - Benito Mussolini": "https://www.treccani.it/enciclopedia/benito-mussolini_(Dizionario-Biografico)/"
+                }
+            ],
+            "categorie": [
+                "politico",
+                "servizi_segreti"
+            ]
+        },
+        "Uccisione di Antonio Canepa a Randazzo e guerriglia separatista dell'EVIS con Salvatore Giuliano": {
+            "anno": 1945,
+            "titolo": "Uccisione di Antonio Canepa a Randazzo e guerriglia separatista dell'EVIS con Salvatore Giuliano",
+            "data": "1945-06-17",
+            "descrizione": "Il 17 giugno 1945 in contrada Murazzorotto presso Randazzo (Catania) muore in uno scontro a fuoco con i Carabinieri [[Antonio Canepa]] (noto con lo pseudonimo di Mario Turri), docente universitario antifascista e fondatore dell'[[Esercito Volontario per l'Indipendenza della Sicilia]] (EVIS), formazione armata giovanile del [[Movimento per l'Indipendenza della Sicilia|MIS]]. Scomparsa con Canepa la componente progressista e repubblicana del separatismo siciliano, la guida militare passa al blocco agrario e nobiliare conservatore (tra cui il duca Guglielmo Paternò Castello di Carcaci e Lucio Tasca Bordonaro), che nel settembre 1945 recluta con il grado di colonnello dell'EVIS il bandito [[Salvatore Giuliano]], avviando gli assalti alle caserme fino alla concessione dello Statuto speciale siciliano nel maggio 1946.",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1945": "https://www.strano.net/stragi/stragi/crono/crono45.htm"
+                },
+                {
+                    "Wikipedia - Antonio Canepa": "https://it.wikipedia.org/wiki/Antonio_Canepa"
+                },
+                {
+                    "Wikipedia - Esercito Volontario per l'Indipendenza della Sicilia": "https://it.wikipedia.org/wiki/Esercito_Volontario_per_l%27Indipendenza_della_Sicilia"
+                }
+            ],
+            "categorie": [
+                "politico",
+                "mafia",
+                "gruppi_terroristici"
             ]
         },
         "Scioglimento dell'OSS e transizione verso la CIA": {
@@ -310,6 +505,46 @@
             "categorie": [
                 "politico",
                 "re"
+            ]
+        },
+        "Amnistia Togliatti, esaurimento dell'epurazione e fondazione del Movimento Sociale Italiano (MSI)": {
+            "anno": 1946,
+            "titolo": "Amnistia Togliatti, esaurimento dell'epurazione e fondazione del Movimento Sociale Italiano (MSI)",
+            "data": "1946-06-22",
+            "descrizione": "Dopo lo scioglimento dell'Alto Commissariato per le Sanzioni contro il Fascismo (febbraio 1946), il 22 giugno 1946 il ministro di Grazia e Giustizia e segretario del PCI [[Palmiro Togliatti]] emana il decreto presidenziale n. 4 ([[Amnistia Togliatti]]) per i reati comuni, politici e militari commessi durante la guerra civile con l'obiettivo dichiarato della pacificazione post-referendaria. L'interpretazione estensiva adottata dalla Corte di Cassazione (che restrinse la causa ostativa delle «sevizie particolarmente efferate» ai soli atti di estremo sadismo) permise la scarcerazione di migliaia di ex appartenenti alla [[Repubblica Sociale Italiana|RSI]], mentre i funzionari epurati furono progressivamente reintegrati negli apparati dello Stato. Il 26 dicembre 1946 a Roma reduci ed ex quadri di Salò (tra cui [[Giorgio Almirante]], [[Pino Romualdi]] e [[Arturo Michelini]]) fondano il [[Movimento Sociale Italiano]] (MSI).",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1946": "https://www.strano.net/stragi/stragi/crono/crono46.htm"
+                },
+                {
+                    "Wikipedia - Amnistia Togliatti": "https://it.wikipedia.org/wiki/Amnistia_Togliatti"
+                },
+                {
+                    "Wikipedia - Movimento Sociale Italiano": "https://it.wikipedia.org/wiki/Movimento_Sociale_Italiano"
+                }
+            ],
+            "categorie": [
+                "politico"
+            ]
+        },
+        "Scissione socialista di Palazzo Barberini ed estromissione delle sinistre dal governo De Gasperi": {
+            "anno": 1947,
+            "titolo": "Scissione socialista di Palazzo Barberini ed estromissione delle sinistre dal governo De Gasperi",
+            "data": "1947-01-11",
+            "descrizione": "L'11 gennaio 1947 a Roma, durante il XXV congresso del Partito Socialista, la corrente riformista, autonomista e filoccidentale guidata da [[Giuseppe Saragat]] si separa dalla maggioranza frontista di [[Pietro Nenni]] (legata al [[Partito Comunista Italiano|PCI]] dal Patto d'unità d'azione) e fonda a [[Scissione di Palazzo Barberini|Palazzo Barberini]] il Partito Socialista dei Lavoratori Italiani (PSLI, dal 1952 [[Partito Socialista Democratico Italiano|PSDI]]). Nel maggio 1947, nel quadro dell'enunciazione della [[Dottrina Truman]] e all'indomani del viaggio di [[Alcide De Gasperi]] negli Stati Uniti e della [[Strage di Portella della Ginestra]], De Gasperi apre la crisi del governo tripartito e il 31 maggio 1947 vara il suo quarto esecutivo escludendo PCI e PSI e inaugurando la stagione del centrismo.",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1947": "https://www.strano.net/stragi/stragi/crono/crono47.htm"
+                },
+                {
+                    "Wikipedia - Scissione di Palazzo Barberini": "https://it.wikipedia.org/wiki/Scissione_di_Palazzo_Barberini"
+                },
+                {
+                    "Wikipedia - Governo De Gasperi IV": "https://it.wikipedia.org/wiki/Governo_De_Gasperi_IV"
+                }
+            ],
+            "categorie": [
+                "politico"
             ]
         },
         "Crisi del maggio e Strage di Portella della Ginestra": {
@@ -401,6 +636,27 @@
                 "servizi_segreti"
             ]
         },
+        "Decreto di scomunica del Sant'Uffizio contro i comunisti e potenziamento dei reparti Celere": {
+            "anno": 1949,
+            "titolo": "Decreto di scomunica del Sant'Uffizio contro i comunisti e potenziamento dei reparti Celere",
+            "data": "1949-07-01",
+            "descrizione": "Il 1° luglio 1949 la Suprema Sacra Congregazione del [[Sant'Uffizio]], con decreto approvato da [[Papa Pio XII]] e pubblicato il 13 luglio, commina la [[Scomunica ai comunisti|scomunica]] ai fedeli che si iscrivano ai partiti comunisti, ne sostengano la stampa o ne professino la dottrina materialista e anticristiana. Sul piano dell'ordine pubblico interno, il ministro dell'Interno [[Mario Scelba]] riorganizza e potenzia i reparti mobili della Polizia ([[Reparto Celere|Celere]]) dotandoli di autoblindo e armamento da guerra per il controllo delle piazze e la repressione degli scioperi operai e bracciantili, che culminerà il 9 gennaio 1950 nell'[[Eccidio delle Fonderie Riunite di Modena]] (sei operai uccisi dalla forza pubblica).",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1949": "https://www.strano.net/stragi/stragi/crono/crono49.htm"
+                },
+                {
+                    "Wikipedia - Scomunica ai comunisti": "https://it.wikipedia.org/wiki/Scomunica_ai_comunisti"
+                },
+                {
+                    "Wikipedia - Eccidio delle Fonderie Riunite di Modena": "https://it.wikipedia.org/wiki/Eccidio_delle_Fonderie_Riunite_di_Modena"
+                }
+            ],
+            "categorie": [
+                "clero",
+                "politico"
+            ]
+        },
         "Uccisione del bandito Salvatore Giuliano a Castelvetrano": {
             "anno": 1950,
             "titolo": "Uccisione del bandito Salvatore Giuliano a Castelvetrano",
@@ -416,6 +672,27 @@
             ],
             "categorie": [
                 "mafia",
+                "servizi_segreti",
+                "politico"
+            ]
+        },
+        "Piano USA-SIFAR «Demagnetize», missione di William Colby a Roma e nascita di «Pace e Libertà»": {
+            "anno": 1952,
+            "titolo": "Piano USA-SIFAR «Demagnetize», missione di William Colby a Roma e nascita di «Pace e Libertà»",
+            "data": "1952-05-14",
+            "descrizione": "Il 14 maggio 1952 il direttore del [[SIFAR]], generale Umberto Broccoli, recepisce gli obiettivi del [[Piano Demagnetize]], direttiva segreta elaborata dal Psychological Strategy Board statunitense per ridurre con operazioni politiche, psicologiche, sindacali e paramilitari la forza del [[Partito Comunista Italiano|PCI]] e del Partito Comunista Francese «anche nel caso di conquista legale del potere». Nel 1953, dopo il mancato scatto della «Legge Truffa», gli Stati Uniti inviano all'ambasciata di Roma (retta da [[Claire Boothe Luce]]) l'alto funzionario della [[Central Intelligence Agency|CIA]] [[William Colby]] per coordinare il sostegno finanziario alle forze anticomuniste, mentre [[Edgardo Sogno]] e Luigi Cavallo fondano il movimento anticomunista [[Pace e Libertà]].",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1952": "https://www.strano.net/stragi/stragi/crono/crono52.htm"
+                },
+                {
+                    "Strano Network - Cronologia 1953": "https://www.strano.net/stragi/stragi/crono/crono53.htm"
+                },
+                {
+                    "Wikipedia - Pace e Libertà": "https://it.wikipedia.org/wiki/Pace_e_Libert%C3%A0"
+                }
+            ],
+            "categorie": [
                 "servizi_segreti",
                 "politico"
             ]
@@ -450,6 +727,48 @@
             "categorie": [
                 "mafia",
                 "servizi_segreti",
+                "politico"
+            ]
+        },
+        "Ritorno di Trieste all'Italia e nascita del Centro Studi Ordine Nuovo di Pino Rauti": {
+            "anno": 1954,
+            "titolo": "Ritorno di Trieste all'Italia e nascita del Centro Studi Ordine Nuovo di Pino Rauti",
+            "data": "1954-10-05",
+            "descrizione": "Dopo i sanguinosi scontri del novembre 1953 a Trieste contro l'amministrazione militare anglo-americana (sei manifestanti uccisi), il 5 ottobre 1954 la firma del Memorandum d'intesa di Londra sancisce il ritorno della Zona A del [[Territorio Libero di Trieste]] all'amministrazione civile italiana. Nello stesso autunno 1954, in seno al [[Movimento Sociale Italiano|MSI]] guidato dal segretario [[Arturo Michelini]], l'ala radicale e spiritualista capeggiata da [[Pino Rauti]] — ispirata alle dottrine tradizionaliste di [[Julius Evola]] — fonda a Roma il [[Centro Studi Ordine Nuovo]], che nel novembre 1956, al congresso missino di Milano, uscirà dal partito contestandone la linea moderata e filoatlantica.",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1954": "https://www.strano.net/stragi/stragi/crono/crono54.htm"
+                },
+                {
+                    "Wikipedia - Ordine Nuovo": "https://it.wikipedia.org/wiki/Ordine_Nuovo"
+                },
+                {
+                    "Wikipedia - Territorio Libero di Trieste": "https://it.wikipedia.org/wiki/Territorio_Libero_di_Trieste"
+                }
+            ],
+            "categorie": [
+                "politico",
+                "gruppi_terroristici"
+            ]
+        },
+        "Omicidio mafioso del sindacalista socialista Salvatore Carnevale a Sciara": {
+            "anno": 1955,
+            "titolo": "Omicidio mafioso del sindacalista socialista Salvatore Carnevale a Sciara",
+            "data": "1955-05-16",
+            "descrizione": "Il 16 maggio 1955 nelle campagne di Sciara (Palermo) la mafia agraria assassina a colpi di lupara [[Salvatore Carnevale]], trentunenne segretario della Camera del Lavoro socialista che guidava i braccianti nell'occupazione delle terre incolte e nella rivendicazione della giornata lavorativa di otto ore nei feudi della principessa Notarbartolo. Grazie alla denuncia pubblica della madre [[Francesca Serio]] — prima donna a costituirsi parte civile in un processo di mafia, assistita dagli avvocati [[Sandro Pertini]] e Nino Taormina — quattro campieri della cosca locale legati all'amministrazione del feudo (difesi da [[Giovanni Leone]]) vengono condannati all'ergastolo in primo grado a Santa Maria Capua Vetere nel 1961, ma saranno poi assolti in appello e in Cassazione per insufficienza di prove.",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1955": "https://www.strano.net/stragi/stragi/crono/crono55.htm"
+                },
+                {
+                    "Wikipedia - Salvatore Carnevale": "https://it.wikipedia.org/wiki/Salvatore_Carnevale"
+                },
+                {
+                    "Atti Convegno Mafia e Antimafia anni '50": "Documents/Mafia e antimafia nel dopoguerra e negli anni cinquanta Atti del Convegno Palermo, 5 maggio 2022(4330112022095438).pdf"
+                }
+            ],
+            "categorie": [
+                "mafia",
                 "politico"
             ]
         },
@@ -492,6 +811,26 @@
             ],
             "categorie": [
                 "politico"
+            ]
+        },
+        "Summit tra Cosa Nostra americana e siciliana al Grand Hotel et des Palmes di Palermo": {
+            "anno": 1957,
+            "titolo": "Summit tra Cosa Nostra americana e siciliana al Grand Hotel et des Palmes di Palermo",
+            "data": "1957-10-12",
+            "descrizione": "Tra il 10 e il 14 ottobre 1957 al [[Grand Hotel et des Palmes]] di Palermo si svolge una serie di incontri riservati tra boss di primo piano di [[Cosa nostra statunitense]] (tra cui [[Lucky Luciano]], [[Giuseppe Bonanno|Joe Bonanno]], Carmine Galante, Santo Trafficante Jr. e John Bonventre) ed esponenti delle cosche siciliane (tra cui [[Salvatore Greco (1923)|Salvatore «Ciaschiteddu» Greco]], [[Gaetano Badalamenti]], [[Giuseppe Genco Russo]], Cesare Manzella e [[Tommaso Buscetta]]). Secondo le risultanze del [[Maxiprocesso di Palermo]] e le rivelazioni di Buscetta, dagli accordi del 1957 scaturirono la riorganizzazione del traffico internazionale di morfina base ed eroina verso gli Stati Uniti e l'istituzione in Sicilia della [[Commissione (Cosa nostra)|Commissione provinciale]] («Cupola»), presieduta inizialmente da Salvatore «Ciaschiteddu» Greco.",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1957": "https://www.strano.net/stragi/stragi/crono/crono57.htm"
+                },
+                {
+                    "Wikipedia - Summit dell'Hotel des Palmes": "https://it.wikipedia.org/wiki/Summit_dell%27Hotel_des_Palmes"
+                },
+                {
+                    "Wikipedia - Commissione (Cosa nostra)": "https://it.wikipedia.org/wiki/Commissione_(Cosa_nostra)"
+                }
+            ],
+            "categorie": [
+                "mafia"
             ]
         },
         "Operazione Milazzo e nascita della giunta regionale trasversale in Sicilia": {
@@ -542,6 +881,28 @@
                 }
             ],
             "categorie": [
+                "servizi_segreti",
+                "politico"
+            ]
+        },
+        "«Notte dei fuochi» in Alto Adige, terrorismo del BAS e stragi di Malga Sasso e Cima Vallona": {
+            "anno": 1961,
+            "titolo": "«Notte dei fuochi» in Alto Adige, terrorismo del BAS e stragi di Malga Sasso e Cima Vallona",
+            "data": "1961-06-11",
+            "descrizione": "Nella notte tra l'11 e il 12 giugno 1961 gli attivisti indipendentisti del [[Befreiungsausschuss Südtirol]] (BAS, Comitato per la liberazione del Sudtirolo fondato da [[Sepp Kerschbaumer]]) fanno saltare con la dinamite 37 tralicci dell'alta tensione in [[Alto Adige]] nella cosiddetta [[Notte dei fuochi]] (Feuernacht). Negli anni seguenti la campagna attentatizia sudtirolese vede il subentro di gruppi neonazisti pangermanisti transfrontalieri (tra cui [[Georg Klotz]] e [[Luis Amplatz]], ucciso nel 1964 dall'infiltrato Christian Kerbler in un'operazione collegata al [[SIFAR]]) e culmina nelle stragi contro i presidi militari italiani di [[Strage di Malga Sasso|Malga Sasso]] (9 settembre 1966, tre finanzieri uccisi) e di [[Strage di Cima Vallona|Cima Vallona]] (25 giugno 1967, quattro militari uccisi), per le quali le Corti d'assise di Milano e Firenze infliggeranno pesanti condanne ai militanti del BAS.",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1961": "https://www.strano.net/stragi/stragi/crono/crono61.htm"
+                },
+                {
+                    "Wikipedia - Notte dei fuochi": "https://it.wikipedia.org/wiki/Notte_dei_fuochi"
+                },
+                {
+                    "Wikipedia - Strage di Cima Vallona": "https://it.wikipedia.org/wiki/Strage_di_Cima_Vallona"
+                }
+            ],
+            "categorie": [
+                "gruppi_terroristici",
                 "servizi_segreti",
                 "politico"
             ]
@@ -664,6 +1025,25 @@
                 "politico"
             ]
         },
+        "Convegno dell'Istituto Alberto Pollio all'Hotel Parco dei Principi sulla «guerra rivoluzionaria»": {
+            "anno": 1965,
+            "titolo": "Convegno dell'Istituto Alberto Pollio all'Hotel Parco dei Principi sulla «guerra rivoluzionaria»",
+            "data": "1965-05-03",
+            "descrizione": "Dal 3 al 5 maggio 1965 si tiene all'Hotel Parco dei Principi di Roma il [[Convegno dell'hotel Parco dei Principi]] su «La guerra rivoluzionaria», promosso dall'Istituto di studi militari «Alberto Pollio» e finanziato dallo Stato Maggiore dell'Esercito e dal [[SIFAR]]. Ai lavori partecipano alti ufficiali, magistrati, dirigenti economici e giornalisti e militanti della destra radicale (tra cui [[Pino Rauti]], [[Guido Giannettini]], Eggardo Beltrametti, Pio Filippani Ronconi e un giovane [[Stefano Delle Chiaie]]): le relazioni teorizzano la necessità di contrastare la «sovversione comunista» con analoghe tecniche di «guerra non ortodossa», infiltrazione, azione psicologica e creazione di nuclei d'autodifesa civile e militare, delineando secondo la [[Commissione Stragi]] la matrice dottrinale della [[Strategia della tensione]].",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1965": "https://www.strano.net/stragi/stragi/crono/crono65.htm"
+                },
+                {
+                    "Wikipedia - Convegno dell'hotel Parco dei Principi": "https://it.wikipedia.org/wiki/Convegno_dell%27hotel_Parco_dei_Principi"
+                }
+            ],
+            "categorie": [
+                "servizi_segreti",
+                "gruppi_terroristici",
+                "politico"
+            ]
+        },
         "Scandalo SIFAR e trasformazione in SID": {
             "anno": 1966,
             "titolo": "Scandalo SIFAR e trasformazione in SID",
@@ -698,6 +1078,63 @@
             "categorie": [
                 "servizi_segreti",
                 "politico"
+            ]
+        },
+        "Fondazione del Fronte Nazionale di Borghese, rifondazione di Avanguardia Nazionale e agenzia «OP»": {
+            "anno": 1968,
+            "titolo": "Fondazione del Fronte Nazionale di Borghese, rifondazione di Avanguardia Nazionale e agenzia «OP»",
+            "data": "1968-09-13",
+            "descrizione": "Nel settembre 1968 [[Junio Valerio Borghese]] costituisce il [[Fronte Nazionale (1968)|Fronte Nazionale]], organizzazione neofascista articolata in una struttura politica palese («Gruppi A») e in una rete clandestina armata («Gruppi B») in contatto con ambienti militari e industriali, mentre [[Stefano Delle Chiaie]] rifonda [[Avanguardia Nazionale]]. Nell'ottobre 1968 il giornalista [[Mino Pecorelli]], legato a ufficiali del [[SID]] e poi affiliato alla [[P2]], avvia a Roma l'agenzia riservata [[Osservatorio Politico|OP (Osservatorio Politico)]]. Nel novembre 1969, quando la maggioranza di [[Ordine Nuovo]] con [[Pino Rauti]] rientra nel [[Movimento Sociale Italiano|MSI]] di [[Giorgio Almirante]], l'ala intransigente di [[Clemente Graziani]] dà vita al Movimento Politico Ordine Nuovo (MPON).",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1968": "https://www.strano.net/stragi/stragi/crono/crono68.htm"
+                },
+                {
+                    "Wikipedia - Fronte Nazionale (1968)": "https://it.wikipedia.org/wiki/Fronte_Nazionale_(1968)"
+                },
+                {
+                    "Wikipedia - Avanguardia Nazionale": "https://it.wikipedia.org/wiki/Avanguardia_Nazionale"
+                }
+            ],
+            "categorie": [
+                "gruppi_terroristici",
+                "servizi_segreti",
+                "politico"
+            ]
+        },
+        "Bombe del 25 aprile a Milano e attentati ai treni dell'8-9 agosto 1969": {
+            "anno": 1969,
+            "titolo": "Bombe del 25 aprile a Milano e attentati ai treni dell'8-9 agosto 1969",
+            "data": "1969-08-08",
+            "descrizione": "Il 25 aprile 1969 due ordigni ad alto potenziale esplodono a Milano nello stand FIAT della Fiera Campionaria e all'ufficio cambi della Stazione Centrale provocando una ventina di feriti; le indagini di polizia indirizzano inizialmente i sospetti su militanti anarchici, che verranno poi assolti. Nella notte tra l'8 e il 9 agosto 1969 dieci ordigni esplosivi a tempo vengono collocati su treni passeggeri in movimento lungo la penisola: otto esplodono causando 12 feriti. Per gli attentati milanesi del 25 aprile e per gli [[Attentati ai treni dell'inizio di agosto 1969]] la Corte d'assise di Catanzaro e la Cassazione condanneranno in via definitiva i dirigenti della cellula veneta di [[Ordine Nuovo]] [[Franco Freda]] e [[Giovanni Ventura]], segnando la prova generale della [[Strage di piazza Fontana]].",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1969": "https://www.strano.net/stragi/stragi/crono/crono69.htm"
+                },
+                {
+                    "Wikipedia - Attentati ai treni dell'inizio di agosto 1969": "https://it.wikipedia.org/wiki/Attentati_ai_treni_dell%27inizio_di_agosto_1969"
+                }
+            ],
+            "categorie": [
+                "gruppi_terroristici",
+                "servizi_segreti"
+            ]
+        },
+        "Strage di viale Lazio a Palermo e ascesa dei Corleonesi nella Commissione di Cosa Nostra": {
+            "anno": 1969,
+            "titolo": "Strage di viale Lazio a Palermo e ascesa dei Corleonesi nella Commissione di Cosa Nostra",
+            "data": "1969-12-10",
+            "descrizione": "Il 10 dicembre 1969 a Palermo un commando armato travestito da appartenenti alle forze dell'ordine — composto tra gli altri dai corleonesi [[Bernardo Provenzano]], [[Salvatore Riina]] e Calogero Bagarella insieme a uomini dei clan Bontate e Di Cristina — assalta gli uffici del costruttore Girolamo Moncada in viale Lazio per giustiziare il boss dell'Acquasanta [[Michele Cavataio]], ritenuto dalle famiglie mafiose l'artefice dei tradimenti della prima guerra di mafia e della [[Strage di Ciaculli]]. Nella sparatoria della [[Strage di viale Lazio]] restano uccisi Cavataio, tre dipendenti o presenti negli uffici e lo stesso aggressore Calogero Bagarella; all'indomani dell'eccidio viene ricostituita la Commissione di [[Cosa nostra]] sotto il triumvirato di [[Gaetano Badalamenti]], [[Stefano Bontate]] e [[Luciano Liggio]] (sostituito in sua vece da Totò Riina).",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1969": "https://www.strano.net/stragi/stragi/crono/crono69.htm"
+                },
+                {
+                    "Wikipedia - Strage di viale Lazio": "https://it.wikipedia.org/wiki/Strage_di_viale_Lazio"
+                }
+            ],
+            "categorie": [
+                "mafia"
             ]
         },
         "Strage di Piazza Fontana e avvio della strategia della tensione": {
@@ -775,48 +1212,73 @@
                 "politico"
             ]
         },
-        "Golpe Borghese e strategia della tensione": {
+        "Golpe Borghese (Operazione Tora Tora), complicità di Licio Gelli e coperture del SID": {
             "anno": 1970,
-            "titolo": "Golpe Borghese e strategia della tensione",
+            "titolo": "Golpe Borghese (Operazione Tora Tora), complicità di Licio Gelli e coperture del SID",
             "data": "1970-12-07",
-            "descrizione": "Nella notte tra il 7 e l'8 dicembre 1970 milizie del [[Fronte Nazionale (1968)|Fronte Nazionale]], congiuntamente a uomini di [[Avanguardia Nazionale]] guidati da Stefano Delle Chiaie e con la regia di [[Junio Valerio Borghese]], occupano per alcune ore il Ministero dell'Interno prelevando armi da fuoco prima che un contrordine anonimo interrompa il golpe (Operazione Tora Tora). Le inchieste certificheranno l'avvenuto tentativo insurrezionale e le coperture interne al [[Servizio Informazioni Difesa|SID]], pur chiudendosi sul piano penale con l'assoluzione degli imputati in Corte d'appello nel 1984.",
+            "descrizione": "Nella notte tra il 7 e l'8 dicembre 1970 scatta l'«Operazione Tora Tora» ([[Golpe Borghese]]), tentativo di colpo di Stato guidato da [[Junio Valerio Borghese]] e dal costruttore Remo Orlandini: militanti del [[Fronte Nazionale (1968)|Fronte Nazionale]] e di [[Avanguardia Nazionale]] (guidati da [[Stefano Delle Chiaie]]) penetrano nell'armeria del Ministero dell'Interno sottraendo circa 180 mitra Beretta MAB 38, mentre colonne armate (tra cui le guardie forestali di Cittaducale comandate dal maggiore Luciano Berti) convergono su Roma per occupare la RAI, il Ministero della Difesa e deportare oppositori politici. Nonostante l'avviso ricevuto nella notte dal capo dell'Ufficio D Federico Gasca Queirazza, il direttore del [[SID]] [[Vito Miceli]] non interviene. Quando l'azione è già in corso, un improvviso contrordine blocca il golpe. Dalle registrazioni integrali del SID acquisite negli anni Novanta dal giudice [[Guido Salvini]] e dalla [[Commissione Stragi]] (inizialmente tagliate dal capitano del SID Antonio La Bruna) emergerà il ruolo chiave del capo della [[P2]] [[Licio Gelli]]: dotato di lasciapassare al Quirinale, Gelli avrebbe dovuto agevolare il sequestro del presidente della Repubblica [[Giuseppe Saragat]] (mentre un nucleo mafioso avrebbe dovuto eliminare il capo della Polizia [[Angelo Vicari]] con il supporto del medico piduista del Viminale Salvatore Drago) e fu proprio Gelli a trasmettere all'ultimo istante il contrordine che interruppe l'operazione.",
             "fonti": [
                 {
+                    "Strano Network - Cronologia 1970": "https://www.strano.net/stragi/stragi/crono/crono70.htm"
+                },
+                {
+                    "Strano Network - Cronologia 1995 (Ordinanza Salvini su Gelli e Golpe Borghese)": "https://www.strano.net/stragi/stragi/crono/crono95.htm"
+                },
+                {
+                    "Relazione Commissione Parlamentare d'Inchiesta sulla P2": "Documents/CommissioneParlamentareDInchiestaSullaP2-1981.pdf"
+                },
+                {
                     "Wikipedia - Golpe Borghese": "https://it.wikipedia.org/wiki/Golpe_Borghese"
-                },
-                {
-                    "Wikipedia - Junio Valerio Borghese": "https://it.wikipedia.org/wiki/Junio_Valerio_Borghese"
-                },
-                {
-                    "Wikipedia - Strategia della tensione": "https://it.wikipedia.org/wiki/Strategia_della_tensione_in_Italia"
                 }
             ],
             "categorie": [
                 "gruppi_terroristici",
+                "massoneria",
                 "servizi_segreti",
+                "mafia",
                 "politico"
             ]
         },
-        "Inchiesta sul Golpe Borghese e depistaggi su Piazza Fontana": {
+        "Inchiesta sul Golpe Borghese, occultamento dei nastri del SID su Licio Gelli e mafia": {
             "anno": 1971,
-            "titolo": "Inchiesta sul Golpe Borghese e depistaggi su Piazza Fontana",
-            "data": "",
-            "descrizione": "Le inchieste giudiziarie sul [[Golpe Borghese]] (con le confessioni del costruttore Remo Orlandini) si intrecciano alle indagini sulla [[Strage di piazza Fontana]] (12 dicembre 1969, 17 morti e 88 feriti). Dagli atti processuali emergono le manovre di inquinamento probatorio e depistaggio messe in atto dal reparto D del [[Servizio Informazioni Difesa|SID]] (guidato da [[Gianadelio Maletti]] e dal capitano Antonio Labruna) per proteggere informatori e militanti neofascisti di [[Ordine Nuovo]] come [[Guido Giannettini]] e Marco Pozzan.",
+            "titolo": "Inchiesta sul Golpe Borghese, occultamento dei nastri del SID su Licio Gelli e mafia",
+            "data": "1971-03-18",
+            "descrizione": "Il 18 marzo 1971 il ministro dell'Interno Franco Restivo rende noto in Parlamento il tentato [[Golpe Borghese]] del dicembre precedente; la Procura di Roma emette mandato di cattura contro [[Junio Valerio Borghese]] (che ripara nella Spagna franchista) e arresta Remo Orlandini e altri congiurati. Nel corso delle indagini l'Ufficio D del [[SID]] guidato dal generale [[Gian Adelio Maletti]] e dal capitano Antonio La Bruna registra a Lugano le confessioni di Orlandini e di esponenti del [[Fronte Nazionale (1968)|Fronte Nazionale]], ma manipola e taglia le bobine prima di trasmetterle all'autorità giudiziaria per occultare il coinvolgimento diretto di [[Licio Gelli]] e della [[P2]], il patto operativo con le cosche di [[Cosa nostra]] (tra cui [[Luciano Liggio]], [[Salvatore Greco (1923)|Salvatore Greco]] e [[Tommaso Buscetta]]) e le complicità nei vertici militari. Il processo di primo grado a Roma (1978) condannerà 46 imputati per cospirazione politica, ma in appello (1984, confermato in Cassazione nel 1986) tutti gli imputati verranno assolti sostenendo che il fatto si fosse arrestato alla fase ideativa.",
             "fonti": [
                 {
-                    "Commissione Parlamentare d'Inchiesta sulle Stragi": "Documents/CommissioneParlamentareDInchiestaSullaP2-1981.pdf"
+                    "Strano Network - Cronologia 1971": "https://www.strano.net/stragi/stragi/crono/crono71.htm"
                 },
                 {
-                    "Wikipedia - Strage di piazza Fontana": "https://it.wikipedia.org/wiki/Strage_di_piazza_Fontana"
+                    "Relazione Commissione Parlamentare d'Inchiesta sulla P2": "Documents/CommissioneParlamentareDInchiestaSullaP2-1981.pdf"
                 },
                 {
                     "Wikipedia - Golpe Borghese": "https://it.wikipedia.org/wiki/Golpe_Borghese"
                 }
             ],
             "categorie": [
-                "gruppi_terroristici",
                 "servizi_segreti",
+                "massoneria",
+                "gruppi_terroristici",
+                "mafia",
                 "politico"
+            ]
+        },
+        "Inchiesta sulle 150.000 schedature illegali della FIAT a Torino": {
+            "anno": 1971,
+            "titolo": "Inchiesta sulle 150.000 schedature illegali della FIAT a Torino",
+            "data": "1971-08-05",
+            "descrizione": "Il 5 agosto 1971 il pretore del lavoro di Torino [[Raffaele Guariniello]] perquisisce gli uffici dei Servizi Generali della [[FIAT]] in corso Marconi, portando alla luce un archivio occulto di 154.613 fascicoli riservati contenenti schedature sulle opinioni politiche, l'appartenenza sindacale, la fede religiosa e la vita privata di operai, impiegati e candidati all'assunzione. Le indagini accertano che la raccolta informativa si avvaleva di una rete retribuita di carabinieri, funzionari di polizia e addetti del [[SIFAR]]/[[SID]]; il procedimento penale, trasferito per legittima sospicione a Napoli, si chiuderà con condanne minori coperte dall'amnistia, costituendo un caso emblematico di applicazione dell'art. 8 dello [[Statuto dei lavoratori]] (divieto di indagini sulle opinioni).",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1971": "https://www.strano.net/stragi/stragi/crono/crono71.htm"
+                },
+                {
+                    "Wikipedia - Schedature Fiat": "https://it.wikipedia.org/wiki/Schedature_Fiat"
+                }
+            ],
+            "categorie": [
+                "politico",
+                "servizi_segreti"
             ]
         },
         "Omicidio del commissario Luigi Calabresi a Milano": {
@@ -855,6 +1317,27 @@
                 "servizi_segreti"
             ]
         },
+        "Fallita strage sul treno Torino-Roma (Nico Azzi) e «Giovedì nero» di Milano con la morte di Antonio Marino": {
+            "anno": 1973,
+            "titolo": "Fallita strage sul treno Torino-Roma (Nico Azzi) e «Giovedì nero» di Milano con la morte di Antonio Marino",
+            "data": "1973-04-12",
+            "descrizione": "Il 7 aprile 1973 il neofascista milanese [[Nico Azzi]] (legato al gruppo «La Fenice» e a [[Ordine Nuovo]]) rimane ferito nella toilette dell'espresso Torino-Roma presso Genova Brignole per lo scoppio prematuro del detonatore di una bomba che avrebbe dovuto esplodere in galleria, lasciando sul convoglio falsi volantini delle [[Brigate Rosse]] per incolpare l'estrema sinistra (Azzi e [[Giancarlo Rognoni]] saranno condannati a oltre vent'anni di reclusione). Cinque giorni dopo, il 12 aprile 1973 a Milano («[[Giovedì nero di Milano|Giovedì nero]]»), durante le violenze scatenate dal divieto prefettizio di un comizio del [[Movimento Sociale Italiano|MSI]], i militanti neofascisti Vittorio Loi e Maurizio Murelli lanciano bombe a mano SRCM contro la polizia in via Bellotti, uccidendo il ventiduenne agente del reparto Celere [[Antonio Marino]].",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1973": "https://www.strano.net/stragi/stragi/crono/crono73.htm"
+                },
+                {
+                    "Wikipedia - Giovedì nero di Milano": "https://it.wikipedia.org/wiki/Gioved%C3%AC_nero_di_Milano"
+                },
+                {
+                    "Wikipedia - Nico Azzi": "https://it.wikipedia.org/wiki/Nico_Azzi"
+                }
+            ],
+            "categorie": [
+                "gruppi_terroristici",
+                "politico"
+            ]
+        },
         "Strage della Questura di Milano compiuta da Gianfranco Bertoli": {
             "anno": 1973,
             "titolo": "Strage della Questura di Milano compiuta da Gianfranco Bertoli",
@@ -871,6 +1354,28 @@
             "categorie": [
                 "gruppi_terroristici",
                 "servizi_segreti",
+                "politico"
+            ]
+        },
+        "Inchiesta sull'organizzazione golpista «Rosa dei Venti» e abbattimento dell'aereo del SID «Argo 16»": {
+            "anno": 1973,
+            "titolo": "Inchiesta sull'organizzazione golpista «Rosa dei Venti» e abbattimento dell'aereo del SID «Argo 16»",
+            "data": "1973-11-23",
+            "descrizione": "Nell'autunno 1973 il giudice istruttore di Padova [[Giovanni Tamburino]] scopre l'organizzazione clandestina [[Rosa dei venti (organizzazione)|Rosa dei Venti]], struttura coperta infiltrata nelle Forze armate, finanziata da industriali liguri e veneti e collegata a [[Ordine Nuovo]] (sciolto per decreto governativo il 21 novembre 1973) e a reti di sicurezza NATO: nell'inchiesta verranno arrestati nel 1974 il tenente colonnello [[Amos Spiazzi]] e l'ex direttore del [[SID]] generale [[Vito Miceli]], prima che la Cassazione trasferisca il procedimento a Roma. Il 23 novembre 1973 precipita a Porto Marghera il bimotore militare [[Argo 16]] (C-47 Dakota impiegato dal SID e da [[Operazione Gladio|Gladio]] per i collegamenti segreti con la base di Capo Marrargiu), provocando la morte di quattro ufficiali; l'istruttoria del giudice [[Rosario Priore]] accerterà l'ipotesi del sabotaggio esplosivo.",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1973": "https://www.strano.net/stragi/stragi/crono/crono73.htm"
+                },
+                {
+                    "Wikipedia - Rosa dei venti (organizzazione)": "https://it.wikipedia.org/wiki/Rosa_dei_venti_(organizzazione)"
+                },
+                {
+                    "Wikipedia - Argo 16": "https://it.wikipedia.org/wiki/Argo_16"
+                }
+            ],
+            "categorie": [
+                "servizi_segreti",
+                "gruppi_terroristici",
                 "politico"
             ]
         },
@@ -929,6 +1434,29 @@
                 "politico"
             ]
         },
+        "Crac della Banca Privata Italiana di Michele Sindona e nomina del liquidatore Giorgio Ambrosoli": {
+            "anno": 1974,
+            "titolo": "Crac della Banca Privata Italiana di Michele Sindona e nomina del liquidatore Giorgio Ambrosoli",
+            "data": "1974-09-27",
+            "descrizione": "Dopo la cattura a Milano del capomafia corleonese [[Luciano Liggio]] (16 maggio 1974), nell'autunno 1974 esplode il dissesto dell'impero finanziario di [[Michele Sindona]] — banchiere siciliano legato allo [[Istituto per le Opere di Religione|IOR]] di monsignor [[Paul Marcinkus]], a [[Cosa nostra]] italo-americana e alla [[P2|loggia P2]], pochi mesi prima definito da [[Giulio Andreotti]] «salvatore della lira». In seguito all'insolvenza della statunitense Franklin National Bank, il 27 settembre 1974 il ministro del Tesoro [[Ugo La Malfa]] e il governatore della Banca d'Italia [[Guido Carli]] dispongono la liquidazione coatta amministrativa della Banca Privata Italiana, nominando commissario liquidatore l'avvocato milanese [[Giorgio Ambrosoli]], mentre la Procura di Milano emette mandato di cattura per bancarotta fraudolenta contro Sindona, riparato negli Stati Uniti.",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1974": "https://www.strano.net/stragi/stragi/crono/crono74.htm"
+                },
+                {
+                    "Wikipedia - Michele Sindona": "https://it.wikipedia.org/wiki/Michele_Sindona"
+                },
+                {
+                    "Wikipedia - Giorgio Ambrosoli": "https://it.wikipedia.org/wiki/Giorgio_Ambrosoli"
+                }
+            ],
+            "categorie": [
+                "mafia",
+                "massoneria",
+                "clero",
+                "politico"
+            ]
+        },
         "Omicidio dello scrittore e regista Pier Paolo Pasolini a Ostia": {
             "anno": 1975,
             "titolo": "Omicidio dello scrittore e regista Pier Paolo Pasolini a Ostia",
@@ -983,6 +1511,28 @@
                 "politico",
                 "servizi_segreti",
                 "gruppi_terroristici"
+            ]
+        },
+        "Legge n. 801/1977 di riforma dei servizi segreti: nascita di SISMI, SISDE e CESIS": {
+            "anno": 1977,
+            "titolo": "Legge n. 801/1977 di riforma dei servizi segreti: nascita di SISMI, SISDE e CESIS",
+            "data": "1977-10-24",
+            "descrizione": "Il 24 ottobre 1977 il Parlamento approva la legge n. 801 di riforma dei servizi d'informazione e sicurezza della Repubblica, varata dopo gli scandali sulle deviazioni e sui depistaggi del [[SID]] nelle inchieste sulle stragi: il SID e l'Ispettorato antiterrorismo vengono sciolti e sostituiti dal [[SISMI]] (Servizio per le informazioni e la sicurezza militare, dipendente dalla Difesa), dal [[SISDE]] (Servizio per le informazioni e la sicurezza democratica, dipendente dall'Interno) e dal [[CESIS]] (coordinamento presso la Presidenza del Consiglio), con l'istituzione del controllo parlamentare del COPACO. Tuttavia, i primi vertici nominati nel gennaio 1978 — i generali [[Giuseppe Santovito]] (SISMI) e [[Giulio Grassini]] (SISDE) e il prefetto [[Walter Pelosi]] (CESIS) — risulteranno tutti iscritti alla [[P2|loggia massonica segreta P2]] di [[Licio Gelli]].",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1977": "https://www.strano.net/stragi/stragi/crono/crono77.htm"
+                },
+                {
+                    "Wikipedia - SISMI": "https://it.wikipedia.org/wiki/SISMI"
+                },
+                {
+                    "Wikipedia - SISDE": "https://it.wikipedia.org/wiki/SISDE"
+                }
+            ],
+            "categorie": [
+                "servizi_segreti",
+                "massoneria",
+                "politico"
             ]
         },
         "Sequestro e uccisione di Aldo Moro": {
@@ -1043,6 +1593,25 @@
                 "politico"
             ]
         },
+        "Sentenza di primo grado a Catanzaro per la Strage di Piazza Fontana e iter giudiziario fino al 2005": {
+            "anno": 1979,
+            "titolo": "Sentenza di primo grado a Catanzaro per la Strage di Piazza Fontana e iter giudiziario fino al 2005",
+            "data": "1979-02-23",
+            "descrizione": "Il 23 febbraio 1979 la Corte d'assise di Catanzaro, al termine del processo di primo grado per la [[Strage di piazza Fontana]] del 12 dicembre 1969, condanna all'ergastolo i militanti di [[Ordine Nuovo]] [[Franco Freda]] e [[Giovanni Ventura]] (fuggiti nei mesi precedenti dalla custodia cautelare riparando in Costa Rica e in Argentina) e l'informatore del [[SID]] [[Guido Giannettini]], assolvendo per insufficienza di prove [[Pietro Valpreda]] e Mario Merlino e condannando per favoreggiamento gli ufficiali del SID [[Gian Adelio Maletti]] e Antonio La Bruna. Nei successivi giudizi d'appello (1981 e Bari 1985, confermati in Cassazione nel 1987) tutti gli imputati della strage saranno assolti per insufficienza di prove; tuttavia, al termine della nuova istruttoria milanese del giudice [[Guido Salvini]], con la sentenza definitiva del 3 maggio 2005 la Cassazione sancirà che la strage di Piazza Fontana fu «storicamente realizzata dalla cellula ordinovista padovana guidata da Franco Freda e Giovanni Ventura», non più condannabili perché già irrevocabilmente giudicati (ne bis in idem).",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1979": "https://www.strano.net/stragi/stragi/crono/crono79.htm"
+                },
+                {
+                    "Wikipedia - Strage di piazza Fontana": "https://it.wikipedia.org/wiki/Strage_di_piazza_Fontana"
+                }
+            ],
+            "categorie": [
+                "gruppi_terroristici",
+                "servizi_segreti",
+                "politico"
+            ]
+        },
         "Omicidio del giornalista d'inchiesta Mino Pecorelli a Roma": {
             "anno": 1979,
             "titolo": "Omicidio del giornalista d'inchiesta Mino Pecorelli a Roma",
@@ -1061,6 +1630,29 @@
                 "massoneria",
                 "politico",
                 "mafia"
+            ]
+        },
+        "Assassinio a Milano del commissario liquidatore Giorgio Ambrosoli e finto sequestro di Michele Sindona": {
+            "anno": 1979,
+            "titolo": "Assassinio a Milano del commissario liquidatore Giorgio Ambrosoli e finto sequestro di Michele Sindona",
+            "data": "1979-07-11",
+            "descrizione": "Nella notte dell'11 luglio 1979 a Milano, poche ore dopo aver sottoscritto il verbale formale d'interrogatorio davanti ai magistrati sulle operazioni illecite della Banca Privata Italiana, l'avvocato [[Giorgio Ambrosoli]] viene assassinato sotto la propria abitazione da [[William Joseph Aricò]], sicario italo-americano ingaggiato da [[Michele Sindona]] dietro compenso di oltre 100.000 dollari versati su conti svizzeri. Il 2 agosto 1979 Sindona inscena a New York un finto rapimento ad opera di un sedicente gruppo eversivo, raggiungendo invece segretamente la Sicilia sotto la protezione della cosca di [[Stefano Bontate]], del medico massone Joseph Miceli Crimi e di esponenti di [[Cosa nostra]] italo-americana con l'obiettivo di esercitare pressioni sui propri referenti politici e finanziari a Roma, prima di riapparire a New York il 16 ottobre. Nel marzo 1986 Sindona sarà condannato in via definitiva all'ergastolo quale mandante dell'omicidio Ambrosoli.",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1979": "https://www.strano.net/stragi/stragi/crono/crono79.htm"
+                },
+                {
+                    "Wikipedia - Giorgio Ambrosoli": "https://it.wikipedia.org/wiki/Giorgio_Ambrosoli"
+                },
+                {
+                    "Wikipedia - Michele Sindona": "https://it.wikipedia.org/wiki/Michele_Sindona"
+                }
+            ],
+            "categorie": [
+                "mafia",
+                "massoneria",
+                "clero",
+                "politico"
             ]
         },
         "Omicidio del vicequestore Boris Giuliano a Palermo": {
@@ -1196,6 +1788,29 @@
                 "politico"
             ]
         },
+        "Seconda guerra di mafia con l'uccisione di Stefano Bontate e sequestro Cirillo": {
+            "anno": 1981,
+            "titolo": "Seconda guerra di mafia con l'uccisione di Stefano Bontate e sequestro Cirillo",
+            "data": "1981-04-23",
+            "descrizione": "Il 23 aprile 1981 a Palermo l'assassinio del boss di Santa Maria di Gesù [[Stefano Bontate]] — seguito l'11 maggio da quello di [[Salvatore Inzerillo]] — scatena la [[Seconda guerra di mafia]] (1981-1983), con cui lo schieramento dei [[Corleonesi]] guidato da [[Salvatore Riina]], [[Bernardo Provenzano]] e [[Leoluca Bagarella]] stermina circa mille affiliati delle famiglie rivali conquistando la guida assoluta di [[Cosa nostra]]. Negli stessi giorni, il 27 aprile 1981 a Torre del Greco le [[Brigate Rosse]] rapiscono l'assessore democristiano campano [[Ciro Cirillo]], rilasciato il 24 luglio 1981 dopo il pagamento di un riscatto di 1,45 miliardi di lire al termine di una trattativa condotta nel carcere di Ascoli Piceno con il capo della [[Nuova Camorra Organizzata]] [[Raffaele Cutolo]] tramite la mediazione di ufficiali del [[SISMI]], del faccendiere [[Francesco Pazienza]] e di esponenti della [[Banda della Magliana]]; il 1° aprile 1982 a Ottaviano verrà trovato decapitato il criminologo neofascista e piduista [[Aldo Semerari]], coinvolto nei rapporti tra camorra e servizi.",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1981": "https://www.strano.net/stragi/stragi/crono/crono81.htm"
+                },
+                {
+                    "Wikipedia - Seconda guerra di mafia": "https://it.wikipedia.org/wiki/Seconda_guerra_di_mafia"
+                },
+                {
+                    "Wikipedia - Sequestro Cirillo": "https://it.wikipedia.org/wiki/Sequestro_Cirillo"
+                }
+            ],
+            "categorie": [
+                "mafia",
+                "servizi_segreti",
+                "gruppi_terroristici",
+                "politico"
+            ]
+        },
         "Attentato a Papa Giovanni Paolo II in Piazza San Pietro": {
             "anno": 1981,
             "titolo": "Attentato a Papa Giovanni Paolo II in Piazza San Pietro",
@@ -1294,6 +1909,28 @@
                 "politico"
             ]
         },
+        "Omicidio di Pippo Fava a Catania, relazione Anselmi sulla P2 e collaborazione di Tommaso Buscetta": {
+            "anno": 1984,
+            "titolo": "Omicidio di Pippo Fava a Catania, relazione Anselmi sulla P2 e collaborazione di Tommaso Buscetta",
+            "data": "1984-07-10",
+            "descrizione": "Il 5 gennaio 1984 a Catania viene assassinato da [[Cosa nostra]] il giornalista e scrittore [[Giuseppe Fava|Pippo Fava]], fondatore e direttore del mensile I Siciliani che aveva denunciato le commistioni tra la cosca di [[Benedetto Santapaola]] e l'imprenditoria catanese (delitto per il quale saranno condannati in via definitiva all'ergastolo Nitto Santapaola e Aldo Ercolano). Il 10 luglio 1984 la [[Commissione parlamentare d'inchiesta sulla loggia massonica P2]] presieduta da [[Tina Anselmi]] approva la [relazione conclusiva](Documents/CommissioneParlamentareDInchiestaSullaP2-1981.pdf) che ricostruisce il sistema di condizionamento istituzionale di [[Licio Gelli]]. Sei giorni dopo, il 16 luglio 1984, il boss mafioso [[Tommaso Buscetta]], estradato dal Brasile a Roma, inizia i suoi interrogatori davanti al giudice [[Giovanni Falcone]], svelando per la prima volta dall'interno la struttura unitaria e la Commissione di Cosa Nostra.",
+            "fonti": [
+                {
+                    "Relazione Commissione Parlamentare d'Inchiesta sulla P2": "Documents/CommissioneParlamentareDInchiestaSullaP2-1981.pdf"
+                },
+                {
+                    "Wikipedia - Giuseppe Fava": "https://it.wikipedia.org/wiki/Giuseppe_Fava"
+                },
+                {
+                    "Wikipedia - Tommaso Buscetta": "https://it.wikipedia.org/wiki/Tommaso_Buscetta"
+                }
+            ],
+            "categorie": [
+                "mafia",
+                "massoneria",
+                "politico"
+            ]
+        },
         "Strage del Rapido 904 nella Grande Galleria dell'Appennino": {
             "anno": 1984,
             "titolo": "Strage del Rapido 904 nella Grande Galleria dell'Appennino",
@@ -1311,6 +1948,24 @@
                 "mafia",
                 "gruppi_terroristici",
                 "servizi_segreti"
+            ]
+        },
+        "Strage di Pizzolungo a Trapani: attentato mafioso contro il giudice Carlo Palermo": {
+            "anno": 1985,
+            "titolo": "Strage di Pizzolungo a Trapani: attentato mafioso contro il giudice Carlo Palermo",
+            "data": "1985-04-02",
+            "descrizione": "Il 2 aprile 1985 a Pizzolungo (Erice, alle porte di Trapani) un'autobomba di [[Cosa nostra]] esplode al passaggio della vettura blindata del sostituto procuratore [[Carlo Palermo]], da poco trasferito in Sicilia da Trento dove aveva istruito una vasta indagine sui traffici internazionali di armi e morfina base tra Medio Oriente, clan mafiosi e faccendieri legati ai servizi segreti. Il magistrato resta ferito ma sopravvive perché schermato dall'utilitaria Volkswagen Scirocco che in quel preciso istante stava sorpassando la blindata: nell'esplosione vengono dilaniati Barbara Rizzo (30 anni) e i suoi due figli gemelli di sei anni, Salvatore e Giuseppe Asta. Per la [[Strage di Pizzolungo]] sono stati condannati in via definitiva all'ergastolo i capimafia [[Salvatore Riina]], [[Vincenzo Virga]], [[Balduccio Di Maggio]], Gioacchino Calabrò e [[Vincenzo Galatolo]].",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1985": "https://www.strano.net/stragi/stragi/crono/crono85.htm"
+                },
+                {
+                    "Wikipedia - Strage di Pizzolungo": "https://it.wikipedia.org/wiki/Strage_di_Pizzolungo"
+                }
+            ],
+            "categorie": [
+                "mafia",
+                "gruppi_terroristici"
             ]
         },
         "Apertura del Maxiprocesso di Palermo nell'aula bunker dell'Ucciardone": {
@@ -1349,6 +2004,24 @@
                 "massoneria",
                 "politico",
                 "clero"
+            ]
+        },
+        "Omicidio a Valderice del giornalista e sociologo Mauro Rostagno": {
+            "anno": 1988,
+            "titolo": "Omicidio a Valderice del giornalista e sociologo Mauro Rostagno",
+            "data": "1988-09-26",
+            "descrizione": "La sera del 26 settembre 1988 in contrada Lenzi a Valderice (Trapani) viene ucciso in un agguato mafioso a colpi di fucile a pompa e pistola [[Mauro Rostagno]], sociologo, ex dirigente di [[Lotta Continua]] e cofondatore della comunità terapeutica Saman, che dai microfoni dell'emittente televisiva trapanese RTC conduceva inchieste giornalistiche sui traffici di [[Cosa nostra]], sui delitti mafiosi e sugli intrecci tra cosche, politica e logge massoniche coperte a Trapani. Dopo anni di depistaggi che avevano indirizzato le indagini su una pista interna alla comunità, nel novembre 2020 la Corte di Cassazione ha confermato in via definitiva la condanna all'ergastolo del boss di Trapani [[Vincenzo Virga]] quale mandante dell'omicidio.",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1988": "https://www.strano.net/stragi/stragi/crono/crono88.htm"
+                },
+                {
+                    "Wikipedia - Mauro Rostagno": "https://it.wikipedia.org/wiki/Mauro_Rostagno"
+                }
+            ],
+            "categorie": [
+                "mafia",
+                "massoneria"
             ]
         },
         "Fallito attentato all'Addaura contro il giudice Giovanni Falcone e comparsa del 'Corvo'": {
@@ -1401,6 +2074,24 @@
             "categorie": [
                 "servizi_segreti",
                 "politico"
+            ]
+        },
+        "Strage del Pilastro a Bologna: la banda della Uno Bianca uccide tre giovani carabinieri": {
+            "anno": 1991,
+            "titolo": "Strage del Pilastro a Bologna: la banda della Uno Bianca uccide tre giovani carabinieri",
+            "data": "1991-01-04",
+            "descrizione": "La sera del 4 gennaio 1991 nel rione Pilastro di Bologna i componenti della [[Banda della Uno bianca]] aprono il fuoco con fucili d'assalto AR-70/90 contro una pattuglia dell'Arma, assassinando i tre giovani carabinieri Otello Stefanini, Andrea Moneta e Mauro Mitilini (di 22, 21 e 21 anni). La [[Strage del Pilastro]] — rivendicata inizialmente dalla sigla telefonica [[Falange Armata]] e seguita da depistaggi e false piste investigative — verrà chiarita solo nel novembre 1994 con l'arresto dei fratelli [[Roberto Savi]], Fabio e Alberto Savi e la scoperta che la banda criminale (autrice tra il 1987 e il 1994 di 103 azioni criminali con 24 morti e 102 feriti tra Emilia-Romagna e Marche) era composta quasi interamente da agenti della Polizia di Stato in servizio, poi condannati in via definitiva all'ergastolo.",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1991": "https://www.strano.net/stragi/stragi/crono/crono91.htm"
+                },
+                {
+                    "Wikipedia - Eccidio del Pilastro": "https://it.wikipedia.org/wiki/Eccidio_del_Pilastro"
+                }
+            ],
+            "categorie": [
+                "gruppi_terroristici",
+                "servizi_segreti"
             ]
         },
         "Scioglimento del PCI e svolta della Bolognina con la nascita del PDS": {
@@ -1530,6 +2221,25 @@
                 "servizi_segreti",
                 "politico",
                 "gruppi_terroristici"
+            ]
+        },
+        "Arresto a Palermo di Bruno Contrada, alto dirigente della Polizia e del SISDE": {
+            "anno": 1992,
+            "titolo": "Arresto a Palermo di Bruno Contrada, alto dirigente della Polizia e del SISDE",
+            "data": "1992-12-24",
+            "descrizione": "Alla vigilia di Natale del 1992 la Direzione investigativa antimafia arresta a Palermo [[Bruno Contrada]], ex capo della Squadra Mobile palermitana e alto dirigente del [[SISDE]], su mandato della Procura di Palermo con l'accusa di concorso esterno in associazione mafiosa per aver fornito negli anni Ottanta notizie riservate e coperture a boss di [[Cosa nostra]] e favorito la latitanza di [[Salvatore Riina]]. Condannato in via definitiva a 10 anni di reclusione nel 2007 (pena interamente espiata), nel 2015 Contrada otterrà dalla Corte europea dei diritti dell'uomo (CEDU) una pronuncia secondo cui all'epoca dei fatti contestati (1979-1988) la fattispecie giurisprudenziale di concorso esterno in associazione mafiosa non era ancora sufficientemente tipizzata nell'ordinamento italiano, cui seguirà nel 2017 la revoca degli effetti penali della sentenza da parte della Cassazione.",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1992": "https://www.strano.net/stragi/stragi/crono/crono92.htm"
+                },
+                {
+                    "Wikipedia - Bruno Contrada": "https://it.wikipedia.org/wiki/Bruno_Contrada"
+                }
+            ],
+            "categorie": [
+                "mafia",
+                "servizi_segreti",
+                "politico"
             ]
         },
         "Arresto del capo dei capi di Cosa Nostra Salvatore Riina a Palermo": {
@@ -1697,6 +2407,30 @@
                 "politico"
             ]
         },
+        "Ordinanza del giudice Salvini su Nuclei di Difesa dello Stato e ruolo di Licio Gelli nel Golpe Borghese": {
+            "anno": 1995,
+            "titolo": "Ordinanza del giudice Salvini su Nuclei di Difesa dello Stato e ruolo di Licio Gelli nel Golpe Borghese",
+            "data": "1995-04-09",
+            "descrizione": "Tra il marzo e il 10 aprile 1995 il giudice istruttore di Milano [[Guido Salvini]] deposita l'ordinanza-sentenza sulle trame nere degli anni Settanta e trasmette gli atti alla [[Commissione Stragi]] e alle Procure di Roma e Reggio Calabria. Il provvedimento accerta due snodi storici cruciali: 1) l'esistenza tra il 1966 e il 1973 dei «[[Nuclei per la Difesa dello Stato|Nuclei di Difesa dello Stato]]» (NDS), struttura clandestina paramilitare articolata in 36 legioni su base territoriale in collegamento con lo Stato Maggiore dell'Esercito, l'Arma dei Carabinieri, reti NATO/CIA e militanti di [[Ordine Nuovo]] e [[Avanguardia Nazionale]]; 2) la ricostruzione — grazie alle bobine integrali non censurate consegnate dall'ex capitano del [[SID]] Antonio La Bruna sulla riunione tra il colonnello Sandro Romagnoli ed esponenti del [[Fronte Nazionale (1968)|Fronte Nazionale]] — della complicità operativa di [[Licio Gelli]] nel [[Golpe Borghese]], in cui il capo della [[P2]] era incaricato di agevolare la cattura del presidente [[Giuseppe Saragat]] al Quirinale e diede poi il contrordine finale che fermò l'azione.",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1995": "https://www.strano.net/stragi/stragi/crono/crono95.htm"
+                },
+                {
+                    "Wikipedia - Nuclei per la Difesa dello Stato": "https://it.wikipedia.org/wiki/Nuclei_per_la_Difesa_dello_Stato"
+                },
+                {
+                    "Wikipedia - Golpe Borghese": "https://it.wikipedia.org/wiki/Golpe_Borghese"
+                }
+            ],
+            "categorie": [
+                "massoneria",
+                "servizi_segreti",
+                "gruppi_terroristici",
+                "mafia",
+                "politico"
+            ]
+        },
         "Avvio del 'processo del secolo' a Palermo contro Giulio Andreotti": {
             "anno": 1995,
             "titolo": "Avvio del 'processo del secolo' a Palermo contro Giulio Andreotti",
@@ -1713,6 +2447,25 @@
             "categorie": [
                 "mafia",
                 "politico"
+            ]
+        },
+        "Sentenza definitiva di Cassazione sulla Strage di Bologna: condanne ai NAR e ai depistatori P2-SISMI": {
+            "anno": 1995,
+            "titolo": "Sentenza definitiva di Cassazione sulla Strage di Bologna: condanne ai NAR e ai depistatori P2-SISMI",
+            "data": "1995-11-23",
+            "descrizione": "Il 23 novembre 1995 le Sezioni Unite penali della Corte di Cassazione pronunciano la sentenza definitiva sul processo principale per la [[Strage di Bologna]] del 2 agosto 1980 (85 morti e oltre 200 feriti): vengono confermati gli ergastoli quali esecutori materiali della strage per i terroristi neofascisti dei [[Nuclei Armati Rivoluzionari|NAR]] [[Valerio Fioravanti]] e [[Francesca Mambro]], nonché le condanne definitive per calunnia aggravata da finalità di terrorismo (per il depistaggio con esplosivi collocati sul treno Taranto-Milano nel gennaio 1981) a carico del venerabile della [[P2]] [[Licio Gelli]], di [[Francesco Pazienza]] e degli ufficiali del [[SISMI]] [[Pietro Musumeci]] e [[Giuseppe Belmonte]]. Successivi procedimenti porteranno alle condanne definitive come co-esecutori anche di [[Luigi Ciavardini]] (2007), [[Gilberto Cavallini]] (2025) e [[Paolo Bellini]] (2025), accertando altresì il ruolo di [[Licio Gelli]], [[Umberto Ortolani]], [[Federico Umberto D'Amato]] e [[Mario Tedeschi]] quali finanziatori e mandanti ormai deceduti.",
+            "fonti": [
+                {
+                    "Strano Network - Cronologia 1995": "https://www.strano.net/stragi/stragi/crono/crono95.htm"
+                },
+                {
+                    "Wikipedia - Strage di Bologna": "https://it.wikipedia.org/wiki/Strage_di_Bologna"
+                }
+            ],
+            "categorie": [
+                "gruppi_terroristici",
+                "massoneria",
+                "servizi_segreti"
             ]
         },
         "Cattura del boss stragista Giovanni Brusca a Cannatello": {
