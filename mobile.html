@@ -1170,6 +1170,59 @@
       border: 0;
       padding: 0;
     }
+
+    .sync-modal-desc {
+      margin: 0 0 12px;
+      font-size: 13px;
+      line-height: 1.55;
+      color: var(--ink-secondary);
+    }
+
+    .sync-stats-box {
+      padding: 10px 12px;
+      margin-bottom: 12px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--ink);
+    }
+
+    .sync-saved-notice {
+      padding: 8px 10px;
+      margin-bottom: 12px;
+      border: 1px solid #2e7d4f;
+      background: rgba(46, 125, 79, .12);
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .sync-dont-ask {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin: 0 0 14px;
+      font-size: 12px;
+      line-height: 1.4;
+      color: var(--muted);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .sync-dont-ask input {
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .sync-modal-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
   </style>
 </head>
 
@@ -1392,6 +1445,38 @@
           <button class="btn" type="submit">Salva Impostazioni</button>
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- Modal Avviso Sincronizzazione / Differenza Dati GitHub -->
+  <div id="modal-sync" class="modal-overlay" hidden>
+    <div class="modal-card">
+      <h2 id="modal-sync-title">Dati locali diversi da GitHub</h2>
+      <p id="modal-sync-desc" class="sync-modal-desc">
+        I dati presenti nella tua bozza locale salvata nel browser sono diversi dalla versione pubblica attuale su GitHub.
+        Se scegli di aggiornare, <strong>i dati locali non salvati verranno sovrascritti</strong>: ti consigliamo di scaricare prima una copia del tuo file JSON per non perderli.
+      </p>
+      <div id="modal-sync-stats" class="sync-stats-box"></div>
+      <div id="modal-sync-saved-msg" class="sync-saved-notice" hidden>
+        ✓ Copia JSON della bozza locale scaricata! Ora puoi aggiornare da GitHub in sicurezza.
+      </div>
+      <label class="sync-dont-ask">
+        <input type="checkbox" id="sync-mute-current">
+        <span>Non mostrarmi più questo avviso all'avvio finché non esce un nuovo aggiornamento su GitHub</span>
+      </label>
+      <div class="sync-modal-actions">
+        <button id="btn-sync-download" class="btn btn-secondary" type="button">
+          <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5L8 11l3.5-3.5M2.5 13.5h11"/></svg>
+          <span>1. Scarica prima i miei dati (.json)</span>
+        </button>
+        <button id="btn-sync-update" class="btn btn-danger" type="button">
+          <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 8a5.5 5.5 0 1 1-1.6-3.9L13.5 5.5V2h-3.5l1.3 1.3"/></svg>
+          <span>2. Aggiorna da GitHub (Sovrascrivi locale)</span>
+        </button>
+        <button id="btn-sync-keep" class="btn btn-secondary" type="button">
+          <span>Mantieni i miei dati locali</span>
+        </button>
+      </div>
     </div>
   </div>
 
@@ -1687,7 +1772,9 @@
       selectedYear: '',
       categoryFilter: new Set(),
       // Impronta del JSON originale da cui deriva la bozza (null = file locale/template/nuovo)
-      sourceSignature: null
+      sourceSignature: null,
+      // Impronta della versione remota per cui l'utente ha scelto di non mostrare l'avviso all'avvio
+      dismissedRemoteSignature: null
     };
 
     const DRAFT_KEY = 'democrhistory_auto_draft_v2';
@@ -1736,6 +1823,7 @@
           events: state.events,
           preEvents: state.preEvents,
           sourceSignature: state.sourceSignature,
+          dismissedRemoteSignature: state.dismissedRemoteSignature || null,
           sourceUrl: currentSourceUrl,
           updatedAt: new Date().toISOString()
         };
@@ -1764,6 +1852,7 @@
           state.events = (draft.events || []).map((e) => normalizeEvent(e, true));
           state.preEvents = (draft.preEvents || []).map((e) => normalizeEvent(e, true));
           state.sourceSignature = draft.sourceSignature || null;
+          state.dismissedRemoteSignature = draft.dismissedRemoteSignature || null;
           if (draft.sourceUrl && draft.sourceUrl.startsWith('data/')) {
             currentSourceUrl = draft.sourceUrl;
           }
@@ -1792,30 +1881,145 @@
       } catch (e) { }
     }
 
+    function performResetToGithub() {
+      closeSyncModal();
+      clearDraft();
+      state.dismissedRemoteSignature = null;
+      try {
+        localStorage.removeItem(SOURCE_PREF_KEY);
+      } catch (e) { }
+      if ($('file')) $('file').value = '';
+      repoDataFiles.length = 0;
+      repoDataFiles.push(...KNOWN_DATA_FILES);
+      currentSourceUrl = DEFAULT_SOURCE_URL;
+      discoverRepoDataFiles(true);
+      fetchInitialData(DEFAULT_SOURCE_URL, true).then(() => switchTab('tab-timeline'));
+    }
+
     function resetToOriginal() {
       if (confirm("Vuoi eliminare le bozze/dati salvati in locale nel browser e ricaricare lo stato pubblico da GitHub?")) {
-        clearDraft();
-        try {
-          localStorage.removeItem(SOURCE_PREF_KEY);
-        } catch (e) { }
-        if ($('file')) $('file').value = '';
-        repoDataFiles.length = 0;
-        repoDataFiles.push(...KNOWN_DATA_FILES);
-        currentSourceUrl = DEFAULT_SOURCE_URL;
-        discoverRepoDataFiles(true);
-        fetchInitialData(DEFAULT_SOURCE_URL, true).then(() => switchTab('tab-timeline'));
+        performResetToGithub();
       }
     }
 
-    // Avvisa se il JSON originale è cambiato rispetto a quello da cui è nata la bozza
+    // Impronta canonica dei contenuti dell'archivio (ignora _id generati casualmente)
+    function buildArchiveFingerprint(metadata, categories, preEvents, events) {
+      const cleanEvent = (e) => ({
+        anno: Number(e.anno || 0),
+        data: String(e.data || '').trim(),
+        titolo: String(e.titolo || '').trim(),
+        descrizione: String(e.descrizione || '').trim(),
+        categorie: [...(e.categorie || [])].sort(),
+        fonti: e.fonti || []
+      });
+      const normPre = [...(preEvents || [])].sort(compareEvents).map(cleanEvent);
+      const normMain = [...(events || [])].sort(compareEvents).map(cleanEvent);
+      const normCats = (categories || []).map((c) => ({
+        id: c.id,
+        label: c.label,
+        color: normalizeHexColor(c.color)
+      }));
+      return hashText(JSON.stringify({
+        titolo: String((metadata && metadata.titolo) || '').trim(),
+        natura: String((metadata && metadata.natura) || '').trim(),
+        categories: normCats,
+        preEvents: normPre,
+        events: normMain
+      }));
+    }
+
+    let latestCheckedRemoteSignature = null;
+
+    function openSyncModal({ isNewGithubVersion, sourceMissing, remoteUrl, remoteTitle, remoteEventsCount, remotePreCount }) {
+      const titleEl = $('modal-sync-title');
+      const descEl = $('modal-sync-desc');
+      const statsEl = $('modal-sync-stats');
+      const savedMsgEl = $('modal-sync-saved-msg');
+      const muteCb = $('sync-mute-current');
+      if (!titleEl || !descEl || !statsEl) return;
+
+      if (savedMsgEl) savedMsgEl.hidden = true;
+      if (muteCb) muteCb.checked = false;
+
+      if (sourceMissing) {
+        titleEl.textContent = 'Archivio su GitHub rinominato o aggiornato';
+        descEl.innerHTML = 'Il file a cui faceva riferimento la tua bozza locale non è più presente con quel nome su GitHub. Se vuoi passare al nuovo archivio pubblico su GitHub, <strong>scarica prima una copia dei tuoi dati locali (.json)</strong> per non perderli.';
+      } else if (isNewGithubVersion) {
+        titleEl.textContent = 'Nuova versione disponibile su GitHub';
+        descEl.innerHTML = 'Su GitHub è presente una <strong>versione più recente</strong> dell\'archivio rispetto alla bozza salvata nel tuo browser. Se aggiorni ora, eventuali modifiche locali andranno perse: <strong>scarica prima i tuoi dati (.json)</strong> se desideri conservarli.';
+      } else {
+        titleEl.textContent = 'Dati in bozza locale diversi da GitHub';
+        descEl.innerHTML = 'Nel browser sono presenti dati salvati in bozza locale differenti dallo stato pubblico attuale su GitHub. Vuoi aggiornare ricaricando i dati da GitHub? <strong>Attenzione:</strong> aggiornando perderai le modifiche locali non esportate (scaricale prima con il pulsante qui sotto).';
+      }
+
+      const localTitle = (state.metadata && state.metadata.titolo) || 'Bozza locale';
+      const localEvCount = state.events.length;
+      const localPreCount = state.preEvents.length;
+      statsEl.innerHTML = `
+        <div><strong>Nel tuo browser (Bozza locale):</strong> ${escapeHtml(localTitle)} &mdash; <strong>${localEvCount}</strong> eventi${localPreCount ? ` (+${localPreCount} pre-eventi)` : ''}</div>
+        <div style="margin-top:4px"><strong>Su GitHub (${escapeHtml(sourceFileName(remoteUrl))}):</strong> ${escapeHtml(remoteTitle)} &mdash; <strong>${remoteEventsCount}</strong> eventi${remotePreCount ? ` (+${remotePreCount} pre-eventi)` : ''}</div>
+      `;
+
+      $('modal-sync').hidden = false;
+    }
+
+    function closeSyncModal() {
+      const modal = $('modal-sync');
+      if (modal) modal.hidden = true;
+    }
+
+    // Controlla all'avvio se la bozza locale differisce dai dati attuali su GitHub
     async function checkSourceUpdate() {
-      if (!state.sourceSignature) return;
+      let targetUrl = currentSourceUrl || DEFAULT_SOURCE_URL;
+      let sourceMissing = false;
       try {
-        const res = await fetch(currentSourceUrl, { cache: 'no-cache' });
+        let res = await fetch(`${targetUrl}?t=${Date.now()}`, { cache: 'no-store' });
+        if (!res.ok && targetUrl !== DEFAULT_SOURCE_URL) {
+          sourceMissing = true;
+          targetUrl = DEFAULT_SOURCE_URL;
+          res = await fetch(`${targetUrl}?t=${Date.now()}`, { cache: 'no-store' });
+        }
         if (!res.ok) return;
-        const signature = hashText(await res.text());
-        if (signature !== state.sourceSignature) {
-          addStatusWarning('stale-warning', 'Il file originale è stato aggiornato dopo questa bozza. Esporta le tue modifiche, poi usa "Ricarica Originale" per vedere la nuova versione.');
+        const remoteText = await res.text();
+        const remoteSignature = hashText(remoteText);
+        latestCheckedRemoteSignature = remoteSignature;
+
+        const remoteData = JSON.parse(remoteText);
+        const savedLocalCats = CATEGORIES.map((c) => ({ ...c }));
+        const remoteParsed = parseArchiveData(remoteData);
+        const remoteCats = CATEGORIES.map((c) => ({ ...c }));
+        // Ripristina subito le categorie della bozza locale dopo l'ispezione
+        setCategories(savedLocalCats);
+
+        const localFp = buildArchiveFingerprint(state.metadata, savedLocalCats, state.preEvents, state.events);
+        const remoteFp = buildArchiveFingerprint(remoteParsed.metadata, remoteCats, remoteParsed.preEvents, remoteParsed.events);
+
+        // Se il contenuto della bozza locale è identico al file su GitHub, allinea silenziosamente la firma
+        if (!sourceMissing && localFp === remoteFp) {
+          if (state.sourceSignature !== remoteSignature) {
+            state.sourceSignature = remoteSignature;
+            saveDraft();
+          }
+          return;
+        }
+
+        const isNewGithubVersion = sourceMissing || Boolean(state.sourceSignature && state.sourceSignature !== remoteSignature);
+
+        const msg = isNewGithubVersion
+          ? 'È disponibile una nuova versione su GitHub diversa da questa bozza locale. Esporta le tue modifiche, poi usa "Ripristina da GitHub".'
+          : 'I dati di questa bozza locale sono diversi dalla versione pubblica su GitHub.';
+        addStatusWarning('stale-warning', msg);
+
+        // Mostra il modale all'avvio a meno che l'utente non abbia silenziato questa specifica versione di GitHub
+        if (state.dismissedRemoteSignature !== remoteSignature) {
+          openSyncModal({
+            isNewGithubVersion,
+            sourceMissing,
+            remoteUrl: targetUrl,
+            remoteTitle: (remoteParsed.metadata && remoteParsed.metadata.titolo) || sourceFileName(targetUrl),
+            remoteEventsCount: remoteParsed.events.length,
+            remotePreCount: remoteParsed.preEvents.length
+          });
         }
       } catch (e) { }
     }
@@ -2978,10 +3182,28 @@
       closeMetaModal();
     });
 
+    $('btn-sync-download').addEventListener('click', () => {
+      downloadJSON();
+      const savedMsgEl = $('modal-sync-saved-msg');
+      if (savedMsgEl) savedMsgEl.hidden = false;
+    });
+    $('btn-sync-update').addEventListener('click', () => {
+      performResetToGithub();
+    });
+    $('btn-sync-keep').addEventListener('click', () => {
+      const muteCb = $('sync-mute-current');
+      if (muteCb && muteCb.checked && latestCheckedRemoteSignature) {
+        state.dismissedRemoteSignature = latestCheckedRemoteSignature;
+        saveDraft();
+      }
+      closeSyncModal();
+    });
+
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         closeEventModal();
         closeMetaModal();
+        closeSyncModal();
       }
     });
 
