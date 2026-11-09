@@ -118,29 +118,33 @@
         }
     },
     "EVENTI": {
-        "Nascita del Movimento Indipendentista Siciliano (MIS)": {
+        "Contesto storico, politico e militare dell'Italia nel 1942: crisi del regime e genesi dei partiti": {
             "anno": 1942,
-            "titolo": "Nascita del Movimento Indipendentista Siciliano (MIS)",
-            "data": "",
-            "descrizione": "Nel settembre 1942 prende forma clandestina in Sicilia il [[Movimento per l'Indipendenza della Sicilia]] (MIS): la componente intellettuale e di sinistra antifascista è guidata da [[Antonio Canepa]] (che fonderà l'[[Esercito Volontario per l'Indipendenza della Sicilia|EVIS]]), mentre l'ala agraria e conservatrice (guidata da [[Andrea Finocchiaro Aprile]]) stabilisce contatti con esponenti della criminalità mafiosa e della nobiltà latifondista, costituendo la premessa del separatismo armato nel secondo dopoguerra.",
+            "titolo": "Contesto storico, politico e militare dell'Italia nel 1942: crisi del regime e genesi dei partiti",
+            "data": "1942-01-01",
+            "descrizione": "All'inizio del 1942 l'[[Storia dell'Italia fascista|Italia fascista]] di [[Benito Mussolini]] — entrata nella [[Seconda guerra mondiale]] il 10 giugno 1940 a fianco della Germania nazista nelle [[Potenze dell'Asse]] — vede infrangersi l'illusione della «guerra parallela»: dopo la perdita dell'Africa Orientale Italiana e i rovesci nei Balcani, tra l'estate e l'autunno 1942 le forze dell'Asse subiscono la svolta irreversibile del conflitto con la sconfitta di [[Seconda battaglia di El Alamein|El Alamein]], lo sbarco alleato nel Nordafrica francese ([[Operazione Torch]]) e la disfatta dell'[[ARMIR]] nella [[Campagna italiana di Russia|campagna di Russia]]. Sul fronte interno i pesanti bombardamenti alleati sul triangolo industriale (Genova, Torino, Milano), il razionamento e l'inflazione erodono il consenso al regime. In questo quadro maturano le premesse della futura Repubblica: si riorganizzano clandestinamente i partiti antifascisti — con la nascita nel 1942 del [[Partito d'Azione]] e della [[Democrazia Cristiana]] di [[Alcide De Gasperi]] accanto al [[Partito Comunista Italiano|PCI]], ai socialisti e ai liberali — mentre ambienti della Corona ([[Vittorio Emanuele III di Savoia|Vittorio Emanuele III]]), degli alti comandi militari e dei gerarchi dissidenti avviano i primi sondaggi per sganciare il Paese da Berlino e i servizi alleati ([[Office of Strategic Services|OSS]] e [[Special Operations Executive|SOE]]) preparano lo sbarco in Italia.",
             "fonti": [
                 {
-                    "Wikipedia - Movimento per l'Indipendenza della Sicilia": "https://it.wikipedia.org/wiki/Movimento_per_l%27Indipendenza_della_Sicilia"
+                    "Treccani - Italia (Storia: Seconda guerra mondiale)": "https://www.treccani.it/enciclopedia/italia/"
                 },
                 {
-                    "Wikipedia - Antonio Canepa": "https://it.wikipedia.org/wiki/Antonio_Canepa"
+                    "Wikipedia - Storia dell'Italia fascista": "https://it.wikipedia.org/wiki/Storia_dell%27Italia_fascista"
+                },
+                {
+                    "Wikipedia - Italia nella seconda guerra mondiale": "https://it.wikipedia.org/wiki/Italia_nella_seconda_guerra_mondiale"
                 }
             ],
             "categorie": [
                 "politico",
-                "mafia"
+                "re",
+                "servizi_segreti"
             ]
         },
         "Operazione Underworld: cooperazione tra intelligence navale USA e criminalità organizzata": {
             "anno": 1942,
             "titolo": "Operazione Underworld: cooperazione tra intelligence navale USA e criminalità organizzata",
-            "data": "1942-01-01",
-            "descrizione": "Durante la Seconda guerra mondiale l'[[Office of Naval Intelligence]] statunitense (tramite l'unità speciale guidata dal comandante Charles R. Haffenden nel Terzo Distretto Navale di New York) avvia l'[[Operazione Underworld]], cooperando con figure della criminalità organizzata italo-americana ed ebraica come [[Joseph Lanza]], [[Meyer Lansky]] e [[Lucky Luciano]] per controllare il fronte portuale, prevenire sabotaggi dell'Asse (dopo il controverso rogo del transatlantico Normandie) e reprimere il contrabbando. Nel 1946 la pena di Luciano sarà commutata con espulsione in Italia; il contesto bellico si intreccerà poi, seppur tramite strutture distinte, con l'azione di [[Office of Strategic Services|OSS]] e [[Governo militare alleato dei territori occupati|AMGOT]] in Sicilia.",
+            "data": "1942-02-09",
+            "descrizione": "Durante la Seconda guerra mondiale l'[[Office of Naval Intelligence]] statunitense (tramite l'unità speciale guidata dal comandante Charles R. Haffenden nel Terzo Distretto Navale di New York) avvia l'[[Operazione Underworld]], cooperando con figure della criminalità organizzata italo-americana ed ebraica come [[Joseph Lanza]], [[Meyer Lansky]] e [[Lucky Luciano]] per controllare il fronte portuale, prevenire sabotaggi dell'Asse (dopo il controverso rogo del transatlantico Normandie del 9 febbraio 1942) e reprimere il contrabbando. Nel 1946 la pena di Luciano sarà commutata con espulsione in Italia; il contesto bellico si intreccerà poi, seppur tramite strutture distinte, con l'azione di [[Office of Strategic Services|OSS]] e [[Governo militare alleato dei territori occupati|AMGOT]] in Sicilia.",
             "fonti": [
                 {
                     "Rodney Campbell - The Luciano Project (McGraw-Hill, 1977)": "https://openlibrary.org/books/OL4558564M/The_Luciano_project"
@@ -158,6 +162,24 @@
             "categorie": [
                 "mafia",
                 "servizi_segreti"
+            ]
+        },
+        "Nascita del Movimento Indipendentista Siciliano (MIS)": {
+            "anno": 1942,
+            "titolo": "Nascita del Movimento Indipendentista Siciliano (MIS)",
+            "data": "1942-09",
+            "descrizione": "Nel settembre 1942 prende forma clandestina in Sicilia il [[Movimento per l'Indipendenza della Sicilia]] (MIS): la componente intellettuale e di sinistra antifascista è guidata da [[Antonio Canepa]] (che fonderà l'[[Esercito Volontario per l'Indipendenza della Sicilia|EVIS]]), mentre l'ala agraria e conservatrice (guidata da [[Andrea Finocchiaro Aprile]]) stabilisce contatti con esponenti della criminalità mafiosa e della nobiltà latifondista, costituendo la premessa del separatismo armato nel secondo dopoguerra.",
+            "fonti": [
+                {
+                    "Wikipedia - Movimento per l'Indipendenza della Sicilia": "https://it.wikipedia.org/wiki/Movimento_per_l%27Indipendenza_della_Sicilia"
+                },
+                {
+                    "Wikipedia - Antonio Canepa": "https://it.wikipedia.org/wiki/Antonio_Canepa"
+                }
+            ],
+            "categorie": [
+                "politico",
+                "mafia"
             ]
         },
         "Sbarco alleato in Sicilia (Operazione Husky) e crollo del fronte interno": {
