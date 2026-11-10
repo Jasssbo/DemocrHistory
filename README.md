@@ -9,8 +9,10 @@
 
 Questo progetto nasce per dare massima visibilità, modernità e fruibilità digitale all'immenso patrimonio informativo raccolto da ricercatori, storici e archivi indipendenti.
 
-> 🔗 **Fonte di riferimento essenziale**: [Strano Network - Cronologia delle Stragi (1942-2002)](https://www.strano.net/stragi/stragi/crono/indcro.htm)  
-> Visita il progetto originale e la loro bibliografia su [strano.net](https://www.strano.net/).
+> 🔗 **Fonti di riferimento essenziali e archivi storici**:  
+> - [Strano Network - Cronologia delle Stragi (1942-2002)](https://www.strano.net/stragi/stragi/crono/indcro.htm) — progetto originale e bibliografia su [strano.net](https://www.strano.net/).  
+> - [Portale degli Archivi Nazionali - Ministero della Cultura](https://archivinazionali.cultura.gov.it/) — documentazione archivistica di Stato, fondi storici e atti declassificati.  
+> - [Rete degli Archivi per non dimenticare](https://memoria.cultura.gov.it/) — portale istituzionale sulla memoria delle stragi, del terrorismo e della violenza politica (vedi anche la sezione [Documenti Online](https://memoria.cultura.gov.it/documenti-online) con atti processuali, sentenze e relazioni d'inchiesta digitalizzate).
 
 ---
 

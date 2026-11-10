@@ -19,14 +19,21 @@ In ambiti sensibili e complessi (Guerra Fredda, stragismo, terrorismo, criminali
 3. **Atti e inchieste istituzionali**: risultanze di Commissioni parlamentari d'inchiesta (P2, Stragi, Antimafia, Moro) e documenti ufficiali desecretati (archivi di Stato, CIA, State Department, SISMI, SIFAR). Presentale specificando la natura dell'atto (es. *"La relazione di maggioranza della Commissione Stragi evidenzia..."*).
 4. **Dibattito storiografico e inchieste indipendenti**: tesi storiografiche accreditate o inchieste giornalistiche di rilievo non convalidate in sede giudiziaria. Vanno introdotte con formule deontologiche chiare (*"Secondo la ricostruzione dello storico X..."*, *"Inchieste giornalistiche hanno ipotizzato..."*), senza mai spacciarle per certezze giudiziarie o fattuali.
 
+### Principio di Tracciabilità e Attribuzione Frasale Puntuale
+Ogni singola frase o periodo della descrizione deve rendere trasparente al lettore la matrice e l'origine dell'informazione veicolata. È vietato fondere affermazioni fattuali, giudiziarie e tesi investigative in enunciati generici o impersonali. In particolare:
+- Se una frase riporta un dato o un esito giudiziario, deve chiarire la sede o l'organo (*"La Corte di Cassazione con sentenza del..."*, *"Il giudice istruttore nell'ordinanza..."*, *"Il GIP in sede di archiviazione..."*).
+- Se una frase espone una tesi istituzionale o investigativa, deve citare l'atto di provenienza (*"Secondo gli atti della Commissione parlamentare d'inchiesta..."*, *"I rapporti desecretati dell'archivio X documentano..."*).
+- Se una frase introduce ricostruzioni giornalistiche, memorialistiche o storiografiche, deve nominare esplicitamente la fonte o l'autore all'interno del periodo (*"Secondo l'inchiesta pubblicata da..."*, *"Nella ricostruzione del memorialista/storico Y..."*).
+- Il lettore deve poter comprendere, periodo per periodo, *chi sostiene cosa* e con quale grado di autorevolezza documentale.
+
 ---
 
 ## 2. Gerarchia e Valutazione Critica delle Fonti
 
 - **Fonti Primarie e Atti Ufficiali (Priorità Massima)**: Sentenze giudiziarie definitive, atti di commissioni parlamentari, documenti d'archivio declassificati, relazioni ministeriali.
-- **Saggistica Accademica e Archivi Storici (Priorità Alta)**: Monografie di storici accreditati, dizionari biografici (es. Treccani), archivi della memoria istituzionali ([memoria.cultura.gov.it](https://memoria.cultura.gov.it/)).
+- **Saggistica Accademica e Archivi Storici (Priorità Alta)**: Monografie di storici accreditati, dizionari biografici (es. Treccani), portali e archivi storici istituzionali ([archivinazionali.cultura.gov.it](https://archivinazionali.cultura.gov.it/), [memoria.cultura.gov.it](https://memoria.cultura.gov.it/) e la relativa sezione [Documenti Online](https://memoria.cultura.gov.it/documenti-online)).
 - **Archivi tematici indipendenti e Cronologie storiche (Priorità Media - da verificare)**: Banche dati come Strano Network, Wikipedia (ottima per entità e wikilink, ma da cross-validare su fatti controversi).
-- **Documenti locali in archivio (`Documents/`)**: PDF, saggi, verbali e atti declassificati memorizzati nella cartella `Documents/` del repository.
+- **Documenti locali in archivio (`Documents/`)**: PDF, saggi, verbali e atti declassificati memorizzati nella cartella `Documents/` del repository. **Regola di conservazione permanente**: ogni volta che viene reperito online un documento storico autorevole e sicuro (atti parlamentari, sentenze, relazioni ministeriali, carte d'archivio declassificate da archivi di Stato o MiC), se le dimensioni e il formato lo consentono va scaricato e salvato direttamente nella cartella `Documents/`. In questo modo il file diventa parte integrante del repository open-source, perennemente accessibile, preservato contro il rischio di dead link o rimozioni dal web e consultabile offline tramite link locale `[Nome Documento](Documents/nome-file.pdf)`.
 - **Agenzie di stampa e quotidiani dell'epoca (Priorità Bassa)**: Utili per la cronaca immediata, ma soggetti a imprecisioni iniziali, censure o tentativi di depistaggio dell'epoca.
 - **Siti complottisti o non verificati**: Da escludere categoricamente.
 
@@ -72,6 +79,7 @@ Per le specifiche complete dello schema JSON, consulta:
 - **`descrizione`**:
   - Tono enciclopedico, asciutto, neutrale.
   - Lunghezza ideale: tra 50 e 150 parole.
+  - **Attribuzione trasparente**: ogni frase deve chiarire da dove deriva l'informazione (fatto materiale, atto giudiziario, relazione di commissione, archivio di Stato o inchiesta storiografica).
   - Utilizza le doppie parentesi quadre per le entità enciclopediche: `[[Nome Voce]]` oppure `[[Nome Voce|Testo Mostrato]]`.
   - Utilizza il formato markdown per link esterni o documenti locali: `[Testo Link](https://...)` o `[Nome Studio](Documents/file.pdf)`.
 - **`fonti`**: Array di oggetti `{ "Nome Fonte": "URL o Documents/file.pdf" }`.
@@ -82,7 +90,7 @@ Per le specifiche complete dello schema JSON, consulta:
 
 Quando elabori un evento, segui sempre questa sequenza ordinata:
 
-1. **Sourcing e Cross-Check**: Raccogli i fatti da almeno due fonti indipendenti. Verifica la data precisa e il corretto inquadramento cronologico.
+1. **Sourcing e Cross-Check**: Raccogli i fatti da almeno due fonti indipendenti. Verifica la data precisa e il corretto inquadramento cronologico. Se identifichi documenti primari o dossier sicuri (es. da archivi di Stato, MiC o commissioni parlamentari), scarica il file PDF direttamente nella cartella `Documents/` per garantirne la permanenza e l'accesso pubblico a lungo termine.
 2. **Analisi Comparativa**: Verifica se vi sono discordanze tra sentenze giudiziarie, atti di commissioni d'inchiesta e saggistica. Riassumi le divergenze in modo neutrale nella descrizione.
 3. **Categorizzazione e Titolazione**: Assegna le etichette corrette dal vocabolario controllato (7 categorie) e scrivi un titolo sintetico non tronco.
 4. **Validazione JSON**: Assicurati che l'oggetto JSON sia valido, senza trailing comma, e conforme allo schema in `resources/event_schema.json`.
