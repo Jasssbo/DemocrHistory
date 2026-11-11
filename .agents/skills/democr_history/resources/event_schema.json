@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "DemocrHistoryEvent",
-  "description": "Schema di validazione per una scheda evento di DemocrHistory",
+  "title": "GuazzabuglioPoliticoEvent",
+  "description": "Schema di validazione per una scheda evento di Guazzabuglio Politico",
   "type": "object",
   "required": [
     "anno",

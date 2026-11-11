@@ -1,7 +1,7 @@
-# DemocrHistory 🇮🇹📜
+# Guazzabuglio Politico 🇮🇹📜
 ### Archivio e Timeline Interattiva per la Storia della Repubblica Italiana
 
-**DemocrHistory** è un progetto **open source e divulgativo** nato per rendere accessibile, consultabile e partecipata la ricostruzione storiografica della storia italiana attraverso una timeline dinamica e schede di approfondimento essenziali.
+**Guazzabuglio Politico** è un progetto **open source e divulgativo** nato per rendere accessibile, consultabile e partecipata la ricostruzione storiografica della storia italiana attraverso una timeline dinamica e schede di approfondimento essenziali.
 
 ---
 
@@ -33,7 +33,7 @@ Chiunque visiti la pagina online tramite **GitHub Pages (`github.io`)** può usa
    - Clicca su **⬇️ Scarica JSON** per scaricare subito il file `.json` nella cartella Download predefinita, oppure clicca su **📁 Salva in...** per aprire il selettore di sistema e scegliere manualmente la cartella e il nome del file dove salvarlo.
 5. **Riapri la tua ricerca o torna all'archivio principale**:
    - Per riprendere in seguito il tuo lavoro (anche da un altro dispositivo), ti basta aprire la pagina `github.io` e selezionare il tuo file tramite **Carica un JSON Locale**.
-   - In qualsiasi momento puoi cliccare sul pulsante **Ricarica Originale** (accanto al nome del file attivo) per tornare a consultare l'archivio principale del sito (`DiacroniaDellaRepubblicaItaliana.json`).
+   - In qualsiasi momento puoi cliccare sul pulsante **Ricarica Originale** (accanto al nome del file attivo) per tornare a consultare l'archivio principale del sito (`GuazzabuglioPolitico.json`).
 
 ---
 
@@ -47,7 +47,7 @@ Ideale per ricercatori, studenti e contributori che hanno esportato il proprio f
 2. Apri la pagina del repository su GitHub e clicca in alto a destra su **Fork** per creare una copia personale del progetto sul tuo account GitHub.
 3. Entra nella cartella [`data/`](data/) del tuo fork:
    - **Per pubblicare una nuova ricerca**: clicca su **Add file &rarr; Upload files** e carica il tuo file `.json` appena esportato.
-   - **Per aggiornare l'archivio principale**: apri `data/DiacroniaDellaRepubblicaItaliana.json`, clicca sull'icona della matita (**Edit this file**) e incolla il contenuto del JSON esportato.
+   - **Per aggiornare l'archivio principale**: apri `data/GuazzabuglioPolitico.json`, clicca sull'icona della matita (**Edit this file**) e incolla il contenuto del JSON esportato.
    - **Per allegare studi o documenti PDF citati**: entra nella cartella [`Documents/`](Documents/) e carica i relativi file.
 4. Clicca su **Commit changes...**, inserisci una breve descrizione del tuo contributo e apri una **Pull Request** verso il repository principale cliccando su **Contribute &rarr; Open pull request**.
 
@@ -77,7 +77,7 @@ Dopo il `git push`, apri la pagina del repository su GitHub e clicca sul pulsant
 
 ## 📐 Struttura Semplificata del Database JSON
 
-Il database di DemocrHistory è stato progettato per essere estremamente **essenziale, pulito e facile da compilare** anche per chi non ha competenze informatiche avanzate.
+Il database di Guazzabuglio Politico è stato progettato per essere estremamente **essenziale, pulito e facile da compilare** anche per chi non ha competenze informatiche avanzate.
 
 ### 📝 Struttura di un evento:
 
@@ -190,7 +190,7 @@ L'applicazione web è progettata secondo un'architettura **zero-dependency** (HT
 - **`mobile.html` (Smartphone)**: pensato per chi apre il sito da telefono; offre un'interfaccia dedicata agli schermi touch con barra di navigazione inferiore a 3 schede (*Timeline*, *Dettaglio*, *Gestione*), filtri categoria scorrevoli orizzontalmente, pulsante flottante (`+`) per l'inserimento rapido e modali a comparsa dal basso (*bottom sheet*).
 
 ### 1. Caricamento Dati e Bozze Automatiche (`localStorage`)
-- **Avvio intelligente**: all'apertura, l'app verifica prima la presenza di una bozza di lavoro salvata nel browser (`localStorage` con chiave `democrhistory_auto_draft_v2`). Se non è presente alcuna bozza, carica automaticamente l'archivio predefinito `data/DiacroniaDellaRepubblicaItaliana.json` senza occupare spazio in `localStorage` finché l'utente non effettua modifiche.
+- **Avvio intelligente**: all'apertura, l'app verifica prima la presenza di una bozza di lavoro salvata nel browser (`localStorage` con chiave `democrhistory_auto_draft_v2`). Se non è presente alcuna bozza, carica automaticamente l'archivio predefinito `data/GuazzabuglioPolitico.json` senza occupare spazio in `localStorage` finché l'utente non effettua modifiche.
 - **Controllo aggiornamenti (`FNV-1a` hash)**: quando viene creata una bozza locale a partire dal file principale, l'app calcola un'impronta veloce (`hashText`) del JSON originale. Alle aperture successive confronta l'impronta della bozza con quella del file sul server e mostra un avviso se l'archivio originale è stato aggiornato nel frattempo.
 
 ### 2. Parser JSON Flessibile e Conservazione dei Dati (`parseArchiveData`)
@@ -224,7 +224,7 @@ DemocrHistory/
 ├── index.html          # Interfaccia Desktop (stile minimale cuboide con tema Chiaro Crema / Scuro)
 ├── mobile.html         # Interfaccia Smartphone (navigazione touch a schede)
 ├── db_template.json    # Modello JSON essenziale per nuovi archivi
-├── data/               # Archivi JSON degli eventi storici (es. DiacroniaDellaRepubblicaItaliana.json)
+├── data/               # Archivi JSON degli eventi storici (es. GuazzabuglioPolitico.json)
 ├── Documents/          # Documenti storici, relazioni d'inchiesta, atti declassificati e studi (PDF, saggi)
 ├── scripts/            # Script Python di supporto per arricchimento e manutenzione del dataset
 └── README.md           # Documentazione del progetto

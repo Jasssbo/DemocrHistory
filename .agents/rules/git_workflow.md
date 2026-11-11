@@ -1,7 +1,7 @@
 # Regole di Interazione Git — Human in the Loop
 
 ## Principio Fondamentale
-Nel repository **DemocrHistory**, il controllo di versione è strettamente **Human-in-the-Loop**. L'utente deve poter revisionare, analizzare criticamente e convalidare ogni singolo cambiamento prima che venga registrato nella cronologia Git.
+Nel repository **Guazzabuglio Politico**, il controllo di versione è strettamente **Human-in-the-Loop**. L'utente deve poter revisionare, analizzare criticamente e convalidare ogni singolo cambiamento prima che venga registrato nella cronologia Git.
 
 ## Direttive per l'Assistente IA / LLM:
 1. **Nessun Commit o Push Automatico**: Non eseguire mai in autonomia `git commit` o `git push`.

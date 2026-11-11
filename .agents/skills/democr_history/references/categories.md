@@ -1,6 +1,6 @@
 # Vocabolario Controllato delle Categorie
 
-Nell'interfaccia di DemocrHistory e nei database JSON sono supportate **esclusivamente 7 categorie**. Non inventare nuove categorie o sinonimi:
+Nell'interfaccia di Guazzabuglio Politico e nei database JSON sono supportate **esclusivamente 7 categorie**. Non inventare nuove categorie o sinonimi:
 
 | ID Categoria | Nome Visualizzato | Colore UI | Criteri di Assegnazione Storiografica |
 |---|---|---|---|

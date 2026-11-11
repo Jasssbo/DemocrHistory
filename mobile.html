@@ -1298,12 +1298,12 @@
       <div class="section-card">
         <h3>Archivi in /data</h3>
         <select id="repo-file-select" class="repo-select" aria-label="Seleziona un archivio dalla cartella /data">
-          <option value="data/DiacroniaDellaRepubblicaItaliana.json">DiacroniaDellaRepubblicaItaliana.json</option>
+          <option value="data/GuazzabuglioPolitico.json">GuazzabuglioPolitico.json</option>
         </select>
 
         <h3>Carica un JSON Locale</h3>
         <input id="file" type="file" accept="application/json">
-        <div id="file-status" class="file-status">Attivo: <strong>DiacroniaDellaRepubblicaItaliana.json</strong></div>
+        <div id="file-status" class="file-status">Attivo: <strong>GuazzabuglioPolitico.json</strong></div>
       </div>
 
       <div class="section-card">
@@ -1779,9 +1779,9 @@
 
     const DRAFT_KEY = 'democrhistory_auto_draft_v2';
     const SOURCE_PREF_KEY = 'democrhistory_selected_source';
-    const DEFAULT_SOURCE_URL = 'data/DiacroniaDellaRepubblicaItaliana.json';
+    const DEFAULT_SOURCE_URL = 'data/GuazzabuglioPolitico.json';
     const KNOWN_DATA_FILES = [
-      'data/DiacroniaDellaRepubblicaItaliana.json'
+      'data/GuazzabuglioPolitico.json'
     ];
     const repoDataFiles = [...KNOWN_DATA_FILES];
     let currentSourceUrl = DEFAULT_SOURCE_URL;
@@ -2975,9 +2975,10 @@
       const hostMatch = location.hostname.match(/^([a-zA-Z0-9-]+)\.github\.io$/i);
       if (hostMatch) {
         ghOwner = hostMatch[1];
-        const pathParts = location.pathname.split('/').filter(Boolean);
-        if (pathParts.length > 0 && !pathParts[0].endsWith('.html')) {
-          ghRepo = pathParts[0];
+        const pathSegments = location.pathname.split('/').filter(Boolean);
+        const repoSegment = pathSegments.find((p) => !p.toLowerCase().endsWith('.html') && !p.toLowerCase().endsWith('.htm'));
+        if (repoSegment) {
+          ghRepo = repoSegment;
         }
       }
 
