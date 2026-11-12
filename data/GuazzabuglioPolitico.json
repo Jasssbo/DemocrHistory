@@ -1,7 +1,7 @@
 {
     "TITOLO": "Il Guazzabuglio Politico",
     "LINGUA": "it",
-    "NATURA_DEL_DOCUMENTO": "Sintesi storiografica fattuale e comparativa dei principali avvenimenti della storia repubblicana italiana (1943-2002) integrata dagli archivi storici e dalla documentazione di Strano Network, con distinzione metodologica rigorosa tra fatti accertati, sentenze giudiziarie definitive e risultanze delle commissioni d'inchiesta.",
+    "NATURA_DEL_DOCUMENTO": "Sintesi storiografica fattuale e comparativa dei principali avvenimenti della storia repubblicana italiana (1943-2011) integrata dagli archivi storici e dalla documentazione di Strano Network, con distinzione metodologica rigorosa tra fatti accertati, sentenze giudiziarie definitive, risultanze delle commissioni d'inchiesta e dinamiche mediatiche.",
     "PRE-EVENTI": {
         "Riorganizzazione napoleonica della massoneria e fondazione del Grande Oriente d'Italia": {
             "anno": 1805,
@@ -1640,7 +1640,7 @@
             "anno": 1971,
             "titolo": "Inchiesta sul Golpe Borghese, occultamento dei nastri del SID su Licio Gelli e mafia",
             "data": "1971-03-18",
-            "descrizione": "Il 18 marzo 1971 il ministro dell'Interno Franco Restivo rende noto in Parlamento il tentato [[Golpe Borghese]] del dicembre precedente; la Procura di Roma emette mandato di cattura contro [[Junio Valerio Borghese]] (che ripara nella Spagna franchista) e arresta Remo Orlandini e altri congiurati. Nel corso delle indagini l'Ufficio D del [[Servizio Informazioni Difesa|SID]] guidato dal generale [[Gianadelio Maletti|Gian Adelio Maletti]] e dal capitano Antonio La Bruna registra a Lugano le confessioni di Orlandini e di esponenti del [[Fronte Nazionale (1968)|Fronte Nazionale]], ma manipola e taglia le bobine prima di trasmetterle all'autorità giudiziaria per occultare il coinvolgimento diretto di [[Licio Gelli]] e della [[P2]], il patto operativo con le cosche di [[Cosa nostra]] (tra cui [[Luciano Liggio]], [[Salvatore Greco (1923-1978)|Salvatore Greco]] e [[Tommaso Buscetta]]) e le complicità nei vertici militari. Il processo di primo grado a Roma (1978) condannerà 46 imputati per cospirazione politica, ma in appello (1984, confermato in Cassazione nel 1986) tutti gli imputati verranno assolti sostenendo che il fatto si fosse arrestato alla fase ideativa.",
+            "descrizione": "Il 18 marzo 1971 il ministro dell'Interno Franco Restivo rende noto in Parlamento il tentato [[Golpe Borghese]] del dicembre precedente; la Procura di Roma emette mandato di cattura contro [[Junio Valerio Borghese]] (che ripara nella Spagna franchista) e arresta Remo Orlandini e altri congiurati. Nel corso delle indagini l'Ufficio D del [[Servizio Informazioni Difesa|SID]] guidato dal generale [[Gianadelio Maletti|Gian Adelio Maletti]] e dal capitano Antonio La Bruna registra a Lugano le confessioni di Orlandini e di esponenti del [[Fronte Nazionale (1968)|Fronte Nazionale]], ma manipola e taglia le bobine prima di trasmetterle all'autorità giudiziaria per occultare il coinvolgimento diretto di [[Licio Gelli]] e della [[P2]], il patto operativo con le cosche di [[Cosa nostra]] (tra cui [[Luciano Liggio]], [[Salvatore Greco (1923-1978)|Salvatore Greco]] e [[Tommaso Buscetta]]) e le complicità nei vertici militari (cfr. [Relazione P2](Documents/CommissioneParlamentareDInchiestaSullaP2-1981.pdf)). Il processo di primo grado a Roma (1978) condannerà 46 imputati per cospirazione politica, ma in appello (1984, confermato in Cassazione nel 1986) tutti gli imputati verranno assolti sostenendo che il fatto si fosse arrestato alla fase ideativa. Sul piano della storia dell'informazione, sociologi e storici dei media osservano come nei primi anni settanta, proprio mentre emergevano le inchieste sul golpe e sulle deviazioni del [[SIFAR]]/SID, la stampa periodica abbia inaugurato il filone del voyeurismo borghese con gli sviluppi mediatici e processuali del [[Delitto Casati Stampa]], spostando l'attenzione del grande pubblico dalle trame eversive alla cronaca nera per logiche editoriali e di tiratura.",
             "fonti": [
                 {
                     "Strano Network - Cronologia 1971": "https://www.strano.net/stragi/stragi/crono/crono71.htm"
@@ -1650,6 +1650,9 @@
                 },
                 {
                     "Wikipedia - Golpe Borghese": "https://it.wikipedia.org/wiki/Golpe_Borghese"
+                },
+                {
+                    "Filodiritto - I delitti mediatici in Italia": "https://www.filodiritto.com/i-delitti-mediatici-italia"
                 }
             ],
             "categorie": [
@@ -1664,7 +1667,7 @@
             "anno": 1971,
             "titolo": "Assassinio del procuratore Pietro Scaglione e dell'agente Antonio Lorusso a Palermo",
             "data": "1971-05-05",
-            "descrizione": "Il 5 maggio 1971 a Palermo, in via dei Cipressi, un commando mafioso affianca l'auto del Procuratore capo [[Pietro Scaglione]] e apre il fuoco, uccidendo il magistrato e il suo autista, l'appuntato [Antonio Lorusso](https://www.poliziapenitenziaria.it/in-memoria-antonino-lorusso-appuntato-agenti-di-custodia-ucciso-dalla-mafia-il-5-maggio-1971/). È il primo omicidio di un magistrato compiuto da [[Cosa nostra|Cosa Nostra]] nel dopoguerra, che inaugura i «delitti eccellenti». Scaglione aveva istruito storici procedimenti su [[Portella della Ginestra]], sui delitti dei sindacalisti [[Placido Rizzotto]] e [[Salvatore Carnevale]], colpendo il «sacco di Palermo» e i Corleonesi. I collaboratori [[Tommaso Buscetta]] e [[Antonino Calderone]] indicarono come mandanti i boss [[Luciano Liggio]] e [[Salvatore Riina]], con l'avallo di [[Giuseppe Calò]]. Nel 1991 il giudice istruttore di Genova ha prosciolto gli indagati per insufficienza di prove, lasciando l'eccidio senza condanne definitive; la Corte d'Appello di Genova (1975) e lo Stato ne hanno attestato l'integrità riconoscendoli vittime del dovere e della mafia.",
+            "descrizione": "Il 5 maggio 1971 a Palermo, in via dei Cipressi, un commando armato affianca l'auto del Procuratore capo della Repubblica [[Pietro Scaglione]] — di ritorno dalla visita quotidiana alla tomba della moglie nel cimitero dei Cappuccini — e apre il fuoco, uccidendo il magistrato e il suo autista di scorta, l'appuntato del Corpo degli Agenti di Custodia [Antonio Lorusso](https://www.poliziapenitenziaria.it/in-memoria-antonino-lorusso-appuntato-agenti-di-custodia-ucciso-dalla-mafia-il-5-maggio-1971/). È il primo assassinio di un magistrato compiuto da [[Cosa nostra|Cosa Nostra]] nell'Italia repubblicana e inaugura la stagione dei «delitti eccellenti» contro rappresentanti delle istituzioni. Nella sua carriera Scaglione aveva istruito i procedimenti sulla strage di [[Portella della Ginestra]] e sugli omicidi dei sindacalisti [[Placido Rizzotto]] e [[Salvatore Carnevale]], promuovendo negli anni sessanta l'azione penale e centinaia di soggiorni obbligati contro le cosche del «sacco di Palermo» e del clan dei Corleonesi. Negli anni ottanta i collaboratori di giustizia [[Tommaso Buscetta]] e [[Antonino Calderone]] indicheranno come mandanti ed esecutori dell'agguato i capi corleonesi [[Luciano Liggio]] e [[Salvatore Riina]], con il supporto di [[Giuseppe Calò]], ma nel 1991 il giudice istruttore di Genova dichiarerà non doversi procedere per mancanza di riscontri esterni individualizzanti, lasciando l'eccidio senza condanne definitive. A fronte delle campagne di delegittimazione apparse sulla stampa dell'epoca, già nel 1975 la Corte d'Appello di Genova ha ristabilito in sede giudiziaria la piena integrità morale di Scaglione, e lo Stato italiano ha onorato il magistrato e l'appuntato Lorusso riconoscendoli ufficialmente vittime del dovere e della mafia.",
             "fonti": [
                 {
                     "Wikipedia - Pietro Scaglione": "https://it.wikipedia.org/wiki/Pietro_Scaglione"
@@ -2536,7 +2539,7 @@
                 "politico",
                 "servizi_segreti"
             ],
-            "descrizione": "Il 20 maggio 1981, superate le resistenze istituzionali dopo il sequestro di Castiglion Fibocchi, il presidente del Consiglio [[Arnaldo Forlani]] rende pubblici gli elenchi dei 962 affiliati alla loggia massonica segreta [[P2]] di [[Licio Gelli]], in cui compaiono ministri in carica ([[Adolfo Sarti]], [[Franco Foschi]], [[Enrico Manca]]), 44 parlamentari, tutti i vertici dei servizi segreti ([[SISMI]], [[SISDE]], [[CESIS]]), generali, magistrati, banchieri ([[Roberto Calvi]], [[Michele Sindona]]) e direttori di giornali. Il 26 maggio 1981 il [[Governo Forlani|governo Forlani]] è costretto alle dimissioni e il 28 giugno 1981 il presidente della Repubblica [[Sandro Pertini]] conferisce l'incarico al repubblicano [[Giovanni Spadolini]], primo presidente del Consiglio non democristiano dal 1945 (nascita del [[Pentapartito]]). Con la legge 23 settembre 1981, n. 527 viene istituita la [[Commissione parlamentare d'inchiesta sulla loggia massonica P2]] presieduta da [[Tina Anselmi]], e con la [[Legge Anselmi|legge 25 gennaio 1982, n. 17]] viene sciolta per legge la loggia P2 e vietate le associazioni segrete. Vedi la [Relazione conclusiva Commissione P2](Documents/CommissioneParlamentareDInchiestaSullaP2-1981.pdf).",
+            "descrizione": "Il 20 maggio 1981, superate le resistenze istituzionali dopo il sequestro di Castiglion Fibocchi, il presidente del Consiglio [[Arnaldo Forlani]] rende pubblici gli elenchi dei 962 affiliati alla loggia massonica segreta [[P2]] di [[Licio Gelli]], in cui compaiono ministri in carica ([[Adolfo Sarti]], [[Franco Foschi]], [[Enrico Manca]]), 44 parlamentari, tutti i vertici dei servizi segreti ([[SISMI]], [[SISDE]], [[CESIS]]), generali, magistrati, banchieri ([[Roberto Calvi]], [[Michele Sindona]]) e direttori di giornali. Il 26 maggio 1981 il [[Governo Forlani|governo Forlani]] è costretto alle dimissioni e il 28 giugno 1981 il presidente della Repubblica [[Sandro Pertini]] conferisce l'incarico al repubblicano [[Giovanni Spadolini]], primo presidente del Consiglio non democristiano dal 1945 (nascita del [[Pentapartito]]). Con la legge 23 settembre 1981, n. 527 viene istituita la [[Commissione parlamentare d'inchiesta sulla loggia massonica P2]] presieduta da [[Tina Anselmi]], e con la [[Legge Anselmi|legge 25 gennaio 1982, n. 17]] viene sciolta per legge la loggia P2 e vietate le associazioni segrete. Meno di tre settimane dopo la diffusione delle liste, la tragedia di [[Incidente di Vermicino|Vermicino]] (10-13 giugno 1981) dà origine alla prima diretta televisiva ininterrotta della Rai (18 ore, seguite da 21 milioni di spettatori): storici e sociologi della comunicazione evidenziano come l'irruzione della «TV del dolore» e la rincorsa agli ascolti abbiano catalizzato l'emotività collettiva, facendo sparire dalle prime pagine il terremoto istituzionale della P2 per logiche commerciali e non per una regia occulta. Vedi la [Relazione conclusiva Commissione P2](Documents/CommissioneParlamentareDInchiestaSullaP2-1981.pdf).",
             "fonti": [
                 {
                     "Wikipedia - P2": "https://it.wikipedia.org/wiki/P2"
@@ -2552,6 +2555,12 @@
                 },
                 {
                     "Strano Network - Cronologia 1981": "https://www.strano.net/stragi/stragi/crono/crono81.htm"
+                },
+                {
+                    "Filodiritto - I delitti mediatici in Italia": "https://www.filodiritto.com/i-delitti-mediatici-italia"
+                },
+                {
+                    "Tesi UniPD - Il caso Loggia P2 nella stampa italiana": "https://thesis.unipd.it/retrieve/b0688ef9-6021-432f-8930-60efb8b60f0c/TESI-IL%20CASO%20LOGGIA%20P2%20NELLE%20PAGINE%20DELLA%20STAMPA%20ITALIANA%20pdf%20A.pdf"
                 }
             ]
         },
@@ -2932,13 +2941,16 @@
             "anno": 1992,
             "titolo": "Arresto di Mario Chiesa e avvio dell'inchiesta Mani Pulite a Milano",
             "data": "1992-02-17",
-            "descrizione": "Il 17 febbraio 1992 il pubblico ministero [[Antonio Di Pietro]] fa arrestare in flagranza di reato l'ingegnere socialista [[Mario Chiesa]], presidente del [[Pio Albergo Trivulzio]] di Milano, mentre intasca una bustarella da sette milioni di lire dall'imprenditore Luca Magni. Le confessioni di Chiesa avviano a catena l'inchiesta giudiziaria [[Mani pulite]], condotta dal pool della Procura milanese guidato da [[Francesco Saverio Borrelli]]: nel giro di pochi mesi lo scandalo di 'Tangentopoli' travolge partiti di governo, ministri, leader storici ([[Bettino Craxi]], [[Arnaldo Forlani]]) e grandi gruppi industriali privati e pubblici.",
+            "descrizione": "Il 17 febbraio 1992 il pubblico ministero [[Antonio Di Pietro]] fa arrestare in flagranza di reato l'ingegnere socialista [[Mario Chiesa]], presidente del [[Pio Albergo Trivulzio]] di Milano, mentre intasca una bustarella da sette milioni di lire dall'imprenditore Luca Magni. Le confessioni di Chiesa avviano a catena l'inchiesta giudiziaria [[Mani pulite]], condotta dal pool della Procura milanese guidato da [[Francesco Saverio Borrelli]]: nel giro di pochi mesi lo scandalo di 'Tangentopoli' travolge partiti di governo, ministri, leader storici ([[Bettino Craxi]], [[Arnaldo Forlani]]) e grandi gruppi industriali privati e pubblici, segnando il tramonto della Prima Repubblica. Sul piano mediatico, studiosi della comunicazione (tra cui Milly Buonanno) evidenziano come, al culmine dell'inchiesta e delle coeve stragi di mafia, l'informazione televisiva abbia inaugurato un «doppio binario», affiancando ai processi politici la spettacolarizzazione morbosa della cronaca nera — in particolare con l'arresto (1993) e il processo (1994) a [[Pietro Pacciani]] per i delitti del [[Mostro di Firenze]] — così da bilanciare l'indignazione civile con l'orrore privato.",
             "fonti": [
                 {
                     "Wikipedia - Mani pulite": "https://it.wikipedia.org/wiki/Mani_pulite"
                 },
                 {
                     "Wikipedia - Antonio Di Pietro": "https://it.wikipedia.org/wiki/Antonio_Di_Pietro"
+                },
+                {
+                    "Filodiritto - I delitti mediatici in Italia": "https://www.filodiritto.com/i-delitti-mediatici-italia"
                 }
             ],
             "categorie": [
@@ -3425,7 +3437,7 @@
             "anno": 2001,
             "titolo": "Fatti del G8 di Genova, morte di Carlo Giuliani e violenze alla scuola Diaz",
             "data": "2001-07-20",
-            "descrizione": "Tra il 19 e il 22 luglio 2001 a Genova, durante il vertice del G8, si svolgono le proteste organizzate dal [[Genoa Social Forum]], rete altermondialista nata nel 2000-2001 con circa un migliaio di sigle e portavoce [[Vittorio Agnoletto]], che aveva trattato con la Prefettura percorsi dei cortei e logistica attorno alla «zona rossa». Il 20 luglio, dopo gli scontri con i settori più radicali, il ventitreenne [[Carlo Giuliani]] è ucciso in piazza Alimonda dal carabiniere Mario Placanica; la richiesta di archiviazione è accolta dal GIP nel 2003. La notte del 21 la polizia irrompe nella [[Fatti della scuola Diaz|scuola Diaz]], dove dormivano manifestanti e operavano il media center e il legal forum del GSF; la Cassazione (2012) condanna dirigenti di polizia per i falsi, mentre per [[Fatti di Bolzaneto|Bolzaneto]] la Cassazione (2013) condanna alcuni agenti. La Corte EDU (caso Cestaro, 2015) qualifica le violenze alla Diaz come tortura.",
+            "descrizione": "Tra il 19 e il 22 luglio 2001 a Genova, in occasione del vertice dei capi di Stato del G8, si svolgono le manifestazioni di protesta coordinate dal [[Genoa Social Forum]], la rete altermondialista nata tra il 2000 e il 2001 attorno a circa un migliaio di sigle e rappresentata dal portavoce [[Vittorio Agnoletto]], che aveva negoziato con la Prefettura i percorsi dei cortei e gli aspetti logistici intorno alla «zona rossa». Il 20 luglio, nel corso degli scontri con le forze dell'ordine innescati dai settori più radicali, il ventitreenne [[Carlo Giuliani]] viene ucciso in piazza Alimonda da un colpo d'arma da fuoco esploso dal carabiniere Mario Placanica durante l'assalto a un Defender; per questa morte il GIP di Genova accoglierà la richiesta di archiviazione nel 2003 ritenendo sussistenti la legittima difesa e l'uso legittimo delle armi. Nella notte del 21 luglio la polizia compie una violenta irruzione nella [[Fatti della scuola Diaz|scuola Diaz]], dove dormivano decine di manifestanti e avevano sede il media center e il legal forum del GSF, ferendo gravemente persone inermi e introducendo false prove (due bottiglie molotov); nel 2012 la Cassazione condannerà in via definitiva numerosi dirigenti e funzionari di polizia per falso, calunnia e lesioni. Gravi violenze e sevizie sui fermati proseguono nella caserma di [[Fatti di Bolzaneto|Bolzaneto]], portando nel 2013 alla sentenza definitiva della Cassazione (tra prescrizioni dei reati e condanne al risarcimento) e, nel 2015, alla condanna dell'Italia da parte della Corte europea dei diritti dell'uomo (caso Cestaro c. Italia), che qualifica i fatti della Diaz come tortura.",
             "fonti": [
                 {
                     "Wikipedia - Genoa Social Forum": "https://it.wikipedia.org/wiki/Genoa_Social_Forum"
@@ -3440,6 +3452,29 @@
             "categorie": [
                 "politico",
                 "servizi_segreti"
+            ]
+        },
+        "Tensioni sull'Articolo 18, riforme del governo Berlusconi II e caso mediatico del delitto di Cogne": {
+            "anno": 2002,
+            "titolo": "Tensioni sull'Articolo 18, riforme del governo Berlusconi II e caso mediatico del delitto di Cogne",
+            "data": "2002-01-30",
+            "descrizione": "Nel gennaio 2002 l'Italia attraversa una fase di forte scontro politico e sindacale sulle proposte del [[Governo Berlusconi II]] di modifica dell'[[Articolo 18 dello statuto dei lavoratori|Articolo 18]] dello Statuto dei lavoratori — sfociate nella mobilitazione del Circo Massimo e nello sciopero generale — nonché sui primi provvedimenti in materia di giustizia. Il 30 gennaio 2002 l'omicidio del piccolo Samuele Lorenzi a Cogne innesca una copertura televisiva senza precedenti: programmi di approfondimento come [[Porta a Porta]] consacrano il genere del «plastico» e dedicano decine di serate al caso. Studiosi della comunicazione rilevano come la morbosità mediatica attorno al delitto familiare abbia polarizzato e monopolizzato il dibattito pubblico, relegando sullo sfondo le tensioni sociali e le riforme economiche per effetto delle logiche commerciali legate agli ascolti.",
+            "fonti": [
+                {
+                    "Wikipedia - Delitto di Cogne": "https://it.wikipedia.org/wiki/Delitto_di_Cogne"
+                },
+                {
+                    "Wikipedia - Governo Berlusconi II": "https://it.wikipedia.org/wiki/Governo_Berlusconi_II"
+                },
+                {
+                    "Wikipedia - Porta a Porta": "https://it.wikipedia.org/wiki/Porta_a_Porta"
+                },
+                {
+                    "Filodiritto - I delitti mediatici in Italia": "https://www.filodiritto.com/i-delitti-mediatici-italia"
+                }
+            ],
+            "categorie": [
+                "politico"
             ]
         },
         "Sentenza definitiva di Cassazione sulle stragi mafiose del 1993": {
@@ -3458,6 +3493,52 @@
             "categorie": [
                 "mafia",
                 "gruppi_terroristici",
+                "politico"
+            ]
+        },
+        "Crisi del governo Prodi II, legge sull'indulto e copertura mediatica dei casi di Erba e Garlasco": {
+            "anno": 2006,
+            "titolo": "Crisi del governo Prodi II, legge sull'indulto e copertura mediatica dei casi di Erba e Garlasco",
+            "data": "2006-12-11",
+            "descrizione": "Tra la fine del 2006 e l'estate del 2007 il [[Governo Prodi II]], sostenuto da una maggioranza parlamentare risicata al Senato, attraversa una fase di logoramento politico acuito dall'approvazione della controversa [[Indulto|legge sull'indulto]] (legge 241/2006) e dalle accese dispute sulla legge finanziaria. Nello stesso periodo l'agenda dei telegiornali e delle trasmissioni di approfondimento viene tuttavia dominata prima dalla [[Strage di Erba]] (11 dicembre 2006, quattro vittime) e poi dal [[Delitto di Garlasco]] (13 agosto 2007). Sociologi dei media documentano come la cronaca giudiziaria trasformata in racconto a puntate abbia saturato i palinsesti e distolto l'attenzione dell'opinione pubblica dai delicati passaggi parlamentari, sostenuta da un modello televisivo a basso costo produttivo e ad alto rendimento d'ascolto che la stessa classe politica ha spesso assecondato per convenienza comunicativa.",
+            "fonti": [
+                {
+                    "Wikipedia - Strage di Erba": "https://it.wikipedia.org/wiki/Strage_di_Erba"
+                },
+                {
+                    "Wikipedia - Delitto di Garlasco": "https://it.wikipedia.org/wiki/Delitto_di_Garlasco"
+                },
+                {
+                    "Wikipedia - Governo Prodi II": "https://it.wikipedia.org/wiki/Governo_Prodi_II"
+                },
+                {
+                    "Filodiritto - I delitti mediatici in Italia": "https://www.filodiritto.com/i-delitti-mediatici-italia"
+                }
+            ],
+            "categorie": [
+                "politico"
+            ]
+        },
+        "Crisi del debito sovrano, scandalo 'Ruby' e saturazione dei palinsesti sui casi Avetrana e Yara Gambirasio": {
+            "anno": 2010,
+            "titolo": "Crisi del debito sovrano, scandalo 'Ruby' e saturazione dei palinsesti sui casi Avetrana e Yara Gambirasio",
+            "data": "2010-10-06",
+            "descrizione": "Tra l'autunno del 2010 e la fine del 2011 l'Italia affronta una grave crisi istituzionale ed economica, segnata dall'impennata record dello spread sui titoli di Stato, dai procedimenti giudiziari legati alle serate di Arcore ([[Caso Ruby]]) e dalle dimissioni del [[Governo Berlusconi IV]] a favore dell'esecutivo tecnico guidato da [[Mario Monti]]. Nello stesso arco temporale i palinsesti televisivi dedicano una copertura quasi ininterrotta alla scomparsa e al delitto di Sarah Scazzi ad [[Delitto di Avetrana|Avetrana]] — una sovraesposizione culminata il 6 ottobre 2010 nell'annuncio in diretta su Rai 3 del ritrovamento del corpo — nonché all'omicidio di [[Omicidio di Yara Gambirasio|Yara Gambirasio]] a Brembate di Sopra. Ricercatori dei mass media evidenziano come la ricerca spasmodica del colpevole in diretta televisiva abbia assorbito l'emotività collettiva, attenuando la percezione pubblica della gravità della crisi finanziaria in atto.",
+            "fonti": [
+                {
+                    "Wikipedia - Delitto di Avetrana": "https://it.wikipedia.org/wiki/Delitto_di_Avetrana"
+                },
+                {
+                    "Wikipedia - Omicidio di Yara Gambirasio": "https://it.wikipedia.org/wiki/Omicidio_di_Yara_Gambirasio"
+                },
+                {
+                    "Wikipedia - Caso Ruby": "https://it.wikipedia.org/wiki/Caso_Ruby"
+                },
+                {
+                    "Filodiritto - I delitti mediatici in Italia": "https://www.filodiritto.com/i-delitti-mediatici-italia"
+                }
+            ],
+            "categorie": [
                 "politico"
             ]
         }

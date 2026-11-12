@@ -78,7 +78,7 @@ Per le specifiche complete dello schema JSON, consulta:
 - **`categorie`**: Array contenente un sottoinsieme delle 7 categorie ammesse (vedi `references/categories.md`).
 - **`descrizione`**:
   - Tono enciclopedico, asciutto, neutrale.
-  - Lunghezza ideale: tra 50 e 150 parole.
+  - Lunghezza ideale: tra 80 e 180 parole (fino a ~200 per vicende giudiziarie o istituzionali complesse), privilegiando sempre la chiarezza sintattica e la completezza logica rispetto alla compressione telegrafica.
   - **Attribuzione trasparente**: ogni frase deve chiarire da dove deriva l'informazione (fatto materiale, atto giudiziario, relazione di commissione, archivio di Stato o inchiesta storiografica).
   - Utilizza le doppie parentesi quadre per le entità enciclopediche: `[[Nome Voce]]` oppure `[[Nome Voce|Testo Mostrato]]`.
   - Utilizza il formato markdown per link esterni o documenti locali: `[Testo Link](https://...)` o `[Nome Studio](Documents/file.pdf)`.
@@ -86,18 +86,40 @@ Per le specifiche complete dello schema JSON, consulta:
 
 ---
 
-## 4. Workflow Operativo per l'LLM
+## 4. Standard Linguistico, Sintassi e Stile Enciclopedico (Italiano & Manuale di Stile)
 
-Quando elabori un evento, segui sempre questa sequenza ordinata:
+Ogni testo inserito nel database deve rispettare le regole classiche della grammatica e della sintassi italiana, prendendo a riferimento i principi del [Manuale di stile di Wikipedia in italiano](https://it.wikipedia.org/wiki/Aiuto:Manuale_di_stile) per garantire prosa chiara, coerente, neutrale e il meno possibile tendenziosa.
+
+### A. Struttura grammaticale, sintassi e tenuta logica
+- **Divieto di stile telegrafico**: evitare l'omissione di articoli, preposizioni o verbi (*es. evitare "nata con mille sigle e portavoce X" o "trattato con Prefettura percorsi"*). Ogni proposizione deve avere soggetto esplicito o inequivocabile, predicato chiaro e complementi completi.
+- **Concordanze e riferimenti anaforici**: verificare sempre genere e numero tra soggetto, participi, aggettivi e pronomi relativi, evitando che un participio o un inciso si riferisca a un termine distante o errato.
+- **Nessi logici e consequenzialità**: collegare i fatti con connettivi appropriati (*poiché, tuttavia, in seguito, per effetto di*) evitando salti logici o accostamenti paratattici ambigui. Non usare locuzioni a connotazione positiva per descrivere fenomeni critici o distorsivi (es. evitare *"grazie alle logiche commerciali"*; preferire *"per effetto delle logiche commerciali"* o *"a causa di"*).
+- **Coerenza dei tempi verbali**: mantenere uniformità all'interno della scheda (es. presente storico per i fatti principali, futuro o passato per gli esiti processuali successivi), evitando sbalzi ingiustificati.
+- **Precisione terminologica**: distinguere con rigore termini giuridici e storici (es. *strage* vs *omicidio/delitto*, *archiviazione* vs *proscioglimento* vs *assoluzione*, *rinvio a giudizio* vs *condanna*).
+
+### B. Stile enciclopedico e neutralità (ispirato a Wikipedia)
+- **Punto di vista neutrale (NPOV)**: adottare un registro sobrio, impersonale e fattuale. Evitare aggettivi enfatici, moralistici o sensazionalistici (es. *orribile, spietato, devastante, scandaloso*) a meno che non siano citazioni testuali di fonti o atti.
+- **Chiarezza e leggibilità**: preferire periodi ben scanditi ed evitare incisi o parentesi eccessivamente annidati che spezzano il filo logico. Se si modifica una scheda esistente per integrarla, preservare la fluidità narrativa senza amputare dettagli essenziali in nome della brevità.
+- **Convenzioni tipografiche coerenti**:
+  - Usare in modo uniforme le virgolette basse `«...»` per citazioni ed espressioni storiche o gergali, evitando di mescolarle casualmente con `'...'` o `"..."`.
+  - Rispettare l'uso italiano delle maiuscole (cariche istituzionali e nomi comuni in minuscolo, es. *presidente del Consiglio*, *governo*, *carabinieri*; *Stato* e sigle in maiuscolo).
+  - Scrivere le date in formato italiano esteso (`1° maggio 1947`, `5 maggio 1971`).
+
+---
+
+## 5. Workflow Operativo per l'LLM
+
+Quando elabori o aggiorni un evento, segui sempre questa sequenza ordinata:
 
 1. **Sourcing e Cross-Check**: Raccogli i fatti da almeno due fonti indipendenti. Verifica la data precisa e il corretto inquadramento cronologico. Se identifichi documenti primari o dossier sicuri (es. da archivi di Stato, MiC o commissioni parlamentari), scarica il file PDF direttamente nella cartella `Documents/` per garantirne la permanenza e l'accesso pubblico a lungo termine.
 2. **Analisi Comparativa**: Verifica se vi sono discordanze tra sentenze giudiziarie, atti di commissioni d'inchiesta e saggistica. Riassumi le divergenze in modo neutrale nella descrizione.
 3. **Categorizzazione e Titolazione**: Assegna le etichette corrette dal vocabolario controllato (7 categorie) e scrivi un titolo sintetico non tronco.
-4. **Validazione JSON**: Assicurati che l'oggetto JSON sia valido, senza trailing comma, e conforme allo schema in `resources/event_schema.json`.
+4. **Revisione Sintattica, Grammaticale e Stilistica (Obbligatoria Pre-Modifica)**: Prima di modificare il file JSON e proporre il commit, rileggi integralmente `titolo` e `descrizione` applicando i criteri della **Sezione 4** (grammatica italiana, concordanze, nessi logici, niente stile telegrafico, neutralità NPOV e tipografia coerente). Correggi ogni frase costruita in modo ambiguo o contorto prima di salvare.
+5. **Validazione JSON**: Assicurati che l'oggetto JSON sia valido, senza trailing comma, e conforme allo schema in `resources/event_schema.json`.
 
 ---
 
-## 5. Politica di Controllo Versioni Git (Human-in-the-Loop)
+## 6. Politica di Controllo Versioni Git (Human-in-the-Loop)
 
 Per garantire la massima trasparenza, verificabilità e controllo da parte dell'utente:
 
