@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Archivio Storico &middot; Minimal</title>
+  <title>Guazzabuglio Politico</title>
   <script>
     // Rilevamento automatico dispositivo: reindirizza smartphone a mobile.html
     (function () {
@@ -1183,27 +1183,41 @@
 
           <div class="editor-actions">
             <button id="btn-add-event" class="btn" type="button">
-              <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg>
+              <svg class="ico" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M8 3v10M3 8h10" />
+              </svg>
               <span>Nuovo Evento</span>
             </button>
             <button id="btn-export-json" class="btn btn-secondary" type="button">
-              <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5L8 11l3.5-3.5M2.5 13.5h11"/></svg>
+              <svg class="ico" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M8 2.5v8M4.5 7.5L8 11l3.5-3.5M2.5 13.5h11" />
+              </svg>
               <span>Scarica JSON</span>
             </button>
             <button id="btn-save-as-json" class="btn btn-secondary" type="button">
-              <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3.5h4.5l1.5 2H14v7.5H2z"/></svg>
+              <svg class="ico" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M2 3.5h4.5l1.5 2H14v7.5H2z" />
+              </svg>
               <span>Salva in...</span>
             </button>
             <button id="btn-edit-meta" class="btn btn-secondary" type="button">
-              <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 5.5h10M3 10.5h10M6 2.5l-1 11M11 2.5l-1 11"/></svg>
+              <svg class="ico" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M3 5.5h10M3 10.5h10M6 2.5l-1 11M11 2.5l-1 11" />
+              </svg>
               <span>Titolo, Info &amp; Categorie</span>
             </button>
             <button id="btn-new-archive" class="btn btn-secondary" type="button">
-              <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 2h6l3 3v9h-9z"/><path d="M9.5 2v3h3"/></svg>
+              <svg class="ico" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M3.5 2h6l3 3v9h-9z" />
+                <path d="M9.5 2v3h3" />
+              </svg>
               <span>Nuovo Archivio</span>
             </button>
-            <button id="btn-reset-github" class="btn btn-secondary" type="button" title="Elimina bozze e cache locale del browser e ricarica i file pubblici da GitHub">
-              <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 8a5.5 5.5 0 1 1-1.6-3.9M13.5 2.5v3h-3"/></svg>
+            <button id="btn-reset-github" class="btn btn-secondary" type="button"
+              title="Elimina bozze e cache locale del browser e ricarica i file pubblici da GitHub">
+              <svg class="ico" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M13.5 8a5.5 5.5 0 1 1-1.6-3.9M13.5 2.5v3h-3" />
+              </svg>
               <span>Ripristina da GitHub</span>
             </button>
           </div>
@@ -1309,9 +1323,11 @@
             <button id="btn-reset-categories" class="btn btn-secondary btn-sm btn-auto-width" type="button"
               title="Ripristina le 7 categorie storiche predefinite">Ripristina predefinite</button>
           </div>
-          <p class="cat-meta-hint">Imposta nome e colore delle categorie per adattarle al tema del tuo archivio. Se rinomini una categoria esistente, gli eventi associati verranno aggiornati automaticamente.</p>
+          <p class="cat-meta-hint">Imposta nome e colore delle categorie per adattarle al tema del tuo archivio. Se
+            rinomini una categoria esistente, gli eventi associati verranno aggiornati automaticamente.</p>
           <div id="meta-categories-container"></div>
-          <button id="btn-add-category" class="btn btn-secondary btn-sm btn-mt-sm" type="button">+ Aggiungi Categoria</button>
+          <button id="btn-add-category" class="btn btn-secondary btn-sm btn-mt-sm" type="button">+ Aggiungi
+            Categoria</button>
         </div>
         <div class="modal-buttons">
           <button class="btn btn-secondary btn-sm" type="button" onclick="closeMetaModal()">Annulla</button>
@@ -1326,8 +1342,10 @@
     <div class="modal-card">
       <h2 id="modal-sync-title">Dati locali diversi da GitHub</h2>
       <p id="modal-sync-desc" class="sync-modal-desc">
-        I dati presenti nella tua bozza locale salvata nel browser sono diversi dalla versione pubblica attuale su GitHub.
-        Se scegli di aggiornare, <strong>i dati locali non salvati verranno sovrascritti</strong>: ti consigliamo di scaricare prima una copia del tuo file JSON per non perderli.
+        I dati presenti nella tua bozza locale salvata nel browser sono diversi dalla versione pubblica attuale su
+        GitHub.
+        Se scegli di aggiornare, <strong>i dati locali non salvati verranno sovrascritti</strong>: ti consigliamo di
+        scaricare prima una copia del tuo file JSON per non perderli.
       </p>
       <div id="modal-sync-stats" class="sync-stats-box"></div>
       <div id="modal-sync-saved-msg" class="sync-saved-notice" hidden>
@@ -1339,11 +1357,15 @@
       </label>
       <div class="sync-modal-actions">
         <button id="btn-sync-download" class="btn btn-secondary" type="button">
-          <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5L8 11l3.5-3.5M2.5 13.5h11"/></svg>
+          <svg class="ico" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M8 2.5v8M4.5 7.5L8 11l3.5-3.5M2.5 13.5h11" />
+          </svg>
           <span>1. Scarica prima i miei dati (.json)</span>
         </button>
         <button id="btn-sync-update" class="btn btn-danger" type="button">
-          <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 8a5.5 5.5 0 1 1-1.6-3.9M13.5 2.5v3h-3"/></svg>
+          <svg class="ico" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M13.5 8a5.5 5.5 0 1 1-1.6-3.9M13.5 2.5v3h-3" />
+          </svg>
           <span>2. Aggiorna da GitHub (Sovrascrivi locale)</span>
         </button>
         <button id="btn-sync-keep" class="btn btn-secondary" type="button">
@@ -2514,38 +2536,38 @@
           },
           "EVENTI": {
             "1. Come strutturare un evento (Es. Strage di Portella della Ginestra)": {
-                "anno": 1947,
-                "titolo": "1. Come strutturare un evento (Es. Strage di Portella della Ginestra)",
-                "data": "1947-05-01",
-                "categorie": ["mafia", "politico"],
-                "descrizione": "Esempio reale: il 1° maggio 1947 una manifestazione contadina a [[Portella della Ginestra]] fu colpita da raffiche di mitra della banda di [[Salvatore Giuliano]]. Nel testo puoi creare link automatici a Wikipedia scrivendo [[Nome Voce]] oppure [[Nome Voce|testo visibile]], link esterni con [Strano Network](https://www.strano.net/stragi/stragi/crono/crono47.htm), o linkare documenti e studi locali salvati nella cartella Documents/ con [Documento](Documents/nome_documento.pdf). Clicca su 'Modifica Evento' qui sotto per vedere come è compilata questa scheda, oppure eliminala quando inizi la tua ricerca.",
-                "fonti": [
-                  { "Strano Network": "https://www.strano.net/stragi/stragi/crono/crono47.htm" },
-                  { "Wikipedia": "https://it.wikipedia.org/wiki/Strage_di_Portella_della_Ginestra" },
-                  { "Documento PDF in archivio": "Documents/RapportoNester-1944.pdf" }
-                ]
-              },
-              "2. Come salvare e riaprire la tua ricerca personale": {
-                "anno": 1948,
-                "titolo": "2. Come salvare e riaprire la tua ricerca personale",
-                "data": "1948-01-01",
-                "categorie": ["politico"],
-                "descrizione": "Mentre lavori dal sito web, ogni modifica viene salvata in automatico come bozza nel tuo browser. Per conservare il tuo documento personale sul computer, clicca su 'Scarica JSON' (scarica subito il file) oppure su 'Salva in...' per scegliere la cartella sul tuo dispositivo: otterrai un file .json pulito e leggibile che potrai riaprire in qualsiasi momento tramite 'Carica un JSON Locale'.",
-                "fonti": [
-                  { "Formato JSON": "https://it.wikipedia.org/wiki/JSON" }
-                ]
-              },
-              "3. Come pubblicare e contribuire con Git / GitHub": {
-                "anno": 1950,
-                "titolo": "3. Come pubblicare e contribuire con Git / GitHub",
-                "data": "1950-01-01",
-                "categorie": ["servizi_segreti"],
-                "descrizione": "Quando la tua ricerca in formato .json è pronta, puoi scegliere di pubblicarla per tutti nel repository GitHub del progetto: carica il tuo file .json nella cartella 'data/' e gli eventuali saggi o documenti correlati nella cartella 'Documents/' tramite una Pull Request (direttamente dal browser su GitHub oppure con i comandi git). Consulta il README del repository per tutti i passaggi dettagliati.",
-                "fonti": [
-                  { "Guida Pull Request GitHub": "https://docs.github.com/it/pull-requests" }
-                ]
-              }
+              "anno": 1947,
+              "titolo": "1. Come strutturare un evento (Es. Strage di Portella della Ginestra)",
+              "data": "1947-05-01",
+              "categorie": ["mafia", "politico"],
+              "descrizione": "Esempio reale: il 1° maggio 1947 una manifestazione contadina a [[Portella della Ginestra]] fu colpita da raffiche di mitra della banda di [[Salvatore Giuliano]]. Nel testo puoi creare link automatici a Wikipedia scrivendo [[Nome Voce]] oppure [[Nome Voce|testo visibile]], link esterni con [Strano Network](https://www.strano.net/stragi/stragi/crono/crono47.htm), o linkare documenti e studi locali salvati nella cartella Documents/ con [Documento](Documents/nome_documento.pdf). Clicca su 'Modifica Evento' qui sotto per vedere come è compilata questa scheda, oppure eliminala quando inizi la tua ricerca.",
+              "fonti": [
+                { "Strano Network": "https://www.strano.net/stragi/stragi/crono/crono47.htm" },
+                { "Wikipedia": "https://it.wikipedia.org/wiki/Strage_di_Portella_della_Ginestra" },
+                { "Documento PDF in archivio": "Documents/RapportoNester-1944.pdf" }
+              ]
+            },
+            "2. Come salvare e riaprire la tua ricerca personale": {
+              "anno": 1948,
+              "titolo": "2. Come salvare e riaprire la tua ricerca personale",
+              "data": "1948-01-01",
+              "categorie": ["politico"],
+              "descrizione": "Mentre lavori dal sito web, ogni modifica viene salvata in automatico come bozza nel tuo browser. Per conservare il tuo documento personale sul computer, clicca su 'Scarica JSON' (scarica subito il file) oppure su 'Salva in...' per scegliere la cartella sul tuo dispositivo: otterrai un file .json pulito e leggibile che potrai riaprire in qualsiasi momento tramite 'Carica un JSON Locale'.",
+              "fonti": [
+                { "Formato JSON": "https://it.wikipedia.org/wiki/JSON" }
+              ]
+            },
+            "3. Come pubblicare e contribuire con Git / GitHub": {
+              "anno": 1950,
+              "titolo": "3. Come pubblicare e contribuire con Git / GitHub",
+              "data": "1950-01-01",
+              "categorie": ["servizi_segreti"],
+              "descrizione": "Quando la tua ricerca in formato .json è pronta, puoi scegliere di pubblicarla per tutti nel repository GitHub del progetto: carica il tuo file .json nella cartella 'data/' e gli eventuali saggi o documenti correlati nella cartella 'Documents/' tramite una Pull Request (direttamente dal browser su GitHub oppure con i comandi git). Consulta il README del repository per tutti i passaggi dettagliati.",
+              "fonti": [
+                { "Guida Pull Request GitHub": "https://docs.github.com/it/pull-requests" }
+              ]
             }
+          }
         };
         loadData(sampleTemplate);
         if (state.events.length > 0) showDetail(state.events[0]);
