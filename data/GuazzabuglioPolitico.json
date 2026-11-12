@@ -1660,6 +1660,33 @@
                 "politico"
             ]
         },
+        "Assassinio del procuratore Pietro Scaglione e dell'agente Antonio Lorusso a Palermo": {
+            "anno": 1971,
+            "titolo": "Assassinio del procuratore Pietro Scaglione e dell'agente Antonio Lorusso a Palermo",
+            "data": "1971-05-05",
+            "descrizione": "Il 5 maggio 1971 a Palermo, in via dei Cipressi, un commando mafioso affianca l'auto del Procuratore capo [[Pietro Scaglione]] e apre il fuoco, uccidendo il magistrato e il suo autista, l'appuntato [Antonio Lorusso](https://www.poliziapenitenziaria.it/in-memoria-antonino-lorusso-appuntato-agenti-di-custodia-ucciso-dalla-mafia-il-5-maggio-1971/). È il primo omicidio di un magistrato compiuto da [[Cosa nostra|Cosa Nostra]] nel dopoguerra, che inaugura i «delitti eccellenti». Scaglione aveva istruito storici procedimenti su [[Portella della Ginestra]], sui delitti dei sindacalisti [[Placido Rizzotto]] e [[Salvatore Carnevale]], colpendo il «sacco di Palermo» e i Corleonesi. I collaboratori [[Tommaso Buscetta]] e [[Antonino Calderone]] indicarono come mandanti i boss [[Luciano Liggio]] e [[Salvatore Riina]], con l'avallo di [[Giuseppe Calò]]. Nel 1991 il giudice istruttore di Genova ha prosciolto gli indagati per insufficienza di prove, lasciando l'eccidio senza condanne definitive; la Corte d'Appello di Genova (1975) e lo Stato ne hanno attestato l'integrità riconoscendoli vittime del dovere e della mafia.",
+            "fonti": [
+                {
+                    "Wikipedia - Pietro Scaglione": "https://it.wikipedia.org/wiki/Pietro_Scaglione"
+                },
+                {
+                    "Polizia Penitenziaria - Antonio Lorusso": "https://www.poliziapenitenziaria.it/in-memoria-antonino-lorusso-appuntato-agenti-di-custodia-ucciso-dalla-mafia-il-5-maggio-1971/"
+                },
+                {
+                    "CSM - Per non dimenticare: Pietro Scaglione": "https://www.csm.it/portale/web/csm-internet/pietro-scaglione"
+                },
+                {
+                    "CSM - Fascicolo biografico Pietro Scaglione": "Documents/BiografiaPietroScaglione-ConsiglioSuperioreDellaMagistratura.pdf"
+                },
+                {
+                    "Atti Convegno Mafia e Antimafia nel dopoguerra": "Documents/Mafia e antimafia nel dopoguerra e negli anni cinquanta Atti del Convegno Palermo, 5 maggio 2022(4330112022095438).pdf"
+                }
+            ],
+            "categorie": [
+                "mafia",
+                "politico"
+            ]
+        },
         "Inchiesta sulle 150.000 schedature illegali della FIAT a Torino": {
             "anno": 1971,
             "titolo": "Inchiesta sulle 150.000 schedature illegali della FIAT a Torino",
@@ -1820,7 +1847,7 @@
                 "servizi_segreti",
                 "politico"
             ],
-            "descrizione": "Il 21 novembre 1973 il Tribunale di Roma condanna 30 dirigenti del [[Ordine Nuovo|Movimento Politico Ordine Nuovo]] (tra cui [[Clemente Graziani]], datosi alla latitanza) per ricostituzione del disciolto partito fascista ai sensi della [[Legge Scelba]]; due giorni dopo il ministro dell'Interno [[Paolo Emilio Taviani]] decreta lo scioglimento d'autorità del movimento. Nel dicembre 1973 in una riunione clandestina a Cattolica i quadri superstiti di Ordine Nuovo e di [[Avanguardia Nazionale]] danno vita alla sigla terroristica [[Ordine Nero]], che firmerà gli attentati del 1974 culminati nella [[Strage di piazza della Loggia]] e nella [[Strage dell'Italicus]]. Nella primavera 1974 viene inoltre smantellato in Valtellina il [[Movimento d'Azione Rivoluzionaria]] (MAR) dell'ex partigiano bianco Carlo Fumagalli e Gaetano Orlando (implicato in attentati ai tralicci e piani insurrezionali con coperture nei servizi), mentre il 30 maggio 1974 sull'altopiano di Pian di Rascino (Rieti) in un conflitto a fuoco con i [[Arma dei Carabinieri|Carabinieri]] viene ucciso il neofascista di Avanguardia Nazionale [[Giancarlo Esposti]].",
+            "descrizione": "Il 21 novembre 1973 il Tribunale di Roma condanna 30 dirigenti del [[Ordine Nuovo|Movimento Politico Ordine Nuovo]] (tra cui [[Clemente Graziani]], datosi alla latitanza) per ricostituzione del disciolto partito fascista ai sensi della [[Legge Scelba]]; due giorni dopo il ministro dell'Interno [[Paolo Emilio Taviani]] decreta lo scioglimento d'autorità del movimento. Nel dicembre 1973 in una riunione clandestina a Cattolica i quadri superstiti di Ordine Nuovo e di [[Avanguardia Nazionale]] danno vita alla sigla terroristica [[Ordine Nero]], che firmerà gli attentati del 1974 culminati nella [[Strage di piazza della Loggia]] e nella [[Strage dell'Italicus]]. Nella primavera 1974 viene inoltre smantellato in Valtellina il [[Movimento di Azione Rivoluzionaria]] (MAR) dell'ex partigiano bianco Carlo Fumagalli e Gaetano Orlando (implicato in attentati ai tralicci e piani insurrezionali con coperture nei servizi), mentre il 30 maggio 1974 sull'altopiano di Pian di Rascino (Rieti) in un conflitto a fuoco con i [[Arma dei Carabinieri|Carabinieri]] viene ucciso il neofascista di Avanguardia Nazionale [[Giancarlo Esposti]].",
             "fonti": [
                 {
                     "Wikipedia - Ordine Nuovo": "https://it.wikipedia.org/wiki/Ordine_Nuovo"
@@ -1829,7 +1856,7 @@
                     "Wikipedia - Ordine Nero": "https://it.wikipedia.org/wiki/Ordine_Nero"
                 },
                 {
-                    "Wikipedia - Movimento d'Azione Rivoluzionaria": "https://it.wikipedia.org/wiki/Movimento_d%27Azione_Rivoluzionaria"
+                    "Wikipedia - Movimento di Azione Rivoluzionaria": "https://it.wikipedia.org/wiki/Movimento_di_Azione_Rivoluzionaria"
                 },
                 {
                     "Commissione Stragi - Doc. XXIII n. 64 Vol. I Tomo II (2000)": "Documents/XIII leg.Doc. XXIII, 64 Vol I , tomo II, p.67-STRAGI E TERRORISMO IN ITALIA DAL DOPOGUERRA AL 1974.pdf"
@@ -3398,8 +3425,11 @@
             "anno": 2001,
             "titolo": "Fatti del G8 di Genova, morte di Carlo Giuliani e violenze alla scuola Diaz",
             "data": "2001-07-20",
-            "descrizione": "Tra il 19 e il 22 luglio 2001 a Genova, in occasione del vertice dei capi di Stato del G8, manifestazioni di massa del movimento no-global sfociano in devastanti scontri urbani e nella morte del ventitreenne [[Carlo Giuliani]], ucciso in piazza Alimonda dal carabiniere Mario Placanica durante l'attacco a un Defender. Nella notte del 21 luglio le forze dell'ordine compiono una violenta irruzione nella [[Fatti della scuola Diaz|scuola Diaz]], sede del coordinamento dei manifestanti, ferendo decine di persone inermi e fabbricando false prove (due bottiglie molotov); le violenze e le torture proseguono nella caserma di [[Fatti di Bolzaneto|Bolzaneto]], portando ad aspre condanne della Corte europea dei diritti dell'uomo contro l'Italia.",
+            "descrizione": "Tra il 19 e il 22 luglio 2001 a Genova, durante il vertice del G8, si svolgono le proteste organizzate dal [[Genoa Social Forum]], rete altermondialista nata nel 2000-2001 con circa un migliaio di sigle e portavoce [[Vittorio Agnoletto]], che aveva trattato con la Prefettura percorsi dei cortei e logistica attorno alla «zona rossa». Il 20 luglio, dopo gli scontri con i settori più radicali, il ventitreenne [[Carlo Giuliani]] è ucciso in piazza Alimonda dal carabiniere Mario Placanica; la richiesta di archiviazione è accolta dal GIP nel 2003. La notte del 21 la polizia irrompe nella [[Fatti della scuola Diaz|scuola Diaz]], dove dormivano manifestanti e operavano il media center e il legal forum del GSF; la Cassazione (2012) condanna dirigenti di polizia per i falsi, mentre per [[Fatti di Bolzaneto|Bolzaneto]] la Cassazione (2013) condanna alcuni agenti. La Corte EDU (caso Cestaro, 2015) qualifica le violenze alla Diaz come tortura.",
             "fonti": [
+                {
+                    "Wikipedia - Genoa Social Forum": "https://it.wikipedia.org/wiki/Genoa_Social_Forum"
+                },
                 {
                     "Wikipedia - Fatti del G8 di Genova": "https://it.wikipedia.org/wiki/Fatti_del_G8_di_Genova"
                 },
