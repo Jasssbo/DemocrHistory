@@ -2219,7 +2219,7 @@
       let result = escapeHtml(text);
 
       // 1. Supporto Markdown classico: [testo](url)
-      result = result.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, label, url) => {
+      result = result.replace(/\[([^\]]+)\]\(((?:[^()]|\([^()]*\))+)\)/g, (match, label, url) => {
         const safeUrl = sanitizeUrl(unescapeHtml(url));
         if (safeUrl) {
           return `<a href="${escapeHtml(safeUrl)}" target="_blank" rel="noopener noreferrer">${label}</a>`;
