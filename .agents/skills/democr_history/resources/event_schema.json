@@ -1,58 +1,58 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "GuazzabuglioPoliticoEvent",
-  "description": "Schema di validazione per una scheda evento di Guazzabuglio Politico",
+  "description": "Schema di validazione per una scheda evento di Guazzabuglio Politico (e archivi compatibili OpenChronichles)",
   "type": "object",
   "required": [
     "anno",
     "titolo",
-    "descrizione"
+    "descrizione",
+    "categorie",
+    "fonti"
   ],
   "properties": {
     "anno": {
       "type": "integer",
       "description": "Anno dell'evento (es. 1947)",
-      "minimum": 1800,
+      "minimum": 1700,
       "maximum": 2100
     },
     "titolo": {
       "type": "string",
-      "description": "Titolo sintetico giornalistico (max 100-110 caratteri)",
+      "description": "Titolo sintetico giornalistico (max 100-115 caratteri, coincidente con la chiave JSON dell'evento)",
+      "minLength": 3,
       "maxLength": 120
     },
     "data": {
       "type": "string",
-      "description": "Data ISO YYYY-MM-DD o stringa vuota se non nota",
+      "description": "Data ISO YYYY-MM-DD (o stringa vuota se non accertata)",
       "pattern": "^$|^\\d{4}(-\\d{2}(-\\d{2})?)?$"
     },
     "categorie": {
       "type": "array",
-      "description": "Categorie tematiche assegnate all'evento",
+      "description": "Categorie tematiche assegnate all'evento (in GuazzabuglioPolitico.json: politico, servizi_segreti, mafia, gruppi_terroristici, massoneria, clero, re; negli archivi personalizzati: id definiti in CATEGORIE)",
+      "minItems": 1,
       "items": {
         "type": "string",
-        "enum": [
-          "politico",
-          "servizi_segreti",
-          "mafia",
-          "gruppi_terroristici",
-          "massoneria",
-          "clero",
-          "re"
-        ]
+        "pattern": "^[a-z0-9_]+$"
       },
       "uniqueItems": true
     },
     "descrizione": {
       "type": "string",
-      "description": "Sintesi enciclopedica con wikilink [[Voce]] o [[Voce|Testo]], link markdown [Testo](URL) o [Doc](Documents/file.pdf)"
+      "description": "Sintesi enciclopedica neutrale con attribuzione frasale delle fonti, wikilink [[Voce]] o [[Voce|Testo]], link markdown [Testo](URL) o [Atto](Documents/File.pdf)",
+      "minLength": 100
     },
     "fonti": {
       "type": "array",
-      "description": "Lista di riferimenti a fonti esterne (URL) o documenti locali (Documents/file.pdf)",
+      "description": "Lista di riferimenti a fonti esterne (URL https) o documenti primari locali (Documents/File.pdf, senza spazi né parentesi nel nome file)",
+      "minItems": 1,
       "items": {
         "type": "object",
+        "minProperties": 1,
         "additionalProperties": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         }
       }
     }
