@@ -1,6 +1,6 @@
 # Catalogo delle Fonti Primarie in `Documents/`
 
-Questo catalogo censisce i **28 documenti primari e studi storici** conservati permanentemente nella cartella `Documents/` del repository. Quando redigi, verifichi o arricchisci una scheda in `data/GuazzabuglioPolitico.json`, **controlla sempre se l'evento rientra nell'ambito di uno o più di questi documenti** e citali sia nel testo (`[Titolo Atto](Documents/File.pdf)`) sia nell'array `fonti`.
+Questo catalogo censisce i **28 documenti primari e studi storici** conservati permanentemente nella cartella `Documents/` del repository. Quando redigi, verifichi o arricchisci una scheda in `data/DiacroniaDellaRepubblicaItaliana.json`, **controlla sempre se l'evento rientra nell'ambito di uno o più di questi documenti** e citali sia nel testo (`[Titolo Atto](Documents/File.pdf)`) sia nell'array `fonti`.
 
 > **Regola tecnica tassativa sui nomi file**: ogni nuovo file aggiunto in `Documents/` deve usare solo caratteri alfanumerici, trattini `-` o underscore `_` (`PascalCase` / `Kebab-Case`), **senza spazi e senza parentesi tonde `()`**, poiché le parentesi tonde spezzano il parser regex dei link Markdown `[testo](url)`.
 

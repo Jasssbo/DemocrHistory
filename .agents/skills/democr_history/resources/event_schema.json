@@ -30,7 +30,7 @@
     },
     "categorie": {
       "type": "array",
-      "description": "Categorie tematiche assegnate all'evento (in GuazzabuglioPolitico.json: politico, servizi_segreti, mafia, gruppi_terroristici, massoneria, clero, re; negli archivi personalizzati: id definiti in CATEGORIE)",
+      "description": "Categorie tematiche assegnate all'evento (in DiacroniaDellaRepubblicaItaliana.json: politico, servizi_segreti, mafia, gruppi_terroristici, massoneria, clero, re; negli archivi personalizzati: id definiti in CATEGORIE)",
       "minItems": 1,
       "items": {
         "type": "string",

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Guazzabuglio Politico</title>
+  <title>Diacronia della Repubblica Italiana</title>
   <script>
     // Rilevamento automatico dispositivo: reindirizza smartphone a mobile.html
     (function () {
@@ -1174,12 +1174,12 @@
         <div class="file-box">
           <label for="repo-file-select">Archivi in /data</label>
           <select id="repo-file-select" class="repo-select" aria-label="Seleziona un archivio dalla cartella /data">
-            <option value="data/GuazzabuglioPolitico.json">GuazzabuglioPolitico.json</option>
+            <option value="data/DiacroniaDellaRepubblicaItaliana.json">DiacroniaDellaRepubblicaItaliana.json</option>
           </select>
 
           <label for="file">Carica un JSON Locale</label>
           <input id="file" type="file" accept="application/json">
-          <div id="file-status" class="file-status">Attivo: <strong>GuazzabuglioPolitico.json</strong></div>
+          <div id="file-status" class="file-status">Attivo: <strong>DiacroniaDellaRepubblicaItaliana.json</strong></div>
 
           <div class="editor-actions">
             <button id="btn-add-event" class="btn" type="button">
@@ -1672,15 +1672,17 @@
 
     const DRAFT_KEY = 'democrhistory_auto_draft_v2';
     const SOURCE_PREF_KEY = 'democrhistory_selected_source';
-    const DEFAULT_SOURCE_URL = 'data/GuazzabuglioPolitico.json';
+    const DEFAULT_SOURCE_URL = 'data/DiacroniaDellaRepubblicaItaliana.json';
     const KNOWN_DATA_FILES = [
-      'data/GuazzabuglioPolitico.json'
+      'data/DiacroniaDellaRepubblicaItaliana.json'
     ];
     const repoDataFiles = [...KNOWN_DATA_FILES];
     let currentSourceUrl = DEFAULT_SOURCE_URL;
     try {
       const savedSource = localStorage.getItem(SOURCE_PREF_KEY);
-      if (savedSource && savedSource.startsWith('data/') && savedSource.endsWith('.json')) {
+      if (savedSource === 'data/GuazzabuglioPolitico.json') {
+        localStorage.setItem(SOURCE_PREF_KEY, DEFAULT_SOURCE_URL);
+      } else if (savedSource && savedSource.startsWith('data/') && savedSource.endsWith('.json')) {
         currentSourceUrl = savedSource;
       }
     } catch (e) { }
@@ -1736,11 +1738,16 @@
         if (draft && (Array.isArray(draft.events) || Array.isArray(draft.preEvents))) {
           setCategories(draft.categories || DEFAULT_CATEGORIES);
           state.metadata = draft.metadata || state.metadata;
+          if (state.metadata && (state.metadata.titolo === 'Il Guazzabuglio Politico' || state.metadata.titolo === 'Guazzabuglio Politico')) {
+            state.metadata.titolo = 'Diacronia della Repubblica Italiana';
+          }
           state.events = (draft.events || []).map((e) => normalizeEvent(e, true));
           state.preEvents = (draft.preEvents || []).map((e) => normalizeEvent(e, true));
           state.sourceSignature = draft.sourceSignature || null;
           state.dismissedRemoteSignature = draft.dismissedRemoteSignature || null;
-          if (draft.sourceUrl && draft.sourceUrl.startsWith('data/')) {
+          if (draft.sourceUrl === 'data/GuazzabuglioPolitico.json') {
+            currentSourceUrl = DEFAULT_SOURCE_URL;
+          } else if (draft.sourceUrl && draft.sourceUrl.startsWith('data/')) {
             currentSourceUrl = draft.sourceUrl;
           }
           // Se ho dovuto riparare ID duplicati, salvo subito così tutte le schede usano gli stessi ID

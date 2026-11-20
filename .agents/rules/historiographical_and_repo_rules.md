@@ -18,13 +18,13 @@ Non fondere mai fatti materiali, sentenze definitive, atti istruttori/parlamenta
 ## 2. Standard Linguistico e Neutralità (NPOV)
 - **Prosa enciclopedica completa**: vietato lo stile telegrafico (niente omissione di articoli, preposizioni o verbi). Ogni frase deve essere grammaticalmente autonoma, scorrevole e neutrale.
 - **Tipografia italiana**: usa le virgolette basse `«...»` per citazioni ed espressioni storiche/gergali, date estese in italiano (`1° maggio 1947`, `2 agosto 1980`) e minuscole per le cariche istituzionali (*presidente del Consiglio*, *ministro dell'Interno*, *carabinieri*).
-- **Coerenza JSON**: in `data/GuazzabuglioPolitico.json` la chiave del dizionario in `PRE-EVENTI` o `EVENTI` deve coincidere esattamente con il campo `"titolo"` dell'evento.
+- **Coerenza JSON**: in `data/DiacroniaDellaRepubblicaItaliana.json` la chiave del dizionario in `PRE-EVENTI` o `EVENTI` deve coincidere esattamente con il campo `"titolo"` dell'evento.
 
 ## 3. Regola di Nomenclatura per `Documents/` (Prevenzione Rottura Link Markdown)
 - Ogni file PDF salvato o aggiunto nella cartella `Documents/` deve avere un nome **privo di parentesi tonde `(` `)` e privo di spazi** (usa `PascalCase` o `Kebab-Case`, es. `Cassazione-StrageDiBologna-23Novembre1995.pdf`).
 - *Motivo tecnico*: il parser Markdown `[testo](Documents/file.pdf)` dell'interfaccia web si interrompe alla prima parentesi chiusa `)`, troncando qualsiasi URL o percorso che contenga parentesi nel nome file.
 
 ## 4. Salvaguardia del Lavoro dell'Utente e Allineamento Interfacce
-- **Divieto di sovrascrittura**: prima di modificare `data/GuazzabuglioPolitico.json` (o altri file in `data/`), leggi sempre lo stato attuale del file su disco per non sovrascrivere correzioni manuali recenti dell'utente.
+- **Divieto di sovrascrittura**: prima di modificare `data/DiacroniaDellaRepubblicaItaliana.json` (o altri file in `data/`), leggi sempre lo stato attuale del file su disco per non sovrascrivere correzioni manuali recenti dell'utente.
 - **Validazione obbligatoria**: dopo qualsiasi modifica ai file JSON in `data/`, esegui sempre lo script `.agents/skills/democr_history/scripts/validate_archive.py` e risolvi ogni errore segnalato prima di concludere.
 - **Sincronia UI**: quando modifichi funzionalità dell'interfaccia web, mantieni allineati `index.html`, `mobile.html` e `OpenChronichles.html` (salvo diversa indicazione esplicita dell'utente).

@@ -1,7 +1,7 @@
 # Vocabolario e Tassonomia delle Categorie
 
-## 1. Categorie Predefinite per `GuazzabuglioPolitico.json`
-Nell'archivio storico principale (`data/GuazzabuglioPolitico.json`) sono utilizzate **7 categorie storiografiche predefinite**:
+## 1. Categorie Predefinite per `DiacroniaDellaRepubblicaItaliana.json`
+Nell'archivio storico principale (`data/DiacroniaDellaRepubblicaItaliana.json`) sono utilizzate **7 categorie storiografiche predefinite**:
 
 | ID Categoria | Nome Visualizzato | Colore Default (`#HEX`) | Criteri di Assegnazione Storiografica |
 |---|---|---|---|
@@ -29,5 +29,5 @@ L'interfaccia web (`index.html`, `mobile.html`, `OpenChronichles.html`) permette
 ]
 ```
 
-- Quando curi `data/GuazzabuglioPolitico.json`, attieniti rigorosamente alle **7 categorie predefinite** della Sezione 1.
+- Quando curi `data/DiacroniaDellaRepubblicaItaliana.json`, attieniti rigorosamente alle **7 categorie predefinite** della Sezione 1.
 - Quando curi un archivio tematico differente dotato del campo `"CATEGORIE"`, utilizza gli `id` definiti nell'array `"CATEGORIE"` di quell'archivio.
